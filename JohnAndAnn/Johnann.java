@@ -1,5 +1,6 @@
 import java.util.List;
 
+/*
 public class Johnann {
 
         public static List<Long> john(long n) {
@@ -17,3 +18,4 @@ public class Johnann {
         }
     }
 }
+*/

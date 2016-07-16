@@ -21,7 +21,7 @@ public class Animal{
 	//constructor
 	public Animal(String n,int num,String h){
 		name =n;
-		this.num=num;
+		noOfLegs=num;
 		habitat=h;
 		}
 

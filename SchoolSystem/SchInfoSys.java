@@ -1,3 +1,4 @@
+package SchoolSystem;
 //identify the class
 public class SchInfoSys{
 
@@ -27,8 +28,8 @@ public class SchInfoSys{
 
 		//default constructor
 		public SchInfoSys(){
-			this(0,"Name","Current Class",0.0);
-			}
+			this(0,"Name","Current Class");
+		}
 
 	//defining the getters and setters
 
@@ -86,7 +87,7 @@ public class SchInfoSys{
 	*/
 
 	public void unitRegister(String s){
-		return s;
+
 		}
 
 
@@ -95,9 +96,8 @@ public class SchInfoSys{
 
 		}
 
-		public boolean removeUnits()
-		{
-
+		public boolean removeUnits() {
+			return false;
 		}
 
 	public String optOut(String unit){

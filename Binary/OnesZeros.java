@@ -1,5 +1,7 @@
 package Binary;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,8 +23,17 @@ import java.util.List;
  */
 
 public class OnesZeros {
-
+    public static void main(String[] args){
+        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
+        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(1,1,1,1))));//15
+        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,1,1,0))));//6
+        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(1,0,0,1))));//9
+    }
     public static int ConvertBinaryArrayToInt(List<Integer> binary) {
-        // Your Code
+        String s = "";
+        for(int n: binary){
+         s += String.valueOf(n);
+        }
+        return Integer.parseInt(s,2);
     }
 }
