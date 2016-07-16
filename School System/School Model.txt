@@ -1,0 +1,120 @@
+you have been contracted by the principal of sch X to create their sch information management sys. 
+
+the sys. is supposed to store students details as their admission number, their name, their current class and their pending school fees balance and their current class
+
+in the system, a student can register fot units, opt out of units, pay school fees and check their pending sch fees balance. YOur taks as the developer to model this scenario by:
+
+1.identifying possible classes in the above system
+2.identify the data members and their access scope
+3.define the getters and setters for the data members
+4.identify the methods for the classes and return their types and parameters
+
+//identify the class
+public class SchInfoSys{
+
+
+	/*
+	declare the properties of the class
+
+	their admission number,
+	their name,
+	their current class and their pending school fees balance
+	*/
+
+	//data members and their access scope is private
+	private int admissionNo;
+	private String name;
+	private String currentClass;
+	private double feeBalance;
+
+	//constructor
+	public SchInfoSys(int a,String n,String c,double f){
+		admissionNo = a;
+		name = n;
+		currentClass = c;
+		feeBalance = f;
+		}
+
+		//default constructor
+		public SchInfoSys(){
+			this(0,"Name","Current Class",0.0);
+			}
+
+	//defining the getters and setters
+
+	//getter and setter for admission number data member in class
+	public void setAdmissionNo(int admissionNo)
+	{
+		this.admissionNo = admissionNo;
+	}
+
+			public int getAdmissionNo()
+			{
+				return admissionNo;
+			}
+
+	//define getter and setter for name data member in class
+	public void setName(String name)
+		{
+			this.name = name;
+		}
+
+				public String getName()
+				{
+					return name;
+				}
+
+	//getter and setter for current class data member in class
+	public void setCurrentClass(String currentClass)
+		{
+			this.currentClass = currentClass;
+		}
+
+				public String getCurrentClass()
+				{
+					return currentClass;
+				}
+
+	//getter and setter for data member fee balance in class
+	public void setFeeBalance(double feeBalance)
+		{
+			this.feeBalance = feeBalance;
+		}
+
+				public double getFeeBalance()
+				{
+					return feeBalance;
+				}
+
+	/*
+	//identify the behaviour of the class
+
+	a student can register for units,
+	opt out of units,
+	pay school fees and
+	check their pending sch fees balance
+	*/
+
+	public boolean unitRegister(boolean fees){
+		return fees;
+		}
+
+	public String optOut(String unit){
+		return unit;
+		}
+
+	public double deposit(double schFees){
+		return schFees;
+		}
+
+	public void displayFeeBalance(){
+
+		}
+
+
+
+
+	public static void main(String[] args){
+
+		}
+	}

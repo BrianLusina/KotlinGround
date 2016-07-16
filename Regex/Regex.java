@@ -1,0 +1,88 @@
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+/**
+ * Created by lusinabrian on 16/06/16.
+ * Class for all Regex tests and solutions
+ */
+public class Regex {
+    public static void main(String[] args){
+
+        System.out.println("Testing for validPhoneNumber()");
+        System.out.println(validPhoneNumber("(123) 456-7890"));
+        System.out.println(validPhoneNumber("(1111)555 2345"));
+        System.out.println(validPhoneNumber("(098) 123 4567"));
+
+        System.out.println("Testing for getCount()");
+        System.out.println(getCount("Power"));
+        System.out.println(getCount("Oops"));
+
+        System.out.println("Testing for autocorrect()");
+        System.out.println(autocorrect("you are huge"));
+        System.out.println(autocorrect("youuuuuuuuu"));
+        System.out.println(autocorrect("u"));
+        System.out.println(autocorrect("u woos"));
+    }
+
+/**
+ * Write a function that accepts a string, and returns true if it is in the form of a phone number.
+ Assume that any integer from 0-9 in any of the spots will produce a valid phone number.
+
+ Only worry about the following format:
+ (123) 456-7890 (don't forget the space after the close parentheses)
+
+ Examples:
+ validPhoneNumber("(123) 456-7890")  =>  returns true
+ validPhoneNumber("(1111)555 2345")  => returns false
+ validPhoneNumber("(098) 123 4567")  => returns false
+ * */
+    public static boolean validPhoneNumber(String phoneNumber) {
+        String number = "^\\([0-9]{3}\\)\\s[0-9]{3}\\-[0-9]{4}$";
+        Pattern pattern = Pattern.compile(number);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.find();
+    }
+
+/**Return the number (count) of vowels in the given string.
+We will consider a, e, i, o, and u as vowels for this Kata.
+**/
+    public static int getCount(String str) {
+        String vow = "[aeiou]";
+        int vowelCount = 0;
+        Pattern pattern = Pattern.compile(vow,Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(str);
+        while(matcher.find()){
+            vowelCount++;
+        }
+        return vowelCount;
+    }
+
+
+/**
+ * Your friend won't stop texting his girlfriend. It's all he does. All day. Seriously. The texts are so mushy too! The whole situation just makes you feel ill. Being the wonderful friend that you are, you hatch an evil plot. While he's sleeping, you take his phone and change the autocorrect options so that every time he types "you" or "u" it gets changed to "your sister."
+
+ Write a function called autocorrect that takes a string and replaces all instances of "you" or "u" (not case sensitive) with "your sister" (always lower case).
+
+ Return the resulting string.
+
+ Here's the slightly tricky part: These are text messages, so there are different forms of "you" and "u".
+
+ For the purposes of this kata, here's what you need to support:
+
+ "youuuuu" with any number of u characters tacked onto the end
+ "u" at the beginning, middle, or end of a string, but NOT part of a word
+ "you" but NOT as part of another word like youtube or bayou
+ * **/
+
+    public static String autocorrect(String input) {
+        String pat = "^(u)+$|^(u)$(\\s\\w|\\W)+|(\\w|\\W\\s)(u)(\\w|\\W\\s)+(u)(\\s\\w|\\W)+|yo(u)+$|yo(u)+(\\s|\\w|\\W)+$|^(\\w|\\W)+yo(u)+$|(\\w|\\W\\s)+(you)(\\s\\w|\\W)+";
+        Pattern pattern = Pattern.compile(pat,Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(input);
+        if(matcher.find()){
+            input = input.replaceAll(pat,"your sister");
+        }
+        return input;
+    }
+
+/*CLASS END*/
+}
