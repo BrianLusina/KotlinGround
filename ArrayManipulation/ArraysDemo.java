@@ -1,13 +1,14 @@
-package DataStructures.DataTypes;
+package ArrayManipulation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
- * Created by lusinabrian on 11/07/16.
- * Demonstration of work with arrays
+ Package: ${PACKAGE_NAME}
+ Created by lusinabrian on 11/07/16 or 23 Jul of 2016,
+ Time: 17:32.
+ Project: JxProjects
+ Description:
  */
 public class ArraysDemo {
 
@@ -31,7 +32,7 @@ public class ArraysDemo {
      Return an array of the numbers in ascending order.
      @implNote
      Instantiate and array with the 3 inputs as elements of the array,
-     sort the array using Arrays.sort(array) and return the result
+     sort the array using ArrayManipulation.sort(array) and return the result
      @param x the first integer input
      @param y the second integer input
      @param z the 3rd integer input

@@ -56,7 +56,7 @@ for(i = 0;i<lotteryNum.length;i++)
 	System.out.println(lotteryNum[i]);
 }
 
-/*Multi-dimensional Arrays
+/*Multi-dimensional ArrayManipulation
 these arrays hold more data and they hold them in form of rows and columns
 syntax:
 	dataType arrayName[][]= new dataType[r][c]; where r and c are number of rows and columns respectively

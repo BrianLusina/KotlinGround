@@ -1,8 +1,5 @@
 package StringManipulation;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  * Created by lusinabrian on 20/07/16.
  * function ThirdGreatest(strArr)
@@ -18,14 +15,12 @@ public class ThirdLargest {
     public static void main(String[] args){
         System.out.println(ThirdGreatest(new String[]{"hello", "world", "before", "all"}));
         System.out.println(ThirdGreatest(new String[]{"hello", "world", "after", "all"}));
-        String[] s = new String[]{"hello", "world", "after", "all"};
-        Arrays.sort(s);
-        System.out.println(Arrays.toString(s));
     }
 
     /**
      * @implNote method checks for the third largest string in an array.
-     * If strings are of same length, return the last word in the order
+     * If strings are of same length, return the last word in the order of the array
+     * @return third longest word
      * @param arr string array input*/
     public static String ThirdGreatest(String[] arr){
         //initialize three string variables for the 1,2 and 3 longest strings
@@ -34,16 +29,20 @@ public class ThirdLargest {
         String thW = "";
         /*perform a for loop, looping through each word, checking for longest word*/
         for(String current : arr) {
-            //if current is greater than longest, reassign it
+            /*if current is greater than longest, reassign it to the longest word
+            assign the second longest to the third and the longest to the second.
+            * */
+            System.out.println("Current string: "+ current);
             if (current.length() > longW.length()) {
                 thW = secW;
                 secW = longW;
                 longW = current;
-            /*if the current word is longer than second*/
+                System.out.printf("Third Word: %s Second Word: %s, Longest Word: %s",thW, secW, longW);
+            /*if the current word is longer than second  assign it to the second*/
             } else if (current.length() > secW.length()) {
                 thW = secW;
                 secW = current;
-            /*if third is longest than current*/
+            /*if current word is longer than third word*/
             } else if (current.length() > thW.length()) {
                 thW = current;
             }
