@@ -7,6 +7,7 @@ import java.util.Arrays;
  * Created by lusinabrian on 23/07/16 or 23 Jul of 2016,
  * Time: 17:31.
  * Project: JxProjects
+ *
  * Description : //Create your own array of integers
  // Find the maximum and minimum of this array that you just created.
  // create a variable to hod the maximum
@@ -27,10 +28,31 @@ public class Maximum_minimum {
 
     /**
      * @implNote gets the maximum and minimum of an array,
-     * outputs each individually
+     * outputs each individually.
+     * creates 2 variables that hold max and min and 1 temporary variable to store 'passing elements'
+     * Loop through array checking if the first element is greater than the second element,
+     * if so, assign the bigger element to a temporary variable swap, assign the smaller element to the bigger elements' position, assign the bigger element to the smaller element's position.
      * @param array, input array with random numbers*/
     public static int[] maximum_min(int[] array){
+        int swap;
+        int max, min;
 
+        for(int i=0; i < array.length-1; i++){
+            for(int j=0; j < array.length-1-i ;j++){
+                if(array[j] > array[j+1]){
+                    swap = array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=swap;
+                }
+            }
+        }
+
+        /*assign the smallest and largest values to variables*/
+        min = array[0];
+        max = array[array.length-1];
+
+        /*out put result*/
+        return new int[]{max, min};
     }/*method end*/
 /*CLASS END*/
 }
