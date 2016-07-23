@@ -1,6 +1,5 @@
-import com.sun.xml.internal.ws.util.StringUtils;
+package aenigma;
 
-import java.util.ArrayList;
 import java.util.stream.IntStream;
 /**
  * Created by lusinabrian on 28/05/16.
@@ -46,20 +45,6 @@ public class CodeWars2 {
         System.out.println(narcissistic(4887));
 
         System.out.println(notVisibleCubes(3l));
-        
-        System.out.println("Testing for toAlternatingCase(String string) function");
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("hello world"),"HELLO WORLD"));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("hello world"),  toAlternativeString("HELLO WORLD")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("HELLO world"),"hello WORLD"));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("hEllO wOrld"),toAlternativeString("HeLLo WoRLD")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("Hello World"),toAlternativeString( toAlternativeString("Hello World"))));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("12345"),toAlternativeString("12345")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("1A2B3C4D5E"), toAlternativeString("1a2b3c4d5e")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("sTRINGuTILS.TOaLTERNATINGcASE"),  toAlternativeString(" toAlternatingCase")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("ALTerNAtiNG CaSe"),  toAlternativeString("altERnaTIng cAsE")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("altERnaTIng cAsE"),  toAlternativeString("ALTerNAtiNG CaSe")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("ALTerNAtiNG CaSe <=> altERnaTIng cAsE"),  toAlternativeString("altERnaTIng cAsE <=> ALTerNAtiNG CaSe")));
-        System.out.println(FunctionTests.getInstance().Test(toAlternativeString("altERnaTIng cAsE <=> ALTerNAtiNG CaSe"),  toAlternativeString("ALTerNAtiNG CaSe <=> altERnaTIng cAsE")));
 
     /*Main Method end*/
     }
