@@ -2,8 +2,8 @@ package Math;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Package: Math
@@ -16,12 +16,15 @@ import java.util.List;
 public class NextHighest {
     public static void main(String[] args){
         System.out.printf("Actual: %d, Expected: %d\n",nxtHigh(1508),8510);
+        System.out.printf("Actual: %d, Expected: %d\n",nxtHigh(1324),4321);
+        System.out.printf("Actual: %d, Expected: %d\n",nxtHigh(1005),5001);
     }
     /**
      * Converts the number to individual digits by converting to a string, splitting it
      * then iterates through the string, converting each string to a number adding them to a list,
      * Use a Comparator to compare each integer and sort the list
-     * add each integer to a string builder and convert to a string and convert to an integer
+     * add each integer to a string builder and convert to a string
+     * Convert to an integer
      * @param n, integer input*/
     public static int nxtHigh(int n){
         String[] nStrArr = String.valueOf(n).split("");
@@ -31,11 +34,9 @@ public class NextHighest {
         for(String s : nStrArr){
             list.add(Integer.parseInt(s));
         }
-        Collections.sort(list, (int1, int2) -> (int1 > int2 ? -1 : (int1 == int2 ? 0 : 1)));
+        Collections.sort(list, (int1, int2) -> (int1 > int2 ? -1 : (Objects.equals(int1, int2) ? 0 : 1)));
 
-        for(int m : list){
-            sb.append(m);
-        }
+        list.forEach(sb::append);
 
         return Integer.parseInt(sb.toString());
     }/*METHOD END*/
