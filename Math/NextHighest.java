@@ -31,12 +31,7 @@ public class NextHighest {
         for(String s : nStrArr){
             list.add(Integer.parseInt(s));
         }
-        Collections.sort(list, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer int1, Integer int2) {
-                return (int1 > int2 ? -1 : (int1 == int2 ? 0 : 1));
-            }
-        });
+        Collections.sort(list, (int1, int2) -> (int1 > int2 ? -1 : (int1 == int2 ? 0 : 1)));
 
         for(int m : list){
             sb.append(m);
