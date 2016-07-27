@@ -12,7 +12,11 @@ package StringManipulation;
 public class ReverseString {
 
     public static void main(String[] args){
-        System.out.printf("Actual:%s, Expected:%s",reverse("CodeNinja"), "ajniNedoC");
+        /*TESTS*/
+        System.out.printf("Actual:%s, Expected:%s\n",reverse("CodeNinja"), "ajniNedoC");
+        System.out.printf("Actual:%s, Expected:%s\n",reverse("ninja"), "ajnin");
+        System.out.printf("Actual:%s, Expected:%s\n",reverse("World"), "dlroW");
+        System.out.printf("Actual:%s, Expected:%s\n",reverse("pleh em"), "help me");
     }
 
     /**
