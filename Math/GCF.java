@@ -15,15 +15,20 @@ public class GCF {
     public static void main(String[] args){
         System.out.printf("Actual: %d, Expected:%d\n", divide(20,10), 10);
         System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
+        System.out.printf("Actual: %d, Expected:%d\n",divide(12,30), 6);
+/*        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
+        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
+        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
+        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);*/
     }
     /**
      * @implNote Used to obtain the GCD of two numbers
+     * return the sum of both numbers if either is 0, which is the greatest common multiple
+     * else use recursion to get the gcd of the two numbers
      * @param num1 number to evaluate gcd
-     * @param num2 number to evaluat gcd*/
+     * @param num2 number to evaluate gcd*/
     public static int divide(int num1, int num2){
-        if(num1 == 0 || num2 == 0)
-            return num1+num2;
-        return divide(num2,num1%num2);
+        return (num1 == 0 || num2 == 0) ? num1+num2 : divide(num2, num1%num2);
     }/*METHOD END*/
 
 /*CLASS END*/
