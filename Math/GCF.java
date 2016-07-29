@@ -13,13 +13,12 @@ package Math;
  */
 public class GCF {
     public static void main(String[] args){
-        System.out.printf("Actual: %d, Expected:%d\n", divide(20,10), 10);
-        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
-        System.out.printf("Actual: %d, Expected:%d\n",divide(12,30), 6);
-/*        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
-        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
-        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);
-        System.out.printf("Actual: %d, Expected:%d\n",divide(5,1), 1);*/
+        System.out.printf("Actual: %d, Expected: %d\n", divide(20,10), 10);
+        System.out.printf("Actual: %d, Expected: %d\n",divide(5,1), 1);
+        System.out.printf("Actual: %d, Expected: %d\n",divide(12,30), 6);
+        System.out.printf("Actual: %d, Expected: %d\n",divide(9,12), 3);
+        System.out.printf("Actual: %d, Expected:%d\n",divide(6,18), 6);
+        System.out.printf("Actual: %d, Expected:%d\n",divide(24,108), 1);
     }
     /**
      * @implNote Used to obtain the GCD of two numbers
