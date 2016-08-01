@@ -1,2 +1,2 @@
-#Java Katas
+# Java Katas
 Katas done in Java
