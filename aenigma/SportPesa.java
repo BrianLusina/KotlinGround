@@ -1,6 +1,5 @@
 package aenigma;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -23,6 +22,8 @@ public class SportPesa {
      * 10 predictions bonus must be less than 11 and 11 less than 12 and 12 less than 13
      * if the user inputs 13, they win the jackpot and generates a new jackpot
      * if the user inputs 10, they win 10% of the jackpot, but jackpot increases in amount
+     * Using the Math.random() method, randomize the jackpot and randomize the winnings for each choice
+     * then randomize the jackpot and increase the amount of the jackpot
      * */
     public static String bonus(int number){
         String message;
@@ -49,7 +50,7 @@ public class SportPesa {
             case 13:
                 winnings = jackpot;
                 jackpot += Math.floor(Math.random() * jackpot);
-                message = "You have made " + String.valueOf(number) + " correct predictions. Your winnings " + String.valueOf((int) winnings) + ". New jackpot " + String.valueOf((int) jackpot);
+                message = "You have made " + String.valueOf(number) + " correct predictions. You have won the jackpot " + String.valueOf((int) winnings) + ". New jackpot " + String.valueOf((int) jackpot);
                 break;
             default:
                 jackpot += Math.floor(Math.random() * jackpot);
