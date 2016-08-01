@@ -1,5 +1,6 @@
 package aenigma;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -31,28 +32,28 @@ public class SportPesa {
         String numStr = String.valueOf(number);
         switch (number){
             case 10:
-                winnings = Math.floor(jackpot * Math.random() * 100);
+                winnings = Math.floor(jackpot * Math.random());
                 jackpot += Math.floor(Math.random() * jackpot);
-                message = "You have made " + numStr + " correct predictions. Your winnings Ksh. " + String.valueOf(winnings) + ". New jackpot Ksh. " + String.valueOf(jackpot);
+                message = "You have made " + numStr + " correct predictions. Your winnings Ksh. " + String.valueOf((int) winnings) + ". New jackpot Ksh. " + String.valueOf((int) jackpot);
                 break;
             case 11:
-                winnings = Math.floor(jackpot * Math.random() * 100);
+                winnings = Math.floor(jackpot * Math.random());
                 jackpot += Math.floor(Math.random() * jackpot);
-                message = "You have made " + numStr + " correct predictions. Your winnings Ksh. " + String.valueOf(winnings) + ". New jackpot Ksh. " + String.valueOf(jackpot);
+                message = "You have made " + numStr + " correct predictions. Your winnings Ksh. " + String.valueOf((int) winnings) + ". New jackpot Ksh. " + String.valueOf((int) jackpot);
                 break;
             case 12:
-                winnings = Math.floor(jackpot * Math.random() * 100);
+                winnings = Math.floor(jackpot * Math.random());
                 jackpot += Math.floor(Math.random() * jackpot);
-                message = "You have made " + numStr + " correct predictions. Your winnings Ksh. " + String.valueOf(winnings) + ". New jackpot Ksh. " + String.valueOf(jackpot);
+                message = "You have made " + numStr + " correct predictions. Your winnings Ksh. " + String.valueOf((int) winnings) + ". New jackpot Ksh. " + String.valueOf((int) jackpot);
                 break;
             case 13:
                 winnings = jackpot;
                 jackpot += Math.floor(Math.random() * jackpot);
-                message = "You have made " + String.valueOf(number) + " correct predictions. Your winnings " + String.valueOf(winnings) + ". New jackpot " + String.valueOf(jackpot);
+                message = "You have made " + String.valueOf(number) + " correct predictions. Your winnings " + String.valueOf((int) winnings) + ". New jackpot " + String.valueOf((int) jackpot);
                 break;
             default:
                 jackpot += Math.floor(Math.random() * jackpot);
-                message = "Sorry, better luck next time"+". New jackpot" + String.valueOf(jackpot);
+                message = "Sorry, better luck next time"+". New jackpot " + String.valueOf((int) jackpot);
                 break;
         }
         
