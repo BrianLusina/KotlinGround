@@ -28,12 +28,19 @@ public void after() throws Exception {
 * 
 */ 
 @Test
-public void testNameThatNumber() throws Exception {
+public void testTen() throws Exception {
     assertEquals("10 must be supported and return \"ten\"", name.nameThatNumber(10), "ten");
-    assertEquals("93 must be supported and return \"ninety three\"", name.nameThatNumber(93), "ninety three");
-    assertEquals("0 must be supported and return \"zero\"", name.nameThatNumber(0), "zero");
 }
 
+@Test
+public void testNinetyThree() throws Exception {
+    assertEquals("93 must be supported and return \"ninety three\"", name.nameThatNumber(93), "ninety three");
+}
+
+@Test
+public void testZero() throws Exception {
+    assertEquals("0 must be supported and return \"zero\"", name.nameThatNumber(0), "zero");
+}
 
 
 } 
