@@ -37,11 +37,9 @@ public class CombineString {
                 return false;
             }
         }
-/*
         if(str1.charAt(0) != str3.charAt(0) && str2.charAt(0) != str3.charAt(0)){
             return false;
         }
-*/
 
         if(str1.charAt(0) == str3.charAt(0) && combine_string(str1.substring(1),str2, str3.substring(1))){
             return true;

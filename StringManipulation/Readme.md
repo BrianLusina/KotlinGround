@@ -22,3 +22,13 @@ Tags:
    For example, given str1="abc" and str2="def", str3="dabecf" is a valid shuffle since it preserves the character
     ordering of the two strings.
     So, given these 3 strings write a function that detects whether str3 is a valid shuffle of str1 and str2.
+
+## Name That Number
+
+  In this kata, you'll be given an integer of range 0 <= x <= 99 and have to return that number spelt out in English. A few examples:
+  ```java
+  nameThatNumber(4)   // returns "four"
+  nameThatNumber(19)  // returns "nineteen"
+  nameThatNumber(99)  // returns "ninety nine"
+  ```
+  Words should be seperated by only spaces and not hyphens. No need to validate parameters, they will always be in the range [0, 99]. Make sure that the returned String has no leading of trailing spaces. Good luck!
