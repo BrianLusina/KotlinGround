@@ -8,10 +8,6 @@ package ObjectOriented.DeclareWinner;
  * Description:
  */
 public class DeclareWinner {
-
-    /**
-     *
-     */
     public static class Fighter {
         public String name;
         public int health, damagePerAttack;
@@ -45,12 +41,41 @@ public class DeclareWinner {
         public void setDamagePerAttack(int damagePerAttack) {
             this.damagePerAttack = damagePerAttack;
         }
-
+    /*FIGHTER END*/
     }
 
 
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
-
+        String winner = "";
+        do{
+            if(firstAttacker.equals(fighter1.name)){
+                for(int x = 0;x < fighter2.health;x++){
+                    /*fighter 1 starts*/
+                    fighter2.health -= fighter1.damagePerAttack;
+                    //fighter 2 retaliates
+                    fighter1.health -= fighter2.damagePerAttack;
+                    if(fighter2.health <= 0){
+                        winner = firstAttacker;
+                    }else{
+                        winner = fighter2.name;
+                    }
+                }
+            }else{
+                for(int x = 0;x < fighter1.health;x++){
+                    /*fighter 1 starts*/
+                    fighter1.health -= fighter2.damagePerAttack;
+                    //fighter 2 retaliates
+                    fighter2.health -= fighter1.damagePerAttack;
+                    if(fighter1.health <= 0){
+                        winner = firstAttacker;
+                    }else{
+                        winner = fighter1.name;
+                    }
+                }
+            }
+        }while (fighter1.health > 0 || fighter2.health > 0);
+        return winner;
+    /*method end*/
     }
 
 /*class end*/
