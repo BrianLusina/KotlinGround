@@ -10,8 +10,7 @@ import static org.junit.Assert.assertArrayEquals;
 * @since <pre>Aug 4, 2016</pre> 
 * @version 1.0 
 */ 
-public class TortoiseTest { 
-    Tortoise tortoise = new Tortoise();
+public class TortoiseTest {
 
     @Test
     public void testRaceOne() throws Exception {
@@ -27,6 +26,16 @@ public class TortoiseTest {
     @Test
     public void testRaceThree() throws Exception{
         assertArrayEquals(new int[]{2, 0, 0}, Tortoise.race(80, 100, 40));
+    }
+
+    @Test
+    public void testRaceFour() throws Exception{
+        assertArrayEquals(new int[]{0, 32, 18}, Tortoise.race(720, 850, 70))
+    }
+
+    @Test
+    public void testRaceFive() throws Exception{
+        assertArrayEquals(new int[]{3, 21, 49}, Tortoise.race(80, 91, 37));
     }
 
 /*CLASS END*/
