@@ -14,8 +14,8 @@ import org.junit.runners.JUnit4;
 public class DeclareWinnerTest { 
 
 @Test
-public void testDeclareWinner() throws Exception {
-        assertEquals(DeclareWinner.declareWinner(new DeclareWinner.Fighter("Lew", 10, 2),new DeclareWinner.Fighter("Harry", 5, 4), "Lew"), "Lew");
+public void testOne() throws Exception {
+        assertEquals("Lew to win", "Lew", DeclareWinner.declareWinner(new DeclareWinner.Fighter("Lew", 10, 2),new DeclareWinner.Fighter("Harry", 5, 4), "Lew"));
 }
 
     @Test

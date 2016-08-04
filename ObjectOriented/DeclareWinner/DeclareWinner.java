@@ -17,66 +17,44 @@ public class DeclareWinner {
             this.health = health;
             this.damagePerAttack = damagePerAttack;
         }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public int getHealth() {
-            return health;
-        }
-
-        public void setHealth(int health) {
-            this.health = health;
-        }
-
-        public int getDamagePerAttack() {
-            return damagePerAttack;
-        }
-
-        public void setDamagePerAttack(int damagePerAttack) {
-            this.damagePerAttack = damagePerAttack;
-        }
     /*FIGHTER END*/
     }
 
 
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
         String winner = "";
-        do{
-            if(firstAttacker.equals(fighter1.name)){
-                for(int x = 0;x < fighter2.health;x++){
-                    /*fighter 1 starts*/
-                    fighter2.health -= fighter1.damagePerAttack;
-                    //fighter 2 retaliates
-                    fighter1.health -= fighter2.damagePerAttack;
-                    if(fighter2.health <= 0){
-                        winner = firstAttacker;
-                    }else{
-                        winner = fighter2.name;
-                    }
-                }
-            }else{
-                for(int x = 0;x < fighter1.health;x++){
-                    /*fighter 1 starts*/
-                    fighter1.health -= fighter2.damagePerAttack;
-                    //fighter 2 retaliates
-                    fighter2.health -= fighter1.damagePerAttack;
-                    if(fighter1.health <= 0){
-                        winner = firstAttacker;
-                    }else{
-                        winner = fighter1.name;
-                    }
+        if(firstAttacker.equals(fighter1.name)){
+            for(int x = 0; x <= fighter2.health + fighter1.health; x++){
+                /*fighter 1 starts*/
+                fighter2.health -= fighter1.damagePerAttack;
+                //fighter 2 retaliates
+                fighter1.health -= fighter2.damagePerAttack;
+                if(fighter2.health <= 0){
+                    winner = firstAttacker;
+                    break;
+                }else if(fighter1.health <= 0){
+                    winner = fighter2.name;
+                    break;
                 }
             }
-        }while (fighter1.health > 0 || fighter2.health > 0);
+        }else{
+            for(int x = 0;x <= fighter1.health + fighter2.health;x++){
+                /*fighter 2 starts*/
+                fighter1.health -= fighter2.damagePerAttack;
+                //fighter 1 retaliates
+                fighter2.health -= fighter1.damagePerAttack;
+                if(fighter1.health <= 0){
+                    winner = firstAttacker;
+                    break;
+                }else if(fighter2.health <= 0){
+                    winner = fighter1.name;
+                    break;
+                }
+            }
+        }
+
         return winner;
     /*method end*/
     }
-
 /*class end*/
 }
