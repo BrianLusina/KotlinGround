@@ -20,7 +20,6 @@ public class DeclareWinner {
     /*FIGHTER END*/
     }
 
-
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
         String winner = "";
         if(firstAttacker.equals(fighter1.name)){
