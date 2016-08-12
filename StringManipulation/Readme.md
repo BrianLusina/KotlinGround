@@ -32,3 +32,15 @@ Tags:
   nameThatNumber(99)  // returns "ninety nine"
   ```
   Words should be seperated by only spaces and not hyphens. No need to validate parameters, they will always be in the range [0, 99]. Make sure that the returned String has no leading of trailing spaces. Good luck!
+
+## Word Search
+
+Write a method that will search an array of strings for all strings that contain another string, ignoring capitalization. Then return an array of the found strings.
+
+The method takes two parameters, the query string and the array of strings to search, and returns an array.
+
+If the string isn't contained in any of the strings in the array, the method returns an array containing a single string: "Empty" (or Nothing in Haskell, or "None" in Python)
+
+Examples
+
+If the string to search for is "me", and the array to search is ["home", "milk", "Mercury", "fish"], the method should return ["home", "Mercury"].
