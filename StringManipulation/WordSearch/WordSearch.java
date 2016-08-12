@@ -1,6 +1,7 @@
 package StringManipulation.WordSearch;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Package: StringManipulation.WordSearch
@@ -22,6 +23,14 @@ public class WordSearch {
            }
         }
         return (results.size() != 0) ? results.toArray(new String[results.size()]) : new String[]{"Empty"};
+    }
+
+    static String[] findWord_v2(String x, String[] y){
+        final String xLower = x.toLowerCase();
+        String[] searchResults = Arrays.stream(y)
+                .filter(s -> s.toLowerCase().contains(xLower))
+                .toArray(String[]::new);
+        return searchResults.length > 0 ? searchResults : new String[] {"Empty"};
     }
 
 /*class end*/
