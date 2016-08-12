@@ -10,6 +10,7 @@ import static org.junit.Assert.assertArrayEquals;
  * @author <Brian Lusina>
  * @since <pre>Aug 12, 2016</pre>
  * @version 1.0
+ *
  */
 public class WordSearchTest {
     WordSearch ws = new WordSearch();
