@@ -2,17 +2,18 @@ package Math.PopulationGrowth;
 
 import org.junit.Test; 
 import org.junit.Before; 
-import org.junit.After; 
+import org.junit.After;
+import static org.junit.Assert.assertEquals;
 
 /** 
 * PopulationGrowth Tester. 
 * 
-* @author <Authors name> 
+* @author <Brian Lusina>
 * @since <pre>Aug 12, 2016</pre> 
 * @version 1.0 
 */ 
-public class PopulationGrowthTest { 
-
+public class PopulationGrowthTest {
+    PopulationGrowth pg = new PopulationGrowth();
 @Before
 public void before() throws Exception { 
 } 
@@ -27,9 +28,18 @@ public void after() throws Exception {
 * 
 */ 
 @Test
-public void testNbYear() throws Exception { 
-//TODO: Test goes here... 
-} 
+public void testOne() throws Exception {
+    assertEquals("Expect 10", 10, pg.nbYear(1500000, 2.5, 10000, 2000000));
+}
 
+    @Test
+    public void testTwo(){
+        assertEquals(15, pg.nbYear(1500, 5, 100, 5000));
+    }
+
+    @Test
+    public void testThree(){
+        assertEquals(94, pg.nbYear(1500000, 0.25, 1000, 2000000));
+    }
 
 } 
