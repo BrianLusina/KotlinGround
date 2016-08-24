@@ -1,4 +1,4 @@
-package StringManipulation;
+package Strings;
 
 /**
  * Created by lusinabrian on 20/07/16.

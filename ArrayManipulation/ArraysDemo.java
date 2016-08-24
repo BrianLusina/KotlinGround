@@ -2,6 +2,7 @@ package ArrayManipulation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.function.IntPredicate;
 
 /**
  Package: ${PACKAGE_NAME}
@@ -39,6 +40,7 @@ public class ArraysDemo {
      @return result, returns the result of the sorted array*/
     public static int[] threeSort(int x, int y, int z){
         int[] result = new int[]{x, y, z};
+
         Arrays.sort(result);
         return result;
     }

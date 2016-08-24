@@ -1,4 +1,4 @@
-package StringManipulation;
+package Strings;
 
 
 /**

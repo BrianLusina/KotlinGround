@@ -1,4 +1,4 @@
-package StringManipulation.WordSearch;
+package Strings.WordSearch;
 
 
 import org.junit.Test;

@@ -1,10 +1,10 @@
-package StringManipulation.WordSearch;
+package Strings.WordSearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Package: StringManipulation.WordSearch
+ * Package: Strings.WordSearch
  * Created by lusinabrian on 12/08/16 or 12 Aug of 2016,
  * Time: 06:13.
  * Project: JxProjects

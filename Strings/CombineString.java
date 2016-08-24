@@ -1,7 +1,7 @@
-package StringManipulation;
+package Strings;
 
 /**
- * Package: StringManipulation
+ * Package: Strings
  * Created by lusinabrian on 02/08/16 or 02 Aug of 2016,
  * Time: 08:30.
  * Project: JxProjects

@@ -1,4 +1,4 @@
-package StringManipulation.NameThatNumber;
+package Strings.NameThatNumber;
 
 import org.junit.Test; 
 import org.junit.Before; 

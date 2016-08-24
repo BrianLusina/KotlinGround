@@ -1,10 +1,10 @@
-package StringManipulation.NameThatNumber;
+package Strings.NameThatNumber;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Package, StringManipulation
+ * Package, Strings
  * Created by lusinabrian on 03/08/16 or 03 Aug of 2016,
  * Time, 09,30.
  * Project, JxProjects
