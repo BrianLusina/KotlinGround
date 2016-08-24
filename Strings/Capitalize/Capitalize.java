@@ -1,4 +1,4 @@
-package Strings;
+package Strings.Capitalize;
 
 /**
  * Package: Strings
