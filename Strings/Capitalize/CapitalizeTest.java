@@ -23,10 +23,8 @@ public void before() throws Exception {
 public void after() throws Exception { 
 } 
 
-/** 
-* 
-* Method: capitalize(String str) 
-* 
+/**
+* Method: capitalize(String str)
 */ 
 @Test
 public void test_single_word() throws Exception {
