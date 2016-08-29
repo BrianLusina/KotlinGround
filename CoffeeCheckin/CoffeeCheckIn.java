@@ -17,15 +17,28 @@ public class CoffeeCheckIn {
         Scanner scanner = new Scanner(System.in);
         String employee_list = scanner.next();
         queue(employee_list);
-        System.out.println("Who was late today?");
-        String later_commer = scanner.next();
+        System.out.println("Who was late today?(Separate names with spaces)");
+        String late_comers = scanner.next();
+        late_evaluater(queue(employee_list), late_comers);
     }
 
-    /**queues the list of employees*/
+    /**queues the list of employees and add a 'marker', specifying who is next in the list*/
     private static ArrayList<String> queue(String employee_list) {
         ArrayList<String> list = new ArrayList<>();
         Collections.addAll(list, employee_list.split(" "));
+        String s = list.get(1) + "*";
         return list;
     }
 
+    /**Takes in initial list and new string list with late comers and evaluates who will buy coffee*/
+    private static ArrayList<String> late_evaluater(ArrayList<String> queue, String late_comers) {
+        ArrayList<String> updated_list = new ArrayList<>();
+        for(String late: late_comers.split(" ")){
+            if(queue.contains(late)){
+                
+            }
+        }
+
+        return null;
+    }
 }
