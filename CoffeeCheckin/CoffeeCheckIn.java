@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class CoffeeCheckIn {
     public static void main(String[] args){
-        System.out.println("Hello, welcome to Coffee Checkin, please enter list of employees, separate names with a space");
+        System.out.println("Hello, welcome to Coffee Check-in, please enter list of employees for the week( separate names with a space)");
         Scanner scanner = new Scanner(System.in);
         String employee_list = scanner.next();
         queue(employee_list);
@@ -26,19 +26,18 @@ public class CoffeeCheckIn {
     private static ArrayList<String> queue(String employee_list) {
         ArrayList<String> list = new ArrayList<>();
         Collections.addAll(list, employee_list.split(" "));
-        String s = list.get(1) + "*";
         return list;
     }
 
-    /**Takes in initial list and new string list with late comers and evaluates who will buy coffee*/
+    /**Takes in initial list and new string with late comers and evaluates who will buy coffee*/
     private static ArrayList<String> late_evaluater(ArrayList<String> queue, String late_comers) {
         ArrayList<String> updated_list = new ArrayList<>();
         for(String late: late_comers.split(" ")){
-            if(queue.contains(late)){
-                
+            for(String q: queue){
+
             }
         }
 
-        return null;
+        return updated_list;
     }
 }
