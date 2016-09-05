@@ -1,3 +1,5 @@
+package HeartRates;
+
 import java.util.Scanner;
 
 public class HeartRates
