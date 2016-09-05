@@ -8,11 +8,6 @@ import java.util.regex.Matcher;
 public class Regex {
     public static void main(String[] args){
 
-        System.out.println("Testing for validPhoneNumber()");
-        System.out.println(validPhoneNumber("(123) 456-7890"));
-        System.out.println(validPhoneNumber("(1111)555 2345"));
-        System.out.println(validPhoneNumber("(098) 123 4567"));
-
         System.out.println("Testing for getCount()");
         System.out.println(getCount("Power"));
         System.out.println(getCount("Oops"));
@@ -24,24 +19,7 @@ public class Regex {
         System.out.println(autocorrect("u woos"));
     }
 
-/**
- * Write a function that accepts a string, and returns true if it is in the form of a phone number.
- Assume that any integer from 0-9 in any of the spots will produce a valid phone number.
 
- Only worry about the following format:
- (123) 456-7890 (don't forget the space after the close parentheses)
-
- Examples:
- validPhoneNumber("(123) 456-7890")  =>  returns true
- validPhoneNumber("(1111)555 2345")  => returns false
- validPhoneNumber("(098) 123 4567")  => returns false
- * */
-    public static boolean validPhoneNumber(String phoneNumber) {
-        String number = "^\\([0-9]{3}\\)\\s[0-9]{3}\\-[0-9]{4}$";
-        Pattern pattern = Pattern.compile(number);
-        Matcher matcher = pattern.matcher(phoneNumber);
-        return matcher.find();
-    }
 
 /**Return the number (count) of vowels in the given string.
 We will consider a, e, i, o, and u as vowels for this Kata.
