@@ -1,9 +1,3 @@
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-
-/**
- * Created by lusinabrian on 15/06/16.
- * Description:
 
  NOTE: This kata requires a decent knowledge of Regular Expressions. As such, it's best to learn about it before tackling this kata. Some good places to start are: the MDN pages, and Regular-Expressions.info.
  You are to write a Regular Expression that matches any string with at least one number divisible by 4 (with no remainder). In most languages, you could do this easily by using number % 4 == 0. How would you do it with Regex?
@@ -28,23 +22,4 @@ import java.util.regex.Matcher;
  "No, [2014] isn't a multiple of 4..."  // 2014 is invalid
  "...may be [+002016] will be." // 2016 is valid
  NOTE: Only Mod4.test(str) will be used, so your expression will just need make a match of some kind.
- */
-public class ModFour {
-    public static void main(String[] args) {
-
-        String[] validTests = {"[+05620]", "[005624]", "[-05628]", "[005632]", "[555636]", "[+05640]", "[005600]", "the beginning [-0] the end", "~[4]", "[32]", "the beginning [0] ... [invalid] numb[3]rs ... the end", "...may be [+002016] will be."};
-        for (String test : validTests) {
-            Matcher m = mod4.matcher(test);
-            System.out.print(test + " is valid, but no match was made." + m.find());
-        }
-
-        String[] invalidTests = {"[+05621]", "[-55622]", "[005623]", "[~24]", "[8.04]", "No, [2014] isn't a multiple of 4..."};
-
-        for (String test : invalidTests) {
-            Matcher m = mod4.matcher(test);
-            System.out.println(test + " is invalid, but a match was made." + m.find());
-        }
-    }
-
-    public static Pattern mod4 = Pattern.compile("...");
-}
+ 
