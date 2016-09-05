@@ -8,10 +8,6 @@ import java.util.regex.Matcher;
 public class Regex {
     public static void main(String[] args){
 
-        System.out.println("Testing for getCount()");
-        System.out.println(getCount("Power"));
-        System.out.println(getCount("Oops"));
-
         System.out.println("Testing for autocorrect()");
         System.out.println(autocorrect("you are huge"));
         System.out.println(autocorrect("youuuuuuuuu"));
@@ -19,21 +15,6 @@ public class Regex {
         System.out.println(autocorrect("u woos"));
     }
 
-
-
-/**Return the number (count) of vowels in the given string.
-We will consider a, e, i, o, and u as vowels for this Kata.
-**/
-    public static int getCount(String str) {
-        String vow = "[aeiou]";
-        int vowelCount = 0;
-        Pattern pattern = Pattern.compile(vow,Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(str);
-        while(matcher.find()){
-            vowelCount++;
-        }
-        return vowelCount;
-    }
 
 
 /**
