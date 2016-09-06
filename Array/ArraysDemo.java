@@ -1,8 +1,7 @@
-package ArrayManipulation;
+package Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.function.IntPredicate;
 
 /**
  Package: ${PACKAGE_NAME}
@@ -33,7 +32,7 @@ public class ArraysDemo {
      Return an array of the numbers in ascending order.
      @implNote
      Instantiate and array with the 3 inputs as elements of the array,
-     sort the array using ArrayManipulation.sort(array) and return the result
+     sort the array using Array.sort(array) and return the result
      @param x the first integer input
      @param y the second integer input
      @param z the 3rd integer input

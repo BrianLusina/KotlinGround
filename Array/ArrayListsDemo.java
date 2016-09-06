@@ -1,9 +1,9 @@
-package ArrayManipulation;
+package Array;
 
 import java.util.ArrayList;
 
 /**
- * Package: ArrayManipulation
+ * Package: Array
  * Created by lusinabrian on 11/07/16.
  * Time: 09:15.
  * Project: JxProjects
