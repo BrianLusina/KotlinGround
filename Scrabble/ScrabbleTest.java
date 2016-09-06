@@ -15,6 +15,7 @@ import java.util.Collection;
  * Project: JxProjects
  * Description:
  */
+@RunWith(Parameterized.class)
 public class ScrabbleTest {
 
     private String input;
@@ -35,7 +36,7 @@ public class ScrabbleTest {
         });
     }
 
-    public ScrabbleScoreTest(String input, int expectedOutput) {
+    public ScrabbleTest(String input, int expectedOutput) {
         this.input = input;
         this.expectedOutput = expectedOutput;
     }
@@ -43,7 +44,6 @@ public class ScrabbleTest {
     @Test
     public void test() {
         ScrabbleGame scrabble = new ScrabbleGame(input);
-
         assertEquals(expectedOutput, scrabble.getScore());
     }
 
