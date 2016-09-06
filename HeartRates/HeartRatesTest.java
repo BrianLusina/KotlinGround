@@ -1,3 +1,5 @@
+package HeartRates;
+
 import javax.swing.JOptionPane;
 import java.util.Scanner;
 
