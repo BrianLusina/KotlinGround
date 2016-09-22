@@ -10,11 +10,12 @@ public class Histogram {
     public static String histogram(final int results[]) {
         String output = "";
         for(int i =0; i < results.length;i++) {
+            String n = (results[i] != 0) ? " " + String.valueOf(results[i]) + "\n" : "";
             output += String.valueOf(i+1) + "|"
                     + new String(new char[results[i]]).replace("\0","#")
-                    + " " + String.valueOf(results[i]) + "\n";
+                    + n;
         }
 
-        return output;
+        return new StringBuilder(output).reverse().toString();
     }
 }

@@ -17,5 +17,6 @@ public class PowerSumDig {
         for(Integer number : IntStream.range(1,10).toArray()){
 
         }
+        return 5;
     }
 }
