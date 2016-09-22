@@ -9,13 +9,13 @@ public class Histogram {
      * @return the histogram in string format*/
     public static String histogram(final int results[]) {
         String output = "";
-        for(int i =0; i < results.length;i++) {
-            String n = (results[i] != 0) ? " " + String.valueOf(results[i]) + "\n" : "";
-            output += String.valueOf(i+1) + "|"
-                    + new String(new char[results[i]]).replace("\0","#")
+        for(int i = results.length; i > 0; i--) {
+            String n = (results[i-1] != 0) ? " " + String.valueOf(results[i-1]) + "\n" : "" + "\n";
+            output += String.valueOf(i) + "|"
+                    + new String(new char[results[i-1]]).replace("\0","#")
                     + n;
         }
 
-        return new StringBuilder(output).reverse().toString();
+        return output;
     }
 }
