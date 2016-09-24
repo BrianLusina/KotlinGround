@@ -1,4 +1,4 @@
-package Strings;
+package Strings.ReverseString;
 
 /**
  * Package: Strings
@@ -9,7 +9,7 @@ package Strings;
  * Write a java algorithm to reverse a string, and print it's output
  * For instance, "CodeNinja" returns: 'ajniNedoC'
  */
-public class ReverseString {
+public class Reverse {
 
     public static void main(String[] args){
         /*TESTS*/
