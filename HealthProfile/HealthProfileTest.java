@@ -1,3 +1,5 @@
+package HealthProfile;
+
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -9,7 +11,7 @@ public class HealthProfileTest
 		JOptionPane joptPane = new JOptionPane();
 
 		//prompt
-		joptPane.showMessageDialog(null,"Welcome to the Health Profile! Enter a few details about yorself and we shall set up your health profile");
+		joptPane.showMessageDialog(null,"Welcome to the HealthProfile! Enter a few details about yorself and we shall set up your health profile");
 		String fname = joptPane.showInputDialog(null,"What is your first name?");
 		String sname = joptPane.showInputDialog(null,"What is your surname?");
 		String gen = joptPane.showInputDialog(null,"What is our sex(male or female)?");

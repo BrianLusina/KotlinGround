@@ -1,12 +1,15 @@
-import org.junit.Test;
+package RomanNumerals.src.test.java;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.Test;
 import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
+import RomanNumerals.src.main.java.RomanNumeral;
 
 @RunWith(Parameterized.class)
 public class RomanNumeralsTest {
@@ -14,7 +17,7 @@ public class RomanNumeralsTest {
     private int input;
     private String expectedOutput;
 
-    @Parameters
+    @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {0, ""},

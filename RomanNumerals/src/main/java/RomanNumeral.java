@@ -1,3 +1,5 @@
+package RomanNumerals.src.main.java;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +8,7 @@ import java.util.Map;
  Package: ${PACKAGE_NAME}
  Created by lusinabrian on 23/07/16 or 23 Jul of 2016,
  Time: 15:56.
- Project: roman-numerals
+ Project: RomanNumerals
  Desc: convert normal numbers to roman numerals
  */
 public class RomanNumeral {
