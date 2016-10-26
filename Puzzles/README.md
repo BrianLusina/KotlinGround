@@ -1,0 +1,1 @@
+Puzzle problems in Java that can not be really defined :laughing:

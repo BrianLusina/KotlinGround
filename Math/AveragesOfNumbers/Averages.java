@@ -9,7 +9,7 @@ class Averages {
 
         double[] out = new double[numbers.length -1];
         for(int x = 0; x < numbers.length-1; x++){
-            out[x] = ((double) numbers[x] + (double) numbers[x+1]) / 2;
+            out[x] = (numbers[x] + numbers[x+1]) / 2.0;
         }
 
         return out;
