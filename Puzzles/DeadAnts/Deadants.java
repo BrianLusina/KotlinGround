@@ -16,7 +16,7 @@ class Deadants {
         int count = 0;
 
         for (String aStampede : stampede) {
-            
+
             if (!aStampede.equals("ant")) {
                 count++;
             }
