@@ -1,3 +1,5 @@
+package allergies.src.main.java;
+
 public enum Allergen {
     EGGS(1),
     PEANUTS(2),

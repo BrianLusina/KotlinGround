@@ -1,7 +1,11 @@
+package anagram.src.test.java;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
+
+import anagram.src.main.java.Anagram;
 import org.junit.Test;
 
 public class AnagramTest {

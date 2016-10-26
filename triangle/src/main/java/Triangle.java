@@ -1,3 +1,5 @@
+package triangle.src.main.java;
+
 /**
  * Created by lusinabrian on 16/07/16.
  * Checks the kind of triangle based on length of sides given.

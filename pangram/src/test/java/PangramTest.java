@@ -1,4 +1,7 @@
+package pangram.src.test.java;
+
 import org.junit.Test;
+import pangram.src.main.java.Pangrams;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;

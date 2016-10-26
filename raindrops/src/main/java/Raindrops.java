@@ -1,3 +1,5 @@
+package raindrops.src.main.java;
+
 /**
  * Package: PACKAGE_NAME
  * Created by lusinabrian on 31/07/16 or 31 Jul of 2016,

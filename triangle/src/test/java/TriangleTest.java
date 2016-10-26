@@ -1,4 +1,9 @@
+package triangle.src.test.java;
+
 import org.junit.Test;
+import triangle.src.main.java.Triangle;
+import triangle.src.main.java.TriangleException;
+import triangle.src.main.java.TriangleKind;
 
 import static org.junit.Assert.assertEquals;
 

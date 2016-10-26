@@ -1,6 +1,9 @@
+package trinary.src.test.java;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import trinary.src.main.java.Trinary;
 
 public class TrinaryTest {
     @Test

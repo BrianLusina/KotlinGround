@@ -1,3 +1,5 @@
+package gigasecond.src.main.java;
+
 import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.LocalDateTime;

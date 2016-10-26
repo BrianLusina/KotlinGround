@@ -1,3 +1,5 @@
+package pangram.src.main.java;
+
 /**
  * Created by lusinabrian on 24/06/16.
  */

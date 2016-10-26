@@ -1,3 +1,5 @@
+package hexadecimal.src.main.java;
+
 import java.util.Arrays;
 
 public class Hexadecimal {

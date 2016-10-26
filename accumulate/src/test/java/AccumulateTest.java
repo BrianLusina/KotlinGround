@@ -1,3 +1,6 @@
+package accumulate.src.test.java;
+
+import accumulate.src.main.java.Accumulate;
 import org.junit.Test;
 
 import java.util.Arrays;

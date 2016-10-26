@@ -1,5 +1,9 @@
+package strain.src.test.java;
+
 import org.junit.Assert;
 import org.junit.Test;
+import strain.src.main.java.Strain;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;

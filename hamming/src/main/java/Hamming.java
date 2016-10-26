@@ -1,3 +1,5 @@
+package hamming.src.main.java;
+
 public class Hamming {
 
     public static int compute(String dnaStrand1, String dnaStrand2){

@@ -1,3 +1,7 @@
+package meetup.src.test.java;
+
+import meetup.src.main.java.Meetup;
+import meetup.src.main.java.MeetupSchedule;
 import org.joda.time.DateTime;
 import org.junit.Test;
 

@@ -1,3 +1,5 @@
+package trinary.src.main.java;
+
 /**
  * Created by lusinabrian on 15/08/16 or 15 Aug of 2016,
  * Time: 14:40.

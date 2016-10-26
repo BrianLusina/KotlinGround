@@ -1,6 +1,9 @@
+package hamming.src.test.java;
+
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
+import hamming.src.main.java.Hamming;
 import org.junit.Test;
 
 public class HammingTest {

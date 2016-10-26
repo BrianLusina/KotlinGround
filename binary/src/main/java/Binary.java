@@ -1,3 +1,5 @@
+package binary.src.main.java;
+
 import java.util.Arrays;
 
 /**

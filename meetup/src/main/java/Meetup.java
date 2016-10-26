@@ -1,3 +1,5 @@
+package meetup.src.main.java;
+
 import org.joda.time.DateTime;
 
 public class Meetup {

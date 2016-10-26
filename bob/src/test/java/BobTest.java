@@ -1,3 +1,6 @@
+package bob.src.test.java;
+
+import bob.src.main.java.Bob;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
