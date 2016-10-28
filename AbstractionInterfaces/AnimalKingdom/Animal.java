@@ -7,7 +7,19 @@ package AbstractionInterfaces.AnimalKingdom;
  */
 abstract class Animal {
 
-    public void eat(){}
+    /**Types of food the animals eat*/
+    public abstract void eat(String food);
 
-    public void sleep(int hours)
+    /**How long the anima will sleep*/
+    public void sleep(int hours){
+        try{
+            // 1000 milliseconds * 60 seconds * 60 minutes * hours
+            Thread.sleep(1000 * 60 *60 *hours);
+        }catch (InterruptedException ie){
+            ie.printStackTrace();
+        }
+    }
+
+    /**The sound the animals make*/
+    public abstract void makeNoise();
 }
