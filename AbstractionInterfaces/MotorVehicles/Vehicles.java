@@ -6,7 +6,7 @@ package AbstractionInterfaces.MotorVehicles;
  * Description: Abstract class for all the motor vehicles
  */
 
-abstract class Vehicles {
+abstract class Vehicles implements VehicleInterface{
     /**Constructor for vehicles
      * @param name Name of vehicle
      * @param model Model of vehicle*/

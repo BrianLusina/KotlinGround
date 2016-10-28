@@ -6,7 +6,7 @@ This demonstrates that Abstract classes can have constructors that can be inheri
 
 This is the hierarchy: 
 
-                                            Vehicle
+                                            Vehicle implments VehicleInterface
                                                |
                                               Cars
                                                |

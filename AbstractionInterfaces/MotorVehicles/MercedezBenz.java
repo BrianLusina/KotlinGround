@@ -6,7 +6,7 @@ package AbstractionInterfaces.MotorVehicles;
  * Description: Subclass of {@link Cars}
  */
 
-public class MercedezBenz extends Cars{
+class MercedezBenz extends Cars{
     /**
      * Constructor for vehicles
      * @param name  Name of vehicle
@@ -17,12 +17,12 @@ public class MercedezBenz extends Cars{
     }
 
     @Override
-    void manufacturer(String name) {
-
+    String manufacturer() {
+        return "Mercedez Benz";
     }
 
     @Override
-    void dateOfManufacture(String name) {
+    void dateOfManufacture() {
 
     }
 
@@ -44,5 +44,15 @@ public class MercedezBenz extends Cars{
     @Override
     void numberOfSeats(int seats) {
 
+    }
+
+    @Override
+    public void hasStereo(boolean hasStereo) {
+        System.out.print(hasStereo);
+    }
+
+    @Override
+    public String bodyColor(String color) {
+        return color;
     }
 }

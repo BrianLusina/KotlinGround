@@ -15,12 +15,11 @@ abstract class Cars extends Vehicles{
         super(name, model);
     }
 
-    /**Name of the manufacturer
-     * @param name Name of manufacturer*/
-    abstract void manufacturer(String name);
+    /**Name of the manufacturer*/
+    abstract String manufacturer();
 
-    /**Date of manufacture
-     * @param name Name of manufacture*/
-    abstract void dateOfManufacture(String name);
+
+    /**Date of manufacture*/
+    abstract void dateOfManufacture();
 
 }
