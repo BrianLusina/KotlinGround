@@ -18,7 +18,9 @@ class SavingsAccount extends BankAccount{
     /**Void method to add interest to the balance of this account
      * Assuming interest rate has already been calculated*/
     public void addMonthlyInterest(){
-        this.getBalance() *= this.getInterestRate();
+        double newBalance = this.getBalance() * this.getInterestRate();
+        //set the new balance
+        this.setBalance(newBalance);
     }
 
     public double getInterestRate() {
@@ -26,6 +28,6 @@ class SavingsAccount extends BankAccount{
     }
 
     public void setInterestRate(double interestRate) {
-        this.interestRate = interestRate/100;
+        this.interestRate = 1 + (interestRate/100);
     }
 }

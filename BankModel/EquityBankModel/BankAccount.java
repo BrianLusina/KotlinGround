@@ -5,8 +5,7 @@ package BankModel.EquityBankModel;
 class BankAccount {
     private int id;
     private String owner;
-    private double balance;
-    private double minimumBalance;
+    private double balance, minimumBalance;
 
     BankAccount(){}
 

@@ -15,12 +15,15 @@ class CurrentAccount extends BankAccount{
         this.maintainanceFee = maintainanceFee;
     }
 
+    /**Deducts the monthly fee from the current account*/
     private void deductMonthlyFee(){
+        double newBalance;
+        //if current balance is less that minimum balance display error
         if(this.getBalance() <= this.getMinimumBalance()){
-            //display error
             System.out.println("Your funds are low");
         }else{
-            this.getBalance() -= this.getMaintainanceFee();
+            newBalance = this.getBalance() - this.getMaintainanceFee();
+            this.setBalance(newBalance);
         }
     }
 
