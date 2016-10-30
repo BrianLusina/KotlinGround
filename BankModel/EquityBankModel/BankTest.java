@@ -23,13 +23,13 @@ public class BankTest {
             savingsAccount = new SavingsAccount(1, owner, openBal, minBal, rate);
             savingsAccount.setInterestRate(rate);
             savingsAccount.addMonthlyInterest();
+            System.out.println("Current Balance:" + savingsAccount.getBalance());
+
         }else{
             currentAccount = new CurrentAccount(1,owner,openBal,minBal,fee);
             currentAccount.setMaintainanceFee(fee);
             currentAccount.deductMonthlyFee();
+            System.out.println("Current Balance: " + currentAccount.getBalance());
         }
-
-        System.out.println(currentAccount.getBalance());
-        System.out.println(savingsAccount.getInterestRate());
     }
 }
