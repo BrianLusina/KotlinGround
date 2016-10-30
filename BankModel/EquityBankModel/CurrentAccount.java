@@ -4,6 +4,8 @@ package BankModel.EquityBankModel;
 class CurrentAccount extends BankAccount{
     private double maintainanceFee;
 
+    public CurrentAccount() {}
+
     public CurrentAccount(double maintainanceFee) {
         this.maintainanceFee = maintainanceFee;
     }
@@ -16,7 +18,7 @@ class CurrentAccount extends BankAccount{
     }
 
     /**Deducts the monthly fee from the current account*/
-    private void deductMonthlyFee(){
+    public void deductMonthlyFee(){
         double newBalance;
         //if current balance is less that minimum balance display error
         if(this.getBalance() <= this.getMinimumBalance()){

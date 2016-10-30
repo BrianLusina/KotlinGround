@@ -12,9 +12,9 @@ public class AccountTest
 		double withdraw;
 		double openBal;
 		//introduce user to Bank
-		joptionPane.showMessageDialog(null,"Welcome to LuDynamic Bank \n We got you covered.");
-		String name = joptionPane.showInputDialog(null,"Please enter a name that will be used as your bank account name");
-		String bal = joptionPane.showInputDialog(null,"Please do enter the initial amount you wish to deposit with LuDynamic");
+		JOptionPane.showMessageDialog(null,"Welcome to LuDynamic Bank \n We got you covered.");
+		String name = JOptionPane.showInputDialog(null,"Please enter a name that will be used as your bank account name");
+		String bal = JOptionPane.showInputDialog(null,"Please do enter the initial amount you wish to deposit with LuDynamic");
 
 		openBal = Double.parseDouble(bal);
 		//create objects of the class BankModel.Account
@@ -31,7 +31,7 @@ public class AccountTest
 
 		if(answer.equals("Y"))
 		{
-			String depositAmount = joptionPane.showInputDialog("Enter the amount to deposit");
+			String depositAmount = JOptionPane.showInputDialog("Enter the amount to deposit");
 			deposit = Double.parseDouble(depositAmount);
 			account1.credit(deposit);
 		}
@@ -42,7 +42,7 @@ public class AccountTest
 			option2.toUpperCase();
 				if(option2.equals("Y"))
 				{
-					String withdrawAmount = joptionPane.showInputDialog("Enter the amount to Withdraw");
+					String withdrawAmount = JOptionPane.showInputDialog("Enter the amount to Withdraw");
 					withdraw = Double.parseDouble(withdrawAmount);
 					account1.debit(withdraw);
 				}

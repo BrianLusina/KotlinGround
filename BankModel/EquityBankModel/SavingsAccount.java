@@ -4,6 +4,8 @@ package BankModel.EquityBankModel;
 class SavingsAccount extends BankAccount{
     private double interestRate;
 
+    public SavingsAccount() {}
+
     public SavingsAccount(double interestRate) {
         this.interestRate = interestRate;
     }
