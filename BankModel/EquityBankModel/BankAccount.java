@@ -1,24 +1,23 @@
 package BankModel.EquityBankModel;
 
-/**
- * Description:
- */
-public class BankAccount {
+/*** Description:Main Bank account that is the parent of all bank accounts in the Bank.
+ * Contains methods and fields that will be inherited from subclasses*/
+class BankAccount {
     private int id;
-    private String ownwer;
+    private String owner;
     private double balance;
     private double minimumBalance;
 
-    public BankAccount(){}
+    BankAccount(){}
 
     /**Constructor
      * @param id user id
-     * @param ownwer bank account owner
+     * @param owner bank account owner
      * @param balance balance in the account
      * @param minimumBalance minimum balance allowed by the bank for the account*/
-    public BankAccount(int id, String ownwer, double balance, double minimumBalance) {
+    BankAccount(int id, String owner, double balance, double minimumBalance) {
         this.id = id;
-        this.ownwer = ownwer;
+        this.owner = owner;
         this.balance = balance;
         this.minimumBalance = minimumBalance;
     }
@@ -43,12 +42,12 @@ public class BankAccount {
         this.id = id;
     }
 
-    public String getOwnwer() {
-        return ownwer;
+    public String getOwner() {
+        return owner;
     }
 
-    public void setOwnwer(String ownwer) {
-        this.ownwer = ownwer;
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     public double getBalance() {
