@@ -1,7 +1,7 @@
-package AbstractionInterfaces.AnimalKingdom;
+package ObjectOriented.AbstractionInterfaces.AnimalKingdom;
 
 /**
- * AbstractionInterfaces.AnimalKingdom
+ * ObjectOriented.AbstractionInterfaces.AnimalKingdom
  * Created by lusinabrian on 28/10/16.
  * Description: cat class that extends {@link Animal}
  */

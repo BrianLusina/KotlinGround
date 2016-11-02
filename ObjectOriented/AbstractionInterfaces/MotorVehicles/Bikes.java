@@ -1,7 +1,7 @@
-package AbstractionInterfaces.MotorVehicles;
+package ObjectOriented.AbstractionInterfaces.MotorVehicles;
 
 /**
- * AbstractionInterfaces.MotorVehicles
+ * ObjectOriented.AbstractionInterfaces.MotorVehicles
  * Created by lusinabrian on 28/10/16.
  * Description: Subclass of {@link Vehicles}
  */

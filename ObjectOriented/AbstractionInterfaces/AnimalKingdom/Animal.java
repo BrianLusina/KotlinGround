@@ -1,7 +1,7 @@
-package AbstractionInterfaces.AnimalKingdom;
+package ObjectOriented.AbstractionInterfaces.AnimalKingdom;
 
 /**
- * AbstractionInterfaces
+ * ObjectOriented.AbstractionInterfaces
  * Created by lusinabrian on 28/10/16.
  * Description:Abstract class for the animal kingdom
  */
