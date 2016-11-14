@@ -1,34 +1,14 @@
 package FunctionalProg.Triangle;
 
+import FunctionalProg.TrianglePojo;
+
 import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
 
-public class TriangleFuncProgram {
+class TriangleFuncProgram {
 
-    public static Function<Student, Boolean> f = student -> {
-
-        String name = student.getFullName();
-        String number = student.studentNumber;
-
-        return (name.equals("John Smith") && number.equals("js123"));
+    public static ToDoubleFunction<TrianglePojo> f = triangle -> {
+        triangle.setArea(0.5 * triangle.base * triangle.height);
+        return triangle.getArea();
     };
-
-    public static class Student {
-        private final String firstName;
-        private final String lastName;
-        public final String studentNumber;
-
-        public Student(String firstName, String lastName, String studentNumber) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.studentNumber = studentNumber;
-        }
-
-        public String getFullName() {
-            return firstName + " " + lastName;
-        }
-        public String getCommaName() {
-            return lastName + ", " + firstName;
-        }
-    }
-
 }

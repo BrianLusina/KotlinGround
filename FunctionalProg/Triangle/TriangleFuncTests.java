@@ -4,11 +4,8 @@ import FunctionalProg.TrianglePojo;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by lusinabrian on 10/06/16.
- * Tests Functions
- */
-public class TriangleFuncTests {
+
+class TriangleFuncTests {
     @Test
     public void testArea() throws Exception {
         TrianglePojo t = new TrianglePojo(5, 10);

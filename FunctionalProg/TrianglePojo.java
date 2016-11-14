@@ -10,10 +10,9 @@ public class TrianglePojo {
     public final int base;
     private double area;
 
-    public TrianglePojo(int height, int base, double area) {
+    public TrianglePojo(int height, int base) {
         this.height = height;
         this.base = base;
-        this.area = area;
     }
 
     public void setArea(double a) {
