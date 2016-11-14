@@ -11,6 +11,8 @@ import java.util.function.Function;
  */
 public class FunctionalProgramming {
 
-    public static Function<StudentPojo, ?> f = ;//Make me a function; remember to set the types!
+    //Make me a function; remember to set the types!
+    public static Function<StudentPojo, Boolean> f = studentPojo ->
+            studentPojo.getFullName().equals("John Smith") && studentPojo.studentNumber.equals("js123");
 
 }

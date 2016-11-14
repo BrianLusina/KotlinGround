@@ -1,3 +1,5 @@
+package FunctionalProg;
+
 /**
  * Created by lusinabrian on 10/06/16.
  * Tests Functions
