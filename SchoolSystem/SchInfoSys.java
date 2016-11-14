@@ -17,7 +17,7 @@ public class SchInfoSys{
 	private String currentClass;
 	private double feeBalance;
 	private String[] regUnits; //array for units
-	private int unitsCount; //counts the number of units that Student has registered
+	private int unitsCount; //counts the number of units that StudentPojo has registered
 
 	//constructor
 	public SchInfoSys(int a,String n,String c){
