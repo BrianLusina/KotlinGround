@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
-class TriangleFuncTests {
+public class TriangleFuncTests {
     @Test
     public void testArea() throws Exception {
         TrianglePojo t = new TrianglePojo(5, 10);
