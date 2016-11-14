@@ -1,11 +1,11 @@
-package FunctionalProg;
+package FunctionalProg.Student;
 
 /**
  * FunctionalProg
  * Created by lusinabrian on 14/11/16.
  * Description:
  */
-public class StudentPojo {
+class StudentPojo {
 
     private final String firstName;
     private final String lastName;

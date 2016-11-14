@@ -1,6 +1,5 @@
 package FunctionalProg.Triangle;
 
-import FunctionalProg.TrianglePojo;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

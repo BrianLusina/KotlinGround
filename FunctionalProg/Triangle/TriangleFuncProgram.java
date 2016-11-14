@@ -1,7 +1,5 @@
 package FunctionalProg.Triangle;
 
-import FunctionalProg.TrianglePojo;
-
 import java.util.function.ToDoubleFunction;
 
 class TriangleFuncProgram {

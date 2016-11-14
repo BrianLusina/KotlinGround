@@ -1,6 +1,5 @@
 package FunctionalProg.Closures;
 
-import java.util.function.ToIntFunction;
 import java.util.function.IntUnaryOperator;
 /**
  * FunctionalProg.Closures

@@ -1,11 +1,9 @@
 package FunctionalProg.Student;
 
-import FunctionalProg.StudentPojo;
-
 import java.util.function.Function;
 
 /**
- * FunctionalProg.StudentPojo
+ * FunctionalProg.Student.StudentPojo
  * Created by lusinabrian on 14/11/16.
  * Description:
  */

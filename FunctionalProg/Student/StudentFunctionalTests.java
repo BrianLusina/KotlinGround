@@ -1,11 +1,10 @@
 package FunctionalProg.Student;
-import FunctionalProg.StudentPojo;
 import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
- * FunctionalProg.StudentPojo
+ * FunctionalProg.Student.StudentPojo
  * Created by lusinabrian on 14/11/16.
  * Description:
  */
