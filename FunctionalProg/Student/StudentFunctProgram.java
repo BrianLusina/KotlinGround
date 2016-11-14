@@ -1,4 +1,4 @@
-package FunctionalProg.Student1;
+package FunctionalProg.Student;
 
 import FunctionalProg.StudentPojo;
 
@@ -9,7 +9,7 @@ import java.util.function.Function;
  * Created by lusinabrian on 14/11/16.
  * Description:
  */
-public class FunctionalProgramming {
+public class StudentFunctProgram {
 
     //Make me a function; remember to set the types!
     public static Function<StudentPojo, Boolean> f = studentPojo ->

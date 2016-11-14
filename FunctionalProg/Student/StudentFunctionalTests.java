@@ -1,4 +1,4 @@
-package FunctionalProg.Student1;
+package FunctionalProg.Student;
 import FunctionalProg.StudentPojo;
 import org.junit.Test;
 import static org.junit.Assert.assertFalse;
@@ -13,6 +13,6 @@ public class StudentFunctionalTests {
     @Test
     public void testJohnSmith() throws Exception {
         StudentPojo jSmith = new StudentPojo("John", "Smith", "js123");
-        assertTrue("John Smith with student number js123 did not return true", FunctionalProgramming.f.apply(jSmith));
+        assertTrue("John Smith with student number js123 did not return true", StudentFunctProgram.f.apply(jSmith));
     }
 }
