@@ -1,4 +1,5 @@
 package FunctionalProg.DragonCurve;
+
 import java.util.function.IntFunction;
 import java.util.function.IntPredicate;
 
@@ -7,6 +8,7 @@ class DragonsCurve {
 
     public IntFunction<String> mapFunction = ; //Make the function; map the chars to Strings
     //a -> aRbFR, b -> LFaLb, otherwise -> itself
+
     /**
      * Make the curve; stream the chars repeatedly (starting with Fa) through the mapFunction n times
      * Then remove the a and b (createFilter function is useful for that)
@@ -28,6 +30,6 @@ class DragonsCurve {
      * Create a predicate to filter the specified char; keep or remove based on keep variable
      */
     public IntPredicate createFilter(char filterWhat, boolean keep) {
-        return ; //Dat predicate
+        return; //Dat predicate
     }
 }
