@@ -1,6 +1,5 @@
 package Strings.Rotations;
 import static org.junit.Assert.*;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Arrays;
@@ -11,8 +10,7 @@ import org.junit.Test;
  * Created by lusinabrian on 15/11/16.
  * Description: Tests for {@link Rotate}
  */
-class RotateTest {
-
+public class RotateTest {
     private static void testing(Boolean actual, Boolean expected) {
         assertEquals(expected, actual);
     }
@@ -29,4 +27,3 @@ class RotateTest {
         testing(Rotate.containAllRots("XjYABhR", a), false);
     }
 }
-
