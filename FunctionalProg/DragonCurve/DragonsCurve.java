@@ -6,7 +6,7 @@ import java.util.function.IntPredicate;
 
 class DragonsCurve {
 
-    public IntFunction<String> mapFunction = ; //Make the function; map the chars to Strings
+    public IntFunction<String> mapFunction = null; //Make the function; map the chars to Strings
     //a -> aRbFR, b -> LFaLb, otherwise -> itself
 
     /**
@@ -30,6 +30,6 @@ class DragonsCurve {
      * Create a predicate to filter the specified char; keep or remove based on keep variable
      */
     public IntPredicate createFilter(char filterWhat, boolean keep) {
-        return; //Dat predicate
+        return null; //Dat predicate
     }
 }
