@@ -1,29 +1,27 @@
 package CoffeeCheckin;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.Scanner;
-/**
- * Package: CoffeeCheckin
- * Created by lusinabrian on 29/08/16 or 29 Aug of 2016,
- * Time: 00:27.
- * Project: JxProjects
- * Description:
- store list of names in an ArrayList
- split the string with names and store in an ArrayList, evaluating who will be next in line.
- */
-public class CoffeeCheckIn {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Collections;
+import CoffeeCheckin.CoffeeCheckinMarkers;
+
+public class CoffeeCheckInSimulation {
+
     public static void main(String[] args){
         System.out.println("Hello, welcome to Coffee Check-in, please enter list of employees for the week( separate names with a space)");
-        Scanner scanner = new Scanner(System.in);
-        String employee_list = scanner.next();
-        queue(employee_list);
+        Scanner scannerEmplInput = new Scanner(System.in);
+        employee_queue(scannerEmplInput.nextLine());
+
         System.out.println("Who was late today?(Separate names with spaces)");
-        String late_comers = scanner.next();
-        late_evaluater(queue(employee_list), late_comers);
+        String late_comers = scannerEmplInput.nextLine();
+
+        //late_evaluater(employee_queue(employee_list), late_comers);
     }
 
     /**queues the list of employees and add a 'marker', specifying who is next in the list*/
-    private static ArrayList<String> queue(String employee_list) {
+    private static ArrayList<String> employee_queue(String employee_list) {
+        HashMap<String, Enum> employeeMap = new HashMap<>();
         ArrayList<String> list = new ArrayList<>();
         Collections.addAll(list, employee_list.split(" "));
         return list;
