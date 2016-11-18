@@ -14,13 +14,13 @@ public class CoffeeCheckInSimulation {
         Scanner scannerEmplInput = new Scanner(System.in);
         String employeeList = scannerEmplInput.nextLine();
 
-        //add to queue
-        employee_queue(employeeList);
+        //add to queue and store in a variable
+        HashMap<String, Enum> employees = employee_queue(employeeList);
 
         System.out.println("Who was late today?(Separate names with spaces)");
-        String late_comers = scannerEmplInput.nextLine();
+        String lateComers = scannerEmplInput.nextLine();
 
-        //late_evaluater(employee_queue(employee_list), late_comers);
+        lateEvaluater(employees, lateComers);
     }
 
     /**queues the list of employees and add a 'marker', specifying who is next in the list
@@ -31,6 +31,7 @@ public class CoffeeCheckInSimulation {
         HashMap<String, Enum> employeeHash = new HashMap<>();
         String[] employeeList = employeeListStr.split(" ");
 
+        //todo: evaluate length of the array before performing loop
         employeeHash.put(employeeList[0], NEXT);
         //add the rest of the names
         for(int x = 1; x < employeeList.length; x++){
@@ -40,15 +41,16 @@ public class CoffeeCheckInSimulation {
     }
 
     /**Takes in initial list and new string with late comers and evaluates who will buy coffee
-     * @param queue the employee queue for the week
-     * @param late_comers The list of late comers for the day*/
-    private static ArrayList<String> late_evaluater(ArrayList<String> queue, String late_comers) {
-        ArrayList<String> updated_list = new ArrayList<>();
-        for(String late: late_comers.split(" ")){
-            for(String q: queue){
-            }
-        }
-
-        return updated_list;
+     * Crosschecks the employee queue and the late comers, if the employee names are in the late queue
+     * then their 'markers' are updated from OTHER to LATE, OR from NEXT to LATE
+     * @param employeeQueue the employee queue for the week
+     * @param lateComers The list of late comers for the day*/
+    private static HashMap<String, Enum> lateEvaluater(HashMap<String, Enum> employeeQueue, String lateComers) {
+        employeeQueue.keySet()
+                .stream()
+                .filter(lateComers::contains)
+                .forEach(employeeName -> employeeQueue.put(employeeName, LATE));
+        System.out.println(employeeQueue);
+        return employeeQueue;
     }
 }
