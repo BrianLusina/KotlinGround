@@ -15,5 +15,6 @@ class Rotate {
         if(strng.equals("")){
             return true;
         }
+        return true;
     }
 }
