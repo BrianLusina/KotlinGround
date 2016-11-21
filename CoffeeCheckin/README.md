@@ -33,7 +33,8 @@ As the examples above show:
 - If the ‘next beneficiary’ is late themselves, they are skipped and must buy the next person a coffee.
 Implement a Java command-line program that simulates this process through one working week (Monday to Friday) 
 in a single invocation of the program:
-1. when launched, the user should be prompted to provide the list of employees. The first one can be assumed to be ‘next’ for Monday.
+1. when launched, the user should be prompted to provide the list of employees. 
+The first one can be assumed to be ‘next’ for Monday.
 2. the user should then be prompted to enter the list of late employees for Monday.
 The program should output the updated list, showing who should buy coffees, and who is next in line for Tuesday
 3. the user should be prompted to repeat step 2 above for the rest of the week, Tuesday through Friday.

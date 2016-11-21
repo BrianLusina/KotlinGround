@@ -5,24 +5,29 @@ import static CoffeeCheckin.CheckinMarkers.*;
 
 public class CoffeeCheckInSimulation {
 
+    /***/
     public static void main(String[] args){
+        int day_counter = 1;
         System.out.println("Hello, welcome to Coffee Check-in. Please enter list of employees for the week( separate names with a space)");
         Scanner scannerEmplInput = new Scanner(System.in);
         String employeeList = scannerEmplInput.nextLine();
 
-        //if the list is empty exit the program, else continue execution
-        if(validate_input(employeeList)){
-            System.out.println("Employee List is empty.");
-            System.exit(1);
-        }else{
-            //add to queue and store in a variable
-            HashMap<String, Enum> employees = employee_queue(employeeList);
+        while(day_counter <= 4){
+            //if the list is empty exit the program, else continue execution
+            if(validate_input(employeeList)){
+                System.out.println("Employee List is empty.");
+                System.exit(1);
+            }else{
+                //add to queue and store in a variable
+                HashMap<String, Enum> employees = employee_queue(employeeList);
 
-            System.out.println("Who was late today?(Separate names with spaces)");
-            String lateComers = scannerEmplInput.nextLine();
+                System.out.println("Who was late today?(Separate names with spaces)");
+                String lateComers = scannerEmplInput.nextLine();
 
-            HashMap<String, Enum> lateHashMap = lateEvaluator(employees, lateComers);
-
+                HashMap<String, Enum> lateHashMap = lateEvaluator(employees, lateComers);
+                week_memory(day_counter,lateHashMap);
+            }
+            day_counter += 1;
         }
     }
 
@@ -65,12 +70,38 @@ public class CoffeeCheckInSimulation {
         return employeeQueue;
     }
 
-    /**Updates the queue aby moving the NEXT flag from the current to the next one in the list
+    /**Updates the queue by moving the NEXT flag from the current to the next one in the list
      * The current NEXT will get coffee from the the LATE comer
      * Also removes the LATE flag and replaces it with OTHER
      * @param hashMap the HashMap with the employee queue
      * @return The newly updated queue list with the details of who is the beneficiary*/
     private static HashMap<String, Enum> beneficiary(HashMap<String, Enum> hashMap){
-        
+
+    }
+
+    /**Small 'in-memory db' to store the data for each day for who was late when
+     * @param dayNumber The day of the week
+     * @param resultForDay This is the result for the day, who will buy coffee for who and who is next*/
+    private static HashMap<Enum, HashMap<String, Enum>> week_memory(int dayNumber, HashMap<String, Enum> resultForDay){
+        HashMap<Enum, HashMap<String, Enum>> week_queue = new HashMap<>();
+        switch (dayNumber){
+            case 1:
+                week_queue.put(MONDAY,resultForDay);
+                break;
+            case 2:
+                week_queue.put(TUESDAY,resultForDay);
+                break;
+            case 3:
+                week_queue.put(WEDNESDAY,resultForDay);
+                break;
+            case 4:
+                week_queue.put(THURSDAY,resultForDay);
+                break;
+            case 5:
+                week_queue.put(FRIDAY, resultForDay);
+                break;
+        }
+
+        return week_queue;
     }
 }
