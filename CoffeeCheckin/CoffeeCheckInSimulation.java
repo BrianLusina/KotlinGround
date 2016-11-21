@@ -27,6 +27,7 @@ public class CoffeeCheckInSimulation {
             }
             day_counter += 1;
         }
+
     }
     
     /**Evaluates the current day*/
@@ -133,6 +134,8 @@ public class CoffeeCheckInSimulation {
                 break;
         }
 
+        System.out.println(week_queue);
         return week_queue;
+
     }
 }
