@@ -4,38 +4,29 @@ import java.util.HashMap;
 import static CoffeeCheckin.CheckinMarkers.*;
 
 public class CoffeeCheckInSimulation {
+    private static Scanner scannerEmplInput;
+    private static int day_counter = 1;
 
     /***/
     public static void main(String[] args){
-        int day_counter = 1;
         System.out.println("Hello, welcome to Coffee Check-in. Please enter list of employees for the week( separate names with a space)");
-        Scanner scannerEmplInput = new Scanner(System.in);
+        scannerEmplInput = new Scanner(System.in);
         String employeeList = scannerEmplInput.nextLine();
+        //add the list to a queue and store in a variable
 
-        while(day_counter <= 4){
+        while(day_counter <= 5){
             //if the list is empty exit the program, else continue execution
-            if(validate_input(employeeList)){
-                System.out.println("Employee List is empty.");
+            if(employeeList.isEmpty()){
+                System.out.println("Employee List is empty. No one is coming in this week. Free week!");
                 System.exit(1);
             }else{
-                //add to queue and store in a variable
                 HashMap<String, Enum> employees = employee_queue(employeeList);
 
-                System.out.println("Who was late today?(Separate names with spaces)");
-                String lateComers = scannerEmplInput.nextLine();
-
-                HashMap<String, Enum> lateHashMap = lateEvaluator(employees, lateComers);
-                week_memory(day_counter,lateHashMap);
+                HashMap<String, Enum> lateHashMap = lateEvaluator(employees);
+                week_memory(day_counter, lateHashMap);
             }
             day_counter += 1;
         }
-    }
-
-    /**Validates user input
-     * Returns false if the list for the week is empty
-     * @return {@link Boolean} value*/
-    private static boolean validate_input(String employeeList) {
-        return employeeList.isEmpty();
     }
 
     /**queues the list of employees and add a 'marker'/ 'flag',
@@ -60,14 +51,21 @@ public class CoffeeCheckInSimulation {
      * Crosschecks the employee queue and the late comers, if the employee names are in the late queue
      * then their 'markers'/'flags' are updated from OTHER to LATE, OR from NEXT to LATE
      * @param employeeQueue the employee queue for the week
-     * @param lateComers The list of late comers for the day
-     * @return The newly updated employee queue*/
-    private static HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue, String lateComers) {
+     * @return The newly updated employee queue for the next day*/
+    private static HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue) {
+        System.out.printf("Day: %s. Who was late today?(Separate names with spaces)");
+        String lateComers = scannerEmplInput.nextLine();
+
         employeeQueue.keySet()
                 .stream()
                 .filter(lateComers::contains)
                 .forEach(employeeName -> employeeQueue.put(employeeName, LATE));
-        return employeeQueue;
+        //this is day one, we return who will buy coffee for who next
+        if(day_counter == 1){
+            return employeeQueue;
+        }else{
+            return beneficiary(employeeQueue);
+        }
     }
 
     /**Updates the queue by moving the NEXT flag from the current to the next one in the list
@@ -76,7 +74,16 @@ public class CoffeeCheckInSimulation {
      * @param hashMap the HashMap with the employee queue
      * @return The newly updated queue list with the details of who is the beneficiary*/
     private static HashMap<String, Enum> beneficiary(HashMap<String, Enum> hashMap){
-
+        for (String employee : hashMap.keySet()) {
+            if(hashMap.get(employee) == LATE){
+                hashMap.put(employee, BUYS_COFFEE_FOR);
+            }else if(hashMap.get(employee) == NEXT){
+                hashMap.put(employee, OTHER);
+            }else{
+                hashMap.put(employee, NEXT);
+            }
+        }
+        return hashMap;
     }
 
     /**Small 'in-memory db' to store the data for each day for who was late when
