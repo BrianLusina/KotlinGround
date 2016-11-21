@@ -21,13 +21,37 @@ public class CoffeeCheckInSimulation {
                 System.exit(1);
             }else{
                 HashMap<String, Enum> employees = employee_queue(employeeList);
-
-                HashMap<String, Enum> lateHashMap = lateEvaluator(employees);
+                Enum currentDay = evaluate_day(day_counter);
+                HashMap<String, Enum> lateHashMap = lateEvaluator(employees, currentDay);
                 week_memory(day_counter, lateHashMap);
             }
             day_counter += 1;
         }
     }
+    
+    /**Evaluates the current day*/
+    private static Enum evaluate_day(int day_counter) {
+        Enum day = null;
+        switch (day_counter){
+            case 1:
+                day =  MONDAY;
+                break;
+            case 2:
+                day =  TUESDAY;
+                break;
+            case 3:
+                day =  WEDNESDAY;
+                break;
+            case 4:
+                day =  THURSDAY;
+                break;
+            case 5:
+                day =  FRIDAY;
+                break;
+        }
+        return day;
+    }
+
 
     /**queues the list of employees and add a 'marker'/ 'flag',
      * specifying who is next in the list
@@ -52,8 +76,8 @@ public class CoffeeCheckInSimulation {
      * then their 'markers'/'flags' are updated from OTHER to LATE, OR from NEXT to LATE
      * @param employeeQueue the employee queue for the week
      * @return The newly updated employee queue for the next day*/
-    private static HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue) {
-        System.out.printf("Day: %s. Who was late today?(Separate names with spaces)");
+    private static HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue, Enum currentDay) {
+        System.out.printf("Day: %s. Who was late today?(Separate names with spaces)", currentDay);
         String lateComers = scannerEmplInput.nextLine();
 
         employeeQueue.keySet()
