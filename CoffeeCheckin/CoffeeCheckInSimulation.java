@@ -7,7 +7,6 @@ public class CoffeeCheckInSimulation {
     private static Scanner scannerEmplInput;
     private static int day_counter = 1;
 
-    /***/
     public static void main(String[] args){
         System.out.println("Hello, welcome to Coffee Check-in. Please enter list of employees for the week( separate names with a space)");
         scannerEmplInput = new Scanner(System.in);
@@ -27,7 +26,6 @@ public class CoffeeCheckInSimulation {
             }
             day_counter += 1;
         }
-
     }
     
     /**Evaluates the current day*/
@@ -85,7 +83,7 @@ public class CoffeeCheckInSimulation {
                 .stream()
                 .filter(lateComers::contains)
                 .forEach(employeeName -> employeeQueue.put(employeeName, LATE));
-        //this is day one, we return who will buy coffee for who next
+        //this is day one, we return who will buy coffee for who next, on Tuesday
         if(day_counter == 1){
             return employeeQueue;
         }else{
@@ -99,15 +97,36 @@ public class CoffeeCheckInSimulation {
      * @param hashMap the HashMap with the employee queue
      * @return The newly updated queue list with the details of who is the beneficiary*/
     private static HashMap<String, Enum> beneficiary(HashMap<String, Enum> hashMap){
-        for (String employee : hashMap.keySet()) {
-            if(hashMap.get(employee) == LATE){
-                hashMap.put(employee, BUYS_COFFEE_FOR);
-            }else if(hashMap.get(employee) == NEXT){
-                hashMap.put(employee, OTHER);
-            }else{
-                hashMap.put(employee, NEXT);
-            }
-        }
+        String beneficiary;
+        String lateComer;
+
+        //collect the late comer
+        lateComer = hashMap.keySet().stream().filter(employee -> hashMap.get(employee) == LATE).findFirst().toString();
+
+        //Retrieve the next person from the queue
+        beneficiary = hashMap.keySet().stream()
+                .filter(employee -> hashMap.get(employee) == NEXT)
+                .findFirst()
+                .toString();
+
+        //update the list, moving the NEXT flag to OTHER and deleting all LATE flags
+        hashMap.keySet().stream()
+                .filter(empl -> hashMap.get(empl) == LATE)
+                .forEach(empl -> hashMap.put(empl, OTHER));
+
+        //move NEXT to OTHER
+        hashMap.keySet().stream()
+                .filter(empl -> hashMap.get(empl) == NEXT)
+                .findFirst()
+                .ifPresent(empl -> hashMap.put(empl, OTHER));
+
+        //move first OTHER to NEXT
+        hashMap.keySet().stream()
+                .filter(employee -> hashMap.get(employee) == OTHER)
+                .findFirst()
+                .ifPresent(employee -> hashMap.put(employee, NEXT));
+
+        System.out.println(lateComer + " buys coffee for " +  beneficiary);
         return hashMap;
     }
 
