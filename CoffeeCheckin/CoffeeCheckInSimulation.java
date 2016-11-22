@@ -1,4 +1,5 @@
 package CoffeeCheckin;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.HashMap;
 import static CoffeeCheckin.CheckinMarkers.*;
@@ -97,17 +98,16 @@ public class CoffeeCheckInSimulation {
      * @param hashMap the HashMap with the employee queue
      * @return The newly updated queue list with the details of who is the beneficiary*/
     private static HashMap<String, Enum> beneficiary(HashMap<String, Enum> hashMap){
-        String beneficiary;
-        String lateComer;
+        Optional<String> lateComer;
+        Optional<String> beneficiary;
 
         //collect the late comer
-        lateComer = hashMap.keySet().stream().filter(employee -> hashMap.get(employee) == LATE).findFirst().toString();
+        lateComer = hashMap.keySet().stream().filter(employee -> hashMap.get(employee) == LATE).findFirst();
 
         //Retrieve the next person from the queue
         beneficiary = hashMap.keySet().stream()
                 .filter(employee -> hashMap.get(employee) == NEXT)
-                .findFirst()
-                .toString();
+                .findFirst();
 
         //update the list, moving the NEXT flag to OTHER and deleting all LATE flags
         hashMap.keySet().stream()
@@ -117,10 +117,10 @@ public class CoffeeCheckInSimulation {
         //move NEXT to OTHER
         hashMap.keySet().stream()
                 .filter(empl -> hashMap.get(empl) == NEXT)
-                .findFirst()
-                .ifPresent(empl -> hashMap.put(empl, OTHER));
+                .forEach(empl -> hashMap.put(empl, OTHER));
 
         //move first OTHER to NEXT
+        //// TODO: edit the first next, moving it to the first NEXT
         hashMap.keySet().stream()
                 .filter(employee -> hashMap.get(employee) == OTHER)
                 .findFirst()
@@ -155,6 +155,5 @@ public class CoffeeCheckInSimulation {
 
         System.out.println(week_queue);
         return week_queue;
-
     }
 }
