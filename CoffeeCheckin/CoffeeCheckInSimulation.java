@@ -2,70 +2,49 @@ package CoffeeCheckin;
 import java.util.*;
 
 import static CoffeeCheckin.CheckinMarkers.*;
+import static CoffeeCheckin.CheckinMarkers.FRIDAY;
 
-public class CoffeeCheckInSimulation {
-    private static Scanner scannerEmplInput;
-    private static int day_counter = 1;
+class CoffeeCheckInSimulation {
+    private String employeesForWeek;
+    private HashMap<String, Enum> coffeeQueue;
+    private static Scanner scannerLateInput;
 
-    public static void main(String[] args){
-        System.out.println("Hello, welcome to Coffee Check-in. Please enter list of employees for the week( separate names with a space)");
-        scannerEmplInput = new Scanner(System.in);
-        String employeeList = scannerEmplInput.nextLine();
-        //add the list to a queue and store in a variable
-
-        while(day_counter <= 5){
-            //if the list is empty exit the program, else continue execution
-            if(employeeList.isEmpty()){
-                System.out.println("Employee List is empty. No one is coming in this week. Free week!");
-                System.exit(1);
-            }else{
-                HashMap<String, Enum> employees = employee_queue(employeeList);
-                Enum currentDay = evaluate_day(day_counter);
-                HashMap<String, Enum> lateHashMap = lateEvaluator(employees, currentDay);
-                week_memory(day_counter, lateHashMap);
-            }
-            day_counter += 1;
-        }
-    }
-    
-    /**Evaluates the current day*/
-    private static Enum evaluate_day(int day_counter) {
-        Enum day = null;
-        switch (day_counter){
-            case 1:
-                day =  MONDAY;
-                break;
-            case 2:
-                day =  TUESDAY;
-                break;
-            case 3:
-                day =  WEDNESDAY;
-                break;
-            case 4:
-                day =  THURSDAY;
-                break;
-            case 5:
-                day =  FRIDAY;
-                break;
-        }
-        return day;
+    CoffeeCheckInSimulation(String employeesForWeek){
+        this.employeesForWeek = employeesForWeek;
     }
 
+    /**Runs the simulation*/
+    void run(int day_counter){
+        HashMap<String, Enum> employees = employee_queue();
+        Enum currentDay = evaluate_day(day_counter);
+        HashMap<String, Enum> lateHashMap = lateEvaluator(employees, currentDay);
+        week_memory(day_counter, lateHashMap);
+    }
 
-    /**queues the list of employees and add a 'marker'/ 'flag',
+    void exitOnErr(){
+        System.out.println("Employee List is empty. No one is coming in this week. Free week!");
+        System.exit(1);
+    }
+
+    /**Check if the list is empty or one*/
+    boolean isListEmptyOrOne() {
+        return !getEmployeesForWeek().isEmpty() && getEmployeesForWeek().split(" ").length != 1;
+    }
+
+    /**queues the list of employees and add a 'marker' / 'flag',
      * specifying who is next in the list
      * first name on the list is assumed to be next
-     * @param employeeListStr the employee list input as a string
      * */
-    private static HashMap<String, Enum> employee_queue(String employeeListStr) {
+    private HashMap<String, Enum> employee_queue() {
         HashMap<String, Enum> employeeHash = new HashMap<>();
-        String[] employeeList = employeeListStr.split(" ");
-
-        // first name on the list is assumed to be NEXT
-        employeeHash.put(employeeList[0], NEXT);
-        //add the rest of the names
-        for(int x = 1; x < employeeList.length; x++){
-            employeeHash.put(employeeList[x], OTHER);
+        if(!isListEmptyOrOne()) {
+            String[] employeeList = getEmployeesForWeek().split(" ");
+            // first name on the list is assumed to be NEXT
+            employeeHash.put(employeeList[0], NEXT);
+            //add the rest of the names
+            for (int x = 1; x < employeeList.length; x++) {
+                employeeHash.put(employeeList[x], OTHER);
+            }
         }
         return employeeHash;
     }
@@ -77,7 +56,7 @@ public class CoffeeCheckInSimulation {
      * @return The newly updated employee queue for the next day*/
     private static HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue, Enum currentDay) {
         System.out.printf("%s: Who was late today?(Separate names with spaces)", currentDay);
-        String lateComers = scannerEmplInput.nextLine();
+        String lateComers = scannerLateInput.nextLine();
         String[] lateArr = lateComers.split(" ");
 
         if(lateArr.length == 1){
@@ -165,5 +144,37 @@ public class CoffeeCheckInSimulation {
 
         System.out.println(week_queue);
         return week_queue;
+    }
+
+    /**Evaluates the current day*/
+    private static Enum evaluate_day(int day_counter) {
+        Enum day = null;
+        switch (day_counter){
+            case 1:
+                day =  MONDAY;
+                break;
+            case 2:
+                day =  TUESDAY;
+                break;
+            case 3:
+                day =  WEDNESDAY;
+                break;
+            case 4:
+                day =  THURSDAY;
+                break;
+            case 5:
+                day =  FRIDAY;
+                break;
+        }
+        return day;
+    }
+
+
+    String getEmployeesForWeek() {
+        return employeesForWeek;
+    }
+
+    public void setEmployeesForWeek(String employeesForWeek) {
+        this.employeesForWeek = employeesForWeek;
     }
 }

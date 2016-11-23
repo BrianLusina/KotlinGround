@@ -1,30 +1,36 @@
 package CoffeeCheckin;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
 import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
-/**
- * CoffeeCheckInSimulation Tester.
- *
- * @author <Brian Lusina>
- * @since <pre>11/18/2016</pre>
- * @version 1.0
- */
+
 public class CoffeeCheckInSimulationTest extends TestCase {
     public CoffeeCheckInSimulationTest(String name) {
         super(name);
     }
 
+    @Before
     public void setUp() throws Exception {
         super.setUp();
     }
 
+    @After
     public void tearDown() throws Exception {
         super.tearDown();
     }
 
-    public static Test suite() {
-        return new TestSuite(CoffeeCheckInSimulationTest.class);
+    public void testEmptyInput(){
+        CoffeeCheckInSimulation coffeeCheck = new CoffeeCheckInSimulation("");
+        assertEquals("List can not be empty", false, coffeeCheck.isListEmptyOrOne());
     }
+
+    public void testOneInput(){
+        CoffeeCheckInSimulation coffeeCheck = new CoffeeCheckInSimulation("John");
+        assertEquals("List can not have one employee for the week", false, coffeeCheck.isListEmptyOrOne());
+    }
+
+
 }
