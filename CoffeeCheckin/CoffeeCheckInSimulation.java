@@ -7,7 +7,6 @@ import static CoffeeCheckin.CheckinMarkers.FRIDAY;
 class CoffeeCheckInSimulation {
     private String employeesForWeek;
     private HashMap<String, Enum> coffeeQueue;
-    private static Scanner scannerLateInput;
 
     CoffeeCheckInSimulation(String employeesForWeek){
         this.employeesForWeek = employeesForWeek;
@@ -51,6 +50,7 @@ class CoffeeCheckInSimulation {
      * @return The newly updated employee queue for the next day*/
     private static HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue, Enum currentDay) {
         System.out.printf("%s: Who was late today?(Separate names with spaces)", currentDay);
+        Scanner scannerLateInput = new Scanner(System.in);
         String lateComers = scannerLateInput.nextLine();
         String[] lateArr = lateComers.split(" ");
 
