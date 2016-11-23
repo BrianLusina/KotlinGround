@@ -1,7 +1,6 @@
 package CoffeeCheckin;
-import java.util.Optional;
-import java.util.Scanner;
-import java.util.HashMap;
+import java.util.*;
+
 import static CoffeeCheckin.CheckinMarkers.*;
 
 public class CoffeeCheckInSimulation {
@@ -77,19 +76,29 @@ public class CoffeeCheckInSimulation {
      * @param employeeQueue the employee queue for the week
      * @return The newly updated employee queue for the next day*/
     private static HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue, Enum currentDay) {
-        System.out.printf("Day: %s. Who was late today?(Separate names with spaces)", currentDay);
+        System.out.printf("%s: Who was late today?(Separate names with spaces)", currentDay);
         String lateComers = scannerEmplInput.nextLine();
+        String[] lateArr = lateComers.split(" ");
 
-        employeeQueue.keySet()
-                .stream()
-                .filter(lateComers::contains)
-                .forEach(employeeName -> employeeQueue.put(employeeName, LATE));
-        //this is day one, we return who will buy coffee for who next, on Tuesday
-        if(day_counter == 1){
-            return employeeQueue;
+        if(lateArr.length == 1){
+            employeeQueue.keySet()
+                    .stream()
+                    .filter(lateComers::contains)
+                    .forEach(employeeName -> employeeQueue.put(employeeName, LATE));
         }else{
-            return beneficiary(employeeQueue);
+            for(String empl : employeeQueue.keySet()){
+                for(String late : lateArr){
+                    if(empl.equals(late)){
+                        employeeQueue.put(empl, LATE);
+                    }
+                }
+            }
         }
+
+
+        System.out.println("The current queue " + employeeQueue);
+
+        return beneficiary(employeeQueue);
     }
 
     /**Updates the queue by moving the NEXT flag from the current to the next one in the list
@@ -98,18 +107,20 @@ public class CoffeeCheckInSimulation {
      * @param hashMap the HashMap with the employee queue
      * @return The newly updated queue list with the details of who is the beneficiary*/
     private static HashMap<String, Enum> beneficiary(HashMap<String, Enum> hashMap){
-        Optional<String> lateComer;
-        Optional<String> beneficiary;
+        String lateComer;
+        String beneficiary;
 
         //collect the late comer
-        lateComer = hashMap.keySet().stream().filter(employee -> hashMap.get(employee) == LATE).findFirst();
+        lateComer = hashMap.keySet().stream()
+                .filter(employee -> hashMap.get(employee) == LATE)
+                .findFirst().toString();
 
         //Retrieve the next person from the queue
         beneficiary = hashMap.keySet().stream()
                 .filter(employee -> hashMap.get(employee) == NEXT)
-                .findFirst();
+                .findFirst().toString();
 
-        //update the list, moving the NEXT flag to OTHER and deleting all LATE flags
+        //update the list, moving the NEXT flag to OTHER
         hashMap.keySet().stream()
                 .filter(empl -> hashMap.get(empl) == LATE)
                 .forEach(empl -> hashMap.put(empl, OTHER));
@@ -120,7 +131,6 @@ public class CoffeeCheckInSimulation {
                 .forEach(empl -> hashMap.put(empl, OTHER));
 
         //move first OTHER to NEXT
-        //// TODO: edit the first next, moving it to the first NEXT
         hashMap.keySet().stream()
                 .filter(employee -> hashMap.get(employee) == OTHER)
                 .findFirst()
