@@ -21,11 +21,6 @@ class CoffeeCheckInSimulation {
         week_memory(day_counter, lateHashMap);
     }
 
-    void exitOnErr(){
-        System.out.println("Employee List is empty. No one is coming in this week. Free week!");
-        System.exit(1);
-    }
-
     /**Check if the list is empty or one*/
     boolean isListEmptyOrOne() {
         return !getEmployeesForWeek().isEmpty() && getEmployeesForWeek().split(" ").length != 1;

@@ -14,19 +14,25 @@ public class CoffeeCheckInMain {
         System.out.println("Hello, welcome to Coffee Check-in. Please enter list of employees for the week( separate names with a space)");
         scannerEmplInput = new Scanner(System.in);
         String employeeList = scannerEmplInput.nextLine();
-
-        //initialize coffee check-in
-        CoffeeCheckInSimulation coffeeCheck = new CoffeeCheckInSimulation(employeeList);
-
+        
+        
         //add the list to a queue and store in a variable
         while(day_counter <= 5){
             //if the list is empty exit the program, else continue execution
-            if(coffeeCheck.getEmployeesForWeek().isEmpty()){
-                coffeeCheck.exitOnErr();
+            if(isListEmptyOrOne(employeeList)){
+                System.out.println("Employee List is empty. No one is coming in this week. Free week!");
+                System.exit(1);
             }else{
+                //initialize coffee check-in
+                CoffeeCheckInSimulation coffeeCheck = new CoffeeCheckInSimulation(employeeList);
                 coffeeCheck.run(day_counter);
             }
             day_counter += 1;
         }
     }
+    /**Check if the list is empty or one*/
+    private static boolean isListEmptyOrOne(String employeeList) {
+        return !employeeList.isEmpty() && employeeList.split(" ").length != 1;
+    }
+
 }
