@@ -8,6 +8,8 @@ class CoffeeCheckInSimulation {
     private String employeesForWeek;
     private HashMap<String, Enum> coffeeQueue;
 
+    CoffeeCheckInSimulation(){}
+
     CoffeeCheckInSimulation(String employeesForWeek){
         this.employeesForWeek = employeesForWeek;
     }
@@ -18,12 +20,18 @@ class CoffeeCheckInSimulation {
         Enum currentDay = evaluate_day(day_counter);
         HashMap<String, Enum> lateHashMap = lateEvaluator(employees, currentDay);
         week_memory(day_counter, lateHashMap);
+
     }
 
     /**Check if the list is empty or one*/
-    boolean isListEmptyOrOne() {
-        return !getEmployeesForWeek().isEmpty() && getEmployeesForWeek().split(" ").length != 1;
-    }
+//    boolean isListEmptyOrOne() {
+//        if(this.employeesForWeek.isEmpty() || ){
+//            return false;
+//        }else{
+//
+//        }
+//        return !getEmployeesForWeek().isEmpty() && getEmployeesForWeek().split(" ").length != 1;
+//    }
 
     /**queues the list of employees and add a 'marker' / 'flag',
      * specifying who is next in the list
@@ -31,14 +39,12 @@ class CoffeeCheckInSimulation {
      * */
     private HashMap<String, Enum> employee_queue() {
         HashMap<String, Enum> employeeHash = new HashMap<>();
-        if(!isListEmptyOrOne()) {
-            String[] employeeList = getEmployeesForWeek().split(" ");
-            // first name on the list is assumed to be NEXT
-            employeeHash.put(employeeList[0], NEXT);
-            //add the rest of the names
-            for (int x = 1; x < employeeList.length; x++) {
-                employeeHash.put(employeeList[x], OTHER);
-            }
+        String[] employeeList = getEmployeesForWeek().split(" ");
+        // first name on the list is assumed to be NEXT
+        employeeHash.put(employeeList[0], NEXT);
+        //add the rest of the names
+        for (int x = 1; x < employeeList.length; x++) {
+            employeeHash.put(employeeList[x], OTHER);
         }
         return employeeHash;
     }
