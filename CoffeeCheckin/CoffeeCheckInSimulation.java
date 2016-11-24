@@ -96,19 +96,20 @@ class CoffeeCheckInSimulation {
                 .filter(benefit -> hashMap.get(benefit) == NEXT)
                 .forEach(benefit -> beneficiary[0] = benefit);
 
+        //move first OTHER to NEXT
         hashMap.keySet()
                 .stream()
                 .filter(emplOther -> hashMap.get(emplOther) == OTHER)
                 .findFirst()
                 .ifPresent(emplOther -> hashMap.put(emplOther, NEXT));
 
-        //update the list, moving the NEXT flag to OTHER and first OTHER to NEXT
+        //move first NEXT to OTHER
         hashMap.keySet()
                 .stream()
                 .filter(name -> hashMap.get(name) == NEXT)
                 .findFirst()
                 .ifPresent(emplOther -> hashMap.put(emplOther, OTHER));
-        
+
         System.out.printf("Current Map: %s\n", hashMap);
         System.out.println(lateComer.get(0) + " buys coffee for " + beneficiary[0]);
         return hashMap;
