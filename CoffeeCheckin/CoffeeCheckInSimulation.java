@@ -1,5 +1,9 @@
 package CoffeeCheckin;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import static CoffeeCheckin.CheckinMarkers.*;
 import static CoffeeCheckin.CheckinMarkers.FRIDAY;
@@ -7,8 +11,6 @@ import static CoffeeCheckin.CheckinMarkers.FRIDAY;
 class CoffeeCheckInSimulation {
     private String employeesForWeek;
     private HashMap<String, Enum> coffeeQueue;
-
-    CoffeeCheckInSimulation(){}
 
     CoffeeCheckInSimulation(String employeesForWeek){
         this.employeesForWeek = employeesForWeek;
@@ -20,18 +22,7 @@ class CoffeeCheckInSimulation {
         Enum currentDay = evaluate_day(day_counter);
         HashMap<String, Enum> lateHashMap = lateEvaluator(employees, currentDay);
         week_memory(day_counter, lateHashMap);
-
     }
-
-    /**Check if the list is empty or one*/
-//    boolean isListEmptyOrOne() {
-//        if(this.employeesForWeek.isEmpty() || ){
-//            return false;
-//        }else{
-//
-//        }
-//        return !getEmployeesForWeek().isEmpty() && getEmployeesForWeek().split(" ").length != 1;
-//    }
 
     /**queues the list of employees and add a 'marker' / 'flag',
      * specifying who is next in the list
@@ -46,6 +37,7 @@ class CoffeeCheckInSimulation {
         for (int x = 1; x < employeeList.length; x++) {
             employeeHash.put(employeeList[x], OTHER);
         }
+        System.out.println("Employee Q: " + employeeHash);
         return employeeHash;
     }
 
@@ -60,6 +52,9 @@ class CoffeeCheckInSimulation {
         String lateComers = scannerLateInput.nextLine();
         String[] lateArr = lateComers.split(" ");
 
+        System.out.printf("Late comers on %s are %s\n",currentDay, Arrays.toString(lateArr));
+
+        //evaluate the length of the late comers and update the queue
         if(lateArr.length == 1){
             employeeQueue.keySet()
                     .stream()
@@ -68,15 +63,12 @@ class CoffeeCheckInSimulation {
         }else{
             for(String empl : employeeQueue.keySet()){
                 for(String late : lateArr){
-                    if(empl.equals(late)){
+                    if(empl.equalsIgnoreCase(late)){
                         employeeQueue.put(empl, LATE);
                     }
                 }
             }
         }
-
-
-        System.out.println("The current queue " + employeeQueue);
 
         return beneficiary(employeeQueue);
     }
@@ -87,36 +79,38 @@ class CoffeeCheckInSimulation {
      * @param hashMap the HashMap with the employee queue
      * @return The newly updated queue list with the details of who is the beneficiary*/
     private static HashMap<String, Enum> beneficiary(HashMap<String, Enum> hashMap){
-        String lateComer;
-        String beneficiary;
+        ArrayList<String> lateComer = new ArrayList<>();
+        final String[] beneficiary = new String[1];
 
-        //collect the late comer
-        lateComer = hashMap.keySet().stream()
-                .filter(employee -> hashMap.get(employee) == LATE)
-                .findFirst().toString();
+        //collect the late comer(s)
+        lateComer.addAll(
+                hashMap.keySet()
+                        .stream()
+                        .filter(late -> hashMap.get(late) == LATE)
+                        .collect(Collectors.toList())
+        );
 
         //Retrieve the next person from the queue
-        beneficiary = hashMap.keySet().stream()
-                .filter(employee -> hashMap.get(employee) == NEXT)
-                .findFirst().toString();
+        hashMap.keySet()
+                .stream()
+                .filter(benefit -> hashMap.get(benefit) == NEXT)
+                .forEach(benefit -> beneficiary[0] = benefit);
 
-        //update the list, moving the NEXT flag to OTHER
-        hashMap.keySet().stream()
-                .filter(empl -> hashMap.get(empl) == LATE)
-                .forEach(empl -> hashMap.put(empl, OTHER));
-
-        //move NEXT to OTHER
-        hashMap.keySet().stream()
-                .filter(empl -> hashMap.get(empl) == NEXT)
-                .forEach(empl -> hashMap.put(empl, OTHER));
-
-        //move first OTHER to NEXT
-        hashMap.keySet().stream()
-                .filter(employee -> hashMap.get(employee) == OTHER)
+        hashMap.keySet()
+                .stream()
+                .filter(emplOther -> hashMap.get(emplOther) == OTHER)
                 .findFirst()
-                .ifPresent(employee -> hashMap.put(employee, NEXT));
+                .ifPresent(emplOther -> hashMap.put(emplOther, NEXT));
 
-        System.out.println(lateComer + " buys coffee for " +  beneficiary);
+        //update the list, moving the NEXT flag to OTHER and first OTHER to NEXT
+        hashMap.keySet()
+                .stream()
+                .filter(name -> hashMap.get(name) == NEXT)
+                .findFirst()
+                .ifPresent(emplOther -> hashMap.put(emplOther, OTHER));
+        
+        System.out.printf("Current Map: %s\n", hashMap);
+        System.out.println(lateComer.get(0) + " buys coffee for " + beneficiary[0]);
         return hashMap;
     }
 
@@ -171,7 +165,7 @@ class CoffeeCheckInSimulation {
     }
 
 
-    String getEmployeesForWeek() {
+    private String getEmployeesForWeek() {
         return employeesForWeek;
     }
 
