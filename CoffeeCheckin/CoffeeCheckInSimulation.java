@@ -18,9 +18,8 @@ class CoffeeCheckInSimulation {
 
     /**Runs the simulation*/
     void run(int day_counter){
-        HashMap<String, Enum> employees = getCoffeeQueue();
         Enum currentDay = evaluate_day(day_counter);
-        HashMap<String, Enum> lateHashMap = lateEvaluator(employees, currentDay);
+        HashMap<String, Enum> lateHashMap = lateEvaluator(this.coffeeQueue, currentDay);
         week_memory(day_counter, lateHashMap);
     }
 
