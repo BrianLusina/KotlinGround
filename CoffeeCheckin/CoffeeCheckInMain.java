@@ -12,7 +12,14 @@ public class CoffeeCheckInMain {
 
         // perform check before creating objects
         if(employeeList.isEmpty() || employeeList.split(" ").length == 1){
-            System.out.println("No employees this week.");
+            if(employeeList.isEmpty()) {
+                System.out.println("No employees this week.");
+                System.exit(1);
+            }
+            else{
+                System.out.printf("Can't have %s working alone this week. Can we?", employeeList.split(" ")[0]);
+                System.exit(1);
+            }
             System.exit(1);
         }else{
             CoffeeCheckInSimulation coffeeCheck = new CoffeeCheckInSimulation(employeeList);
