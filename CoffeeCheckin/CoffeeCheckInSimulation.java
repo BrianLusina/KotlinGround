@@ -68,6 +68,21 @@ class CoffeeCheckInSimulation {
                         .filter(late -> linkedHashMap.get(late) == LATE)
                         .collect(Collectors.toList())
         );
+
+        //check if the NEXT person is late, move the beneficiary down the list
+        for(String fortfeit : linkedHashMap.keySet()){
+            lateComer
+                    .stream()
+                    .filter(aLateComer -> linkedHashMap.get(fortfeit) == NEXT
+                            && aLateComer.equalsIgnoreCase(fortfeit)
+                    )
+                    .forEachOrdered(aLateComer -> linkedHashMap.keySet()
+                            .stream()
+                            .filter(other -> linkedHashMap.get(other) == OTHER)
+                            .findFirst()
+                            .ifPresent(next -> linkedHashMap.put(next, NEXT)));
+        }
+
         //Retrieve the next person from the queue
         linkedHashMap.keySet()
                 .stream()
