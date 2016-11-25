@@ -1,15 +1,12 @@
 package CoffeeCheckin;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static CoffeeCheckin.CheckinMarkers.*;
 
 class CoffeeCheckInSimulation {
     private String employeesForWeek;
-    private HashMap<String, Enum> coffeeQueue;
+    private LinkedHashMap<String, Enum> coffeeQueue;
 
     CoffeeCheckInSimulation(String employeesForWeek){
         this.employeesForWeek = employeesForWeek;
@@ -28,7 +25,7 @@ class CoffeeCheckInSimulation {
      * then their 'markers'/'flags' are updated from OTHER to LATE, OR from NEXT to LATE
      * @param employeeQueue the employee queue for the week
      * @return The newly updated employee queue for the next day*/
-    private HashMap<String, Enum> lateEvaluator(HashMap<String, Enum> employeeQueue, Enum currentDay) {
+    private HashMap<String, Enum> lateEvaluator(LinkedHashMap<String, Enum> employeeQueue, Enum currentDay) {
         System.out.printf("%s: Who was late today?(Separate names with spaces)", currentDay);
         Scanner scannerLateInput = new Scanner(System.in);
         String lateComers = scannerLateInput.nextLine();
@@ -58,53 +55,55 @@ class CoffeeCheckInSimulation {
     /**Updates the queue by moving the NEXT flag from the current to the next one in the list
      * The current NEXT will get coffee from the the LATE comer
      * Also removes the LATE flag and replaces it with OTHER
-     * @param hashMap the HashMap with the employee queue
+     * @param linkedHashMap the HashMap with the employee queue
      * @return The newly updated queue list with the details of who is the beneficiary*/
-    private HashMap<String, Enum> beneficiary(HashMap<String, Enum> hashMap){
+    private HashMap<String, Enum> beneficiary(LinkedHashMap<String, Enum> linkedHashMap){
         ArrayList<String> lateComer = new ArrayList<>();
         final String[] beneficiary = new String[1];
 
         //collect the late comer(s)
         lateComer.addAll(
-                hashMap.keySet()
+                linkedHashMap.keySet()
                         .stream()
-                        .filter(late -> hashMap.get(late) == LATE)
+                        .filter(late -> linkedHashMap.get(late) == LATE)
                         .collect(Collectors.toList())
         );
         //Retrieve the next person from the queue
-        hashMap.keySet()
+        linkedHashMap.keySet()
                 .stream()
-                .filter(benefit -> hashMap.get(benefit) == NEXT)
+                .filter(benefit -> linkedHashMap.get(benefit) == NEXT)
                 .forEach(benefit -> {
                     beneficiary[0] = benefit;
-                    hashMap.put(benefit, DONE);
+                    linkedHashMap.put(benefit, DONE);
                 });
 
         //remove late flags, replace with other
-        hashMap.keySet()
+        linkedHashMap.keySet()
                 .stream()
-                .filter(lateOrNext -> hashMap.get(lateOrNext) == LATE)
-                .forEach(late -> hashMap.put(late, OTHER));
+                .filter(lateOrNext -> linkedHashMap.get(lateOrNext) == LATE)
+                .forEach(late -> linkedHashMap.put(late, OTHER));
 
         //move NEXT down the list
-        hashMap.keySet()
+        linkedHashMap.keySet()
                 .stream()
-                .filter(other -> hashMap.get(other) == OTHER)
+                .filter(other -> linkedHashMap.get(other) == OTHER)
                 .findFirst()
-                .ifPresent(next -> hashMap.put(next, NEXT));
+                .ifPresent(next -> linkedHashMap.put(next, NEXT));
 
-        System.out.printf("Current Map: %s\n", hashMap);
+        System.out.printf("Queue for tomorrow: %s\n", linkedHashMap);
 
-        setCoffeeQueue(hashMap);
+        setCoffeeQueue(linkedHashMap);
 
         System.out.println(lateComer.get(0) + " buys coffee for " + beneficiary[0]);
-        return hashMap;
+        return linkedHashMap;
     }
 
     /**Small 'in-memory db' to store the data for each day for who was late when
      * @param dayNumber The day of the week
      * @param resultForDay This is the result for the day, who will buy coffee for who and who is next*/
-    private static HashMap<Enum, HashMap<String, Enum>> week_memory(int dayNumber, HashMap<String, Enum> resultForDay){
+    private static HashMap<Enum, HashMap<String, Enum>> week_memory(
+            int dayNumber, HashMap<String, Enum> resultForDay){
+
         HashMap<Enum, HashMap<String, Enum>> week_queue = new HashMap<>();
         switch (dayNumber){
             case 1:
@@ -151,20 +150,24 @@ class CoffeeCheckInSimulation {
         return day;
     }
 
-    private HashMap<String, Enum> getCoffeeQueue() {
-        HashMap<String, Enum> employeeHash = new HashMap<>();
+    /**This sets the coffee queue for the week from the user input
+     * Returns the coffee queue for the week
+     * */
+    private LinkedHashMap<String, Enum> getCoffeeQueue() {
+        LinkedHashMap<String, Enum> employeeQueue = new LinkedHashMap<>();
         String[] employeeList = this.employeesForWeek.split(" ");
         // first name on the list is assumed to be NEXT
-        employeeHash.put(employeeList[0], NEXT);
+        employeeQueue.put(employeeList[0], NEXT);
         //add the rest of the names
         for (int x = 1; x < employeeList.length; x++) {
-            employeeHash.put(employeeList[x], OTHER);
+            employeeQueue.put(employeeList[x], OTHER);
         }
 
-        return employeeHash;
+        return employeeQueue;
     }
 
-    private void setCoffeeQueue(HashMap<String, Enum> coffeeQueue) {
+    /**Updates the coffee queue*/
+    private void setCoffeeQueue(LinkedHashMap<String, Enum> coffeeQueue) {
         this.coffeeQueue = coffeeQueue;
     }
 }
