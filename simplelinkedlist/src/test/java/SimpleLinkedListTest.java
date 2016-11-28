@@ -1,12 +1,7 @@
-package simplelinkedlist.src.test.java;
-
 
 import java.util.NoSuchElementException;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
-import org.junit.Ignore;
-import simplelinkedlist.src.main.java.SimpleLinkedList;
-
 
 public class SimpleLinkedListTest {
 
@@ -17,7 +12,6 @@ public class SimpleLinkedListTest {
         assertThat(list.size()).isEqualTo(0);
     }
 
-    @Ignore
     @Test
     public void canCreateFromArray() {
         Integer[] values = new Integer[]{1, 2, 3};
@@ -25,14 +19,12 @@ public class SimpleLinkedListTest {
         assertThat(list.size()).isEqualTo(3);
     }
 
-    @Ignore
     @Test(expected = NoSuchElementException.class)
     public void popOnEmptyListWillThrow() {
         SimpleLinkedList list = new SimpleLinkedList();
         list.pop();
     }
 
-    @Ignore
     @Test
     public void popReturnsLastAddedElement() {
         SimpleLinkedList list = new SimpleLinkedList();
@@ -44,7 +36,6 @@ public class SimpleLinkedListTest {
         assertThat(list.size()).isEqualTo(0);
     }
 
-    @Ignore
     @Test
     public void reverseReversesList() {
         SimpleLinkedList list = new SimpleLinkedList();
@@ -61,7 +52,6 @@ public class SimpleLinkedListTest {
         assertThat(list.pop()).isEqualTo(5);
     }
 
-    @Ignore
     @Test
     public void canReturnListAsArray() {
         SimpleLinkedList list = new SimpleLinkedList();
@@ -74,7 +64,6 @@ public class SimpleLinkedListTest {
         assertThat(list.asArray(Integer.class)).containsExactly(expected);
     }
 
-    @Ignore
     @Test
     public void canReturnEmptyListAsEmptyArray() {
         SimpleLinkedList list = new SimpleLinkedList();
