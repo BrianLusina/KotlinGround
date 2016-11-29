@@ -1,7 +1,10 @@
+package simplelinkedlist.src.test.java;
 
 import java.util.NoSuchElementException;
-import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.Assert;
 import org.junit.Test;
+import simplelinkedlist.src.main.java.SimpleLinkedList;
 
 public class SimpleLinkedListTest {
 
@@ -9,14 +12,14 @@ public class SimpleLinkedListTest {
     @Test
     public void aNewListIsEmpty() {
         SimpleLinkedList list = new SimpleLinkedList();
-        assertThat(list.size()).isEqualTo(0);
+        Assert.assertEquals(list.size(), 0);
     }
 
     @Test
     public void canCreateFromArray() {
         Integer[] values = new Integer[]{1, 2, 3};
         SimpleLinkedList list = new SimpleLinkedList(values);
-        assertThat(list.size()).isEqualTo(3);
+        Assert.assertEquals(list.size(),3);
     }
 
     @Test(expected = NoSuchElementException.class)
@@ -30,10 +33,10 @@ public class SimpleLinkedListTest {
         SimpleLinkedList list = new SimpleLinkedList();
         list.push(9);
         list.push(8);
-        assertThat(list.size()).isEqualTo(2);
-        assertThat(list.pop()).isEqualTo(8);
-        assertThat(list.pop()).isEqualTo(9);
-        assertThat(list.size()).isEqualTo(0);
+        Assert.assertEquals(list.size(),2);
+        Assert.assertEquals(list.pop(),8);
+        Assert.assertEquals(list.pop(),9);
+        Assert.assertEquals(list.size(),0);
     }
 
     @Test
@@ -45,11 +48,11 @@ public class SimpleLinkedListTest {
         list.push(6);
         list.push(5);
         list.reverse();
-        assertThat(list.pop()).isEqualTo(9);
-        assertThat(list.pop()).isEqualTo(8);
-        assertThat(list.pop()).isEqualTo(7);
-        assertThat(list.pop()).isEqualTo(6);
-        assertThat(list.pop()).isEqualTo(5);
+        Assert.assertEquals(list.pop(),9);
+        Assert.assertEquals(list.pop(),8);
+        Assert.assertEquals(list.pop(),7);
+        Assert.assertEquals(list.pop(),6);
+        Assert.assertEquals(list.pop(),5);
     }
 
     @Test
@@ -61,14 +64,14 @@ public class SimpleLinkedListTest {
         list.push(6);
         list.push(5);
         Integer[] expected = {5, 6, 7, 8, 9};
-        assertThat(list.asArray(Integer.class)).containsExactly(expected);
+        Assert.assertArrayEquals(list.asArray(Integer.class), expected);
     }
 
     @Test
     public void canReturnEmptyListAsEmptyArray() {
         SimpleLinkedList list = new SimpleLinkedList();
         Object[] expected = {};
-        assertThat(list.asArray(Object.class)).containsExactly(expected);
+        Assert.assertArrayEquals(list.asArray(Object.class), expected);
     }
 
 }

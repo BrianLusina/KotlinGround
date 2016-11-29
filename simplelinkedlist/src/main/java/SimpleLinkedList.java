@@ -1,3 +1,5 @@
+package simplelinkedlist.src.main.java;
+
 import java.lang.reflect.Array;
 import java.util.NoSuchElementException;
 import java.util.Objects;
