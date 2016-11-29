@@ -22,7 +22,7 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
+
     public void testSumOfMultiplesOf3and5UpToFour() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -37,7 +37,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOf3and5UpToTen() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -52,7 +51,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOf3and5UpToOneHundred() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -67,7 +65,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOf3and5UpToOneThousand() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -82,7 +79,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOf7and13and17UpToTwenty() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -98,7 +94,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOf4and6UpToFifteen() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -129,7 +124,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOf5and25UpToTwoHundredSeventyFive() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -144,7 +138,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOf43and47UpToTenThousand() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -159,7 +152,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOfOneUpToOneHundred() {
 
         SumOfMultiples mySum = new SumOfMultiples();
@@ -173,7 +165,6 @@ public class SumOfMultiplesTest {
 
 
     @Test
-    @Ignore
     public void testSumOfMultiplesOfNoneUpToTenThousand() {
 
         SumOfMultiples mySum = new SumOfMultiples();
