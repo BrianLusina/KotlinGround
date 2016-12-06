@@ -1,6 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
+
+out/
 *.class
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -23,7 +26,6 @@ hs_err_pid*
 # Generated files
 bin/
 gen/
-out/
 
 # Gradle files
 .gradle/
