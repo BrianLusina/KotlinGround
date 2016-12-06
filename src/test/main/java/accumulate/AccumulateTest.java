@@ -1,4 +1,4 @@
-package main.java.accumulate;
+package test.main.java.accumulate;
 
 import main.java.accumulate.Accumulate;
 import org.junit.Test;
