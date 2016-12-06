@@ -1,4 +1,4 @@
-package accumulate.src.main.java;
+package main.java.accumulate;
 
 import java.util.ArrayList;
 import java.util.List;
