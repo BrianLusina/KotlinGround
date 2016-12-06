@@ -1,6 +1,6 @@
-package acronym.src.test.java;
+package test.main.java.acronym;
 
-import acronym.src.main.java.Acronym;
+import main.java.acronym.Acronym;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

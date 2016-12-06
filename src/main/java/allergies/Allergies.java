@@ -1,4 +1,4 @@
-package allergies.src.main.java;
+package main.java.allergies;
 
 import java.util.EnumSet;
 import java.util.List;

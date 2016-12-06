@@ -1,7 +1,7 @@
-package allergies.src.test.java;
+package test.java.allergies;
 
-import allergies.src.main.java.Allergen;
-import allergies.src.main.java.Allergies;
+import main.java.allergies.Allergen;
+import main.java.allergies.Allergies;
 import org.junit.Test;
 
 import java.util.Arrays;

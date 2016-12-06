@@ -1,4 +1,4 @@
-package Array.maxmin;
+package main.java.Array.maxmin;
 
 import java.util.Arrays;
 

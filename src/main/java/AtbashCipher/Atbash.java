@@ -1,4 +1,4 @@
-package AtbashCipher.src.main.java;
+package main.java.AtbashCipher;
 
 import java.util.ArrayList;
 import java.util.List;

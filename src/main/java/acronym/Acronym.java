@@ -1,6 +1,4 @@
-package acronym.src.main.java;
-
-import java.util.Arrays;
+package main.java.acronym;
 
 public class Acronym {
 

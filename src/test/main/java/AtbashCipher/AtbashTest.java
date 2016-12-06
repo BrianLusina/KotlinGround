@@ -1,6 +1,6 @@
-package AtbashCipher.src.test.java;
+package test.main.java.AtbashCipher;
 
-import AtbashCipher.src.main.java.Atbash;
+import main.java.AtbashCipher.Atbash;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;

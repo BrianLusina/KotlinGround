@@ -1,4 +1,4 @@
-package allergies.src.main.java;
+package main.java.allergies;
 
 public enum Allergen {
     EGGS(1),
