@@ -1,4 +1,4 @@
-package binary.src.test.java;
+package test.java.binary;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
 import java.util.Collection;
-import binary.src.main.java.Binary;
+import main.java.binary.Binary;
 
 import static org.junit.Assert.assertEquals;
 

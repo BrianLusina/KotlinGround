@@ -1,4 +1,4 @@
-package test.main.java.AtbashCipher;
+package test.java.AtbashCipher;
 
 import main.java.AtbashCipher.Atbash;
 import org.junit.Test;

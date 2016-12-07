@@ -1,14 +1,5 @@
-package binary.src.main.java;
+package main.java.binary;
 
-import java.util.Arrays;
-
-/**
- * Package: PACKAGE_NAME
- * Created by lusinabrian on 24/07/16 or 24 Jul of 2016,
- * Time: 22:08.
- * Project: binary
- * Description:
- */
 public class Binary {
     /*FIELDS*/
     private String binaryString;

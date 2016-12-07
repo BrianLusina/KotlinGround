@@ -1,18 +1,18 @@
-package test.DataStructures.simplelinkedlist.src.main.java;
+package test.CoffeeCheckin;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
 
 /**
- * SimpleLinkedList Tester.
+ * CoffeeCheckInSimulation Tester.
  *
  * @author <Authors name>
- * @since <pre>12/06/2016</pre>
+ * @since <pre>12/07/2016</pre>
  * @version 1.0
  */
-public class SimpleLinkedListTest extends TestCase {
-    public SimpleLinkedListTest(String name) {
+public class CoffeeCheckInSimulationTest extends TestCase {
+    public CoffeeCheckInSimulationTest(String name) {
         super(name);
     }
 
@@ -25,6 +25,6 @@ public class SimpleLinkedListTest extends TestCase {
     }
 
     public static Test suite() {
-        return new TestSuite(SimpleLinkedListTest.class);
+        return new TestSuite(CoffeeCheckInSimulationTest.class);
     }
 }

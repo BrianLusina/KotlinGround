@@ -1,8 +1,9 @@
-package CoffeeCheckin;
+package main.java.CoffeeCheckin;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static CoffeeCheckin.CheckinMarkers.*;
+import static main.java.CoffeeCheckin.CheckinMarkers.*;
 
 class CoffeeCheckInSimulation {
     private String employeesForWeek;

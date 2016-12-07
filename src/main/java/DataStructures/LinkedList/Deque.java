@@ -1,6 +1,8 @@
-package DataStructures.LinkedList.src.main.java;
+package main.java.DataStructures.LinkedList;
 
 public class Deque<T> {
+
+
     private static class Element<T>{
         final T value;
         Element next;

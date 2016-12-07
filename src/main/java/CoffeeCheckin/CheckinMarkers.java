@@ -1,4 +1,4 @@
-package CoffeeCheckin;
+package main.java.CoffeeCheckin;
 
 enum CheckinMarkers {
     LATE, NEXT, OTHER, DONE,
