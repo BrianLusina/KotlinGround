@@ -1,7 +1,7 @@
-package etl.src.test.java;
+package test.java.etl;
 
 import com.google.common.collect.ImmutableMap;
-import etl.src.main.java.Etl;
+import main.java.etl.Etl;
 import org.junit.Test;
 
 import java.util.Arrays;

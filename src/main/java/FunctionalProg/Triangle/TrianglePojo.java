@@ -1,11 +1,11 @@
-package FunctionalProg.Triangle;
+package main.java.FunctionalProg.Triangle;
 
 /**
  * FunctionalProg
  * Created by lusinabrian on 14/11/16.
  * Description:
  */
-class TrianglePojo {
+public class TrianglePojo {
     public final int height;
     public final int base;
     private double area;

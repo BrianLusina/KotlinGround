@@ -1,12 +1,8 @@
-package FunctionalProg.Closures;
+package main.java.FunctionalProg.Closures;
 
 import java.util.function.IntUnaryOperator;
-/**
- * FunctionalProg.Closures
- * Created by lusinabrian on 14/11/16.
- * Description:
- */
-class AdderFactory {
+
+public class AdderFactory {
     /*
    * Make the "create" method (public, static). It accepts one parameter (int addTo) and returns
    * a function (make sure to use the appropriate type). This function accepts an integer,

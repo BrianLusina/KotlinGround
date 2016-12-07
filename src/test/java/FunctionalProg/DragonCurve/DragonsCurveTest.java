@@ -1,4 +1,6 @@
-package FunctionalProg.DragonCurve;
+package test.java.FunctionalProg.DragonCurve;
+
+import main.java.FunctionalProg.DragonCurve.DragonsCurve;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.stream.IntStream;

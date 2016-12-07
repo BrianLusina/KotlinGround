@@ -1,10 +1,9 @@
-package FunctionalProg.DragonCurve;
+package main.java.FunctionalProg.DragonCurve;
 
 import java.util.function.IntFunction;
 import java.util.function.IntPredicate;
 
-
-class DragonsCurve {
+public class DragonsCurve {
 
     public IntFunction<String> mapFunction = null; //Make the function; map the chars to Strings
     //a -> aRbFR, b -> LFaLb, otherwise -> itself

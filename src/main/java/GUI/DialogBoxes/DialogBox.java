@@ -1,3 +1,5 @@
+package main.java.GUI.DialogBoxes;
+
 import javax.swing.JOptionPane;
 
 public class DialogBox

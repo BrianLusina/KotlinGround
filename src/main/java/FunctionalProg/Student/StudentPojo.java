@@ -1,11 +1,7 @@
-package FunctionalProg.Student;
+package main.java.FunctionalProg.Student;
 
-/**
- * FunctionalProg
- * Created by lusinabrian on 14/11/16.
- * Description:
- */
-class StudentPojo {
+
+public class StudentPojo {
 
     private final String firstName;
     private final String lastName;

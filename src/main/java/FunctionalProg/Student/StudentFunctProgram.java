@@ -1,12 +1,7 @@
-package FunctionalProg.Student;
+package main.java.FunctionalProg.Student;
 
 import java.util.function.Function;
 
-/**
- * FunctionalProg.Student.StudentPojo
- * Created by lusinabrian on 14/11/16.
- * Description:
- */
 public class StudentFunctProgram {
 
     //Make me a function; remember to set the types!
