@@ -1,4 +1,4 @@
-package meetup.src.main.java;
+package main.java.meetup;
 
 public enum MeetupSchedule {
     FIRST,

@@ -1,4 +1,5 @@
-package Math;
+package main.java.Math;
+
 /**
  * Package: Math
  * Created by lusinabrian on 29/07/16 or 29 Jul of 2016,

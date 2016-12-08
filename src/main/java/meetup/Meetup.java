@@ -1,4 +1,4 @@
-package meetup.src.main.java;
+package main.java.meetup;
 
 import org.joda.time.DateTime;
 

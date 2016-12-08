@@ -1,3 +1,5 @@
+package main.java.Math;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
