@@ -1,8 +1,8 @@
-package Math.AveragesOfNumbers;
+package main.java.Math.AveragesOfNumbers;
 
-class Averages {
+public class Averages {
 
-    static double[] averages(int[] numbers) {
+    public static double[] averages(int[] numbers) {
         if(numbers == null || numbers.length == 0){
             return new double[]{};
         }

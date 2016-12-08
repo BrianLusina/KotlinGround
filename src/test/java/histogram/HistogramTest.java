@@ -1,4 +1,4 @@
-package test.main.java.histogram;
+package test.java.histogram;
 
 import main.java.histogram.Histogram;
 import org.junit.Test;

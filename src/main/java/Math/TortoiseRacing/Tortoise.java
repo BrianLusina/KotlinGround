@@ -1,4 +1,4 @@
-package Math.TortoiseRacing;
+package main.java.Math.TortoiseRacing;
 
 /**
  * Package: Math.TortoiseRacing
@@ -8,6 +8,7 @@ package Math.TortoiseRacing;
  * Description:
  */
 public class Tortoise {
+
     public static int[] race(int speedA, int speedB, int lead) {
         return new int[]{};
     }

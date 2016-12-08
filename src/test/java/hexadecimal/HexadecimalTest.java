@@ -1,4 +1,4 @@
-package test.main.java.hexadecimal;
+package test.java.hexadecimal;
 
 import main.java.hexadecimal.Hexadecimal;
 import org.junit.Test;
