@@ -1,4 +1,5 @@
-package Hannah;
+package main.java.Hannah;
+
 import java.util.Scanner;
 
 /**

@@ -1,8 +1,9 @@
-package GradeSchool.src.main.java;
+package main.java.GradeSchool;
 
 import java.util.*;
 
 public class School {
+
     public HashMap<Integer,List<String>> database = new HashMap<Integer, List<String>>();
     public List<String> emptyDatabase = new ArrayList<String>();
 

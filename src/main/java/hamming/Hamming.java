@@ -1,4 +1,4 @@
-package hamming.src.main.java;
+package main.java.hamming;
 
 public class Hamming {
 

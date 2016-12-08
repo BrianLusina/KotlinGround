@@ -1,13 +1,13 @@
-package hamming.src.test.java;
+package test.java.hamming;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-import hamming.src.main.java.Hamming;
+import main.java.hamming.Hamming;
 import org.junit.Test;
 
 public class HammingTest {
-    
+
     @Test
     public void testNoDifferenceBetweenIdenticalStrands() {
         assertThat(Hamming.compute("A", "A"), is(0));
@@ -20,7 +20,7 @@ public class HammingTest {
 
     @Test
     public void testCompleteHammingDistanceForSmallStrand() {
-        assertThat(Hamming.compute("AG", "CT"), is(2)); 
+        assertThat(Hamming.compute("AG", "CT"), is(2));
     }
 
     @Test

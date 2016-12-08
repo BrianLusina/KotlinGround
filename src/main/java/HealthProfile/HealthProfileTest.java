@@ -1,4 +1,4 @@
-package HealthProfile;
+package main.java.HealthProfile;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
