@@ -1,6 +1,6 @@
-package hexadecimal.src.test.java;
+package test.main.java.hexadecimal;
 
-import hexadecimal.src.main.java.Hexadecimal;
+import main.java.hexadecimal.Hexadecimal;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

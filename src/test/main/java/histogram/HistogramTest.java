@@ -1,9 +1,10 @@
-package histogram;
+package test.main.java.histogram;
 
+import main.java.histogram.Histogram;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class HistogramTests {
+public class HistogramTest {
     @Test
     public void basic() {
         final String expected =

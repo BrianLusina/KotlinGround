@@ -1,4 +1,4 @@
-package histogram;
+package main.java.histogram;
 
 public class Histogram {
     /***
