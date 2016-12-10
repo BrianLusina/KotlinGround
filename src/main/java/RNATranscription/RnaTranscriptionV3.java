@@ -1,4 +1,4 @@
-package RNATranscription.src.main.java;
+package main.java.RNATranscription;
 
 import java.util.HashMap;
 

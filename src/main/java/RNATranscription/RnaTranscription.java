@@ -1,6 +1,7 @@
-package RNATranscription.src.main.java;
+package main.java.RNATranscription;
 
 public class RnaTranscription {
+
     public static String ofDna(String DNA){
         String RNA = "";
         for(char nucleotide: DNA.toCharArray()){

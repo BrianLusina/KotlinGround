@@ -1,4 +1,4 @@
-package raindrops.src.main.java;
+package main.java.raindrops;
 
 /**
  * Package: PACKAGE_NAME
@@ -7,6 +7,7 @@ package raindrops.src.main.java;
  * Project: raindrops
  */
 public class Raindrops {
+
     public static String convert(int number){
         String rain = "";
 

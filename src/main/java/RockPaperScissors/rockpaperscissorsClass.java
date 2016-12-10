@@ -1,4 +1,4 @@
-package RockPaperScissors;
+package main.java.RockPaperScissors;
 
 import java.util.Scanner;
 import java.util.Random;

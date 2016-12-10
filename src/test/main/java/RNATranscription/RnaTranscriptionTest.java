@@ -1,37 +1,48 @@
-package RNATranscription.src.test.java;
+package test.main.java.RNATranscription;
 
-import RNATranscription.src.main.java.RnaTranscription;
+import junit.framework.TestCase;
+import main.java.RNATranscription.RnaTranscription;
 import org.junit.Assert;
-import org.junit.Test;
 
-public class RnaTranscriptionTest {
+public class RnaTranscriptionTest extends TestCase {
+    public RnaTranscriptionTest(String name) {
+        super(name);
+    }
 
-    @Test
+    public void setUp() throws Exception {
+        super.setUp();
+    }
+
+    public void tearDown() throws Exception {
+        super.tearDown();
+    }
+
+    @org.junit.Test
     public void testRnaTranscriptionOfEmptyDnaIsEmptyRna() {
         Assert.assertEquals("", RnaTranscription.ofDna(""));
     }
 
-    @Test
+    @org.junit.Test
     public void testRnaTranscriptionOfCytosineIsGuanine() {
         Assert.assertEquals("G", RnaTranscription.ofDna("C"));
     }
 
-    @Test
+    @org.junit.Test
     public void testRnaTranscriptionOfGuanineIsCytosine() {
         Assert.assertEquals("C", RnaTranscription.ofDna("G"));
     }
 
-    @Test
+    @org.junit.Test
     public void testRnaTranscriptionOfThymineIsAdenine() {
         Assert.assertEquals("A", RnaTranscription.ofDna("T"));
     }
 
-    @Test
+    @org.junit.Test
     public void testRnaTranscriptionOfAdenineIsUracil() {
         Assert.assertEquals("U", RnaTranscription.ofDna("A"));
     }
 
-    @Test
+    @org.junit.Test
     public void testRnaTranscription() {
         Assert.assertEquals("UGCACCAGAAUU", RnaTranscription.ofDna("ACGTGGTCTTAA"));
     }

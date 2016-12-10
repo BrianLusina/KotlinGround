@@ -1,4 +1,4 @@
-package Robotname.src.main.java;
+package main.java.Robotname;
 
 import java.util.Random;
 

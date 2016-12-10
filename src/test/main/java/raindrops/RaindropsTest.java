@@ -1,23 +1,33 @@
-package raindrops.src.test.java;
+package test.main.java.raindrops;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import junit.framework.TestCase;
+import main.java.raindrops.Raindrops;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-import raindrops.src.main.java.Raindrops;
 
 import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(Parameterized.class)
-public class RaindropsTest {
+public class RaindropsTest extends TestCase {
+    public RaindropsTest(String name) {
+        super(name);
+    }
+
+    public void setUp() throws Exception {
+        super.setUp();
+    }
+
+    public void tearDown() throws Exception {
+        super.tearDown();
+    }
 
     private int input;
     private String expectedOutput;
 
-    @Parameters
+    @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 // Non-primes
@@ -53,7 +63,7 @@ public class RaindropsTest {
         this.expectedOutput = expectedOutput;
     }
 
-    @Test
+    @org.junit.Test
     public void test() {
         assertEquals(expectedOutput, Raindrops.convert(input));
     }

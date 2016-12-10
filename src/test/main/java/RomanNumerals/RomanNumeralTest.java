@@ -1,18 +1,28 @@
-package RomanNumerals.src.test.java;
+package test.main.java.RomanNumerals;
 
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import junit.framework.TestCase;
+import main.java.RomanNumerals.RomanNumeral;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.Test;
-import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.assertEquals;
-import RomanNumerals.src.main.java.RomanNumeral;
-
 @RunWith(Parameterized.class)
-public class RomanNumeralsTest {
+public class RomanNumeralTest extends TestCase {
+    public RomanNumeralTest(String name) {
+        super(name);
+    }
+
+    public void setUp() throws Exception {
+        super.setUp();
+    }
+
+    public void tearDown() throws Exception {
+        super.tearDown();
+    }
 
     private int input;
     private String expectedOutput;
@@ -42,15 +52,18 @@ public class RomanNumeralsTest {
         });
     }
 
-    public RomanNumeralsTest(int input, String expectedOutput) {
+    public RomanNumeralTest(int input, String expectedOutput) {
         this.input = input;
         this.expectedOutput = expectedOutput;
     }
 
-    @Test
+    @org.junit.Test
     public void convertArabicNumberalToRomanNumeral() {
         RomanNumeral romanNumeral = new RomanNumeral(input);
 
         assertEquals(expectedOutput, romanNumeral.getRomanNumeral());
+    }
+    public static Test suite() {
+        return new TestSuite(RomanNumeralTest.class);
     }
 }

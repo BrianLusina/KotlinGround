@@ -1,4 +1,4 @@
-package Regex.ValidPhoneNumber;
+package main.java.Regex.ValidPhoneNumber;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

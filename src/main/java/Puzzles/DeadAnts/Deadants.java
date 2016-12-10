@@ -1,11 +1,11 @@
-package Puzzles.DeadAnts;
+package main.java.Puzzles.DeadAnts;
 
-class Deadants {
+public class Deadants {
     /**
      * Checks if the argument is null, returns 0
      * creates a string to later check if the word is ant or a regular word
      * count the number of words in the string using a regex*/
-    static int deadAntCount(final String ants) {
+    public static int deadAntCount(final String ants) {
         String ant = "ant|^([a-zA-Z]*)$";
 
         if(ants == null){
