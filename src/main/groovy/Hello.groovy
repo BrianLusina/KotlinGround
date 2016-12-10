@@ -1,4 +1,4 @@
-package main.java.Groovy
+package main.groovy
 
 class Hello {
     static void main(String[] args) {
