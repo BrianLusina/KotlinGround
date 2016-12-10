@@ -1,24 +1,32 @@
-package Primefactors.src.test.java;
-
-import Primefactors.src.main.java.PrimeFactors;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+package test.main.java.Primefactors;
+import junit.framework.TestCase;
+import main.java.Primefactors.PrimeFactors;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+public class PrimeFactorsTest extends TestCase {
+    public PrimeFactorsTest(String name) {
+        super(name);
+    }
 
-@RunWith(Parameterized.class)
-public class PrimeFactorsTest {
+    public void setUp() throws Exception {
+        super.setUp();
+    }
 
+    public void tearDown() throws Exception {
+        super.tearDown();
+    }
+
+    public void testGetForNumber() throws Exception {
+        //TODO: Test goes here...
+    }
     private long input;
     private List<Long> expectedOutput;
 
-    @Parameters(name="Prime factors of {0} = {1}")
+    @Parameterized.Parameters(name="Prime factors of {0} = {1}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1L, Arrays.asList()},
@@ -40,7 +48,7 @@ public class PrimeFactorsTest {
         this.expectedOutput = expectedOutput;
     }
 
-    @Test
+    @org.junit.Test
     public void test() {
         assertEquals(expectedOutput, PrimeFactors.getForNumber(input));
     }

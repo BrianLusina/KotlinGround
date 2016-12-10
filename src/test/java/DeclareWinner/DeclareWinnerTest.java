@@ -1,47 +1,50 @@
-package ObjectOriented.DeclareWinner;
+package test.java.DeclareWinner;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import org.junit.runners.JUnit4;
+import junit.framework.TestCase;
+import main.java.DeclareWinner.DeclareWinner;
 
-/** 
-* DeclareWinner Tester. 
-* 
-* @author <Authors name> 
-* @since <pre>Aug 4, 2016</pre> 
-* @version 1.0 
-*/ 
-public class DeclareWinnerTest { 
+public class DeclareWinnerTest extends TestCase {
+    public DeclareWinnerTest(String name) {
+        super(name);
+    }
 
-@Test
-public void testOne() throws Exception {
+    public void setUp() throws Exception {
+        super.setUp();
+    }
+
+    public void tearDown() throws Exception {
+        super.tearDown();
+    }
+
+
+    @org.junit.Test
+    public void testOne() throws Exception {
         assertEquals("Lew to win", "Lew", DeclareWinner.declareWinner(new DeclareWinner.Fighter("Lew", 10, 2),new DeclareWinner.Fighter("Harry", 5, 4), "Lew"));
-}
+    }
 
-    @Test
+    @org.junit.Test
     public void testTwo() throws Exception{
         assertEquals(DeclareWinner.declareWinner(new DeclareWinner.Fighter("Lew", 10, 2),new DeclareWinner.Fighter("Harry", 5, 4), "Harry"),"Harry");
     }
 
-    @Test
+    @org.junit.Test
     public void testThree() throws Exception{
         assertEquals(DeclareWinner.declareWinner(new DeclareWinner.Fighter("Harald", 20, 5), new DeclareWinner.Fighter("Harry", 5, 4), "Harry"),"Harald");
     }
 
-    @Test
+    @org.junit.Test
     public void testFour() throws Exception{
         assertEquals(DeclareWinner.declareWinner(new DeclareWinner.Fighter("Harald", 20, 5), new DeclareWinner.Fighter("Harry", 5, 4), "Harald"),"Harald");
     }
 
-    @Test
+    @org.junit.Test
     public void testFive() throws Exception{
         assertEquals(DeclareWinner.declareWinner(new DeclareWinner.Fighter("Jerry", 30, 3), new DeclareWinner.Fighter("Harald", 20, 5), "Jerry"), "Harald");
     }
 
-    @Test
+    @org.junit.Test
     public void testSix() throws Exception{
         assertEquals(DeclareWinner.declareWinner(new DeclareWinner.Fighter("Jerry", 30, 3), new DeclareWinner.Fighter("Harald", 20, 5), "Harald"),"Harald");
     }
 
-/*CLASS END*/
 }

@@ -1,8 +1,5 @@
-package pangram.src.main.java;
+package main.java.pangram;
 
-/**
- * Created by lusinabrian on 24/06/16.
- */
 public class Pangrams {
 
     public static boolean isPangram(String pan){

@@ -1,90 +1,98 @@
-package Phonenumber.src.test.java;
+package test.main.java.Phonenumber;
 
-import Phonenumber.src.main.java.PhoneNumber;
-import org.junit.Test;
+import junit.framework.TestCase;
+import main.java.Phonenumber.PhoneNumber;
 
-import static org.junit.Assert.assertEquals;
+public class PhoneNumberTest extends TestCase {
+    public PhoneNumberTest(String name) {
+        super(name);
+    }
 
-public class PhoneNumberTest {
+    public void setUp() throws Exception {
+        super.setUp();
+    }
 
-    @Test
+    public void tearDown() throws Exception {
+        super.tearDown();
+    }
+
+    @org.junit.Test
     public void cleansNumber() {
         final String expectedNumber = "1234567890";
         final String actualNumber = new PhoneNumber("(123) 456-7890").getNumber();
 
         assertEquals(
-            expectedNumber, actualNumber
+                expectedNumber, actualNumber
         );
     }
 
-    @Test
+    @org.junit.Test
     public void cleansNumberWithDots() {
         final String expectedNumber = "1234567890";
         final String actualNumber = new PhoneNumber("123.456.7890").getNumber();
 
         assertEquals(
-            expectedNumber, actualNumber
+                expectedNumber, actualNumber
         );
     }
 
-    @Test
+    @org.junit.Test
     public void validWhen11DigitsAndFirstIs1() {
         final String expectedNumber = "1234567890";
         final String actualNumber = new PhoneNumber("11234567890").getNumber();
 
         assertEquals(
-            expectedNumber, actualNumber
+                expectedNumber, actualNumber
         );
     }
 
-    @Test
+    @org.junit.Test
     public void invalidWhenOnly11Digits() {
         final String expectedNumber = "0000000000";
         final String actualNumber = new PhoneNumber("21234567890").getNumber();
 
         assertEquals(
-            expectedNumber, actualNumber
+                expectedNumber, actualNumber
         );
     }
 
-    @Test
+    @org.junit.Test
     public void invalidWhen9Digits() {
         final String expectedNumber = "0000000000";
         final String actualNumber = new PhoneNumber("123456789").getNumber();
 
         assertEquals(
-            expectedNumber, actualNumber
+                expectedNumber, actualNumber
         );
     }
 
-    @Test
+    @org.junit.Test
     public void areaCode() {
         final String expectedAreaCode = "123";
         final String actualAreaCode = new PhoneNumber("1234567890").getAreaCode();
 
         assertEquals(
-            expectedAreaCode, actualAreaCode
+                expectedAreaCode, actualAreaCode
         );
     }
 
-    @Test
+    @org.junit.Test
     public void prettyPrint() {
         final String expectedPrettyNumber = "(123) 456-7890";
         final String actualPrettyNumber = new PhoneNumber("1234567890").pretty();
 
         assertEquals(
-            expectedPrettyNumber, actualPrettyNumber
+                expectedPrettyNumber, actualPrettyNumber
         );
     }
 
-    @Test
+    @org.junit.Test
     public void prettyPrintWithFullUSPhoneNumber() {
         final String expectedPrettyNumber = "(123) 456-7890";
         final String actualPrettyNumber = new PhoneNumber("11234567890").pretty();
 
         assertEquals(
-            expectedPrettyNumber, actualPrettyNumber
+                expectedPrettyNumber, actualPrettyNumber
         );
     }
-
 }

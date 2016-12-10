@@ -1,4 +1,4 @@
-package test.main.java.NucleotideCount;
+package test.java.NucleotideCount;
 import junit.framework.TestCase;
 import main.java.NucleotideCount.DNA;
 

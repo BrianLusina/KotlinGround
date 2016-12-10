@@ -1,36 +1,48 @@
-package pangram.src.test.java;
+package test.main.java.pangram;
 
-import org.junit.Test;
-import pangram.src.main.java.Pangrams;
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import junit.framework.TestCase;
+import main.java.pangram.Pangrams;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-public class PangramTest {
+public class PangramsTest extends TestCase {
+    public PangramsTest(String name) {
+        super(name);
+    }
 
-    @Test
+    public void setUp() throws Exception {
+        super.setUp();
+    }
+
+    public void tearDown() throws Exception {
+        super.tearDown();
+    }
+
+    @org.junit.Test
     public void emptySentence() {
         assertFalse(Pangrams.isPangram(""));
     }
 
-    @Test
+    @org.junit.Test
     public void testLowercasePangram() {
         assertTrue(Pangrams.isPangram("the quick brown fox jumps over the lazy dog"));
     }
 
-    @Test
+    @org.junit.Test
     public void missingCharacterX() {
         assertFalse(Pangrams.isPangram("a quick movement of the enemy will jeopardize five gunboats"));
     }
 
-    @Test
+    @org.junit.Test
     public void mixedCaseAndPunctuation() {
         assertTrue(Pangrams.isPangram("\"Five quacking Zephyrs jolt my wax bed.\""));
     }
 
-    @Test
+    @org.junit.Test
     public void nonAsciiCharacters() {
         assertTrue(Pangrams.isPangram("Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich."));
     }
-
 }

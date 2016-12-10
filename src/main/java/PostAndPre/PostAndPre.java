@@ -1,4 +1,4 @@
-package PostAndPre;
+package main.java.PostAndPre;
 
 /**
  * Created by lusinabrian on 06/07/16.

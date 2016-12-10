@@ -1,4 +1,4 @@
-package ObjectOriented.DeclareWinner;
+package main.java.DeclareWinner;
 
 /**
  * Package: ObjectOriented.DeclareWinner

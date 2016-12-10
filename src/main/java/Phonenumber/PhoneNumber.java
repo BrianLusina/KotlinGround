@@ -1,9 +1,5 @@
-package Phonenumber.src.main.java;
+package main.java.Phonenumber;
 
-import com.sun.xml.internal.ws.util.StringUtils;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
