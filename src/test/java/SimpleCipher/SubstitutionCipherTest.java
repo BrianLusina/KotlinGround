@@ -1,6 +1,6 @@
-package SimpleCipher.src.test.java;
+package test.java.SimpleCipher;
 
-import SimpleCipher.src.main.java.Cipher;
+import main.java.SimpleCipher.Cipher;
 import org.junit.Before;
 import org.junit.Test;
 

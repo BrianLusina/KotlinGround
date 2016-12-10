@@ -1,4 +1,4 @@
-package test.main.java.Strings.Rotations;
+package test.java.Rotations;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

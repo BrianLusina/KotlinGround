@@ -1,4 +1,4 @@
-package Spaceage.src.main.java;
+package main.java.Spaceage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +15,7 @@ import java.util.Map;
  Neptune: orbital period 164.79132 Earth years
  */
 public class SpaceAge {
+
     public static final float earthYrsSec = 31557600L;
     public static final float mercuryYrsSec = (float)(earthYrsSec * 0.2408467);
     public static final float venusYrsSec = (float)(earthYrsSec * 0.61519726);

@@ -1,16 +1,16 @@
-package main.java.Scrabble;
+package test.java.Scrabble;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
+import main.java.Scrabble.ScrabbleGame;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
-/**
- * ScrabbleGame Tester.
- *
- * @author <Authors name>
- * @since <pre>12/10/2016</pre>
- * @version 1.0
- */
+import java.util.Arrays;
+import java.util.Collection;
+
+@RunWith(Parameterized.class)
 public class ScrabbleGameTest extends TestCase {
     public ScrabbleGameTest(String name) {
         super(name);
@@ -24,15 +24,34 @@ public class ScrabbleGameTest extends TestCase {
         super.tearDown();
     }
 
-    public void testGetScore() throws Exception {
-        //TODO: Test goes here...
+    private String input;
+    private int expectedOutput;
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][]{
+                {"", 0},
+                {" \t\n", 0},
+                {null, 0},
+                {"a", 1},
+                {"f", 4},
+                {"street", 6},
+                {"quirky", 22},
+                {"OXYPHENBUTAZONE", 41},
+                {"alacrity", 13},
+        });
     }
 
-    public void testSetGetInput() throws Exception {
-        //TODO: Test goes here...
+    public ScrabbleGameTest(String input, int expectedOutput) {
+        this.input = input;
+        this.expectedOutput = expectedOutput;
     }
 
-    public static Test suite() {
+    @org.junit.Test
+    public void test() {
+        ScrabbleGame scrabble = new ScrabbleGame(input);
+        assertEquals(expectedOutput, scrabble.getScore());
+    }    public static Test suite() {
         return new TestSuite(ScrabbleGameTest.class);
     }
 }

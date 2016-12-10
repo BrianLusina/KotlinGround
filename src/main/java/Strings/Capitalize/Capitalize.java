@@ -1,4 +1,4 @@
-package Strings.Capitalize;
+package main.java.Strings.Capitalize;
 
 /**
  * Package: Strings

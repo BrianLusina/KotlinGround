@@ -1,9 +1,10 @@
-package Wordcount.src.main.java;
+package main.java.Wordcount;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class WordCount {
+
     public Map<String,Integer> phrase(String word){
         //convert string to lowercase to cater for similar words with different capitalizations
         word = word.toLowerCase();

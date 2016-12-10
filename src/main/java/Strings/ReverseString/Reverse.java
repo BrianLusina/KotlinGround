@@ -1,4 +1,4 @@
-package Strings.ReverseString;
+package main.java.Strings.ReverseString;
 
 /**
  * Package: Strings

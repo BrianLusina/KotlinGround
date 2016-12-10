@@ -1,10 +1,10 @@
-package sumofmultiples;
+package main.java.sumofmultiples;
 
 import java.util.stream.IntStream;
 
-class SumOfMultiples {
+public class SumOfMultiples {
 
-    int Sum(int number, int[] multiples){
+    public int Sum(int number, int[] multiples){
         //create range for the numbers
         if(multiples.length == 0){
             return 0;

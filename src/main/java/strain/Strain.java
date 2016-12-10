@@ -1,4 +1,4 @@
-package strain.src.main.java;
+package main.java.strain;
 
 import java.util.ArrayList;
 import java.util.List;

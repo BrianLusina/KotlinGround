@@ -1,4 +1,4 @@
-package test.main.java.Strings.WordSearch;
+package test.java.WordSearch;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
