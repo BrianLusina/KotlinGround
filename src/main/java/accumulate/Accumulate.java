@@ -14,7 +14,7 @@ public class Accumulate {
 
     public static <T> List<T> accumulate(List<T> collection, Function<T, T> func) {
         List<T> outCollection = new ArrayList<>();
-        for(T item : collection){
+        for (T item : collection) {
             outCollection.add(func.apply(item));
         }
         return outCollection;

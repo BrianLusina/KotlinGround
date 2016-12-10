@@ -11,21 +11,21 @@ import java.util.LinkedList;
  * You can easily change an ArrayList to a LinkedLists by changing the object type.
  * You cannot specify an initial capacity for the LinkedLists.
  * The most notable difference between the LinkedLists and the ArrayList is in the way they store objects.
- The ArrayList is better for storing and accessing data, as it is very similar to a normal array.
- The LinkedLists is better for manipulating data, such as making numerous inserts and deletes.
-
- In addition to storing the object, the LinkedLists stores the memory address (or link) of the element that follows it.
- It's called a LinkedLists because each element contains a link to the neighboring element.
-
- Since the LinkedLists is an array, you can use the enhanced for loop to iterate over its elements.
-
- Summary:
- - Use an ArrayList when you need rapid access to your data.
- - Use a LinkedLists when you need to make a large number of inserts and/or deletes.
+ * The ArrayList is better for storing and accessing data, as it is very similar to a normal array.
+ * The LinkedLists is better for manipulating data, such as making numerous inserts and deletes.
+ * <p>
+ * In addition to storing the object, the LinkedLists stores the memory address (or link) of the element that follows it.
+ * It's called a LinkedLists because each element contains a link to the neighboring element.
+ * <p>
+ * Since the LinkedLists is an array, you can use the enhanced for loop to iterate over its elements.
+ * <p>
+ * Summary:
+ * - Use an ArrayList when you need rapid access to your data.
+ * - Use a LinkedLists when you need to make a large number of inserts and/or deletes.
  */
 public class LinkedLists {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
     /*Resizable array colors with an initial capacity of 10*/
         LinkedList<String> colors = new LinkedList();
         colors.add("Red");
@@ -34,9 +34,9 @@ public class LinkedLists {
         colors.add("Yellow");
 
         //does the ArrayList contain Orange?
-        if(colors.contains("Orange")){
+        if (colors.contains("Orange")) {
             System.out.println("LinkedList colors contains Orange \n");
-        }else{
+        } else {
             System.out.println("LinkedList colors does not contains Orange \n");
         }
 
@@ -69,14 +69,14 @@ public class LinkedLists {
         String value = it.next();
         System.out.println(value);
 /**
-Typically, iterators are used in loops. At each iteration of the loop, you can access the corresponding list element.
-While loop determines whether the iterator has additional elements, prints the value of the element, and advances the iterator to the next.
+ Typically, iterators are used in loops. At each iteration of the loop, you can access the corresponding list element.
+ While loop determines whether the iterator has additional elements, prints the value of the element, and advances the iterator to the next.
  */
-        while(it.hasNext()){
+        while (it.hasNext()) {
             value = it.next();
             System.out.println(value);
         }
-    //Main end
+        //Main end
     }
 //End
 }

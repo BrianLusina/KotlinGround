@@ -8,7 +8,7 @@ package main.java.raindrops;
  */
 public class Raindrops {
 
-    public static String convert(int number){
+    public static String convert(int number) {
         String rain = "";
 
         if (number % 3 == 0) {

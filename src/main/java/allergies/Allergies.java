@@ -13,15 +13,16 @@ import java.util.stream.Collectors;
  */
 public class Allergies {
     int score;
-    public Allergies(int score){
+
+    public Allergies(int score) {
         this.score = score;
     }
 
-    public boolean isAllergicTo(Allergen allergen){
+    public boolean isAllergicTo(Allergen allergen) {
         return (allergen.getScore() & score) == allergen.getScore();
     }/*method end*/
 
-    public List<Allergen> getList(){
+    public List<Allergen> getList() {
         return EnumSet.allOf(Allergen.class).stream().filter(this::isAllergicTo).collect(Collectors.toList());
     }/*method end*/
 /*CLASS END*/

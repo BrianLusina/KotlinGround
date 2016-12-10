@@ -9,19 +9,19 @@ package Binary;
  * Description:
  */
 public class CountBinary {
-    public static void main(String[] args){
-        System.out.printf("Expected: %d, Actual: %d\n",5, countBits(1234));
-        System.out.printf("Expected: %d, Actual: %d\n",1, countBits(4));
-        System.out.printf("Expected: %d, Actual: %d\n",3,  countBits(7));
-        System.out.printf("Expected: %d, Actual: %d\n",2,  countBits(9));
-        System.out.printf("Expected: %d, Actual: %d\n",2,  countBits(10));
+    public static void main(String[] args) {
+        System.out.printf("Expected: %d, Actual: %d\n", 5, countBits(1234));
+        System.out.printf("Expected: %d, Actual: %d\n", 1, countBits(4));
+        System.out.printf("Expected: %d, Actual: %d\n", 3, countBits(7));
+        System.out.printf("Expected: %d, Actual: %d\n", 2, countBits(9));
+        System.out.printf("Expected: %d, Actual: %d\n", 2, countBits(10));
     }
 
-    public static int countBits(int n){
+    public static int countBits(int n) {
         int counter = 0;
         String bin = Integer.toBinaryString(n);
-        for(int x = 0; x<bin.length();x++){
-            if(bin.charAt(x) == '1')
+        for (int x = 0; x < bin.length(); x++) {
+            if (bin.charAt(x) == '1')
                 counter++;
         }
         return counter;

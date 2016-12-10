@@ -6,7 +6,7 @@ package ObjectOriented.AbstractionInterfaces.MotorVehicles;
  * Description:
  */
 public class CarsTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         VehicleInterface vehicleInterface = new MercedezBenz("S class", "sclass1200");
 
         vehicleInterface.bodyColor("black");

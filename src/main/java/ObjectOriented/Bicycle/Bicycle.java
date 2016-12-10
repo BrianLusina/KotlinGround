@@ -5,9 +5,9 @@ package ObjectOriented.Bicycle;
  * Created by lusinabrian on 02/11/16.
  * Description: Bicycle Class which will be the superclass describing all bicycles in existence
  */
-class Bicycle implements BicycleInterface{
+class Bicycle implements BicycleInterface {
     //fields/ states of bicycles
-    private int currentGear, currentSpeed,currentPedal, yearMade;
+    private int currentGear, currentSpeed, currentPedal, yearMade;
     private String name, model;
 
     Bicycle(int currentGear, int currentSpeed, int currentPedal, int yearMade, String name, String model) {

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class WordCount {
 
-    public Map<String,Integer> phrase(String word){
+    public Map<String, Integer> phrase(String word) {
         //convert string to lowercase to cater for similar words with different capitalizations
         word = word.toLowerCase();
         //Use regex to remove all non-words and punctuation marks
@@ -13,8 +13,8 @@ public class WordCount {
         /*create a map to store the strings and the word count*/
         Map<String, Integer> map = new HashMap<String, Integer>();
         /*for each loop looping through each word in string array*/
-        for(String s : word.split(" ")){
-            s = s.replaceAll(punctuation,"");
+        for (String s : word.split(" ")) {
+            s = s.replaceAll(punctuation, "");
             Integer count = map.get(s);
             count = (count != null && map.containsKey(s)) ? ++count : 1;
             map.put(s, count);

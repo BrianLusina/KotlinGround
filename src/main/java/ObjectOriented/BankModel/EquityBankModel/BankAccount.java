@@ -7,13 +7,17 @@ class BankAccount {
     private String owner;
     private double balance, minimumBalance;
 
-    BankAccount(){}
+    BankAccount() {
+    }
 
-    /**Constructor
-     * @param id user id
-     * @param owner bank account owner
-     * @param balance balance in the account
-     * @param minimumBalance minimum balance allowed by the bank for the account*/
+    /**
+     * Constructor
+     *
+     * @param id             user id
+     * @param owner          bank account owner
+     * @param balance        balance in the account
+     * @param minimumBalance minimum balance allowed by the bank for the account
+     */
     BankAccount(int id, String owner, double balance, double minimumBalance) {
         this.id = id;
         this.owner = owner;
@@ -21,15 +25,21 @@ class BankAccount {
         this.minimumBalance = minimumBalance;
     }
 
-    /**Withdraw amount from account
-     * @param amount amount withdrawn from the account*/
-    public double withdraw(double amount){
+    /**
+     * Withdraw amount from account
+     *
+     * @param amount amount withdrawn from the account
+     */
+    public double withdraw(double amount) {
         return this.getBalance() - amount;
     }
 
-    /**Deposit into bank account
-     * @param amount Amount to deposit into bank account*/
-    public double deposit(double amount){
+    /**
+     * Deposit into bank account
+     *
+     * @param amount Amount to deposit into bank account
+     */
+    public double deposit(double amount) {
         return this.getBalance() + amount;
     }
 

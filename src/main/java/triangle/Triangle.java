@@ -5,13 +5,13 @@ package main.java.triangle;
  * Checks the kind of triangle based on length of sides given.
  */
 public class Triangle {
-    private double side1,side2, side3;
+    private double side1, side2, side3;
 
     /*constructor*/
     public Triangle(double side1, double side2, double side3) throws TriangleException {
-        if((side1 <= 0 || side2 <= 0 || side3 <= 0) || ((side1 + side2 <= side3) || ((side2 + side3 <= side1))) || ((side1 + side3 <= side2))){
+        if ((side1 <= 0 || side2 <= 0 || side3 <= 0) || ((side1 + side2 <= side3) || ((side2 + side3 <= side1))) || ((side1 + side3 <= side2))) {
             throw new TriangleException();
-        }else {
+        } else {
             this.side1 = side1;
             this.side2 = side2;
             this.side3 = side3;
@@ -19,17 +19,17 @@ public class Triangle {
     }
 
     /*return kind of triangle*/
-    public TriangleKind getKind(){
-        if(getSide1() == getSide2() && getSide2() == getSide3()){
+    public TriangleKind getKind() {
+        if (getSide1() == getSide2() && getSide2() == getSide3()) {
             return TriangleKind.EQUILATERAL;
-        }else if((getSide1() ==  getSide2() && getSide2() != getSide3()) || (getSide2() ==  getSide3() && getSide3() != getSide1()) || (getSide1() ==  getSide3() && getSide1() != getSide2())){
+        } else if ((getSide1() == getSide2() && getSide2() != getSide3()) || (getSide2() == getSide3() && getSide3() != getSide1()) || (getSide1() == getSide3() && getSide1() != getSide2())) {
             return TriangleKind.ISOSCELES;
-        }else{
+        } else {
             return TriangleKind.SCALENE;
         }
     }
 
-/*GETTERS AND SETTERS*/
+    /*GETTERS AND SETTERS*/
     public double getSide1() {
         return side1;
     }

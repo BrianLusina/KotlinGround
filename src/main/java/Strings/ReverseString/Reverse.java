@@ -11,19 +11,21 @@ package main.java.Strings.ReverseString;
  */
 public class Reverse {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /*TESTS*/
-        System.out.printf("Actual:%s, Expected:%s\n",reverse("CodeNinja"), "ajniNedoC");
-        System.out.printf("Actual:%s, Expected:%s\n",reverse("ninja"), "ajnin");
-        System.out.printf("Actual:%s, Expected:%s\n",reverse("World"), "dlroW");
-        System.out.printf("Actual:%s, Expected:%s\n",reverse("pleh em"), "help me");
+        System.out.printf("Actual:%s, Expected:%s\n", reverse("CodeNinja"), "ajniNedoC");
+        System.out.printf("Actual:%s, Expected:%s\n", reverse("ninja"), "ajnin");
+        System.out.printf("Actual:%s, Expected:%s\n", reverse("World"), "dlroW");
+        System.out.printf("Actual:%s, Expected:%s\n", reverse("pleh em"), "help me");
     }
 
     /**
      * Create a new string builder append the string to the string builder
      * use the reverse method of sb and convert to string
-     * @param input, string input to reverse*/
-    public static String reverse(String input){
+     *
+     * @param input, string input to reverse
+     */
+    public static String reverse(String input) {
         StringBuilder sb = new StringBuilder().append(input);
         return sb.reverse().toString();
     }/*method end*/

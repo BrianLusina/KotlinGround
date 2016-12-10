@@ -11,22 +11,22 @@ public class Sieve {
     private int limit;
     private List<Integer> primes;
 
-    public Sieve(int limit){
+    public Sieve(int limit) {
         this.limit = limit;
         this.primes = calcPrimes();
     }
 
-    public List<Integer> getPrimes(){
+    public List<Integer> getPrimes() {
         return primes;
     }
 
-    private List<Integer> calcPrimes(){
+    private List<Integer> calcPrimes() {
         primes = new ArrayList<>();
         LinkedList<Integer> linked = IntStream.range(2, getLimit() + 1)
                 .boxed()
                 .collect(Collectors.toCollection(LinkedList::new));
 
-        while(linked.size() > 0){
+        while (linked.size() > 0) {
             Integer p = linked.remove();
             primes.add(p);
             linked = linked.stream()

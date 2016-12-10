@@ -7,19 +7,25 @@ package ObjectOriented.AbstractionInterfaces.AnimalKingdom;
  */
 abstract class Animal {
 
-    /**Types of food the animals eat*/
+    /**
+     * Types of food the animals eat
+     */
     public abstract void eat(String food);
 
-    /**How long the anima will sleep*/
-    public void sleep(int hours){
-        try{
+    /**
+     * How long the anima will sleep
+     */
+    public void sleep(int hours) {
+        try {
             // 1000 milliseconds * 60 seconds * 60 minutes * hours
-            Thread.sleep(1000 * 60 *60 *hours);
-        }catch (InterruptedException ie){
+            Thread.sleep(1000 * 60 * 60 * hours);
+        } catch (InterruptedException ie) {
             ie.printStackTrace();
         }
     }
 
-    /**The sound the animals make*/
+    /**
+     * The sound the animals make
+     */
     public abstract void makeNoise();
 }

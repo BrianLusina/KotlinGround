@@ -14,47 +14,47 @@ public class Atbash {
     private static final String ALPHA = "abcdefghijklmnopqrstuvwxyz";
     private static final String CIPHER = "zyxwvutsrqponmlkjihgfedcba";
 
-    public static String encode(String input){
+    public static String encode(String input) {
         String enc = filterInvalids(input).toLowerCase();
         String dec = "";
-        for(char c : enc.toCharArray()){
+        for (char c : enc.toCharArray()) {
             dec += cipherizer(c);
         }
 
         return groupies(dec);
     }/*encoding end*/
 
-    public static String decode(String input){
+    public static String decode(String input) {
         String enc = filterInvalids(input).toLowerCase();
         String dec = "";
-        for(char c : enc.toCharArray()){
+        for (char c : enc.toCharArray()) {
             dec += cipherizer(c);
         }
         return dec;
     }/*decoding end*/
 
     /*filter invalid characters*/
-    public static String filterInvalids(String toFilter){
+    public static String filterInvalids(String toFilter) {
         String out = "";
-        for(char c: toFilter.toCharArray()){
-            if(Character.isLetterOrDigit(c)){
-                out += c ;
+        for (char c : toFilter.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                out += c;
             }
         }
         return out;
     }
 
     /*performs the actual cipher*/
-    public static char cipherizer(char c){
+    public static char cipherizer(char c) {
         int indx = ALPHA.indexOf(c);
         return indx >= 0 ? CIPHER.toCharArray()[indx] : c;
     }
 
     /*groups the words into five letters*/
-    public static String groupies(String str){
+    public static String groupies(String str) {
         List<String> words = new ArrayList<String>();
-        for(int x = 0;x < str.length(); x += GROUP_SIZE){
-            words.add(x + GROUP_SIZE <=  str.length() ? str.substring(x, x + GROUP_SIZE) : str.substring(x));
+        for (int x = 0; x < str.length(); x += GROUP_SIZE) {
+            words.add(x + GROUP_SIZE <= str.length() ? str.substring(x, x + GROUP_SIZE) : str.substring(x));
         }
         return String.join(" ", words);
     }

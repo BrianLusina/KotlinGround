@@ -13,14 +13,14 @@ import java.util.stream.Collectors;
  */
 public class RnaTranscriptionV4 {
     public static String ofDna(String input) {
-        Map<Character,Character> dnarnaMap = new HashMap<>();
+        Map<Character, Character> dnarnaMap = new HashMap<>();
         dnarnaMap.put('G', 'C');
         dnarnaMap.put('C', 'G');
         dnarnaMap.put('T', 'A');
         dnarnaMap.put('A', 'U');
 
-        return input.chars().mapToObj(c->(char)c)
-                .map(n->dnarnaMap.get(n).toString())
+        return input.chars().mapToObj(c -> (char) c)
+                .map(n -> dnarnaMap.get(n).toString())
                 .collect(Collectors.joining());
     }
 }

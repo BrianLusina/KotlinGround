@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * Description:
  */
 public class ValidPhone {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         System.out.println("Testing for validPhoneNumber()");
         System.out.println(validPhoneNumber("(123) 456-7890"));

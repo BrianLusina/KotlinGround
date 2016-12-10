@@ -10,8 +10,8 @@ public class Primers {
 
     public long numberOfDivisors(int n) {
         ArrayList<Long> arrayList = new ArrayList<>();
-        for(Integer i: IntStream.rangeClosed(1,n).toArray()){
-            if(n%i == 0)
+        for (Integer i : IntStream.rangeClosed(1, n).toArray()) {
+            if (n % i == 0)
                 arrayList.add((long) i);
         }
 

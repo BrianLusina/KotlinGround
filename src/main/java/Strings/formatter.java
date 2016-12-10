@@ -9,9 +9,10 @@ package Strings;
  */
 public class formatter {
     public static String buildString(String... args) {
-            return "I like " + String.join(", ", args);
+        return "I like " + String.join(", ", args);
     }
-    public static void main(String[] args){
-        System.out.println(buildString("Cheese", "Milk", "Bread","Steak"));
+
+    public static void main(String[] args) {
+        System.out.println(buildString("Cheese", "Milk", "Bread", "Steak"));
     }
 }

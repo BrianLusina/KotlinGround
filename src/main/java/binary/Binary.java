@@ -5,15 +5,15 @@ public class Binary {
     private String binaryString;
 
     /*CONSTRUCTOR*/
-    public Binary(String binaryString){
+    public Binary(String binaryString) {
         this.binaryString = binaryString;
     }
 
-    public int getDecimal(){
+    public int getDecimal() {
         int result = 0;
         int len = getBinaryString().length();
-        for(String s: getBinaryString().split("")){
-            result += Integer.parseInt(s) * Math.pow(2, len-1);
+        for (String s : getBinaryString().split("")) {
+            result += Integer.parseInt(s) * Math.pow(2, len - 1);
             len -= 1;
         }
         return result;

@@ -6,9 +6,10 @@ package ObjectOriented.AbstractionInterfaces.MotorVehicles;
  * Description: Subclass of {@link Cars}
  */
 
-class MercedezBenz extends Cars{
+class MercedezBenz extends Cars {
     /**
      * Constructor for vehicles
+     *
      * @param name  Name of vehicle
      * @param model Model of vehicle
      */

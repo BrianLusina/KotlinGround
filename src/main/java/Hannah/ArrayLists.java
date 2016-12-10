@@ -10,18 +10,18 @@ import java.util.Iterator;
  * ArrayLists store objects and thus use Classes such as Integer,String,Double etc.
  * They are resizable and thus can expand or shrink, however, an initial capacity can also be specified
  * add() method adds items to the ArrayList, while remove() method removes items
- *
- Other useful methods include the following:
- - contains(): Returns true if the list contains the specified element
- - get(int index): Returns the element at the specified position in the list
- - size(): Returns the number of elements in the list
- - clear(): Removes all of the elements from the list
-
- Note: As with arrays, the indexing starts with 0.
+ * <p>
+ * Other useful methods include the following:
+ * - contains(): Returns true if the list contains the specified element
+ * - get(int index): Returns the element at the specified position in the list
+ * - size(): Returns the number of elements in the list
+ * - clear(): Removes all of the elements from the list
+ * <p>
+ * Note: As with arrays, the indexing starts with 0.
  */
 public class ArrayLists {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
     /*Resizable array colors with an initial capacity of 10*/
         ArrayList<String> colors = new ArrayList<String>(10);
         colors.add("Red");
@@ -30,9 +30,9 @@ public class ArrayLists {
         colors.add("Yellow");
 
         //does the ArrayList contain Orange?
-        if(colors.contains("Orange")){
+        if (colors.contains("Orange")) {
             System.out.println("ArrayList colors contains Orange \n");
-        }else{
+        } else {
             System.out.println("ArrayList colors does not contains Orange \n");
         }
 
@@ -69,13 +69,13 @@ public class ArrayLists {
         int x = 0;
         Iterator<Integer> it = list.iterator();
         while (it.hasNext()) {
-            x+= it.next();
+            x += it.next();
         }
         System.out.println(x);
 /*----------------------*/
-        int f=1, i=2;
-        while(++i<5)
-            f*=i;
+        int f = 1, i = 2;
+        while (++i < 5)
+            f *= i;
         System.out.println(f);
     }
 

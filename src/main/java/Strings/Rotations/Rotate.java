@@ -9,11 +9,13 @@ public class Rotate {
      * Check if the rotation list is a subset of the input list
      * If it is, return true, else false
      * If the string is empty, return true
+     *
      * @param strng {@link String} String to perform rotations on
-     * @param arr {@link List} containing all the possible rotations of the input string
-     * @return {@link Boolean} value*/
+     * @param arr   {@link List} containing all the possible rotations of the input string
+     * @return {@link Boolean} value
+     */
     public static Boolean containAllRots(String strng, List<String> arr) {
-        if(strng.equals("")){
+        if (strng.equals("")) {
             return true;
         }
         return true;

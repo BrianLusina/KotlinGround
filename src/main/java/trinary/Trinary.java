@@ -8,15 +8,15 @@ package main.java.trinary;
 public class Trinary {
     private static final int RADIX = 3;
 
-    public static int toDecimal(String trin){
-        if(!validTrinary(trin)){
+    public static int toDecimal(String trin) {
+        if (!validTrinary(trin)) {
             return 0;
         }
 
         int power = 1;
         int n = 0;
 
-        for(int i = trin.toCharArray().length - 1; i >= 0; i--){
+        for (int i = trin.toCharArray().length - 1; i >= 0; i--) {
             int dig = Character.digit(trin.charAt(i), RADIX);
             n += dig * power;
             power *= RADIX;
@@ -24,7 +24,7 @@ public class Trinary {
         return n;
     }/*method end*/
 
-    public static boolean validTrinary(String s){
+    public static boolean validTrinary(String s) {
         return s.matches("[012]+");
     }
 /*CLASS END*/

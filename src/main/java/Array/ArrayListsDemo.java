@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Project: JxProjects
  */
 public class ArrayListsDemo {
-        public static void main(String[] args){
+    public static void main(String[] args) {
         // create an empty array list
         ArrayList<Integer> arrlist = new ArrayList<Integer>(5);
 
@@ -35,27 +35,27 @@ public class ArrayListsDemo {
         for (Integer number : arrlist) {
             System.out.println("Number = " + number);
         }
-            double[] myList = {1.9, 2.9, 3.4, 3.5};
+        double[] myList = {1.9, 2.9, 3.4, 3.5};
 
-            // Printing  array elements
-            for (int i = 0; i < myList.length; i++) {
-                System.out.println(myList[i] + " ");
-            }
-            // Summing all elements
-            double total = 0;
-            for (int i = 0; i < myList.length; i++) {
-                total += myList[i];
-            }
-            System.out.println("Total is " + total);
+        // Printing  array elements
+        for (int i = 0; i < myList.length; i++) {
+            System.out.println(myList[i] + " ");
+        }
+        // Summing all elements
+        double total = 0;
+        for (int i = 0; i < myList.length; i++) {
+            total += myList[i];
+        }
+        System.out.println("Total is " + total);
 
-            // Finding the largest element
-            double max = myList[0];
-            for (int i = 1; i < myList.length; i++) {
-                if (myList[i] > max) max = myList[i];
-            }
-            System.out.println("Max is " + max);
+        // Finding the largest element
+        double max = myList[0];
+        for (int i = 1; i < myList.length; i++) {
+            if (myList[i] > max) max = myList[i];
+        }
+        System.out.println("Max is " + max);
 
-            System.out.println(myList.toString());
+        System.out.println(myList.toString());
     }/*MAIN END*/
 /*CLASS END*/
 }

@@ -15,10 +15,11 @@ public class TrianglePojo {
         this.base = base;
     }
 
-    public void setArea(double a) {
-        area = a;
-    }
     public double getArea() {
         return area;
+    }
+
+    public void setArea(double a) {
+        area = a;
     }
 }

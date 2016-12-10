@@ -2,9 +2,9 @@ package main.java.pangram;
 
 public class Pangrams {
 
-    public static boolean isPangram(String pan){
-        int i=0;
-        for(char c : pan.toCharArray()) {
+    public static boolean isPangram(String pan) {
+        int i = 0;
+        for (char c : pan.toCharArray()) {
             int x = Character.toUpperCase(c);
             if (x >= 'A' && x <= 'Z') {
                 i |= 1 << (x - 'A');
