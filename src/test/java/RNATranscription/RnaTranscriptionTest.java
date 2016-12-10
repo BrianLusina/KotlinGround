@@ -1,4 +1,4 @@
-package test.main.java.RNATranscription;
+package test.java.RNATranscription;
 
 import junit.framework.TestCase;
 import main.java.RNATranscription.RnaTranscription;

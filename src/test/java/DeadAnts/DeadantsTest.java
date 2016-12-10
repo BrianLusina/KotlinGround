@@ -1,4 +1,4 @@
-package test.main.java.Puzzles.DeadAnts;
+package test.java.DeadAnts;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

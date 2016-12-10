@@ -1,14 +1,7 @@
-package Scrabble;
+package main.java.Scrabble;
 
 import java.util.*;
 
-/**
- * Package: Scrabble
- * Created by lusinabrian on 06/09/16 or 06 Sep of 2016,
- * Time: 12:24.
- * Project: JxProjects
- * Description:
- */
 public class ScrabbleGame {
     private String input;
 

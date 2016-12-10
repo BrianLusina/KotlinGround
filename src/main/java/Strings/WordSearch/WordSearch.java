@@ -1,4 +1,4 @@
-package Strings.WordSearch;
+package main.java.Strings.WordSearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,6 +10,7 @@ import java.util.Arrays;
  * Project: JxProjects
  */
 public class WordSearch {
+
     /**
      * Loop through each word in the array, and check if the word contains any character in the string to search for
      * @param x String to search for

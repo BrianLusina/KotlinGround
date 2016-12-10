@@ -1,7 +1,5 @@
-package test.main.java.raindrops;
+package test.java.raindrops;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
 import junit.framework.TestCase;
 import main.java.raindrops.Raindrops;
 import org.junit.runners.Parameterized;
