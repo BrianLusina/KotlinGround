@@ -41,7 +41,7 @@ public class SpaceAge {
 
     /*years on earth*/
     public float onEarth() {
-        return getSeconds() / (float) earthYrsSec;
+        return getSeconds() / earthYrsSec;
     }
 
     /*years on mercury*/

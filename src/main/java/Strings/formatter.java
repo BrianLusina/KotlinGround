@@ -1,4 +1,4 @@
-package Strings;
+package main.java.Strings;
 
 /**
  * Package: Strings

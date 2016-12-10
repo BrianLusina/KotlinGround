@@ -8,11 +8,11 @@ public class Deque<T> {
     }
 
     public final T pop() {
-
+        return null;
     }
 
     public final T shift() {
-
+        return null;
     }
 
     public final void unshift(T value) {

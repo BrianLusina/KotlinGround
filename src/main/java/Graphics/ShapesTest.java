@@ -7,7 +7,7 @@ public class ShapesTest {
         String input;
         int choice;
 
-        input = joptPane.showInputDialog("Enter 1 to draw rectangles\n Enter 2 to draw ovals");
+        input = JOptionPane.showInputDialog("Enter 1 to draw rectangles\n Enter 2 to draw ovals");
 
         choice = Integer.parseInt(input);
 

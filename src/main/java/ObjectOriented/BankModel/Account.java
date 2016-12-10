@@ -34,11 +34,11 @@ public class Account {
     //method that withdraws money
     public void debit(double amount) {
         if (amount > balance) {
-            String userR = joptionPane.showInputDialog("You can't withdraw more than what you have, do you wish for an overdraft?(Y/N)");
+            String userR = JOptionPane.showInputDialog("You can't withdraw more than what you have, do you wish for an overdraft?(Y/N)");
             if (userR.equals("Y")) {
                 balance = balance - amount;
                 String message = String.format("Your new balance is: %.2f", balance);
-                joptionPane.showMessageDialog(null, message);
+                JOptionPane.showMessageDialog(null, message);
             } else {
                 displayBankDetails();
             }
@@ -56,7 +56,7 @@ public class Account {
         String userAcName = getUserAccountName();
         Double userBankBal = getBalance();
         String message = String.format("Your BankModel.Account details\n BankModel.Account name: %s\n Balance %.2f\n Thank your for banking with LuDynamic", userAcName, userBankBal);
-        joptionPane.showMessageDialog(null, message);
+        JOptionPane.showMessageDialog(null, message);
     }
 //end
 }

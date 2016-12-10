@@ -128,7 +128,7 @@ public class HealthProfile {
 
     public void displayHealthProfile() {
         String message = String.format("First Name: %s\n Surname: %s\n Gender: %s\n Birth Year: %d\n Age: %d\n Current height: %.2f\n Current Weight: %.2f\n Maximum Heart Rate: %.2f\n Target Heart Rate: %s\n BMI: %.2f", getFirstName(), getSurname(), getGender(), getPatientDob(), currentAge(), getHeight(), getWeight(), getMaxHR(), getTargetHR(), getBMI());
-        joptPane.showMessageDialog(null, message);
+        JOptionPane.showMessageDialog(null, message);
     }
 
 //end

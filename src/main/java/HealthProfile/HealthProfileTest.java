@@ -9,17 +9,17 @@ public class HealthProfileTest {
         JOptionPane joptPane = new JOptionPane();
 
         //prompt
-        joptPane.showMessageDialog(null, "Welcome to the HealthProfile! Enter a few details about yorself and we shall set up your health profile");
-        String fname = joptPane.showInputDialog(null, "What is your first name?");
-        String sname = joptPane.showInputDialog(null, "What is your surname?");
-        String gen = joptPane.showInputDialog(null, "What is our sex(male or female)?");
-        String userdob = joptPane.showInputDialog(null, "In which year were you born?");
+        JOptionPane.showMessageDialog(null, "Welcome to the HealthProfile! Enter a few details about yorself and we shall set up your health profile");
+        String fname = JOptionPane.showInputDialog(null, "What is your first name?");
+        String sname = JOptionPane.showInputDialog(null, "What is your surname?");
+        String gen = JOptionPane.showInputDialog(null, "What is our sex(male or female)?");
+        String userdob = JOptionPane.showInputDialog(null, "In which year were you born?");
         int dob = Integer.parseInt(userdob);
 
-        String userW = joptPane.showInputDialog(null, "What is your weight(Kgs)?");
+        String userW = JOptionPane.showInputDialog(null, "What is your weight(Kgs)?");
         double w = Double.parseDouble(userW);
 
-        String userH = joptPane.showInputDialog(null, "How tall are you?");
+        String userH = JOptionPane.showInputDialog(null, "How tall are you?");
         double h = Double.parseDouble(userH);
 
         //create an object of the HealthProfile  class

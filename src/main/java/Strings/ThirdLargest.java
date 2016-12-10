@@ -1,4 +1,4 @@
-package Strings;
+package main.java.Strings;
 
 /**
  * Created by lusinabrian on 20/07/16.

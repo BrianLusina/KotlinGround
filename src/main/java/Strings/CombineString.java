@@ -1,4 +1,4 @@
-package Strings;
+package main.java.Strings;
 
 /**
  * Package: Strings
@@ -31,11 +31,7 @@ public class CombineString {
             return false;
         }
         if (str1 == null || str2 == null || str3 == null) {
-            if ((str1 + str2).equals(str3)) {
-                return true;
-            } else {
-                return false;
-            }
+            return (str1 + str2).equals(str3);
         }
         if (str1.charAt(0) != str3.charAt(0) && str2.charAt(0) != str3.charAt(0)) {
             return false;
@@ -45,10 +41,7 @@ public class CombineString {
             return true;
         }
 
-        if (str2.charAt(0) == str3.charAt(0) && combine_string(str1, str2.substring(1), str3.substring(1))) {
-            return true;
-        }
-        return false;
+        return str2.charAt(0) == str3.charAt(0) && combine_string(str1, str2.substring(1), str3.substring(1));
 
     }/*end*/
 /*CLASS END*/
