@@ -1,4 +1,4 @@
-package test.main.java.RomanNumerals;
+package test.java.RomanNumerals;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

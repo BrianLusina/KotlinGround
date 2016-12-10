@@ -1,4 +1,4 @@
-package test.main.java.Primefactors;
+package test.java.Primefactors;
 import junit.framework.TestCase;
 import main.java.Primefactors.PrimeFactors;
 import org.junit.runners.Parameterized;

@@ -1,4 +1,4 @@
-package test.main.java.Robotname;
+package test.java.Robotname;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

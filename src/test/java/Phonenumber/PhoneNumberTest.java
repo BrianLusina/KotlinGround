@@ -1,4 +1,4 @@
-package test.main.java.Phonenumber;
+package test.java.Phonenumber;
 
 import junit.framework.TestCase;
 import main.java.Phonenumber.PhoneNumber;

@@ -1,7 +1,5 @@
-package test.main.java.pangram;
+package test.java.pangram;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
 import junit.framework.TestCase;
 import main.java.pangram.Pangrams;
 
