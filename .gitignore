@@ -24,7 +24,6 @@ hs_err_pid*
 *.dex
 
 # Generated files
-bin/
 gen/
 
 # Gradle files
