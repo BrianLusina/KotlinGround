@@ -1,1 +1,1 @@
-Sample Groocy classes and functions
+Groovy package for the Groovy programming language.
