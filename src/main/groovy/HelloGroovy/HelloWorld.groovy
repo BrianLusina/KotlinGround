@@ -2,11 +2,11 @@
 
 class HelloWorld {
 
-    def hello(name) {
-        if(name == ""){
-            return name;
+    static hello(name) {
+        if(name == "" || name == null){
+            return "Hello, World!"
         }else{
-            return "Hello $name"
+            return "Hello, $name!"
         }
     }
 

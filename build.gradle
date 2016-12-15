@@ -1,6 +1,7 @@
 apply plugin: "java"
 apply plugin: "eclipse"
 apply plugin: "idea"
+apply plugin: "groovy"
 
 repositories {
   mavenCentral()
@@ -8,6 +9,8 @@ repositories {
 
 dependencies {
     compile "joda-time:joda-time:2.3+"
+    compile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+
     testCompile "com.google.guava:guava:16+"
     testCompile "junit:junit:4.10"
     testCompile "org.assertj:assertj-core:3.2.0"
