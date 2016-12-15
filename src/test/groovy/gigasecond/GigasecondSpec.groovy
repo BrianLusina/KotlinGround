@@ -1,10 +1,11 @@
-@Grab('org.spockframework:spock-core:1.0-groovy-2.4')
+package gigasecond
+
 import spock.lang.*
 import static java.util.Calendar.*
 
 class GigasecondSpec extends Specification {
 
-    def gigasecond = new Gigasecond()
+    def gigasecond = new GigasecondGroovy()
 
     def 'calculates one gigasecond after a date'() {
         given:

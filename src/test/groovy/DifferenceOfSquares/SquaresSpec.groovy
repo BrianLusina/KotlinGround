@@ -1,4 +1,5 @@
-@Grab('org.spockframework:spock-core:1.0-groovy-2.4')
+package DifferenceOfSquares
+
 import spock.lang.*
 
 class SquaresSpec extends Specification {
