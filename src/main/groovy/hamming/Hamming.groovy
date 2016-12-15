@@ -1,4 +1,0 @@
-package hamming
-
-class Hamming {
-}
