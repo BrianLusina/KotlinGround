@@ -1,7 +1,10 @@
+package NthPrime
+
+
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class Prime {
+class NthPrime {
 
   private def isPrime(int n) {
     def sqrt = Math.ceil(Math.sqrt(n))

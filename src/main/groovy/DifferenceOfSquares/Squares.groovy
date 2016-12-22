@@ -1,3 +1,5 @@
+package DifferenceOfSquares
+
 class Squares {
 
     def naturalNum

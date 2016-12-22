@@ -1,3 +1,5 @@
+package RobotName
+
 class Robot {
   String name
 

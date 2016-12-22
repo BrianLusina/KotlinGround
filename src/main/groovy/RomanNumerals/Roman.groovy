@@ -1,3 +1,5 @@
+package RomanNumerals
+
 class Roman {
   def Roman() {
     Integer.metaClass.toRoman = {->

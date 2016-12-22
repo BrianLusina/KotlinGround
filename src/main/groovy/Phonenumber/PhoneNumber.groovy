@@ -1,3 +1,5 @@
+package Phonenumber
+
 class PhoneNumber {
 
     private static def REGEX = ~/^1?[\s\.\-\(]*(\d{3})[\s\.\-\)]*\s?(\d{3})[\s\.\-]*(\d{4})$/

@@ -1,3 +1,5 @@
+package RnaTranscription
+
 class Complement {
 
     private def dnaMap = ["G":"C","C":"G","T":"A","A":"U"]

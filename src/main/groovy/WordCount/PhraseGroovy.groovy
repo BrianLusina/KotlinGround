@@ -1,7 +1,9 @@
-class Phrase {
+package WordCount
+
+class PhraseGroovy {
   String input 
 
-  def Phrase(s) {
+  def PhraseGroovy(s) {
     input = s
   }
 

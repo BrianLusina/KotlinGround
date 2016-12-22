@@ -16,7 +16,6 @@ class GigasecondSpec extends Specification {
             result == Date.parse('yyyy-MMM-dd hh:mm:ss', '2043-Jan-01 00:46:40')
     }
 
-    @Ignore
     def 'calculates one gigasecond after a date with hours and minutes'() {
         given:
             def start = Date.parse('yyyy-MMM-dd hh:mm', '1959-Jul-19 12:31')
@@ -26,7 +25,6 @@ class GigasecondSpec extends Specification {
             result == Date.parse('yyyy-MMM-dd hh:mm:ss', '1991-Mar-27 01:17:40')
     }
 
-    @Ignore
     def 'calculates one gigasecond after a date with hours and minutes and seconds'() {
         given:
             def start = Date.parse('yyyy-MMM-dd hh:mm:ss', '1977-Jun-13 02:15:45')
