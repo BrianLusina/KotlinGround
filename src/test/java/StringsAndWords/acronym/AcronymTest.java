@@ -9,7 +9,7 @@ public class AcronymTest {
 
     @Test
     public void fromTitleCasedPhrases() {
-        final String phrase = "Portable Network Graphics";
+        final String phrase = "Portable Network GUI.Graphics";
         final String expected = "PNG";
         assertEquals(expected, Acronym.generate(phrase));
     }
