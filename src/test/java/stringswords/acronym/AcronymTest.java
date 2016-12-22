@@ -1,6 +1,6 @@
 package stringswords.acronym;
 
-import main.java.acronym.Acronym;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -6,4 +6,5 @@ package stringswords.anagram;
  * Description:
  */
 public class AnagramDetection {
+
 }
