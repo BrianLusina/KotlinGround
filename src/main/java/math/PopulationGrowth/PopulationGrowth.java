@@ -1,7 +1,7 @@
 package main.java.Math.PopulationGrowth;
 
 /**
- * Package: Math.PopulationGrowth
+ * Package: math.PopulationGrowth
  * Created by lusinabrian on 12/08/16 or 12 Aug of 2016,
  * Time: 06:02.
  * Project: JxProjects

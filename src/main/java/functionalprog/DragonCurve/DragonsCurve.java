@@ -5,7 +5,7 @@ import java.util.function.IntPredicate;
 
 public class DragonsCurve {
 
-    public IntFunction<String> mapFunction = null; //Make the function; map the chars to StringsAndWords
+    public IntFunction<String> mapFunction = null; //Make the function; map the chars to stringswords
     //a -> aRbFR, b -> LFaLb, otherwise -> itself
 
     /**

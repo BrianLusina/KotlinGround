@@ -1,4 +1,4 @@
-package StringsAndWords.hamming;
+package stringswords.hamming;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;

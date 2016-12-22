@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.stream.IntStream;
 
 /**
- * Package: Math
+ * Package: math
  * Created by lusinabrian on 23/07/16 or 23 Jul of 2016,
  * Time: 22:07.
  * Project: JxProjects

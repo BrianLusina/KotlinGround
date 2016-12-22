@@ -7,7 +7,7 @@ import java.util.Map;
  * Package: ${PACKAGE_NAME}
  * Created by lusinabrian on 23/07/16 or 23 Jul of 2016,
  * Time: 15:56.
- * Project: Math.RomanNumerals
+ * Project: math.RomanNumerals
  * Desc: convert normal numbers to roman numerals
  */
 public class RomanNumeral {

@@ -7,7 +7,7 @@ import java.util.List;
  * Package: PACKAGE_NAME
  * Created by lusinabrian on 26/07/16 or 26 Jul of 2016,
  * Time: 22:32.
- * Project: Math.Primefactors
+ * Project: math.Primefactors
  */
 public class PrimeFactors {
     /**

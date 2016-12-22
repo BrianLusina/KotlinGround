@@ -1,4 +1,4 @@
-import Math.raindrops.Raindrops
+import math.raindrops.Raindrops
 import spock.lang.*
 
 class RaindropsSpec extends Specification {

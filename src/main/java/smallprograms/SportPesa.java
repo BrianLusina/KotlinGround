@@ -1,4 +1,4 @@
-package SmallJavaProg;
+package smallprograms;
 
 import java.util.Scanner;
 
@@ -22,7 +22,7 @@ public class SportPesa {
      * 10 predictions bonus must be less than 11 and 11 less than 12 and 12 less than 13
      * if the user inputs 13, they win the jackpot and generates a new jackpot
      * if the user inputs 10, they win 10% of the jackpot, but jackpot increases in amount
-     * Using the Math.random() method, randomize the jackpot and randomize the winnings for each choice
+     * Using the math.random() method, randomize the jackpot and randomize the winnings for each choice
      * then randomize the jackpot and increase the amount of the jackpot
      */
     public static String bonus(int number) {

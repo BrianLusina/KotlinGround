@@ -1,7 +1,7 @@
 package main.java.Strings;
 
 /**
- * Package: StringsAndWords
+ * Package: stringswords
  * Created by lusinabrian on 05/09/16 or 05 Sep of 2016,
  * Time: 06:25.
  * Project: JxProjects

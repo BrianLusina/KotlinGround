@@ -1,4 +1,4 @@
-package Math.Binary;
+package math.Binary;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,9 +6,9 @@ import java.util.List;
 
 /**
  * Created by lusinabrian on 16/07/16.
- * Given an array of one's and zero's convert the equivalent Math.Binary.binary value to an integer.
+ * Given an array of one's and zero's convert the equivalent math.Binary.binary value to an integer.
  * <p>
- * Eg: [0, 0, 0, 1] is treated as 0001 which is the Math.Binary.binary representation of 1
+ * Eg: [0, 0, 0, 1] is treated as 0001 which is the math.Binary.binary representation of 1
  * <p>
  * Examples:
  * <p>

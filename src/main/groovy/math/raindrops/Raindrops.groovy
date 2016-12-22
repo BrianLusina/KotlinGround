@@ -1,4 +1,4 @@
-package Math.raindrops
+package math.raindrops
 
 class Raindrops {
 

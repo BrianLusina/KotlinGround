@@ -1,7 +1,7 @@
 package main.java.Strings.ReverseString;
 
 /**
- * Package: StringsAndWords
+ * Package: stringswords
  * Created by lusinabrian on 27/07/16 or 27 Jul of 2016,
  * Time: 09:39.
  * Project: JxProjects

@@ -1,7 +1,7 @@
 package main.java.Math;
 
 /**
- * Package: Math
+ * Package: math
  * Created by lusinabrian on 29/07/16 or 29 Jul of 2016,
  * Time: 08:43.
  * Project: JxProjects

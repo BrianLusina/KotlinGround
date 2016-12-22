@@ -1,4 +1,4 @@
-package test.main.java.acronym;
+package stringswords.acronym;
 
 import main.java.acronym.Acronym;
 import org.junit.Test;

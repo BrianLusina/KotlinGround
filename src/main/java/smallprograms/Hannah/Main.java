@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Created by lusinabrian on 29/11/15.
- * Project: SmallJavaProg.Hannah,
+ * Project: smallprograms.Hannah,
  * Package: ${PACKAGE_NAME}
  */
 public class Main {
@@ -16,7 +16,7 @@ public class Main {
         int num1, num2, sum;
 
         /*Introduction*/
-        System.out.println("Welcome, I am SmallJavaProg.Hannah and I shall guide you through my various features");
+        System.out.println("Welcome, I am smallprograms.Hannah and I shall guide you through my various features");
         System.out.println("I am not as complex as I appear even though I am sophisticated. All you have to do is sit back and follow my simple guidelines.");
         System.out.println("Remember; I am here to serve you.");
 

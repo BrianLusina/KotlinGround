@@ -1,78 +1,78 @@
-package test.java.anagram;
+package stringswords.anagram;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
 
-import main.java.anagram.Anagram;
 import org.junit.Test;
 
-public class AnagramTest {
+
+public class MatchAnagramTest {
 
     @Test
     public void testNoMatches() {
-        Anagram detector = new Anagram("diaper");
+        MatchAnagram detector = new MatchAnagram("diaper");
         assertThat(detector.match(Arrays.asList("hello", "world", "zombies", "pants"))).isEmpty();
     }
 
     @Test
     public void testSimpleAnagram() {
-        Anagram detector = new Anagram("ant");
+        MatchAnagram detector = new MatchAnagram("ant");
         List<String> anagram = detector.match(Arrays.asList("tan", "stand", "at"));
         assertThat(anagram).containsExactly("tan");
     }
 
     @Test
     public void testDetectMultipleAnagrams() {
-        Anagram detector = new Anagram("master");
+        MatchAnagram detector = new MatchAnagram("master");
         List<String> anagrams = detector.match(Arrays.asList("stream", "pigeon", "maters"));
         assertThat(anagrams).contains("maters", "stream");
     }
 
     @Test
     public void testDoesNotConfuseDifferentDuplicates() {
-        Anagram detector = new Anagram("galea");
+        MatchAnagram detector = new MatchAnagram("galea");
         List<String> anagrams = detector.match(Arrays.asList("eagle"));
         assertThat(anagrams).isEmpty();
     }
 
     @Test
     public void testIdenticalWordIsNotAnagram() {
-        Anagram detector = new Anagram("corn");
+        MatchAnagram detector = new MatchAnagram("corn");
         List<String> anagrams = detector.match(Arrays.asList("corn", "dark", "Corn", "rank", "CORN", "cron", "park"));
         assertThat(anagrams).containsExactly("cron");
     }
 
     @Test
     public void testEliminateAnagramsWithSameChecksum() {
-        Anagram detector = new Anagram("mass");
+        MatchAnagram detector = new MatchAnagram("mass");
         assertThat(detector.match(Arrays.asList("last")).isEmpty());
     }
 
     @Test
     public void testEliminateAnagramSubsets() {
-        Anagram detector = new Anagram("good");
+        MatchAnagram detector = new MatchAnagram("good");
         assertThat(detector.match(Arrays.asList("dog", "goody"))).isEmpty();
     }
 
     @Test
     public void testDetectAnagrams() {
-        Anagram detector = new Anagram("listen");
+        MatchAnagram detector = new MatchAnagram("listen");
         List<String> anagrams = detector.match(Arrays.asList("enlists", "google", "inlets", "banana"));
         assertThat(anagrams).contains("inlets");
     }
 
     @Test
     public void testMultipleAnagrams() {
-        Anagram detector = new Anagram("allergy");
+        MatchAnagram detector = new MatchAnagram("allergy");
         List<String> anagrams = detector.match(Arrays.asList("gallery", "ballerina", "regally", "clergy", "largely", "leading"));
         assertThat(anagrams).contains("gallery", "largely", "regally");
     }
 
     @Test
     public void testAnagramsAreCaseInsensitive() {
-        Anagram detector = new Anagram("Orchestra");
+        MatchAnagram detector = new MatchAnagram("Orchestra");
         List<String> anagrams = detector.match(Arrays.asList("cashregister", "Carthorse", "radishes"));
         assertThat(anagrams).contains("Carthorse");
     }

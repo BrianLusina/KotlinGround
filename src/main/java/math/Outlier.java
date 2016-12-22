@@ -3,7 +3,7 @@ package main.java.Math;
 import java.util.ArrayList;
 
 /**
- * Package: Math
+ * Package: math
  * Created by lusinabrian on 23/07/16 or 23 Jul of 2016,
  * Time: 23:16.
  * Project: JxProjects

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Package: Math
+ * Package: math
  * Created by lusinabrian on 25/07/16 or 25 Jul of 2016,
  * Time: 09:15.
  * Project: JxProjects

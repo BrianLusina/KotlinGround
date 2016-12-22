@@ -1,7 +1,7 @@
-package ObjectOriented.AbstractionInterfaces.AnimalKingdom;
+package objects.AbstractionInterfaces.AnimalKingdom;
 
 /**
- * ObjectOriented.AbstractionInterfaces.AnimalKingdom
+ * objects.AbstractionInterfaces.AnimalKingdom
  * Created by lusinabrian on 28/10/16.
  * Description: class that extends the {@link Animal} class
  */

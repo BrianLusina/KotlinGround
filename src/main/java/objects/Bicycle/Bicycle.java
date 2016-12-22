@@ -1,7 +1,7 @@
-package ObjectOriented.Bicycle;
+package objects.Bicycle;
 
 /**
- * ObjectOriented.Bicycle
+ * objects.Bicycle
  * Created by lusinabrian on 02/11/16.
  * Description: Bicycle Class which will be the superclass describing all bicycles in existence
  */

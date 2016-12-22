@@ -1,7 +1,7 @@
 package main.java.Strings.Capitalize;
 
 /**
- * Package: StringsAndWords
+ * Package: stringswords
  * Created by lusinabrian on 24/08/16 or 24 Aug of 2016,
  * Time: 05:28.
  * Project: JxProjects

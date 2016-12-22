@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Package: StringsAndWords.WordSearch
+ * Package: stringswords.WordSearch
  * Created by lusinabrian on 12/08/16 or 12 Aug of 2016,
  * Time: 06:13.
  * Project: JxProjects

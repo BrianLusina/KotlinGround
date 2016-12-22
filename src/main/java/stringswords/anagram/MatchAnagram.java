@@ -1,13 +1,13 @@
-package main.java.anagram;
+package stringswords.anagram;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Anagram {
+public class MatchAnagram {
     String agram;
 
-    public Anagram(String agram) {
+    public MatchAnagram(String agram) {
         this.agram = agram;
     }
 

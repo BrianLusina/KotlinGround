@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
  * Package: PACKAGE_NAME
  * Created by lusinabrian on 27/08/16 or 27 Aug of 2016,
  * Time: 11:14.
- * Project: StringsAndWords.RNATranscription
+ * Project: stringswords.RNATranscription
  * Description:
  */
 public class RnaTranscriptionV4 {

@@ -1,4 +1,4 @@
-package SmallJavaProg.HealthProfile;
+package smallprograms.HealthProfile;
 
 import javax.swing.*;
 

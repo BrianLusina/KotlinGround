@@ -3,7 +3,7 @@ package main.java.trinary;
 /**
  * Created by lusinabrian on 15/08/16 or 15 Aug of 2016,
  * Time: 14:40.
- * Project: Math.trinary
+ * Project: math.trinary
  */
 public class Trinary {
     private static final int RADIX = 3;

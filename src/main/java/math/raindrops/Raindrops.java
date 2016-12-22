@@ -4,7 +4,7 @@ package main.java.raindrops;
  * Package: PACKAGE_NAME
  * Created by lusinabrian on 31/07/16 or 31 Jul of 2016,
  * Time: 08:45.
- * Project: Math.raindrops
+ * Project: math.raindrops
  */
 public class Raindrops {
 

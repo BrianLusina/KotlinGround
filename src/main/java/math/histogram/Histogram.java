@@ -6,7 +6,7 @@ public class Histogram {
      * the count of hashes and the number itself.
      * @param results the integer array with the roll results, They will be arranged in order the 1st element is
      * the roll count of number 1 on the die and so on.
-     * @return the Math.histogram in string format*/
+     * @return the math.histogram in string format*/
     public static String histogram(final int results[]) {
         String output = "";
         for (int i = results.length; i > 0; i--) {

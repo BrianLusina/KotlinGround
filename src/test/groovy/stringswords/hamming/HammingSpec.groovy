@@ -1,4 +1,4 @@
-package StringsAndWords.hamming
+package stringswords.hamming
 
 import spock.lang.*
 
