@@ -14,4 +14,12 @@ package annotations;
         reviewers = {"Brian Lusina"}
 )
 public class FancyClass {
+
+    @MethodPreamble(
+            description = "Some fancy method",
+            returnVar = "String"
+    )
+    public String fancyMethod(){
+        return "Hello";
+    }
 }
