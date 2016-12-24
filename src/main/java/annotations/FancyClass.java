@@ -15,6 +15,7 @@ package annotations;
 )
 public class FancyClass {
 
+
     @MethodPreamble(
             description = "Some fancy method",
             returnVar = "String"
@@ -22,4 +23,6 @@ public class FancyClass {
     public String fancyMethod(){
         return "Hello";
     }
+
+    public void clean(){}
 }
