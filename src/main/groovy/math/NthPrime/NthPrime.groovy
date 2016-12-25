@@ -1,4 +1,4 @@
-package NthPrime
+package math.NthPrime
 
 
 import groovy.transform.CompileStatic

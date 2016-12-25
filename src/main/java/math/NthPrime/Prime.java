@@ -1,4 +1,4 @@
-package main.java.Math.NthPrime;
+package math.NthPrime;
 
 public class Prime {
 
