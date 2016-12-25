@@ -49,3 +49,38 @@ As you can see, all occurrences of Object are replaced by T. A type variable can
 
 This same technique can be applied to create generic interfaces.
 
+## Type Parameter Naming Conventions
+
+By convention, type parameter names are single, uppercase letters. This stands in sharp contrast to the variable naming conventions that you already know about, and with good reason: Without this convention, it would be difficult to tell the difference between a type variable and an ordinary class or interface name.
+
+The most commonly used type parameter names are:
+
+E - Element (used extensively by the Java Collections Framework)
+K - Key
+N - Number
+T - Type
+V - Value
+S,U,V etc. - 2nd, 3rd, 4th types
+You'll see these names used throughout the Java SE API and the rest of this lesson.
+
+## Invoking and Instantiating a Generic Type
+
+To reference the generic Box class from within your code, you must perform a generic type invocation, which replaces T with some concrete value, such as Integer:
+
+``` java
+Box<Integer> integerBox;
+```
+
+You can think of a generic type invocation as being similar to an ordinary method invocation, but instead of passing an argument to a method, you are passing a type argument — Integer in this case — to the Box class itself.
+
+Type Parameter and Type Argument Terminology: Many developers use the terms "type parameter" and "type argument" interchangeably, but these terms are not the same. When coding, one provides type arguments in order to create a parameterized type. Therefore, the T in Foo<T> is a type parameter and the String in Foo<String> f is a type argument. This lesson observes this definition when using these terms.
+Like any other variable declaration, this code does not actually create a new Box object. It simply declares that integerBox will hold a reference to a "Box of Integer", which is how Box<Integer> is read.
+
+An invocation of a generic type is generally known as a parameterized type.
+
+To instantiate this class, use the new keyword, as usual, but place <Integer> between the class name and the parenthesis:
+
+``` java
+Box<Integer> integerBox = new Box<Integer>();
+```
+
