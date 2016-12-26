@@ -1,4 +1,4 @@
-package main.java.FunctionalProg.Triangle;
+package functionalprog.Triangle;
 
 import java.util.function.ToDoubleFunction;
 

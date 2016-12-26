@@ -25,13 +25,13 @@ public class Stacks<T> implements StackInterface<T>{
      * */
     @Override
     public void push(T t) {
+        if(this.isFull()){
+            throw new StackOverflowError("Stack size exceeded");
+        }
         if(this.isEmpty()){
             stack.add(t);
         }else if(!this.isEmpty() && !this.isFull()){
             stack.add(t);
-        }
-        if(this.isFull()){
-            throw new StackOverflowError("Stack size exceeded");
         }
     }
 
@@ -53,16 +53,33 @@ public class Stacks<T> implements StackInterface<T>{
 
     @Override
     public int getCurrentSize() {
-        return stack.size();
+        return getStack().size();
     }
 
     @Override
     public boolean isFull() {
-        return stack.size() == maxSize;
+        return getCurrentSize() == getMaxSize();
     }
 
     @Override
     public boolean isEmpty() {
-        return stack.isEmpty();
+        return getStack().isEmpty();
     }
+
+    public int getMaxSize() {
+        return maxSize;
+    }
+
+    public void setMaxSize(int maxSize) {
+        this.maxSize = maxSize;
+    }
+
+    ArrayList<T> getStack() {
+        return stack;
+    }
+
+    public void setStack(ArrayList<T> stack) {
+        this.stack = stack;
+    }
+
 }

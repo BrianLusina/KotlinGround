@@ -1,7 +1,7 @@
-package test.java.CryptoSquare;
+package cryptography.CryptoSquare;
 
 import junit.framework.TestCase;
-import main.java.CryptoSquare.Crypto;
+
 
 import java.util.Arrays;
 import java.util.List;

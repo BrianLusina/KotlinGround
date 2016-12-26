@@ -25,13 +25,14 @@ public class StacksTest extends TestCase {
         super.setUp();
     }
 
-    public void tearDown() throws Exception {
-        super.tearDown();
+    public void testGetMaxSize() throws Exception {
+        Stacks stack = new Stacks(10);
+        assertEquals("Expected size 10", 10, stack.getMaxSize());
     }
 
     public void testGetCurrentSize() throws Exception {
         Stacks stack = new Stacks(2);
-        assertEquals("Expected size 2", 2, stack.getCurrentSize());
+        assertEquals("Expected size 0", 0, stack.getCurrentSize());
     }
 
     public void testIsEmpty(){
