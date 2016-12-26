@@ -11,6 +11,8 @@ public class Stacks<T> implements StackInterface<T>{
     private int maxSize;
     private ArrayList<T> stack;
 
+    public Stacks(){}
+
     /**
      * Initializes a new Stack object with max size
      * @param maxSize the maximum size this stack will take*/
