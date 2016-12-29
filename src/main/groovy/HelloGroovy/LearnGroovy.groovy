@@ -102,6 +102,6 @@ class LearnGroovy {
         // print the values of a map
         println devMap.values()
 
-        
+
     }
 }
