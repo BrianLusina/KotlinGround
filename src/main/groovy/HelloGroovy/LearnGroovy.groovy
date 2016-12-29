@@ -75,6 +75,33 @@ class LearnGroovy {
         // clear list
         technologies.clear()
 
+        // MAPS
+        // empty map
+
+        def devMap = [:]
+        // add values
+        devMap = ["name": "Brian", "lastName": "Lusina", "frameworks": ["Android", "Flask", "Gradle", "React"],
+                  "Languages": ["Java", "Python", "JavaScript"]]
+
+        devMap.put("age", "23")
+        println "DevMap: $devMap"
+
+        //iterate over elements of a map
+        devMap.each{println "$it.key: $it.value"}
+        devMap.eachWithIndex { it, i -> println "$i: $it"}
+
+        //evaluate a map contains a key
+        assert devMap.containsKey("name")
+
+        //evaluate a map contains a value
+        assert devMap.containsValue("23")
+
+        // print the keys of a map
+        println devMap.keySet()
+
+        // print the values of a map
+        println devMap.values()
+
         
     }
 }
