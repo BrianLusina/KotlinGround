@@ -102,6 +102,57 @@ class LearnGroovy {
         // print the values of a map
         println devMap.values()
 
+        /*Logical branching*/
+        def m = 3
 
+        if(m==1) {
+            println "One"
+        } else if(m==2) {
+            println "Two"
+        } else {
+            println "X greater than Two"
+        }
+
+        //Groovy also supports the ternary operator
+        def y = 10
+        def z = (y > 1) ? "worked" : "failed"
+        assert z == "worked"
+
+        //Groovy supports 'The Elvis Operator' too! Instead of using the ternary operator:
+        // def displayName = user.name ? user.name : 'Anonymous'
+
+        //We can write it:
+        // displayName = user.name ?: 'Anonymous'
+
+        // for loop
+        // iterate over a range
+        def n = 0
+        for (i in 0 .. 30){
+            n+=i
+        }
+        println "Sum range $n"
+
+        // iterate over a list
+        for (i in [5, 4, 3, 2, 1]){
+            n+=i
+        }
+        println "Sum of list:$n"
+
+        // iterate over an array
+        def array = (0 .. 20).toArray()
+        def b = 0
+        for (a in array){
+            b += a
+        }
+
+        //Iterate over a map
+        def map = ['name':'Roberto', 'framework':'Grails', 'language':'Groovy']
+        x = 0
+        for ( e in map ) {
+            x += e.value
+        }
+        println "Map iteration: $x"
+
+        
     }
 }

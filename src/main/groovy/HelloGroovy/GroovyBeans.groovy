@@ -37,5 +37,13 @@ package HelloGroovy
  which may fail at runtime.
  */
 class GroovyBeans {
-    
+    // read only property
+    final String name = "Roberto"
+
+    // read only property with public getter and protected setter
+    String language
+    protected void setLanguage(String language) { this.language = language }
+
+    // dynamically typed property
+    def lastName
 }
