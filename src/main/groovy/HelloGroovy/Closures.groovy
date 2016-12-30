@@ -55,6 +55,6 @@ class Closures {
         callClosure(2, 3)
         callClosure(3, 4)
 
-        
+
     }
 }
