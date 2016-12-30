@@ -25,7 +25,6 @@ class ExpandoGroovy {
         }
         def sw = new StringWriter()
         println user.showInfo(sw)
-
     }
 
 }
