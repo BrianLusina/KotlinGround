@@ -153,6 +153,6 @@ class LearnGroovy {
         }
         println "Map iteration: $x"
 
-        
+
     }
 }
