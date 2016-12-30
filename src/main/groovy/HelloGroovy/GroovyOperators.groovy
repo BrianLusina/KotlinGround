@@ -18,6 +18,9 @@ class GroovyOperators {
         techIKnow*.toUpperCase() // = to techIKnow.collect { it?.toUpperCase() }
         println "Some tech I know $techIKnow"
 
-        
+        //Safe navigation operator: used to avoid a NullPointerException.
+        //def lang = langIKnow.get(1)
+        // def language = langIKnow?.language
+
     }
 }
