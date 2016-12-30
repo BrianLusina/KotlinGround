@@ -1,5 +1,6 @@
 package HelloGroovy
 
+import groovy.transform.CompileStatic
 import groovy.transform.TypeChecked
 
 /**
@@ -14,6 +15,7 @@ import groovy.transform.TypeChecked
 class TypeCheck {
     static void main(String[] args){
         test()
+        assert sum(2,5) == 7
     }
 
     static void testMethod() {}
@@ -25,4 +27,24 @@ class TypeCheck {
         def name = "Roberto"
         println name
     }
+
+/*
+Un comment me to test
+    @TypeChecked
+    static Integer testInt() {
+        Integer num = "1"
+
+        Integer[] numbers = [1,2,3,4]
+
+        Date date = numbers[1]
+        return "Test"
+    }
+*/
+
+    //CompileStatic example:
+    @CompileStatic
+    static int sum(int x, int y) {
+        x + y
+    }
+
 }
