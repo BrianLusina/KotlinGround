@@ -1,6 +1,7 @@
-package test.java.Primefactors;
+package math.Primefactors;
+
 import junit.framework.TestCase;
-import main.java.Primefactors.PrimeFactors;
+
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
