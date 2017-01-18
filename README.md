@@ -1,5 +1,7 @@
 # Java PlayGround
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ee8646cf1ed14cf4a2624601d1caa7fd)](https://www.codacy.com/app/BrianLusina/Java-Playground?utm_source=github.com&utm_medium=referral&utm_content=BrianLusina/Java-Playground&utm_campaign=badger)
+
 Java PlayGround has a series of small programs purely made in Java and a bit of Groovy (because Groovy).
 The purpose of this repo is for learning purposes purely, especially in the Java language.
 
