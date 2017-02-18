@@ -57,7 +57,7 @@ class LearnGroovy {
         // Check for multiple contents
         technologies.containsAll(["Spring", "Griffon"])
 
-        /**Sorting lists*/
+        /**java.Sorting lists*/
         // mutates original list
         technologies.sort()
 

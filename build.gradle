@@ -72,6 +72,11 @@ task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
     ]
 }
 
+jar{
+ baseName = 'javaplayground'
+ version = rootProject.ext.versionName
+}
+
 ext {
     versionCode = 1
     versionName = "1.0"

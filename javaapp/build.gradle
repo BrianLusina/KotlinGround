@@ -2,6 +2,20 @@ apply plugin: "java"
 apply plugin: "eclipse"
 apply plugin: "idea"
 
+sourceSets{
+ main{
+  java{
+    srcDir 'src'
+  }
+ }
+
+ test{
+  java {
+   srcDir 'test'
+  }
+ }
+}
+
 repositories {
   mavenCentral()
 }
