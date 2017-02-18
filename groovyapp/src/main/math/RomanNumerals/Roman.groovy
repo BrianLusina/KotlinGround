@@ -1,4 +1,4 @@
-package math.RomanNumerals
+package main.math.RomanNumerals
 
 class Roman {
   def Roman() {

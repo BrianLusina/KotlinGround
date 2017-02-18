@@ -1,4 +1,4 @@
-package DifferenceOfSquares
+package main.DifferenceOfSquares
 
 class Squares {
 

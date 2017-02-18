@@ -1,5 +1,6 @@
-package RobotName
+package test.RobotName
 
+import main.RobotName.Robot
 import org.junit.Test
 import static org.junit.Assert.assertEquals
 import static org.junit.Assert.assertNotEquals

@@ -1,4 +1,4 @@
-package HelloGroovy
+package main.HelloGroovy
 
 import groovy.transform.CompileStatic
 import groovy.transform.TypeChecked

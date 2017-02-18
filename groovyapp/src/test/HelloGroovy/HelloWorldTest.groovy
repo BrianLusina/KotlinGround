@@ -1,5 +1,6 @@
-package HelloGroovy
+package test.HelloGroovy
 
+import main.HelloGroovy.HelloWorld
 import spock.lang.Shared
 import spock.lang.Specification
 

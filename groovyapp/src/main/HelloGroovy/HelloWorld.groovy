@@ -1,4 +1,4 @@
-package HelloGroovy
+package main.HelloGroovy
 
 
 class HelloWorld {

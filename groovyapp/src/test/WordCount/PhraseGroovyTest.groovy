@@ -1,5 +1,6 @@
-package WordCount
+package test.WordCount
 
+import main.WordCount.PhraseGroovy
 import org.junit.Test
 import static org.junit.Assert.assertEquals
 

@@ -1,5 +1,6 @@
-package math.NthPrime
+package test.math.NthPrime
 
+import main.math.NthPrime.NthPrime
 import org.junit.Test
 import static org.junit.Assert.assertEquals
 

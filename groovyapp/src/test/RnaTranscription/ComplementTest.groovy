@@ -1,5 +1,6 @@
-package RnaTranscription
+package test.RnaTranscription
 
+import main.RnaTranscription.Complement
 import spock.lang.*
 
 class ComplementTest extends Specification {

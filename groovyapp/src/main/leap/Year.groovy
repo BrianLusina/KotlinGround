@@ -1,4 +1,4 @@
-package leap
+package main.leap
 
 class Year {
   def isLeap(i) {

@@ -1,5 +1,6 @@
-package hamming
+package test.hamming
 
+import main.hamming.HammingGroovy
 import spock.lang.*
 
 class HammingSpec extends Specification {

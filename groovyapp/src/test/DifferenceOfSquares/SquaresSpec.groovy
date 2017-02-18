@@ -1,8 +1,11 @@
-package DifferenceOfSquares
+package test.DifferenceOfSquares
 
+import main.DifferenceOfSquares.Squares
+import org.apache.tools.ant.taskdefs.optional.extension.Specification
+import org.junit.Ignore
 import spock.lang.*
 
-class SquaresSpec extends Specification {
+class SquaresSpec {
 
     @Unroll("can square the sum of the numbers up to #integer")
     def "can square the sum up to the given integer"() {

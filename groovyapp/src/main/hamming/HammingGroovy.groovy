@@ -1,4 +1,4 @@
-package hamming
+package main.hamming
 
 class HammingGroovy {
 

@@ -1,5 +1,6 @@
-package leap
+package test.leap
 
+import main.leap.Year
 import org.junit.Test
 import static org.junit.Assert.assertTrue
 import static org.junit.Assert.assertFalse

@@ -1,5 +1,6 @@
-package math.RomanNumerals
+package test.math.RomanNumerals
 
+import main.math.RomanNumerals.Roman
 import org.junit.Test
 import static org.junit.Assert.assertEquals
 

@@ -1,4 +1,4 @@
-package WordCount
+package main.WordCount
 
 class PhraseGroovy {
   String input 

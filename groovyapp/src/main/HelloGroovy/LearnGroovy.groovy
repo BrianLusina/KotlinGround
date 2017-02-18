@@ -1,4 +1,4 @@
-package HelloGroovy
+package main.HelloGroovy
 
 /**
  * HelloGroovy

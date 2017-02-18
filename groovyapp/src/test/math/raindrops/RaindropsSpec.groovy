@@ -1,4 +1,6 @@
-import math.raindrops.Raindrops
+package test.math.raindrops
+
+import main.math.raindrops.Raindrops
 import spock.lang.*
 
 class RaindropsSpec extends Specification {

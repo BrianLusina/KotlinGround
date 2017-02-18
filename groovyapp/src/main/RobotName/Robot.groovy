@@ -1,4 +1,4 @@
-package RobotName
+package main.RobotName
 
 class Robot {
   String name

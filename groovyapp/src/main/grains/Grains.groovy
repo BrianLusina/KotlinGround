@@ -1,4 +1,4 @@
-package grains
+package main.grains
 
 class Grains {
   def square(num) {

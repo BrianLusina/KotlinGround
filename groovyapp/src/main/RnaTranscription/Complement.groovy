@@ -1,4 +1,4 @@
-package RnaTranscription
+package main.RnaTranscription
 
 class Complement {
 

@@ -1,5 +1,6 @@
-package grains
+package test.grains
 
+import main.grains.Grains
 import org.junit.Test
 import static org.junit.Assert.assertEquals
 

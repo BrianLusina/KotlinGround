@@ -1,5 +1,6 @@
-package Phonenumber
+package test.Phonenumber
 
+import main.Phonenumber.PhoneNumber
 import spock.lang.*
 
 class PhoneNumberSpec extends Specification {
