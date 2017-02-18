@@ -4,6 +4,7 @@ machine:
 
 dependencies:
   pre:
+    - gradle wrapper --gradle-version 2.13
     - gradle dependencies
     - curl https://www.jpm4j.org/install/script | sh
     - jpm install com.codacy:codacy-coverage-reporter:assembly

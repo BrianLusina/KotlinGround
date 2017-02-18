@@ -13,10 +13,12 @@ addons:
     packages:
       - oracle-java8-installer
 
+# todo configure installing jpm
+
 before_install:
+  - gradle wrapper --gradle-version 2.13
   - gradle assemble
-  - curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
-  # - curl https://www.jpm4j.org/install/script | sh
+  - curl https://www.jpm4j.org/install/script | sh
   - java -jar jpm4j.jar -u init
   - ~/jpm/bin/jpm install com.codacy:codacy-coverage-reporter:assembly
 

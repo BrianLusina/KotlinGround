@@ -71,3 +71,9 @@ task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
             "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
     ]
 }
+
+ext {
+    versionCode = 1
+    versionName = "1.0"
+}
+
