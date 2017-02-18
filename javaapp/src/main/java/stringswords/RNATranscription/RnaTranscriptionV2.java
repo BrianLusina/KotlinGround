@@ -1,4 +1,4 @@
-package main.stringswords.RNATranscription;
+package java.stringswords.RNATranscription;
 
 import java.util.stream.Collectors;
 

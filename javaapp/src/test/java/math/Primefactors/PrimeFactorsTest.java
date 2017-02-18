@@ -1,10 +1,10 @@
-package test.math.Primefactors;
+package java.math.Primefactors;
 
 import junit.framework.TestCase;
 
-import main.math.Primefactors.PrimeFactors;
 import org.junit.runners.Parameterized;
 
+import java.math.Primefactors.PrimeFactors;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;

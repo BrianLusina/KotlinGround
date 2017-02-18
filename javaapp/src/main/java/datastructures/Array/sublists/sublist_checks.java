@@ -1,4 +1,4 @@
-package main.datastructures.Array.sublists;
+package java.datastructures.Array.sublists;
 
 /**
  * Package: java.java.datastructures.Array.sublists

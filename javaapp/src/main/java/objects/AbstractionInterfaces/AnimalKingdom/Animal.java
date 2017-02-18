@@ -1,4 +1,4 @@
-package main.objects.AbstractionInterfaces.AnimalKingdom;
+package java.objects.AbstractionInterfaces.AnimalKingdom;
 
 /**
  * java.objects.AbstractionInterfaces

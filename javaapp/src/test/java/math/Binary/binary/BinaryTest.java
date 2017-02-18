@@ -1,11 +1,11 @@
-package test.math.Binary.binary;
+package java.math.Binary.binary;
 
-import main.math.Binary.binary.Binary;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
+import java.math.Binary.binary.Binary;
 import java.util.Arrays;
 import java.util.Collection;
 import static org.junit.Assert.assertEquals;

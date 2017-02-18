@@ -1,4 +1,4 @@
-package main.datastructures.Array.maxmin;
+package java.datastructures.Array.maxmin;
 
 import java.util.Arrays;
 

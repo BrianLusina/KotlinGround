@@ -1,9 +1,9 @@
-package test.algorithms.allergies;
+package java.algorithms.allergies;
 
-import main.algorithms.allergies.Allergen;
-import main.algorithms.allergies.Allergies;
 import org.junit.Test;
 
+import java.algorithms.allergies.Allergen;
+import java.algorithms.allergies.Allergies;
 import java.util.Arrays;
 import java.util.List;
 

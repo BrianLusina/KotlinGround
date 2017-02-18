@@ -1,9 +1,8 @@
-package test.math.trinary;
+package java.math.trinary;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.math.trinary.Trinary;
 
 
 public class TrinaryTest extends TestCase {

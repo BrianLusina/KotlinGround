@@ -1,4 +1,4 @@
-package main.algorithms.etl;
+package java.algorithms.etl;
 
 import java.util.HashMap;
 import java.util.List;

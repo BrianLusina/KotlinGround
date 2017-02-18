@@ -1,9 +1,9 @@
-package test.math.raindrops;
+package java.math.raindrops;
 
 import junit.framework.TestCase;
-import main.math.raindrops.Raindrops;
 import org.junit.runners.Parameterized;
 
+import java.math.raindrops.Raindrops;
 import java.util.Arrays;
 import java.util.Collection;
 

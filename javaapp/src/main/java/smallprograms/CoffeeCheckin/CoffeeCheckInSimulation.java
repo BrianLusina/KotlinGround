@@ -1,9 +1,7 @@
-package main.smallprograms.CoffeeCheckin;
+package java.smallprograms.CoffeeCheckin;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static main.smallprograms.CoffeeCheckin.CheckinMarkers.*;
 
 class CoffeeCheckInSimulation {
     private String employeesForWeek;
@@ -26,19 +24,19 @@ class CoffeeCheckInSimulation {
         HashMap<Enum, HashMap<String, Enum>> week_queue = new HashMap<>();
         switch (dayNumber) {
             case 1:
-                week_queue.put(MONDAY, resultForDay);
+                week_queue.put(CheckinMarkers.MONDAY, resultForDay);
                 break;
             case 2:
-                week_queue.put(TUESDAY, resultForDay);
+                week_queue.put(CheckinMarkers.TUESDAY, resultForDay);
                 break;
             case 3:
-                week_queue.put(WEDNESDAY, resultForDay);
+                week_queue.put(CheckinMarkers.WEDNESDAY, resultForDay);
                 break;
             case 4:
-                week_queue.put(THURSDAY, resultForDay);
+                week_queue.put(CheckinMarkers.THURSDAY, resultForDay);
                 break;
             case 5:
-                week_queue.put(FRIDAY, resultForDay);
+                week_queue.put(CheckinMarkers.FRIDAY, resultForDay);
                 break;
         }
 
@@ -52,19 +50,19 @@ class CoffeeCheckInSimulation {
         Enum day = null;
         switch (day_counter) {
             case 1:
-                day = MONDAY;
+                day = CheckinMarkers.MONDAY;
                 break;
             case 2:
-                day = TUESDAY;
+                day = CheckinMarkers.TUESDAY;
                 break;
             case 3:
-                day = WEDNESDAY;
+                day = CheckinMarkers.WEDNESDAY;
                 break;
             case 4:
-                day = THURSDAY;
+                day = CheckinMarkers.THURSDAY;
                 break;
             case 5:
-                day = FRIDAY;
+                day = CheckinMarkers.FRIDAY;
                 break;
         }
         return day;
@@ -100,12 +98,12 @@ class CoffeeCheckInSimulation {
             employeeQueue.keySet()
                     .stream()
                     .filter(lateComers::contains)
-                    .forEach(employeeName -> employeeQueue.put(employeeName, LATE));
+                    .forEach(employeeName -> employeeQueue.put(employeeName, CheckinMarkers.LATE));
         } else {
             for (String empl : employeeQueue.keySet()) {
                 for (String late : lateArr) {
                     if (empl.equalsIgnoreCase(late)) {
-                        employeeQueue.put(empl, LATE);
+                        employeeQueue.put(empl, CheckinMarkers.LATE);
                     }
                 }
             }
@@ -130,19 +128,19 @@ class CoffeeCheckInSimulation {
         lateComer.addAll(
                 linkedHashMap.keySet()
                         .stream()
-                        .filter(late -> linkedHashMap.get(late) == LATE)
+                        .filter(late -> linkedHashMap.get(late) == CheckinMarkers.LATE)
                         .collect(Collectors.toList())
         );
 
         //check if the NEXT person is late, move the beneficiary down the list
         for (String fortfeit : linkedHashMap.keySet()) {
             for (String aLateComer : lateComer) {
-                if (linkedHashMap.get(fortfeit) == NEXT && aLateComer.equalsIgnoreCase(fortfeit)) {
+                if (linkedHashMap.get(fortfeit) == CheckinMarkers.NEXT && aLateComer.equalsIgnoreCase(fortfeit)) {
                     linkedHashMap.keySet()
                             .stream()
-                            .filter(other -> linkedHashMap.get(other) == OTHER)
+                            .filter(other -> linkedHashMap.get(other) == CheckinMarkers.OTHER)
                             .findFirst()
-                            .ifPresent(next -> linkedHashMap.put(next, NEXT));
+                            .ifPresent(next -> linkedHashMap.put(next, CheckinMarkers.NEXT));
                 }
             }
         }
@@ -150,24 +148,24 @@ class CoffeeCheckInSimulation {
         //Retrieve the next person from the queue
         linkedHashMap.keySet()
                 .stream()
-                .filter(benefit -> linkedHashMap.get(benefit) == NEXT)
+                .filter(benefit -> linkedHashMap.get(benefit) == CheckinMarkers.NEXT)
                 .forEach(benefit -> {
                     beneficiary[0] = benefit;
-                    linkedHashMap.put(benefit, DONE);
+                    linkedHashMap.put(benefit, CheckinMarkers.DONE);
                 });
 
         //remove late flags, replace with other
         linkedHashMap.keySet()
                 .stream()
-                .filter(lateOrNext -> linkedHashMap.get(lateOrNext) == LATE)
-                .forEach(late -> linkedHashMap.put(late, OTHER));
+                .filter(lateOrNext -> linkedHashMap.get(lateOrNext) == CheckinMarkers.LATE)
+                .forEach(late -> linkedHashMap.put(late, CheckinMarkers.OTHER));
 
         //move NEXT down the list
         linkedHashMap.keySet()
                 .stream()
-                .filter(other -> linkedHashMap.get(other) == OTHER)
+                .filter(other -> linkedHashMap.get(other) == CheckinMarkers.OTHER)
                 .findFirst()
-                .ifPresent(next -> linkedHashMap.put(next, NEXT));
+                .ifPresent(next -> linkedHashMap.put(next, CheckinMarkers.NEXT));
 
         System.out.printf("Queue for tomorrow: %s\n", linkedHashMap);
 
@@ -185,10 +183,10 @@ class CoffeeCheckInSimulation {
         LinkedHashMap<String, Enum> employeeQueue = new LinkedHashMap<>();
         String[] employeeList = this.employeesForWeek.split(" ");
         // first name on the list is assumed to be NEXT
-        employeeQueue.put(employeeList[0], NEXT);
+        employeeQueue.put(employeeList[0], CheckinMarkers.NEXT);
         //add the rest of the names
         for (int x = 1; x < employeeList.length; x++) {
-            employeeQueue.put(employeeList[x], OTHER);
+            employeeQueue.put(employeeList[x], CheckinMarkers.OTHER);
         }
 
         return employeeQueue;

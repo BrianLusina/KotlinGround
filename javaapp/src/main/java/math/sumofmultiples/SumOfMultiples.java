@@ -1,4 +1,4 @@
-package main.math.sumofmultiples;
+package java.math.sumofmultiples;
 
 import java.util.stream.IntStream;
 

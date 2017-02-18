@@ -1,8 +1,9 @@
-package test.cryptography.SimpleCipher;
+package java.cryptography.SimpleCipher;
 
-import main.cryptography.SimpleCipher.Cipher;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.cryptography.SimpleCipher.Cipher;
 
 import static org.junit.Assert.assertEquals;
 

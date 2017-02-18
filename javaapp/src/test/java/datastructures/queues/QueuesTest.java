@@ -1,4 +1,4 @@
-package test.datastructures.queues;
+package java.datastructures.queues;
 
 import org.junit.After;
 import org.junit.Before;

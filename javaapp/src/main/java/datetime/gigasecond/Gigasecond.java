@@ -1,4 +1,4 @@
-package main.datetime.gigasecond;
+package java.datetime.gigasecond;
 
 import java.math.BigInteger;
 import java.time.LocalDate;

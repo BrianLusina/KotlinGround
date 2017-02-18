@@ -1,4 +1,4 @@
-package main.regex.ModFour;
+package java.regex.ModFour;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-package test.ReverseString;
+package java.ReverseString;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

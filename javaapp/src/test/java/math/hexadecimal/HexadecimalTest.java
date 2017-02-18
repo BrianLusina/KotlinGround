@@ -1,7 +1,9 @@
-package test.math.hexadecimal;
+package java.math.hexadecimal;
 
-import main.math.hexadecimal.Hexadecimal;
 import org.junit.Test;
+
+import java.math.hexadecimal.Hexadecimal;
+
 import static org.junit.Assert.assertEquals;
 
 public class HexadecimalTest {

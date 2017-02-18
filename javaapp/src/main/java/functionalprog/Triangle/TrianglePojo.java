@@ -1,4 +1,4 @@
-package main.functionalprog.Triangle;
+package java.functionalprog.Triangle;
 
 /**
  * java.java.functionalprog

@@ -1,8 +1,9 @@
-package test.stringswords.RNATranscription;
+package java.stringswords.RNATranscription;
 
 import junit.framework.TestCase;
-import main.stringswords.RNATranscription.RnaTranscription;
 import org.junit.Assert;
+
+import java.stringswords.RNATranscription.RnaTranscription;
 
 public class RnaTranscriptionTest extends TestCase {
     public RnaTranscriptionTest(String name) {

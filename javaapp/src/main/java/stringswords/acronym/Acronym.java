@@ -1,4 +1,4 @@
-package main.stringswords.acronym;
+package java.stringswords.acronym;
 
 public class Acronym {
 

@@ -1,4 +1,4 @@
-package main.stringswords;
+package java.stringswords;
 
 public class PhoneNumber {
     public static void main(String[] args) {

@@ -1,9 +1,9 @@
-package test.Rotations;
+package java.Rotations;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.stringswords.Rotations.Rotate;
+import java.stringswords.Rotations.Rotate;
 
 
 import java.util.Arrays;

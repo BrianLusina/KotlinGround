@@ -1,10 +1,11 @@
-package test.hamming;
+package java.hamming;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-import main.hamming.Hamming;
 import org.junit.Test;
+
+import java.hamming.Hamming;
 
 public class HammingTest {
 

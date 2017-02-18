@@ -1,4 +1,4 @@
-package main.objects.BankModel;
+package java.objects.BankModel;
 
 import javax.swing.*;
 import java.util.Scanner;

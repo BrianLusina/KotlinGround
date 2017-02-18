@@ -1,7 +1,9 @@
-package test.math.histogram;
+package java.math.histogram;
 
-import main.math.histogram.Histogram;
 import org.junit.Test;
+
+import java.math.histogram.Histogram;
+
 import static org.junit.Assert.*;
 
 public class HistogramTest {

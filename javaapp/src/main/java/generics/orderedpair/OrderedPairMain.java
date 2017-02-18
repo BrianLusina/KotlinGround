@@ -1,7 +1,4 @@
-package main.generics.orderedpair;
-
-import main.generics.orderedpair.OrderedPair;
-import main.generics.orderedpair.Pair;
+package java.generics.orderedpair;
 
 /**
  * java.generics.orderedpair

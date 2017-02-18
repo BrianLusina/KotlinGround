@@ -1,4 +1,4 @@
-package main.generics.orderedpair;
+package java.generics.orderedpair;
 
 /**
  * java.generics.orderedpair

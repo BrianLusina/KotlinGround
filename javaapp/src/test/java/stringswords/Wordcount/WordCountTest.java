@@ -1,9 +1,8 @@
-package test.stringswords.Wordcount;
+package java.stringswords.Wordcount;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.stringswords.Wordcount.WordCount;
 
 import java.util.HashMap;
 import java.util.Map;

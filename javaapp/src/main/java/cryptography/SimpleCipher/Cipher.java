@@ -1,4 +1,4 @@
-package main.cryptography.SimpleCipher;
+package java.cryptography.SimpleCipher;
 
 import java.util.Random;
 import java.util.stream.IntStream;

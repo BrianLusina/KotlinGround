@@ -2,9 +2,9 @@ package java.algorithms.GradeSchool;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import main.algorithms.GradeSchool.School;
 import org.junit.Test;
 
+import java.algorithms.GradeSchool.School;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

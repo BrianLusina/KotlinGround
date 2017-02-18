@@ -1,4 +1,4 @@
-package main.puzzles.Scrabble;
+package java.puzzles.Scrabble;
 
 import java.util.Arrays;
 import java.util.HashMap;

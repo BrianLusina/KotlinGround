@@ -1,8 +1,8 @@
-package test.math.AveragesOfNumbers;
+package java.math.AveragesOfNumbers;
 
 import junit.framework.TestCase;
-import main.math.AveragesOfNumbers.Averages;
 
+import java.math.AveragesOfNumbers.Averages;
 import java.util.Arrays;
 
 public class AveragesTest extends TestCase {

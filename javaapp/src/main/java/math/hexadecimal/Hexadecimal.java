@@ -1,4 +1,4 @@
-package main.math.hexadecimal;
+package java.math.hexadecimal;
 
 import java.util.Arrays;
 

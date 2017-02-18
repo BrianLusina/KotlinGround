@@ -1,8 +1,9 @@
-package test.functionalprog.Triangle;
+package java.functionalprog.Triangle;
 
 import junit.framework.TestCase;
-import main.functionalprog.Triangle.TriangleFuncProgram;
-import main.functionalprog.Triangle.TrianglePojo;
+
+import java.functionalprog.Triangle.TriangleFuncProgram;
+import java.functionalprog.Triangle.TrianglePojo;
 
 public class TriangleFuncProgramTest extends TestCase {
     public TriangleFuncProgramTest(String name) {

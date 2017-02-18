@@ -1,4 +1,4 @@
-package main.generics.box;
+package java.generics.box;
 
 /**
  * java.generics

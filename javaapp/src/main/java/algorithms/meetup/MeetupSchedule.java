@@ -1,4 +1,4 @@
-package main.algorithms.meetup;
+package java.algorithms.meetup;
 
 public enum MeetupSchedule {
     FIRST,

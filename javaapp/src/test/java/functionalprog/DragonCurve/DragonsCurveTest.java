@@ -1,8 +1,9 @@
-package test.functionalprog.DragonCurve;
+package java.functionalprog.DragonCurve;
 
-import main.functionalprog.DragonCurve.DragonsCurve;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.functionalprog.DragonCurve.DragonsCurve;
 import java.util.stream.IntStream;
 import java.util.Arrays;
 import java.util.HashMap;

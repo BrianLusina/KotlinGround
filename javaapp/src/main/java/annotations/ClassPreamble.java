@@ -1,4 +1,4 @@
-package main.annotations;
+package java.annotations;
 
 import java.lang.annotation.Documented;
 

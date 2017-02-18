@@ -1,4 +1,4 @@
-package main.annotations;
+package java.annotations;
 
 /**
  * java.annotations

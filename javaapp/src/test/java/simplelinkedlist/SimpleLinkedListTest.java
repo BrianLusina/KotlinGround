@@ -1,8 +1,8 @@
-package test.simplelinkedlist;
+package java.simplelinkedlist;
 
 import java.util.NoSuchElementException;
 
-import main.datastructures.simplelinkedlist.SimpleLinkedList;
+import java.datastructures.simplelinkedlist.SimpleLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 

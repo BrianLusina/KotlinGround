@@ -1,9 +1,8 @@
-package test.math.Spaceage;
+package java.math.Spaceage;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.math.Spaceage.SpaceAge;
 
 
 public class SpaceAgeTest extends TestCase {

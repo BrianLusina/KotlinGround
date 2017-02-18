@@ -1,4 +1,4 @@
-package main.stringswords.pangram;
+package java.stringswords.pangram;
 
 public class Pangrams {
 

@@ -1,7 +1,8 @@
-package test.stringswords.bob;
+package java.stringswords.bob;
 
-import main.stringswords.bob.Bob;
 import org.junit.Test;
+
+import java.stringswords.bob.Bob;
 
 import static org.junit.Assert.*;
 

@@ -1,8 +1,9 @@
-package test.functionalprog.Student;
+package java.functionalprog.Student;
 
 import junit.framework.TestCase;
-import main.functionalprog.Student.StudentFunctProgram;
-import main.functionalprog.Student.StudentPojo;
+
+import java.functionalprog.Student.StudentFunctProgram;
+import java.functionalprog.Student.StudentPojo;
 
 
 public class StudentFunctProgramTest extends TestCase {

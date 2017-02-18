@@ -1,7 +1,8 @@
-package test.math.NthPrime;
+package java.math.NthPrime;
 
-import main.math.NthPrime.Prime;
 import org.junit.Test;
+
+import java.math.NthPrime.Prime;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

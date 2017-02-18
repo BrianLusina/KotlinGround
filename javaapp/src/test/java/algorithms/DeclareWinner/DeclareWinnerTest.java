@@ -1,7 +1,8 @@
-package test.algorithms.DeclareWinner;
+package java.algorithms.DeclareWinner;
 
 import junit.framework.TestCase;
-import main.algorithms.DeclareWinner.DeclareWinner;
+
+import java.algorithms.DeclareWinner.DeclareWinner;
 
 
 public class DeclareWinnerTest extends TestCase {

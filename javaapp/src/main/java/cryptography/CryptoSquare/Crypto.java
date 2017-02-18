@@ -1,4 +1,4 @@
-package main.cryptography.CryptoSquare;
+package java.cryptography.CryptoSquare;
 
 import java.util.ArrayList;
 import java.util.List;

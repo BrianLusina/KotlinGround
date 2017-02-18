@@ -1,4 +1,4 @@
-package main.algorithms.strain;
+package java.algorithms.strain;
 
 import java.util.ArrayList;
 import java.util.List;

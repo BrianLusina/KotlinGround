@@ -1,4 +1,4 @@
-package main.math.Spaceage;
+package java.math.Spaceage;
 
 /**
  * Created by lusinabrian on 11/07/16.

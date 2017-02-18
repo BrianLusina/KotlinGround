@@ -1,4 +1,4 @@
-package main.math.NumPow;
+package java.math.NumPow;
 
 import java.util.ArrayList;
 import java.util.stream.IntStream;

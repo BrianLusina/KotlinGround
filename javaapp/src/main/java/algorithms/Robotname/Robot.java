@@ -1,4 +1,4 @@
-package main.algorithms.Robotname;
+package java.algorithms.Robotname;
 
 import java.util.Random;
 

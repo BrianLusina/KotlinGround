@@ -1,4 +1,4 @@
-package main.functionalprog.Student;
+package java.functionalprog.Student;
 
 import java.util.function.Function;
 

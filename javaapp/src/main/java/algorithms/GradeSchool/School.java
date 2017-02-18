@@ -1,4 +1,4 @@
-package main.algorithms.GradeSchool;
+package java.algorithms.GradeSchool;
 
 import java.util.*;
 

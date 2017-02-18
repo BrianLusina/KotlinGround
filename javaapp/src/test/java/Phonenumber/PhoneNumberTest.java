@@ -1,7 +1,8 @@
-package test.Phonenumber;
+package java.Phonenumber;
 
 import junit.framework.TestCase;
-import main.Phonenumber.PhoneNumber;
+
+import java.Phonenumber.PhoneNumber;
 
 public class PhoneNumberTest extends TestCase {
     public PhoneNumberTest(String name) {

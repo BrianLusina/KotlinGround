@@ -1,4 +1,4 @@
-package main.stringswords.RNATranscription;
+package java.stringswords.RNATranscription;
 
 public class RnaTranscription {
 

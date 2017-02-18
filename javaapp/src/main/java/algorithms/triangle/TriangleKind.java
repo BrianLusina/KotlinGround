@@ -1,4 +1,4 @@
-package main.algorithms.triangle;
+package java.algorithms.triangle;
 
 public enum TriangleKind {
     EQUILATERAL,

@@ -1,4 +1,4 @@
-package main.objects.BankModel.EquityBankModel;
+package java.objects.BankModel.EquityBankModel;
 
 /*** Description: Account that earns monthly interest to the balance*/
 class SavingsAccount extends BankAccount {

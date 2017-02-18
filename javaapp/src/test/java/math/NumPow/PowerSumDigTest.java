@@ -1,9 +1,8 @@
-package test.math.NumPow;
+package java.math.NumPow;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.math.NumPow.PowerSumDig;
+
+import java.math.NumPow.PowerSumDig;
 
 import static org.junit.Assert.assertEquals;
 

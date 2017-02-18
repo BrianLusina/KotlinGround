@@ -1,4 +1,4 @@
-package test.smallprograms.CoffeeCheckin;
+package java.CoffeeCheckin;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

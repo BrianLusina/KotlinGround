@@ -1,4 +1,4 @@
-package main.datastructures.Array.Sorting;
+package java.datastructures.Array.Sorting;
 
 public class Sorting {
     /**

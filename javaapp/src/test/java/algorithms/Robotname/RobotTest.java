@@ -1,9 +1,8 @@
-package test.algorithms.Robotname;
+package java.algorithms.Robotname;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.algorithms.Robotname.Robot;
 
 
 import static org.hamcrest.CoreMatchers.equalTo;

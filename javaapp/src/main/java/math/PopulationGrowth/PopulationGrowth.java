@@ -1,4 +1,4 @@
-package main.math.PopulationGrowth;
+package java.math.PopulationGrowth;
 
 /**
  * Package: java.java.math.PopulationGrowth

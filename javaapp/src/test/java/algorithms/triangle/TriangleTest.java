@@ -1,11 +1,8 @@
-package test.algorithms.triangle;
+package java.algorithms.triangle;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.algorithms.triangle.Triangle;
-import main.algorithms.triangle.TriangleException;
-import main.algorithms.triangle.TriangleKind;
 
 
 public class TriangleTest extends TestCase {

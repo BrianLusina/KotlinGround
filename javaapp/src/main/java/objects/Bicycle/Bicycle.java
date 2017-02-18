@@ -1,4 +1,4 @@
-package main.objects.Bicycle;
+package java.objects.Bicycle;
 
 /**
  * java.objects.Bicycle

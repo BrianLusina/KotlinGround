@@ -1,4 +1,4 @@
-package test.stringswords.anagram;
+package java.stringswords.anagram;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

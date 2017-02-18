@@ -1,4 +1,4 @@
-package main.math.Binary;
+package java.math.Binary;
 
 
 /**

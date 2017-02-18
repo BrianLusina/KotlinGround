@@ -1,4 +1,4 @@
-package main.smallprograms;
+package java.smallprograms;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package main.math.TortoiseRacing;
+package java.math.TortoiseRacing;
 
 /**
  * Package: java.java.math.TortoiseRacing

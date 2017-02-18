@@ -1,4 +1,4 @@
-package main.generics.box;
+package java.generics.box;
 
 public class BoxMain {
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package main.stringswords.NucleotideCount;
+package java.stringswords.NucleotideCount;
 
 import java.util.AbstractMap;
 import java.util.Map;

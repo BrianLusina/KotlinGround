@@ -1,9 +1,9 @@
-package test.datastructures;
+package java.datastructures;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.datastructures.stacks.Stacks;
+import java.datastructures.stacks.Stacks;
 
 /**
  * Stacks Tester.

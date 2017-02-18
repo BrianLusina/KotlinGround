@@ -1,4 +1,4 @@
-package main.objects.AbstractionInterfaces.MotorVehicles;
+package java.objects.AbstractionInterfaces.MotorVehicles;
 
 /**
  * java.objects.AbstractionInterfaces.MotorVehicles

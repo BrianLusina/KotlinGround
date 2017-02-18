@@ -1,7 +1,8 @@
-package test.AtbashCipher;
+package java.AtbashCipher;
 
 
-import main.cryptography.AtbashCipher.Atbash;
+import java.cryptography.AtbashCipher.Atbash;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
@@ -41,7 +42,7 @@ public class AtbashTest {
 
         @Test
         public void test() {
-            assertEquals(expectedOutput, Atbash.encode(input));
+            Assert.assertEquals(expectedOutput, Atbash.encode(input));
         }
     }
 

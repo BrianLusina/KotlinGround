@@ -1,4 +1,4 @@
-package main.threads;
+package java.threads;
 
 
 /**

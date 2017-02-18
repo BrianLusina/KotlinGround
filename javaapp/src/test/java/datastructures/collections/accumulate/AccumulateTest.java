@@ -1,9 +1,9 @@
-package test.datastructures.collections.accumulate;
+package java.datastructures.collections.accumulate;
 
 
-import main.datastructures.collections.accumulate.Accumulate;
 import org.junit.Test;
 
+import java.datastructures.collections.accumulate.Accumulate;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;

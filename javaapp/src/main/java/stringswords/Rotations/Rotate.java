@@ -1,4 +1,4 @@
-package main.stringswords.Rotations;
+package java.stringswords.Rotations;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package test.WordSearch;
+package java.WordSearch;
 
+import java.stringswords.WordSearch.WordSearch;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.stringswords.WordSearch.WordSearch;
 
 import static org.junit.Assert.assertArrayEquals;
 

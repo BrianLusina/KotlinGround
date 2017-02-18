@@ -1,4 +1,4 @@
-package main.regex.Autocorrect;
+package java.regex.Autocorrect;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

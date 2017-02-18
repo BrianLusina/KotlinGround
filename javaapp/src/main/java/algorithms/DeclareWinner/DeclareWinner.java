@@ -1,4 +1,4 @@
-package main.algorithms.DeclareWinner;
+package java.algorithms.DeclareWinner;
 
 /**
  * Package: java.objects.java.java.algorithms.DeclareWinner

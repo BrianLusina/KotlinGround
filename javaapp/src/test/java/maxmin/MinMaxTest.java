@@ -1,6 +1,6 @@
-package test.maxmin;
+package java.maxmin;
 
-import main.datastructures.Array.maxmin.MinMax;
+import java.datastructures.Array.maxmin.MinMax;
 import org.junit.Before;
 import org.junit.Test;
 

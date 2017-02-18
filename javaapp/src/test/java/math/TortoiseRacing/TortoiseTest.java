@@ -1,7 +1,8 @@
-package test.math.TortoiseRacing;
+package java.math.TortoiseRacing;
 
 import junit.framework.TestCase;
-import main.math.TortoiseRacing.Tortoise;
+
+import java.math.TortoiseRacing.Tortoise;
 
 import static org.junit.Assert.assertArrayEquals;
 

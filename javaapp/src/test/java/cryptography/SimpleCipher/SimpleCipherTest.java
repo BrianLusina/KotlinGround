@@ -1,4 +1,4 @@
-package test.cryptography.SimpleCipher;
+package java.cryptography.SimpleCipher;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

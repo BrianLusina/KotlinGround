@@ -1,4 +1,4 @@
-package main.smallprograms.HealthProfile;
+package java.smallprograms.HealthProfile;
 
 import javax.swing.*;
 import java.util.Scanner;

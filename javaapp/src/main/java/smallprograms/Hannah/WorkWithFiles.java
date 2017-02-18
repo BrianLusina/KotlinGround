@@ -1,4 +1,4 @@
-package main.java.Hannah;
+package java.smallprograms.Hannah;
 
 import java.io.File;
 import java.util.Formatter;

@@ -1,6 +1,7 @@
-package test.stringswords.NucleotideCount;
+package java.stringswords.NucleotideCount;
 import junit.framework.TestCase;
-import main.stringswords.NucleotideCount.DNA;
+
+import java.stringswords.NucleotideCount.DNA;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
