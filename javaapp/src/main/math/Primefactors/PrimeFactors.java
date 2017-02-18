@@ -1,4 +1,4 @@
-package math.Primefactors;
+package main.math.Primefactors;
 
 import java.util.ArrayList;
 import java.util.List;

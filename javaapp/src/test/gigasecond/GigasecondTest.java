@@ -1,6 +1,6 @@
-package test.java.gigasecond;
+package test.gigasecond;
 
-import main.java.gigasecond.Gigasecond;
+import main.datetime.gigasecond.Gigasecond;
 import org.junit.Test;
 
 import java.time.LocalDate;

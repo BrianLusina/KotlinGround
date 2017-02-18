@@ -1,4 +1,4 @@
-package main.java.Math;
+package main.math;
 
 /**
  * Package: math

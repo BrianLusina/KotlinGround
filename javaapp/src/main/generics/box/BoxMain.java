@@ -1,4 +1,4 @@
-package generics.box;
+package main.generics.box;
 
 public class BoxMain {
     public static void main(String[] args){

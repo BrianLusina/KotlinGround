@@ -1,4 +1,4 @@
-package main.java.Strings.NameThatNumber;
+package main.stringswords.NameThatNumber;
 
 import java.util.HashMap;
 import java.util.Map;

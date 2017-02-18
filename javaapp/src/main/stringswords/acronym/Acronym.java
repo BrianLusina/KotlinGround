@@ -1,4 +1,4 @@
-package stringswords.acronym;
+package main.stringswords.acronym;
 
 public class Acronym {
 

@@ -1,7 +1,7 @@
-package test.java.allergies;
+package test.algorithms.allergies;
 
-import main.java.allergies.Allergen;
-import main.java.allergies.Allergies;
+import main.algorithms.allergies.Allergen;
+import main.algorithms.allergies.Allergies;
 import org.junit.Test;
 
 import java.util.Arrays;

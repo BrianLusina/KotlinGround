@@ -1,8 +1,8 @@
-package test.java.GradeSchool;
+package test.algorithms.GradeSchool;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import main.java.GradeSchool.School;
+import main.algorithms.GradeSchool.School;
 import org.junit.Test;
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package main.java.DataStructures.simplelinkedlist;
+package main.datastructures.simplelinkedlist;
 
 import java.lang.reflect.Array;
 import java.util.NoSuchElementException;

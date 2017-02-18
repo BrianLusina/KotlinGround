@@ -1,4 +1,4 @@
-package BankModel.EquityBankModel;
+package main.objects.BankModel.EquityBankModel;
 
 /*** Description: Account that earns monthly interest to the balance*/
 class SavingsAccount extends BankAccount {

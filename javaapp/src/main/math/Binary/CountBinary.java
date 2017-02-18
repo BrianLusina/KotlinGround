@@ -1,4 +1,4 @@
-package math.Binary;
+package main.math.Binary;
 
 
 /**

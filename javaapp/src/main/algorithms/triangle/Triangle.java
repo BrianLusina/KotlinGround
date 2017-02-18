@@ -1,4 +1,4 @@
-package main.java.triangle;
+package main.algorithms.triangle;
 
 /**
  * Created by lusinabrian on 16/07/16.

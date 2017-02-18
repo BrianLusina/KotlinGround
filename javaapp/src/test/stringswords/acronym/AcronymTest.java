@@ -1,6 +1,7 @@
-package stringswords.acronym;
+package test.stringswords.acronym;
 
 
+import main.stringswords.acronym.Acronym;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

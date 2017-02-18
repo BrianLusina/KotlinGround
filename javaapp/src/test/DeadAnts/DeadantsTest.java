@@ -1,9 +1,9 @@
-package test.java.DeadAnts;
+package test.DeadAnts;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.Puzzles.DeadAnts.Deadants;
+import main.puzzles.DeadAnts.Deadants;
 
 
 public class DeadantsTest extends TestCase {

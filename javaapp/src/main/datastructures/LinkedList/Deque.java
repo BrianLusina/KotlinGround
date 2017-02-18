@@ -1,4 +1,4 @@
-package main.java.DataStructures.LinkedList;
+package main.datastructures.LinkedList;
 
 public class Deque<T> {
     private Element<T> head;

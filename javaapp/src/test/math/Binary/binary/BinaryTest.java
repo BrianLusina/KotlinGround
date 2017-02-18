@@ -1,5 +1,6 @@
-package test.java.binary;
+package test.math.Binary.binary;
 
+import main.math.Binary.binary.Binary;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -7,8 +8,6 @@ import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
 import java.util.Collection;
-import main.java.binary.Binary;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)

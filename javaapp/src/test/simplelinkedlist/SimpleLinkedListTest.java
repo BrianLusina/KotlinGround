@@ -1,10 +1,10 @@
-package test.java.simplelinkedlist;
+package test.simplelinkedlist;
 
 import java.util.NoSuchElementException;
 
+import main.datastructures.simplelinkedlist.SimpleLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
-import main.java.DataStructures.simplelinkedlist.SimpleLinkedList;
 
 public class SimpleLinkedListTest {
 

@@ -1,4 +1,4 @@
-package stringswords.anagram;
+package main.stringswords.anagram;
 
 import java.util.ArrayList;
 import java.util.Arrays;

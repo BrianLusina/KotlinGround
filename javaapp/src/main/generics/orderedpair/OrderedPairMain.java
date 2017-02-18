@@ -1,4 +1,7 @@
-package generics.orderedpair;
+package main.generics.orderedpair;
+
+import main.generics.orderedpair.OrderedPair;
+import main.generics.orderedpair.Pair;
 
 /**
  * generics.orderedpair

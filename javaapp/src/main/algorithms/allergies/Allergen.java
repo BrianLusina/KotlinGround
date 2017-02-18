@@ -1,4 +1,4 @@
-package main.java.allergies;
+package main.algorithms.allergies;
 
 public enum Allergen {
     EGGS(1),

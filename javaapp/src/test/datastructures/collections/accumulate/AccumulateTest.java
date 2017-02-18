@@ -1,6 +1,7 @@
-package datastructures.collections.accumulate;
+package test.datastructures.collections.accumulate;
 
 
+import main.datastructures.collections.accumulate.Accumulate;
 import org.junit.Test;
 
 import java.util.Arrays;

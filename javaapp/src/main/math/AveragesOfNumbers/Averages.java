@@ -1,4 +1,4 @@
-package main.java.Math.AveragesOfNumbers;
+package main.math.AveragesOfNumbers;
 
 public class Averages {
 

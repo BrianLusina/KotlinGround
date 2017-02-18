@@ -1,9 +1,9 @@
-package test.java.strain;
+package test.algorithms.strain;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.strain.Strain;
+import main.algorithms.strain.Strain;
 import org.junit.Assert;
 
 import java.util.Arrays;

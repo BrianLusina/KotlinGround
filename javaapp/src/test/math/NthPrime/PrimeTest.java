@@ -1,5 +1,6 @@
-package math.NthPrime;
+package test.math.NthPrime;
 
+import main.math.NthPrime.Prime;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

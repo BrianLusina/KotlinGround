@@ -1,4 +1,4 @@
-package BankModel.EquityBankModel;
+package main.objects.BankModel.EquityBankModel;
 
 /*** Description:Main Bank account that is the parent of all bank accounts in the Bank.
  * Contains methods and fields that will be inherited from subclasses*/

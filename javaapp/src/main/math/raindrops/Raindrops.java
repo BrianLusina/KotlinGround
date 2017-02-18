@@ -1,4 +1,4 @@
-package main.java.raindrops;
+package main.math.raindrops;
 
 /**
  * Package: PACKAGE_NAME

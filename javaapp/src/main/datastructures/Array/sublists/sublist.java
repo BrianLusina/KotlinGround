@@ -1,4 +1,4 @@
-package datastructures.Array.sublists;
+package main.datastructures.Array.sublists;
 
 import java.util.stream.IntStream;
 

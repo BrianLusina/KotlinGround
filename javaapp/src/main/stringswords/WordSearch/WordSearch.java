@@ -1,4 +1,4 @@
-package main.java.Strings.WordSearch;
+package main.stringswords.WordSearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;

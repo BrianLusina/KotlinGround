@@ -1,4 +1,4 @@
-package main.java.trinary;
+package main.math.trinary;
 
 /**
  * Created by lusinabrian on 15/08/16 or 15 Aug of 2016,

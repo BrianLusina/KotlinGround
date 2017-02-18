@@ -1,4 +1,4 @@
-package hamming;
+package main.hamming;
 
 public class Hamming {
 

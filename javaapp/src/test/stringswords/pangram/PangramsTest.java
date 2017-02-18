@@ -1,7 +1,7 @@
-package test.java.pangram;
+package test.stringswords.pangram;
 
 import junit.framework.TestCase;
-import main.java.pangram.Pangrams;
+import main.stringswords.pangram.Pangrams;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

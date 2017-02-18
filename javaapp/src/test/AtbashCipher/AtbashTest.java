@@ -1,6 +1,7 @@
-package AtbashCipher;
+package test.AtbashCipher;
 
-import cryptography.AtbashCipher.Atbash;
+
+import main.cryptography.AtbashCipher.Atbash;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package main.java.Regex.VowelCount;
+package main.regex.VowelCount;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

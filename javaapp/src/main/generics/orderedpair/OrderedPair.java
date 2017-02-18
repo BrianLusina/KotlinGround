@@ -1,4 +1,4 @@
-package generics.orderedpair;
+package main.generics.orderedpair;
 
 /**
  * generics.orderedpair

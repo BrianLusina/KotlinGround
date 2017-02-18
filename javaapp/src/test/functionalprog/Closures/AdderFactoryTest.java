@@ -1,7 +1,7 @@
-package test.FunctionalProg.Closures;
+package test.functionalprog.Closures;
 
 import junit.framework.TestCase;
-import main.java.FunctionalProg.Closures.AdderFactory;
+import main.functionalprog.Closures.AdderFactory;
 
 public class AdderFactoryTest extends TestCase {
     public AdderFactoryTest(String name) {

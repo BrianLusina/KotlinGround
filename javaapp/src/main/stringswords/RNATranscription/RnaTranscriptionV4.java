@@ -1,4 +1,4 @@
-package main.java.RNATranscription;
+package main.stringswords.RNATranscription;
 
 import java.util.HashMap;
 import java.util.Map;

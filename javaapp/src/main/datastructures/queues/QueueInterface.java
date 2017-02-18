@@ -1,4 +1,4 @@
-package datastructures.queues;
+package main.datastructures.queues;
 
 /**
  * datastructures.queues

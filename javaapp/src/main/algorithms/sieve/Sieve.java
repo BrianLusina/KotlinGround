@@ -1,4 +1,4 @@
-package main.java.sieve;
+package main.algorithms.sieve;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

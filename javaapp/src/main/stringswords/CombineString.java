@@ -1,4 +1,4 @@
-package main.java.Strings;
+package main.stringswords;
 
 /**
  * Package: stringswords

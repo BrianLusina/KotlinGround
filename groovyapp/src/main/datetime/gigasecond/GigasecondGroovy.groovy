@@ -1,4 +1,4 @@
-package main.gigasecond
+package main.datetime.gigasecond
 
 import groovy.time.TimeCategory
 

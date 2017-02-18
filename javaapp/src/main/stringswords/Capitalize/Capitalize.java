@@ -1,4 +1,4 @@
-package main.java.Strings.Capitalize;
+package main.stringswords.Capitalize;
 
 /**
  * Package: stringswords

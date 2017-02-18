@@ -1,9 +1,9 @@
-package test.java.Capitalize;
+package test.Capitalize;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.Strings.Capitalize.Capitalize;
+import main.stringswords.Capitalize.Capitalize;
 import org.junit.After;
 import org.junit.Before;
 

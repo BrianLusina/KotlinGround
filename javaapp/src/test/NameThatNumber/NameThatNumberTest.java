@@ -1,9 +1,9 @@
-package test.java.NameThatNumber;
+package test.NameThatNumber;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.Strings.NameThatNumber.NameThatNumber;
+import main.stringswords.NameThatNumber.NameThatNumber;
 import org.junit.After;
 import org.junit.Before;
 

@@ -1,4 +1,4 @@
-package main.java.GUI.DialogBoxes;
+package main.GUI.DialogBoxes;
 
 import javax.swing.*;
 

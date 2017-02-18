@@ -1,4 +1,4 @@
-package main.java.binary;
+package main.math.Binary.binary;
 
 public class Binary {
     /*FIELDS*/

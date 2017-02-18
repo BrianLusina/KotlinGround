@@ -1,9 +1,9 @@
-package test.java.Math.PopulationGrowth;
+package test.math.PopulationGrowth;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.Math.PopulationGrowth.PopulationGrowth;
+import main.math.PopulationGrowth.PopulationGrowth;
 import org.junit.After;
 import org.junit.Before;
 

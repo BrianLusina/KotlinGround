@@ -1,10 +1,10 @@
-package test.java.meetup;
+package test.algorithms.meetup;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.meetup.Meetup;
-import main.java.meetup.MeetupSchedule;
+import main.algorithms.meetup.Meetup;
+import main.algorithms.meetup.MeetupSchedule;
 import org.joda.time.DateTime;
 
 import static org.assertj.core.api.Assertions.assertThat;

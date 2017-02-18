@@ -1,6 +1,6 @@
-package test.java.SimpleCipher;
+package test.cryptography.SimpleCipher;
 
-import main.java.SimpleCipher.Cipher;
+import main.cryptography.SimpleCipher.Cipher;
 import org.junit.Test;
 
 public class IncorrectKeyCipherTest {

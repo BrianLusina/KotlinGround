@@ -1,6 +1,6 @@
-package test.java.histogram;
+package test.math.histogram;
 
-import main.java.histogram.Histogram;
+import main.math.histogram.Histogram;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

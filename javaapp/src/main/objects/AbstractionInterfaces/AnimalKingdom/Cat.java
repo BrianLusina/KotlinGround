@@ -1,4 +1,4 @@
-package objects.AbstractionInterfaces.AnimalKingdom;
+package main.objects.AbstractionInterfaces.AnimalKingdom;
 
 /**
  * objects.AbstractionInterfaces.AnimalKingdom

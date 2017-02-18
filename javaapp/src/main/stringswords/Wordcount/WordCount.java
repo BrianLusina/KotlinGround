@@ -1,4 +1,4 @@
-package main.java.Wordcount;
+package main.stringswords.Wordcount;
 
 import java.util.HashMap;
 import java.util.Map;

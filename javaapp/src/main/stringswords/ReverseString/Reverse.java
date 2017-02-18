@@ -1,4 +1,4 @@
-package main.java.Strings.ReverseString;
+package main.stringswords.ReverseString;
 
 /**
  * Package: stringswords

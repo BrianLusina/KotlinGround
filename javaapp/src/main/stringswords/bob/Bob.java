@@ -1,4 +1,4 @@
-package main.java.bob;
+package main.stringswords.bob;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-package datastructures.stacks;
+package main.datastructures.stacks;
 
 /**
  * datastructures.stacks

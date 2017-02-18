@@ -1,4 +1,4 @@
-package main.java.triangle;
+package main.algorithms.triangle;
 
 public class TriangleException extends Exception {
 

@@ -1,4 +1,4 @@
-package main.java.CoffeeCheckin;
+package main.smallprograms.CoffeeCheckin;
 
 import java.util.Scanner;
 

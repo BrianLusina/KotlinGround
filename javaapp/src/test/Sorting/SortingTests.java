@@ -1,8 +1,8 @@
-package test.java.Sorting;
+package test.Sorting;
 
 import java.util.Arrays;
 
-import main.java.Array.Sorting.Sorting;
+import main.datastructures.Array.Sorting.Sorting;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

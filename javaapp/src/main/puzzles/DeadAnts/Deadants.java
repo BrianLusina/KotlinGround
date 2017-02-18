@@ -1,4 +1,4 @@
-package main.java.Puzzles.DeadAnts;
+package main.puzzles.DeadAnts;
 
 public class Deadants {
     /**

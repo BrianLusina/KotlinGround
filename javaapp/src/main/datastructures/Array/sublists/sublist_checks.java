@@ -1,4 +1,4 @@
-package datastructures.Array.sublists;
+package main.datastructures.Array.sublists;
 
 /**
  * Package: datastructures.Array.sublists

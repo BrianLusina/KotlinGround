@@ -1,4 +1,4 @@
-package BankModel.EquityBankModel;
+package main.objects.BankModel.EquityBankModel;
 
 import javax.swing.*;
 

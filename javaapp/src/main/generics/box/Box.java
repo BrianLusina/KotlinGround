@@ -1,4 +1,4 @@
-package generics.box;
+package main.generics.box;
 
 /**
  * generics

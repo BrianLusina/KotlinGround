@@ -1,8 +1,9 @@
-package hamming;
+package test.hamming;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
+import main.hamming.Hamming;
 import org.junit.Test;
 
 public class HammingTest {

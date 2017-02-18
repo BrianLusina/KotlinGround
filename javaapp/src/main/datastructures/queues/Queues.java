@@ -1,4 +1,4 @@
-package datastructures.queues;
+package main.datastructures.queues;
 import java.util.Queue;
 
 /**

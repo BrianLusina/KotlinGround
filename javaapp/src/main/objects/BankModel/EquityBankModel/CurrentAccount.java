@@ -1,4 +1,4 @@
-package BankModel.EquityBankModel;
+package main.objects.BankModel.EquityBankModel;
 
 /**
  * Description:Charges monthly maintainance fee to the account

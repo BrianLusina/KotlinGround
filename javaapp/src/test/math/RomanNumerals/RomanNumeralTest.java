@@ -1,9 +1,9 @@
-package test.java.RomanNumerals;
+package test.math.RomanNumerals;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.RomanNumerals.RomanNumeral;
+import main.math.RomanNumerals.RomanNumeral;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 

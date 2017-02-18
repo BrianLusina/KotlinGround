@@ -1,4 +1,4 @@
-package objects.Bicycle;
+package main.objects.Bicycle;
 
 /**
  * objects.Bicycle

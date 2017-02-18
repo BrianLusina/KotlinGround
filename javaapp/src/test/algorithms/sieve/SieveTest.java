@@ -1,9 +1,9 @@
-package test.java.sieve;
+package test.algorithms.sieve;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.sieve.Sieve;
+import main.algorithms.sieve.Sieve;
 
 import java.util.Arrays;
 import java.util.List;

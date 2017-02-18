@@ -1,9 +1,9 @@
-package test.java.Scrabble;
+package test.puzzles.Scrabble;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.Scrabble.ScrabbleGame;
+import main.puzzles.Scrabble.ScrabbleGame;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 

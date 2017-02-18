@@ -1,4 +1,4 @@
-package main.java.FunctionalProg.DragonCurve;
+package main.functionalprog.DragonCurve;
 
 import java.util.function.IntFunction;
 import java.util.function.IntPredicate;

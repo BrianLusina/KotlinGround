@@ -1,6 +1,6 @@
 package test.gigasecond
 
-import main.gigasecond.GigasecondGroovy
+import main.datetime.gigasecond.GigasecondGroovy
 import spock.lang.*
 
 class GigasecondSpec extends Specification {

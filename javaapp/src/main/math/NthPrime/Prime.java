@@ -1,4 +1,4 @@
-package math.NthPrime;
+package main.math.NthPrime;
 
 import java.util.stream.IntStream;
 

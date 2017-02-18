@@ -1,4 +1,4 @@
-package datastructures.collections.accumulate;
+package main.datastructures.collections.accumulate;
 
 import java.util.ArrayList;
 import java.util.List;

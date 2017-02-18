@@ -1,9 +1,9 @@
-package test.java.sumofmultiples;
+package test.math.sumofmultiples;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
-import main.java.sumofmultiples.SumOfMultiples;
+import main.math.sumofmultiples.SumOfMultiples;
 import org.junit.Ignore;
 
 import static org.junit.Assert.assertEquals;

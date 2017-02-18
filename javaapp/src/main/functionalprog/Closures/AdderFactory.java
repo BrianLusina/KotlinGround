@@ -1,4 +1,4 @@
-package main.java.FunctionalProg.Closures;
+package main.functionalprog.Closures;
 
 import java.util.function.IntUnaryOperator;
 

@@ -1,9 +1,9 @@
-package test.java.LinkedList;
+package test.LinkedList;
 
+import main.datastructures.LinkedList.Deque;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Ignore;
-import main.java.DataStructures.LinkedList.Deque;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
