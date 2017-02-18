@@ -5,10 +5,13 @@ machine:
 dependencies:
   pre:
     - gradle dependencies
+    - curl https://www.jpm4j.org/install/script | sh
+    - jpm install com.codacy:codacy-coverage-reporter:assembly
 
 test:
   override:
     - gradle test
-    - curl https://www.jpm4j.org/install/script | sh
-    - jpm install com.codacy:codacy-coverage-reporter:assembly
     - codacy-coverage-reporter -l Java -r coverage.xml
+   post:
+      - gradle jacocoTestReport
+      - bash <(curl -s https://codecov.io/bash)
