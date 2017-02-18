@@ -5,13 +5,13 @@ apply plugin: "idea"
 sourceSets{
  main{
   java{
-    srcDir 'src'
+    srcDir 'src/main/com'
   }
  }
 
  test{
   java {
-   srcDir 'test'
+   srcDir 'src/test/com'
   }
  }
 }

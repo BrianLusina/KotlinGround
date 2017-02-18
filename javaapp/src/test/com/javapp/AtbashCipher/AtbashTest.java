@@ -1,4 +1,4 @@
-package com.javapp;
+package javapp.AtbashCipher;
 
 
 import com.javapp.cryptography.AtbashCipher.Atbash;

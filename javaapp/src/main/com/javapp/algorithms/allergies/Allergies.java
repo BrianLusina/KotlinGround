@@ -1,5 +1,6 @@
 package com.javapp.algorithms.allergies;
 
+
 import java.util.EnumSet;
 import java.util.List;
 import java.util.stream.Collectors;

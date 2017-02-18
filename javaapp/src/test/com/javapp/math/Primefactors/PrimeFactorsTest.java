@@ -8,9 +8,6 @@ import java.util.Collection;
 import java.util.List;
 
 public class PrimeFactorsTest extends TestCase {
-    public PrimeFactorsTest(String name) {
-        super(name);
-    }
 
     public void setUp() throws Exception {
         super.setUp();
@@ -20,13 +17,10 @@ public class PrimeFactorsTest extends TestCase {
         super.tearDown();
     }
 
-    public void testGetForNumber() throws Exception {
-        //TODO: Test goes here...
-    }
     private long input;
     private List<Long> expectedOutput;
 
-    @Parameterized.Parameters(name="Prime factors of {0} = {1}")
+    //@Parameterized.Parameters(name="Prime factors of {0} = {1}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1L, Arrays.asList()},

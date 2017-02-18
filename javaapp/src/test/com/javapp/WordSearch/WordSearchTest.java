@@ -7,6 +7,7 @@ import junit.framework.TestSuite;
 
 import static org.junit.Assert.assertArrayEquals;
 
+
 public class WordSearchTest extends TestCase {
     public WordSearchTest(String name) {
         super(name);

@@ -1,5 +1,6 @@
-package com.javapp.algorithms.DeclareWinner;
+package javapp.algorithms.DeclareWinner;
 
+import com.javapp.algorithms.DeclareWinner.DeclareWinner;
 import junit.framework.TestCase;
 
 
