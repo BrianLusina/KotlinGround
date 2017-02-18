@@ -9,10 +9,6 @@ dependencies:
 test:
   override:
     - gradle test
-    # runs coverage
-    # - coverage run --source pysnips -m py.test tests/
-    # - coverage report
-    # - coverage xml -i
-    # - coverage html -i
-    # - python-codacy-coverage -r coverage.xml
-    # - codecov
+    - curl https://www.jpm4j.org/install/script | sh
+    - jpm install com.codacy:codacy-coverage-reporter:assembly
+    - codacy-coverage-reporter -l Java -r coverage.xml

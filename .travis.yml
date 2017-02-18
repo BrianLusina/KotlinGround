@@ -15,6 +15,9 @@ addons:
 
 before_install:
   - gradle assemble
+  - curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
+  - java -jar jpm4j.jar -u init
+  - ~/jpm/bin/jpm install com.codacy:codacy-coverage-reporter:assembly
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -27,6 +30,9 @@ cache:
 script:
   - gradle check compileStarterSourceJava --continue
   - gradle test
+  - curl https://www.jpm4j.org/install/script | sh
+  - codacy-coverage-reporter -l Java -r coverage.xml
 
 after_success:
+  - ~/jpm/bin/codacy-coverage-reporter -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
   - bash <(curl -s https://codecov.io/bash)
