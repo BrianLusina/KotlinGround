@@ -9,10 +9,10 @@ TERM=dumb
 function on_exit() {
   echo ">>> on_exit()"
   if [ "$XAPI_PID" != "" ] ; then
-    kill $XAPI_PID
+    kill ${XAPI_PID}
     echo "Stopped X-API (pid=${XAPI_PID})"
   fi
-  cd $EXECPATH
+  cd ${EXECPATH}
   echo "<<< on_exit()"
 }
 
