@@ -21,7 +21,7 @@ assert_gradle_installed() {
   which gradle >/dev/null
   if [ $? != 0 ]; then
     echo "Gradle not found.  This the Java build tool and is required."
-    echo -e "Have you completed the setup instructions at https://github.com/exercism/xjava ?\n"
+    echo -e "Have you completed the setup instructions at https://github.javapp/exercism/xjava ?\n"
     echo "PATH=${PATH}"
     echo "aborting."
     exit 1
@@ -34,7 +34,7 @@ assert_jq_installed() {
   which jq >/dev/null
   if [ $? != 0 ]; then
     echo "jq not found.  This utility is used to parse the config.json file and is required."
-    echo -e "Have you completed the setup instructions at https://github.com/exercism/xjava ?\n"
+    echo -e "Have you completed the setup instructions at https://github.javapp/exercism/xjava ?\n"
     echo "PATH=${PATH}"
     echo "aborting."
     exit 1
@@ -53,7 +53,7 @@ assert_required_ruby_installed() {
   if [ "$CURRENT_RUBY_VER" != "$EXPECTED_RUBY_VER" ]; then
     echo "${RACKAPP_HOME} requires Ruby ${EXPECTED_RUBY_VER}; current Ruby version is ${CURRENT_RUBY_VER}."
     echo -e "Ruby used: `which ruby`.\n"
-    echo -e "Have you completed the setup instructions at https://github.com/exercism/xjava ?\n"
+    echo -e "Have you completed the setup instructions at https://github.javapp/exercism/xjava ?\n"
     echo "PATH=${PATH}"
     echo "aborting."
     exit 1
