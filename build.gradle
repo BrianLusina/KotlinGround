@@ -2,11 +2,19 @@ apply plugin: "java"
 apply plugin: "eclipse"
 apply plugin: "idea"
 apply plugin: "groovy"
-apply from: "/jacoco.gradle"
+apply plugin: "jacoco"
+
+jacoco{
+    toolVersion = "0.7.8"
+}
+
+configurations { codacy }
 
 allprojects {
     repositories {
         jcenter()
+	maven { url "https://jitpack.io" }
+    	maven { url "http://dl.bintray.com/typesafe/maven-releases" }
     }
 }
 
@@ -26,6 +34,7 @@ dependencies {
     testCompile "com.google.guava:guava:16+"
     testCompile "junit:junit:4.10"
     testCompile "org.assertj:assertj-core:3.2.0"
+    codacy 'com.github.codacy:codacy-coverage-reporter:-SNAPSHOT'
 }
 
 test {
@@ -61,3 +70,13 @@ codeCoverageReport.dependsOn {
     subprojects*.test
 }
 
+task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
+    main = "com.codacy.CodacyCoverageReporter"
+    classpath = configurations.codacy
+    args = [
+            "-l",
+            "Java",
+            "-r",
+            "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+    ]
+}
