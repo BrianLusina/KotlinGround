@@ -1,1 +1,0 @@
-Groovy package for the Groovy programming language.
