@@ -4,17 +4,18 @@ apply plugin: "eclipse"
 
 sourceSets{
  main{
-  groovy{
-    srcDir 'src'
+  java{
+    srcDir 'src/main/com'
   }
  }
 
  test{
-  groovy {
-   srcDir 'test'
+  java {
+   srcDir 'src/test/com'
   }
  }
 }
+
 repositories {
   mavenCentral()
 }
