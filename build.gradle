@@ -1,5 +1,4 @@
 apply plugin: "java"
-apply plugin: "eclipse"
 apply plugin: "idea"
 apply plugin: "groovy"
 apply plugin: "jacoco"
@@ -18,9 +17,6 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
 
 repositories {
   mavenCentral()
@@ -37,12 +33,7 @@ dependencies {
     codacy 'com.github.codacy:codacy-coverage-reporter:-SNAPSHOT'
 }
 
-test {
-    testLogging {
-        exceptionFormat = 'full'
-        events = ["passed", "failed", "skipped"]
-    }
-}
+
 
 jacocoTestReport {
     reports {
@@ -61,7 +52,7 @@ task codeCoverageReport(type: JacocoReport) {
     reports {
         xml.enabled true
         xml.destination "${buildDir}/reports/jacoco/report.xml"
-        html.enabled false
+        html.enabled true
         csv.enabled false
     }
 }
