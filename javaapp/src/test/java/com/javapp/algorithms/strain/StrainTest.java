@@ -1,57 +1,43 @@
 package com.javapp.algorithms.strain;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 
-public class StrainTest extends TestCase {
-    public StrainTest(String name) {
-        super(name);
-    }
-
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    @org.junit.Test
+public class StrainTest {
+    @Test
     public void emptyKeep() {
         List<Integer> input = new LinkedList<>();
         List<Integer> expectedOutput = new LinkedList<>();
         Assert.assertEquals(expectedOutput, Strain.keep(input, x -> x < 10));
     }
 
-    @org.junit.Test
+    @Test
     public void keepEverything() {
         List<Integer> input = Arrays.asList(1, 2, 3);
         List<Integer> expectedOutput = Arrays.asList(1, 2, 3);
         Assert.assertEquals(expectedOutput, Strain.keep(input, x -> x < 10));
     }
 
-    @org.junit.Test
+    @Test
     public void keepFirstAndLast() {
         List<Integer> input = Arrays.asList(1, 2, 3);
         List<Integer> expectedOutput = Arrays.asList(1, 3);
         Assert.assertEquals(expectedOutput, Strain.keep(input, x -> x % 2 != 0));
     }
 
-    @org.junit.Test
+    @Test
     public void keepNeitherFirstNorLast() {
         List<Integer> input = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> expectedOutput = Arrays.asList(2, 4);
         Assert.assertEquals(expectedOutput, Strain.keep(input, x -> x % 2 == 0));
     }
 
-    @org.junit.Test
+    @Test
     public void KeepStrings() {
         List<String> words = Arrays
                 .asList("apple zebra banana zombies cherimoya zelot".split(" "));
@@ -60,7 +46,7 @@ public class StrainTest extends TestCase {
                 Strain.keep(words, x -> x.startsWith("z")));
     }
 
-    @org.junit.Test
+    @Test
     public void KeepArrays() {
         List<List<Integer>> actual = Arrays.asList(
                 Arrays.asList(1, 2, 3),
@@ -79,21 +65,21 @@ public class StrainTest extends TestCase {
                 Strain.keep(actual, col -> col.contains(5)));
     }
 
-    @org.junit.Test
+    @Test
     public void emptyDiscard() {
         List<Integer> input = new LinkedList<>();
         List<Integer> expectedOutput = new LinkedList<>();
         Assert.assertEquals(expectedOutput, Strain.discard(input, x -> x < 10));
     }
 
-    @org.junit.Test
+    @Test
     public void discardNothing() {
         List<Integer> input = Arrays.asList(1, 2, 3);
         List<Integer> expectedOutput = Arrays.asList(1, 2, 3);
         Assert.assertEquals(expectedOutput, Strain.discard(input, x -> x > 10));
     }
 
-    @org.junit.Test
+    @Test
     public void discardFirstAndLast() {
         List<Integer> input = Arrays.asList(1, 2, 3);
         List<Integer> expectedOutput = Arrays.asList(2);
@@ -101,14 +87,14 @@ public class StrainTest extends TestCase {
 
     }
 
-    @org.junit.Test
+    @Test
     public void discardNeitherFirstNorLast() {
         List<Integer> input = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> expectedOutput = Arrays.asList(1, 3, 5);
         Assert.assertEquals(expectedOutput, Strain.discard(input, x -> x % 2 == 0));
     }
 
-    @org.junit.Test
+    @Test
     public void discardStrings() {
         List<String> words = Arrays
                 .asList("apple zebra banana zombies cherimoya zelot".split(" "));
@@ -117,7 +103,7 @@ public class StrainTest extends TestCase {
                 Strain.discard(words, x -> x.startsWith("z")));
     }
 
-    @org.junit.Test
+    @Test
     public void discardArrays() {
         List<List<Integer>> actual = Arrays.asList(
                 Arrays.asList(1, 2, 3),
@@ -135,7 +121,4 @@ public class StrainTest extends TestCase {
                 Strain.discard(actual, col -> col.contains(5)));
     }
 
-    public static Test suite() {
-        return new TestSuite(StrainTest.class);
-    }
 }

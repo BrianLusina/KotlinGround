@@ -1,39 +1,29 @@
 package com.javapp.math.Spaceage;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+
+import org.junit.Test;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 
-public class SpaceAgeTest extends TestCase {
-    public SpaceAgeTest(String name) {
-        super(name);
-    }
-
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
+public class SpaceAgeTest {
     private static final double MAXIMUM_DELTA = 1E-02;
 
-    @org.junit.Test
+    @Test
     public void ageInSeconds() {
         SpaceAge age = new SpaceAge(1000000);
 
         assertEquals(1000000, age.getSeconds(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnEarth() {
         SpaceAge age = new SpaceAge(1000000000);
 
         assertEquals(31.69, age.onEarth(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnMercury() {
         SpaceAge age = new SpaceAge(2134835688);
 
@@ -41,7 +31,7 @@ public class SpaceAgeTest extends TestCase {
         assertEquals(280.88, age.onMercury(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnVenus() {
         SpaceAge age = new SpaceAge(189839836);
 
@@ -49,7 +39,7 @@ public class SpaceAgeTest extends TestCase {
         assertEquals(9.78, age.onVenus(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnMars() {
         SpaceAge age = new SpaceAge(2329871239L);
 
@@ -57,7 +47,7 @@ public class SpaceAgeTest extends TestCase {
         assertEquals(39.25, age.onMars(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnJupiter() {
         SpaceAge age = new SpaceAge(901876382);
 
@@ -65,7 +55,7 @@ public class SpaceAgeTest extends TestCase {
         assertEquals(2.41, age.onJupiter(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnSaturn() {
         SpaceAge age = new SpaceAge(3000000000L);
 
@@ -73,7 +63,7 @@ public class SpaceAgeTest extends TestCase {
         assertEquals(3.23, age.onSaturn(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnUranus() {
         SpaceAge age = new SpaceAge(3210123456L);
 
@@ -81,7 +71,7 @@ public class SpaceAgeTest extends TestCase {
         assertEquals(1.21, age.onUranus(), MAXIMUM_DELTA);
     }
 
-    @org.junit.Test
+    @Test
     public void ageOnNeptune() {
         SpaceAge age = new SpaceAge(8210123456L);
 
@@ -89,7 +79,4 @@ public class SpaceAgeTest extends TestCase {
         assertEquals(1.58, age.onNeptune(), MAXIMUM_DELTA);
     }
 
-    public static Test suite() {
-        return new TestSuite(SpaceAgeTest.class);
-    }
 }

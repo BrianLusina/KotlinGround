@@ -9,10 +9,9 @@ sourceSets{
   }
  }
 
-
  test{
   java {
-   srcDir 'src/test/com'
+   srcDir 'java'
   }
  }
 }

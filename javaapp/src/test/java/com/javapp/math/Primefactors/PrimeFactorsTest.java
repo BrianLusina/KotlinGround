@@ -1,26 +1,20 @@
 package com.javapp.math.Primefactors;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class PrimeFactorsTest extends TestCase {
+import static org.testng.AssertJUnit.assertEquals;
 
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
+public class PrimeFactorsTest{
 
     private long input;
     private List<Long> expectedOutput;
 
-    //@Parameterized.Parameters(name="Prime factors of {0} = {1}")
+    @Parameterized.Parameters(name="Prime factors of {0} = {1}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1L, Arrays.asList()},
@@ -42,7 +36,7 @@ public class PrimeFactorsTest extends TestCase {
         this.expectedOutput = expectedOutput;
     }
 
-    @org.junit.Test
+    @Test
     public void test() {
         assertEquals(expectedOutput, PrimeFactors.getForNumber(input));
     }

@@ -1,22 +1,14 @@
 package com.javapp.math.AveragesOfNumbers;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
 import java.util.Arrays;
 
-public class AveragesTest extends TestCase {
-    public AveragesTest(String name) {
-        super(name);
-    }
+import static org.testng.AssertJUnit.assertEquals;
 
-    public void setUp() throws Exception {
-        super.setUp();
-    }
+public class AveragesTest {
 
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
-    @org.junit.Test
+    @Test
     public void basicTests(){
         assertEquals(Arrays.toString(new double[] { 2, 2, 2, 2 }), Arrays.toString(Averages.averages(new int[] { 2, 2, 2, 2, 2 })));
         assertEquals(Arrays.toString(new double[] { 0, 0, 0, 0 }), Arrays.toString(Averages.averages(new int[] { 2, -2, 2, -2, 2 })));

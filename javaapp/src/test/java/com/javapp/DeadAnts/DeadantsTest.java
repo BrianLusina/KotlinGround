@@ -1,27 +1,11 @@
 package com.javapp.DeadAnts;
 
 import com.javapp.puzzles.DeadAnts.Deadants;
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 
-public class DeadantsTest extends TestCase {
-    public DeadantsTest(String name) {
-        super(name);
-    }
-
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    public static Test suite() {
-        return new TestSuite(DeadantsTest.class);
-    }
+public class DeadantsTest {
 
     @org.junit.Test
     public void example() {

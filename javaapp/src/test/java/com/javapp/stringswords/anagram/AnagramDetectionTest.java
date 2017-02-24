@@ -1,6 +1,8 @@
 package com.javapp.stringswords.anagram;
 
-import junit.framework.TestCase;
+
+import org.junit.Ignore;
+import org.junit.Test;
 
 /**
  * AnagramDetection Tester.
@@ -9,21 +11,16 @@ import junit.framework.TestCase;
  * @since <pre>12/23/2016</pre>
  * @version 1.0
  */
-public class AnagramDetectionTest extends TestCase {
-    public AnagramDetectionTest(String name) {
-        super(name);
-    }
+//todo: configure these tests
+@Ignore
+public class AnagramDetectionTest{
 
-    public void setUp() throws Exception {
-        super.setUp();
+    @Test
+    public void shouldDetectNoChangeInCharacters(){
+        //assertEquals(anagramDetection('abc', 'abc'), 1);
     }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-/*  it('should detect no change in the characters', function () {
-    expect(anagramDetection('abc', 'abc')).to.equal(1);
+/*
+  it('should detect no change in the characters', function () {
   });
 
   it('should detect anagrams of itself', function () {
@@ -37,7 +34,8 @@ public class AnagramDetectionTest extends TestCase {
 
   it('should not fail with a larger child than parent string', function () {
     expect(anagramDetection('test', 'testing')).to.equal(0);
-  });*/
+  });
+*/
 
 
 }

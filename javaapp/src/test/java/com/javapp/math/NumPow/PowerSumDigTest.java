@@ -1,6 +1,9 @@
 package com.javapp.math.NumPow;
 
 import junit.framework.TestCase;
+import org.junit.Test;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 /**
  * PowerSumDig Tester.
@@ -9,22 +12,12 @@ import junit.framework.TestCase;
  * @since <pre>12/08/2016</pre>
  * @version 1.0
  */
-public class PowerSumDigTest extends TestCase {
-    public PowerSumDigTest(String name) {
-        super(name);
-    }
-
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
+public class PowerSumDigTest{
     private static void testing(long act, long exp) {
         assertEquals(exp, act);
     }
-    @org.junit.Test
+
+    @Test
     public void test1() {
         testing(PowerSumDig.powerSumDigTerm(1), 81);
         testing(PowerSumDig.powerSumDigTerm(2), 512);

@@ -1,28 +1,17 @@
 package com.javapp.Scrabble;
 
 import com.javapp.puzzles.Scrabble.ScrabbleGame;
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
 
+import static org.testng.AssertJUnit.assertEquals;
+
 @RunWith(Parameterized.class)
-public class ScrabbleGameTest extends TestCase {
-    public ScrabbleGameTest(String name) {
-        super(name);
-    }
-
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
+public class ScrabbleGameTest{
 
     private String input;
     private int expectedOutput;
@@ -47,11 +36,10 @@ public class ScrabbleGameTest extends TestCase {
         this.expectedOutput = expectedOutput;
     }
 
-    @org.junit.Test
+    @Test
     public void test() {
         ScrabbleGame scrabble = new ScrabbleGame(input);
         assertEquals(expectedOutput, scrabble.getScore());
-    }    public static Test suite() {
-        return new TestSuite(ScrabbleGameTest.class);
     }
+    
 }

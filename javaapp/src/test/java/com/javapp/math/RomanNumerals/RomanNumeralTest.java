@@ -1,27 +1,15 @@
 package com.javapp.math.RomanNumerals;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
 
+import static org.testng.AssertJUnit.assertEquals;
+
 @RunWith(Parameterized.class)
-public class RomanNumeralTest extends TestCase {
-    public RomanNumeralTest(String name) {
-        super(name);
-    }
-
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
+public class RomanNumeralTest {
 
     private int input;
     private String expectedOutput;
@@ -61,8 +49,5 @@ public class RomanNumeralTest extends TestCase {
         RomanNumeral romanNumeral = new RomanNumeral(input);
 
         assertEquals(expectedOutput, romanNumeral.getRomanNumeral());
-    }
-    public static Test suite() {
-        return new TestSuite(RomanNumeralTest.class);
     }
 }

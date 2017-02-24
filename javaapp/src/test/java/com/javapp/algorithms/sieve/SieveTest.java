@@ -1,34 +1,23 @@
 package com.javapp.algorithms.sieve;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class SieveTest extends TestCase {
-    public SieveTest(String name) {
-        super(name);
-    }
+import static org.testng.AssertJUnit.assertEquals;
 
-    public void setUp() throws Exception {
-        super.setUp();
-    }
+public class SieveTest {
 
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    @org.junit.Test
+    @Test
     public void findFirstPrime() {
         Sieve sieve = new Sieve(2);
-        List<Integer> expectedOutput = Arrays.asList(new Integer[]{2});
+        List<Integer> expectedOutput = Arrays.asList(2);
 
         assertEquals(expectedOutput, sieve.getPrimes());
     }
 
-    @org.junit.Test
+    @Test
     public void findPrimesUpTo10() {
         Sieve sieve = new Sieve(10);
         List<Integer> expectedOutput = Arrays.asList(2, 3, 5, 7);
@@ -36,7 +25,7 @@ public class SieveTest extends TestCase {
         assertEquals(expectedOutput, sieve.getPrimes());
     }
 
-    @org.junit.Test
+    @Test
     public void findPrimesUpTo1000() {
         Sieve sieve = new Sieve(1000);
         List<Integer> expectedOutput = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
@@ -50,8 +39,5 @@ public class SieveTest extends TestCase {
                 991, 997);
 
         assertEquals(expectedOutput, sieve.getPrimes());
-    }
-    public static Test suite() {
-        return new TestSuite(SieveTest.class);
     }
 }

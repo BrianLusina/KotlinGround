@@ -1,32 +1,20 @@
 package com.javapp.stringswords.Wordcount;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class WordCountTest extends TestCase {
-    public WordCountTest(String name) {
-        super(name);
-    }
+import static org.testng.AssertJUnit.assertEquals;
 
-    public void setUp() throws Exception {
-        super.setUp();
-    }
-
-    public void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-
+public class WordCountTest {
     private final WordCount wordCount = new WordCount();
 
-    @org.junit.Test
+    @Test
     public void countOneWord() {
-        Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
-        final Map<String, Integer> expectedWordCount = new HashMap<String, Integer>();
+        Map<String, Integer> actualWordCount;
+        final Map<String, Integer> expectedWordCount = new HashMap<>();
         expectedWordCount.put("word", 1);
 
         actualWordCount = wordCount.phrase("word");
@@ -35,7 +23,7 @@ public class WordCountTest extends TestCase {
         );
     }
 
-    @org.junit.Test
+    @Test
     public void countOneOfEach() {
         Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
         final Map<String, Integer> expectedWordCount = new HashMap<String, Integer>();
@@ -49,7 +37,7 @@ public class WordCountTest extends TestCase {
         );
     }
 
-    @org.junit.Test
+    @Test
     public void countMultipleOccurences() {
         Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
         final Map<String, Integer> expectedWordCount = new HashMap<String, Integer>();
@@ -65,7 +53,7 @@ public class WordCountTest extends TestCase {
         );
     }
 
-    @org.junit.Test
+    @Test
     public void ignorePunctuation() {
         Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
         final Map<String, Integer> expectedWordCount = new HashMap<String, Integer>();
@@ -82,7 +70,7 @@ public class WordCountTest extends TestCase {
 
     }
 
-    @org.junit.Test
+    @Test
     public void includeNumbers() {
         Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
         final Map<String, Integer> expectedWordCount = new HashMap<String, Integer>();
@@ -96,7 +84,7 @@ public class WordCountTest extends TestCase {
         );
     }
 
-    @org.junit.Test
+    @Test
     public void normalizeCase() {
         Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
         final Map<String, Integer> expectedWordCount = new HashMap<String, Integer>();
@@ -108,7 +96,4 @@ public class WordCountTest extends TestCase {
         );
     }
 
-    public static Test suite() {
-        return new TestSuite(WordCountTest.class);
-    }
 }
