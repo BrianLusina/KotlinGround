@@ -5,13 +5,13 @@ apply plugin: "eclipse"
 sourceSets{
  main{
   groovy{
-    srcDir 'src/main/com'
+    srcDir 'groovy'
   }
  }
 
  test{
   groovy{
-   srcDir 'src/test/com'
+   srcDir 'groovy'
   }
  }
 }
