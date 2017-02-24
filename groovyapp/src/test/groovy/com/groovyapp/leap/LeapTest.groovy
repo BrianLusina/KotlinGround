@@ -1,6 +1,5 @@
 package com.groovyapp.leap
 
-import com.groovyapp.leap.Year
 import org.junit.Test
 import static org.junit.Assert.assertTrue
 import static org.junit.Assert.assertFalse

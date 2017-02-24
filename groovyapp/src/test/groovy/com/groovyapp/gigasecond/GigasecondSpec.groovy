@@ -1,6 +1,7 @@
 package com.groovyapp.gigasecond
 
-import com.groovyapp.datetime.gigasecond.GigasecondGroovy
+import com.groovyapp.GigasecondGroovy
+
 import spock.lang.*
 
 class GigasecondSpec extends Specification {

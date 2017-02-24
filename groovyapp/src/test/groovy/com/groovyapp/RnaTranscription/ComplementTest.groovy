@@ -1,6 +1,5 @@
 package com.groovyapp.RnaTranscription
 
-import com.groovyapp.RnaTranscription.Complement
 import spock.lang.*
 
 class ComplementTest extends Specification {
