@@ -5,9 +5,10 @@ apply plugin: "idea"
 sourceSets{
  main{
   java{
-    srcDir 'src/main/com'
+    srcDir 'java'
   }
  }
+
 
  test{
   java {
