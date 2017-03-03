@@ -10,6 +10,9 @@ package com.javapp.enums;
  *  These values are passed to the constructor when the constant is created.
  *  Java requires that the constants be defined first, prior to any fields or methods.
  *  Also, when there are fields and methods, the list of enum constants must end with a semicolon.
+ *
+ *  Run this command on Planet.class
+ *  java Planet <Value>
  */
 public enum Planet {
     MERCURY (3.303e+23, 2.4397e6),
@@ -63,6 +66,7 @@ public enum Planet {
         }
         double earthWeight = Double.parseDouble(args[0]);
         double mass = earthWeight/EARTH.surfaceGravity();
+
         for (Planet p : Planet.values())
             System.out.printf("Your weight on %s is %f%n",
                     p, p.surfaceWeight(mass));
