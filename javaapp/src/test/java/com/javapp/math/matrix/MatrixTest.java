@@ -1,6 +1,5 @@
 package com.javapp.math.matrix;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
@@ -46,7 +45,6 @@ public class MatrixTest {
         }
     }
 
-    @Ignore
     @RunWith(Parameterized.class)
     public static class CountColumnsTest {
         private Matrix matrix;
@@ -78,7 +76,6 @@ public class MatrixTest {
         }
     }
 
-    @Ignore
     @RunWith(Parameterized.class)
     public static class GetFirstRowTest {
         private Matrix matrix;
@@ -110,7 +107,6 @@ public class MatrixTest {
         }
     }
 
-    @Ignore
     @RunWith(Parameterized.class)
     public static class GetLastRowTest {
         private Matrix matrix;
@@ -142,7 +138,6 @@ public class MatrixTest {
         }
     }
 
-    @Ignore
     @RunWith(Parameterized.class)
     public static class GetFirstColumnTest {
         private Matrix matrix;
@@ -175,7 +170,6 @@ public class MatrixTest {
     }
 
 
-    @Ignore
     @RunWith(Parameterized.class)
     public static class GetLastColumnTest {
         private Matrix matrix;
