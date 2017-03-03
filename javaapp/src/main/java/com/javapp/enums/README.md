@@ -31,3 +31,7 @@ for (Planet p : Planet.values()) {
                       p, p.surfaceWeight(mass));
 }
 ```
+
+> All enums implicitly extend `java.lang.Enum`. Because a class can only extend one parent the Java language
+> does not support multiple inheritance of state therefore an enum cannot extend anything else.
+
