@@ -19,9 +19,9 @@ public class LargestSeriesProductCalculator {
      * @param length the length to check for the largest product in the given string*/
     public long calculateLargestProductForSeriesLength(int length){
         if(length < 0) {
-            throw new IllegalArgumentException("Length input can not be less than 0");
+            throw new IllegalArgumentException("Series length must be non-negative.");
         }else if(length > series.length()){
-            throw new IllegalArgumentException("Length input can not be greater than the series to search through");
+            throw new IllegalArgumentException("Series length must be less than or equal to the length of the string to search.");
         }else if(length == 0){
             return 1;
         }else{
@@ -46,9 +46,9 @@ public class LargestSeriesProductCalculator {
      * */
     private void validateStringInput() throws IllegalArgumentException{
         if(series == null){
-            throw new IllegalArgumentException("Series string must not be null");
+            throw new IllegalArgumentException("String to search must be non-null.");
         }else if(!series.chars().allMatch(Character::isDigit)){
-            throw new IllegalArgumentException("All characters must be digits");
+            throw new IllegalArgumentException("String to search may only contains digits.");
         }
     }
 
