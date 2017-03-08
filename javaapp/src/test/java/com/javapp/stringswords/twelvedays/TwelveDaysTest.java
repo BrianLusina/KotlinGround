@@ -1,6 +1,5 @@
 package com.javapp.stringswords.twelvedays;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,7 +12,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseOne, TwelveDays.verse(1));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseTwo() {
         String expectedVerseTwo = "On the second day of Christmas my true love gave to me, two Turtle Doves, " +
@@ -21,7 +20,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseTwo, TwelveDays.verse(2));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseThree() {
         String expectedVerseThree = "On the third day of Christmas my true love gave to me, three French Hens, " +
@@ -29,7 +28,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseThree, TwelveDays.verse(3));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseFour() {
         String expectedVerseFour = "On the fourth day of Christmas my true love gave to me, four Calling Birds, " +
@@ -37,7 +36,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseFour, TwelveDays.verse(4));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseFive() {
         String expectedVerseFive = "On the fifth day of Christmas my true love gave to me, five Gold Rings, " +
@@ -45,7 +44,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseFive, TwelveDays.verse(5));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseSix() {
         String expectedVerseSix = "On the sixth day of Christmas my true love gave to me, six Geese-a-Laying, " +
@@ -54,7 +53,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseSix, TwelveDays.verse(6));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseSeven() {
         String expectedVerseSeven = "On the seventh day of Christmas my true love gave to me, " +
@@ -63,7 +62,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseSeven, TwelveDays.verse(7));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseEight() {
         String expectedVerseEight = "On the eighth day of Christmas my true love gave to me, eight Maids-a-Milking," +
@@ -72,7 +71,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseEight, TwelveDays.verse(8));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseNine() {
         String expectedVerseNine = "On the ninth day of Christmas my true love gave to me, nine Ladies Dancing, " +
@@ -81,7 +80,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseNine, TwelveDays.verse(9));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseTen() {
         String expectedVerseTen = "On the tenth day of Christmas my true love gave to me, ten Lords-a-Leaping, " +
@@ -91,7 +90,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseTen, TwelveDays.verse(10));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseEleven() {
         String expectedVerseEleven = "On the eleventh day of Christmas my true love gave to me, " +
@@ -101,7 +100,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseEleven, TwelveDays.verse(11));
     }
 
-    @Ignore
+    
     @Test
     public void testVerseTwelve() {
         String expectedVerseTwelve = "On the twelfth day of Christmas my true love gave to me, " +
@@ -111,7 +110,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseTwelve, TwelveDays.verse(12));
     }
 
-    @Ignore
+    
     @Test
     public void testMultipleVerses() {
         String expectedVerseOneToThree = "On the first day of Christmas my true love gave to me, " +
@@ -123,7 +122,7 @@ public class TwelveDaysTest {
         assertEquals(expectedVerseOneToThree, TwelveDays.verses(1, 3));
     }
 
-    @Ignore
+    
     @Test
     public void testSingWholeSong() {
         String expectedSong = "On the first day of Christmas my true love gave to me, a Partridge in a Pear Tree.\n" +
