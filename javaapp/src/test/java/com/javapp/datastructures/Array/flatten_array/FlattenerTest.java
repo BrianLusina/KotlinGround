@@ -2,8 +2,6 @@ package com.javapp.datastructures.Array.flatten_array;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.Ignore;
-
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
@@ -39,7 +37,6 @@ public class FlattenerTest {
                                 8)));
     }
 
-    @Ignore
     @Test
     public void testFiveLevelsOfNestingWithNoNulls() {
         assertEquals(
@@ -62,7 +59,6 @@ public class FlattenerTest {
                                 "-2")));
     }
 
-    @Ignore
     @Test
     public void testSixLevelsOfNestingWithNoNulls() {
         assertEquals(
@@ -85,7 +81,6 @@ public class FlattenerTest {
                                 "8")));
     }
 
-    @Ignore
     @Test
     public void testSixLevelsOfNestingWithNulls() {
         assertEquals(
@@ -109,7 +104,6 @@ public class FlattenerTest {
                                 "negative two")));
     }
 
-    @Ignore
     @Test
     public void testNestedListsFullOfNullsOnly() {
         assertEquals(
