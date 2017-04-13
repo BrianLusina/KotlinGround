@@ -1,20 +1,14 @@
 package com.javapp.annotations;
 
-/**
- * java.annotations
- * Created by lusinabrian on 25/12/16.
- * Description:
- */
 @ClassPreamble(
         author = "Brian Lusina",
         date = "",
-        currentRevision = 1,
         lastModified = "",
         lastModifiedBy = "Brian Lusina",
+        briefDescription = "Demonstration of usage of annotations",
         reviewers = {"Brian Lusina"}
 )
 public class FancyClass {
-
 
     @MethodPreamble(
             description = "Some fancy method",
