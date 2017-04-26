@@ -3,7 +3,8 @@ package com.javapp.math.pascalstriangle;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /*** author lusinabrian on 26/04/17.*/
 public class PascalsTriangleTest {
@@ -19,7 +20,6 @@ public class PascalsTriangleTest {
         assertArrayEquals(expectedOutput, PascalsTriangle.computeTriangle(4));
     }
 
-    @Ignore
     @Test
     public void testTriangleWithSixRows() {
         int[][] expectedOutput = new int[][]{
@@ -34,7 +34,6 @@ public class PascalsTriangleTest {
         assertArrayEquals(expectedOutput, PascalsTriangle.computeTriangle(6));
     }
 
-    @Ignore
     @Test
     public void testExpectEmptyTriangle() {
         int[][] expectedOutput = new int[][]{
@@ -58,7 +57,6 @@ public class PascalsTriangleTest {
         assertEquals(true, PascalsTriangle.isTriangle(input));
     }
 
-    @Ignore
     @Test
     public void testInvalidInput() {
         int[][] input = new int[][]{
@@ -71,7 +69,6 @@ public class PascalsTriangleTest {
         assertEquals(false, PascalsTriangle.isTriangle(input));
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void testValidatesNotNegativeRows() {
         PascalsTriangle.computeTriangle(-1);
