@@ -1,5 +1,8 @@
 package com.javapp.math.pascalstriangle;
 
+import org.junit.Ignore;
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /*** author lusinabrian on 26/04/17.*/
