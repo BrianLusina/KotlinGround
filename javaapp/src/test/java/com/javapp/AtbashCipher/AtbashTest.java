@@ -1,5 +1,4 @@
-package javapp.AtbashCipher;
-
+package com.javapp.AtbashCipher;
 
 import com.javapp.cryptography.AtbashCipher.Atbash;
 import org.junit.Assert;
