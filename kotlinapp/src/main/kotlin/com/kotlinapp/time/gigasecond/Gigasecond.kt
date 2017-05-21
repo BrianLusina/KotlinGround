@@ -1,7 +1,13 @@
 package com.kotlinapp.time.gigasecond
 
+import java.time.LocalDate
+import java.time.LocalDateTime
+
 /**
  * @author lusinabrian on 20/05/17.
  */
-class Gigasecond {
+data class Gigasecond (val initialDateTime: LocalDateTime){
+    constructor(initialDateTime: LocalDate) : this(initialDateTime.atTime(0,0))
+
+    val date = initialDateTime.plusSeconds(1000000000)
 }
