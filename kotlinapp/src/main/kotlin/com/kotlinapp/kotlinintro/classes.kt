@@ -38,7 +38,10 @@ open class Animal(val name: String) {
 /**
  * class inheriting from Animal
  * */
-class Mammal(name: String) : Animal(name){
+open class Mammal(name: String) : Animal(name){
+
+    // property declaration
+    open val hasFur = true
 
     constructor(name: String, noOfLegs: Int) : this(name){
         println("Mammal $name created with $noOfLegs legs")
@@ -46,6 +49,29 @@ class Mammal(name: String) : Animal(name){
 
     override fun makeSound(sound: String): String {
         return "$sound !!!"
+    }
+
+    open fun canMove() : Boolean{
+        return true
+    }
+}
+
+/**
+ * Person class, which is obviously a mammal*/
+class Person(name: String, age: Int) : Mammal(name){
+
+    // overriding property declaration
+    override val hasFur: Boolean = false
+
+    init {
+        println("Person $name created, age: $age years old")
+    }
+
+    /**
+     * final annotation means that this class member/method can not be overridden by
+     * subclasses*/
+    final override fun canMove(): Boolean {
+        return super.canMove()
     }
 }
 
