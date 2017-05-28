@@ -1,5 +1,7 @@
 package com.kotlinapp.kotlinintro.spektesting
 
+import com.nhaarman.mockito_kotlin.mock
+import com.nhaarman.mockito_kotlin.verify
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
@@ -30,6 +32,17 @@ class CalculatorTest : Spek({
             calculcator?.accumulate(2)
             calculcator?.accumulate(3)
             assertEquals(5, calculcator?.total)
+        }
+    }
+
+    describe("Output should be written correctly"){
+        it("should write output amount"){
+            val result : Result = mock()
+            val calculator = Calculator(result)
+            it("should write the correct amount"){
+                calculator.accumulate(2)
+                verify(result).write(2)
+            }
         }
     }
 })

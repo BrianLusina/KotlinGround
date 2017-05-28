@@ -15,6 +15,7 @@ class Calculator (val output: Result){
 
     fun accumulate(n :Int){
         total += n
+        output.write(total)
     }
 }
 
