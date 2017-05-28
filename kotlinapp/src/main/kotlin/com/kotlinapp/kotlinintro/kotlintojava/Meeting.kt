@@ -14,6 +14,17 @@ class Meeting (val title: String){
     @JvmField
     var description = ""
 
+    /**
+     * We expect this to throw an error if the attendee is null or empty
+     * This annotation tells Java compiler that this method may throw this MeetingException
+     * Which means that Java compiler MUST handle this method with a try catch block
+     * */
+    @Throws(MeetingException::class)
+    fun addAttendee(attendee: String){
+        if(attendee.isNullOrEmpty()){
+            throw MeetingException("Attendee must have a name")
+        }
+    }
     // this exposes fields and methods to JAVA as static, since Kotlin has no concept of static
     companion object{
         @JvmField
@@ -30,3 +41,5 @@ class Meeting (val title: String){
         }
     }
 }
+
+class MeetingException(message: String): Exception(message)

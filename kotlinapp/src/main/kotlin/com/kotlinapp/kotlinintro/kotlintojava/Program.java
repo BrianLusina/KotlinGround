@@ -24,5 +24,17 @@ public class Program {
         // these are obviously not clean ways to access field and methods from Kotlin
         String appNameField = Meeting.Companion.getAPP_NAME();
         String appName = Meeting.Companion.getAppName();
+
+        // this will not compile, Kotlin will throw an error stating that nulls are not allowed
+        // the addAttendee method will not run
+        // meeting.addAttendee(null);
+
+        // this, however, will throw the exception we expect
+        try {
+            meeting.addAttendee("");
+        }catch (MeetingException me){
+            me.printStackTrace();
+            System.out.println(me.getMessage());
+        }
     }
 }
