@@ -13,31 +13,31 @@ class RnaTranscriptionKtTest{
         Assert.assertEquals("", transcribeToRna(""))
     }
 
-    @Ignore
+    
     @Test
     fun cytosineIsGuanine() {
         Assert.assertEquals("G", transcribeToRna("C"))
     }
 
-    @Ignore
+    
     @Test
     fun guanineIsCytosine() {
         Assert.assertEquals("C", transcribeToRna("G"))
     }
 
-    @Ignore
+    
     @Test
     fun thymineIsAdenine() {
         Assert.assertEquals("A", transcribeToRna("T"))
     }
 
-    @Ignore
+    
     @Test
     fun adenineIsUracil() {
         Assert.assertEquals("U", transcribeToRna("A"))
     }
 
-    @Ignore
+    
     @Test
     fun rnaTranscription() {
         Assert.assertEquals("UGCACCAGAAUU", transcribeToRna("ACGTGGTCTTAA"))
