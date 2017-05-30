@@ -1,4 +1,4 @@
-package com.kotlinapp.kstrings.rnatranscription
+package com.kotlinapp.ktstrings.rnatranscription
 
 /**
  * @author lusinabrian on 29/05/17.

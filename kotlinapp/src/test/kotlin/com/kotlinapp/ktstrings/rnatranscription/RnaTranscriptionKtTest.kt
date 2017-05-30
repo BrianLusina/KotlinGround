@@ -1,7 +1,6 @@
-package com.kotlinapp.kstrings.rnatranscription
+package com.kotlinapp.ktstrings.rnatranscription
 
 import org.junit.Assert
-import org.junit.Ignore
 import org.junit.Test
 
 /**
