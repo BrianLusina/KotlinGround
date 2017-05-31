@@ -6,7 +6,7 @@ package com.kotlinapp.algorithms
 import com.kotlinapp.algorithms.etl.ETL
 import org.junit.Test
 import org.junit.Ignore
-import kotlin.test.assertEquals
+import org.junit.Assert.assertEquals
 
 class ETLTest {
 
@@ -19,7 +19,6 @@ class ETLTest {
         assertEquals(expected, ETL.transform(old))
     }
 
-    @Ignore
     @Test
     fun transformMoreValues() {
         val old = mapOf(1 to listOf('A', 'E', 'I'))
@@ -28,7 +27,6 @@ class ETLTest {
         assertEquals(expected, ETL.transform(old))
     }
 
-    @Ignore
     @Test
     fun moreKeys() {
         val old = mapOf(1 to listOf('A', 'E', 'I'), 2 to listOf('D', 'G'))
@@ -37,7 +35,7 @@ class ETLTest {
         assertEquals(expected, ETL.transform(old))
     }
 
-    @Ignore
+
     @Test
     fun fullDataset() {
         val old = mapOf(
