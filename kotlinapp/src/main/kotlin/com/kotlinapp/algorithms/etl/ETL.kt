@@ -3,19 +3,18 @@ package com.kotlinapp.algorithms.etl
 /**
  * @author lusinabrian on 31/05/17.
  */
-class ETL{
-    companion object{
-        /**
-         * Maps the old data to a new system
-         * */
-        fun transform(oldMap : Map<Int, List<Char>>) : Map<Char, Int>{
-            var result : HashMap<Char, Int> = HashMap()
-            for((k, v) in oldMap){
-                for (char in v){
-                    result.put(char.toLowerCase(), k)
-                }
+object ETL{
+
+    /**
+     * Maps the old data to a new system
+     * @param oldMap old map with ints as keys and lists as values
+     * @return [Map] new map with characters as keys and ints as values
+     * */
+    fun transform(oldMap : Map<Int, List<Char>>) : Map<Char, Int>{
+        return oldMap.flatMap {
+            it.value.map {
+                word -> Pair(word.toLowerCase(), it.key)
             }
-            return result
-        }
+        }.toMap()
     }
 }
