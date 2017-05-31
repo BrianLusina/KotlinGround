@@ -1,4 +1,4 @@
-package com.kotlinapp.kotlinintro
+package com.kotlinapp.kotlinintro.classes
 
 /**
  * @author lusinabrian on 28/05/17.
