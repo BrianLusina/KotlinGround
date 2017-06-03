@@ -1,12 +1,12 @@
 package com.kotlinapp.ktstrings.wordcount
 
-/**
- * @author lusinabrian on 03/06/17.
- */
 import org.junit.Test
 import org.junit.Ignore
 import kotlin.test.assertEquals
 
+/**
+ * @author lusinabrian on 03/06/17.
+ */
 class WordCountTest {
 
     @Test
