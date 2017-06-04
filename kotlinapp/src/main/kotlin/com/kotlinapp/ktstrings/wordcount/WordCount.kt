@@ -11,12 +11,10 @@ object WordCount{
      * @return [Map] with keys with words and values as the counts of numbers
      * */
     fun phrase(sentence: String): Map<String, Int>{
-        var result : Map<String, Int> = mapOf()
-        sentence.split(" ").forEach {
-            if(it !in result.keys){
-                result.plus(it to it.count())
-            }
-        }
-        return result
+        val phrase = sentence.toLowerCase().replace(Regex("[^\\w']"), " ").trim()
+        val words = phrase.split(Regex("\\s+"))
+        val groupedWords = words.groupBy({ w -> w })
+
+        return groupedWords.mapValues({ it.value.size })
     }
 }
