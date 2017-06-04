@@ -1,7 +1,6 @@
 package com.kotlinapp.ktstrings.wordcount
 
 import org.junit.Test
-import org.junit.Ignore
 import kotlin.test.assertEquals
 
 /**
@@ -16,7 +15,6 @@ class WordCountTest {
         assertEquals(expectedWordCount, WordCount.phrase("word"))
     }
 
-    @Ignore
     @Test
     fun countOneOfEach() {
         val expectedWordCount = mapOf("one" to 1, "of" to 1, "each" to 1)
@@ -24,7 +22,6 @@ class WordCountTest {
         assertEquals(expectedWordCount, WordCount.phrase("one of each"))
     }
 
-    @Ignore
     @Test
     fun countMultipleOccurences() {
         val expectedWordCount = mapOf("one" to 1, "fish" to 4, "two" to 1, "red" to 1, "blue" to 1)
@@ -32,7 +29,6 @@ class WordCountTest {
         assertEquals(expectedWordCount, WordCount.phrase("one fish two fish red fish blue fish"))
     }
 
-    @Ignore
     @Test
     fun ignorePunctuation() {
         val expectedWordCount = mapOf("car" to 1, "carpet" to 1, "as" to 1, "java" to 1, "javascript" to 1)
@@ -41,7 +37,6 @@ class WordCountTest {
 
     }
 
-    @Ignore
     @Test
     fun includeNumbers() {
         val expectedWordCount = mapOf("testing" to 2, "1" to 1, "2" to 1)
@@ -49,7 +44,6 @@ class WordCountTest {
         assertEquals(expectedWordCount, WordCount.phrase("testing, 1, 2 testing"))
     }
 
-    @Ignore
     @Test
     fun normalizeCase() {
         val expectedWordCount = mapOf("go" to 3)
@@ -57,7 +51,6 @@ class WordCountTest {
         assertEquals(expectedWordCount, WordCount.phrase("go Go GO"))
     }
 
-    @Ignore
     @Test
     fun allowApostrophes() {
         val expectedWordCount = mapOf("first" to 1, "don't" to 2, "laugh" to 1, "then" to 1, "cry" to 1)
