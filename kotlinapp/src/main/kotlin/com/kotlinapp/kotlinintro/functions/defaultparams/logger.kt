@@ -7,7 +7,7 @@ package com.kotlinapp.kotlinintro.functions.defaultparams
 
 fun main(args: Array<String>) {
     logger("Hello!!")
-    logger("Danger!!", 2)
+    logger("Danger!!", loglevel = 2)
 }
 
 /**
