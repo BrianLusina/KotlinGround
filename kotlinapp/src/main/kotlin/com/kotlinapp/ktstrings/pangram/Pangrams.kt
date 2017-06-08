@@ -16,5 +16,9 @@ object Pangrams {
 
         return i == i or (1 shl ('Z') + 1 - 'A') - 1
     }
+
+    val alphaLength = 26
+    fun isPangramX(input: String) = input.toLowerCase().replace(Regex("[^a-z]"), "").toSet().size == alphaLength
+
 }
 
