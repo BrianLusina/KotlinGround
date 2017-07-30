@@ -8,9 +8,9 @@ class PhoneNumber {
 
     public PhoneNumber(String input) {
         def matcher = REGEX.matcher(input)
-        if ( matcher.matches() ) {
-            areaCode   = "${matcher.group(1)}"
-            exchange   = "${matcher.group(2)}"
+        if (matcher.matches()) {
+            areaCode = "${matcher.group(1)}"
+            exchange = "${matcher.group(2)}"
             subscriber = "${matcher.group(3)}"
         }
     }

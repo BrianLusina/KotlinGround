@@ -10,7 +10,8 @@ import java.util.Arrays;
  * Description:
  */
 public class MinMax {
-    public static int[] minMax(int[] arr) {
-        return new int[]{Arrays.stream(arr).min().getAsInt(), Arrays.stream(arr).max().getAsInt()};
-    }
+
+  public static int[] minMax(int[] arr) {
+    return new int[]{Arrays.stream(arr).min().getAsInt(), Arrays.stream(arr).max().getAsInt()};
+  }
 }

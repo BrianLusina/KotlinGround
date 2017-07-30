@@ -1,6 +1,6 @@
 package com.kotlinapp.kotlinintro
 
-fun main(args: Array<String>){
+fun main(args: Array<String>) {
     println("Hello Kotlin")
     println(sum(5, 5))
     println(add(5, 5))
@@ -40,7 +40,7 @@ fun main(args: Array<String>){
  * @param a int
  * @param b Int
  * @return {@link Int}*/
-fun sum(a: Int, b: Int): Int{
+fun sum(a: Int, b: Int): Int {
     return a + b
 }
 
@@ -51,27 +51,27 @@ fun add(a: Int, b: Int) = a + b
 /**
  * Function returning no meaningful value
  * */
-fun printSum(a: Int, b: Int): Unit{
+fun printSum(a: Int, b: Int): Unit {
     println("Sum of $a and $b is ${a + b}")
 }
 
 /**
  * Conditionals*/
-fun maxOf(a: Int, b: Int): Int{
-    if(a > b){
+fun maxOf(a: Int, b: Int): Int {
+    if (a > b) {
         return a
-    }else{
+    } else {
         return b
     }
 }
 
 /**
  * Using if as an expression*/
-fun maximum(a: Int, b: Int) = if (a > b ) a else b
+fun maximum(a: Int, b: Int) = if (a > b) a else b
 
 /**
  * marked as Nullable when null values are possible
  * */
-fun parseInt(str: String): Int?{
+fun parseInt(str: String): Int? {
     return null
 }

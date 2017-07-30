@@ -32,34 +32,34 @@ fun main(args: Array<String>) {
 //    details.forEach(::println)
 
     // passing in println function
-  //  getAllProviders { key -> println("Provider: $key") }
+    //  getAllProviders { key -> println("Provider: $key") }
 }
 
 /**
  * Parameter is a function
  * */
-fun getAllProviders(fn: (String) -> Unit){
+fun getAllProviders(fn: (String) -> Unit) {
     val allProviders = Providers.getProviders()
 
-    allProviders.forEach{ key -> fn(key.toString())}
+    allProviders.forEach { key -> fn(key.toString()) }
 }
 
 /**
  * Data class of provider details
  * */
-data class ProviderDetails(val providerName :String, val name: String)
+data class ProviderDetails(val providerName: String, val name: String)
 
-class Providers{
-    fun getProviders(): List<Provider>{
+class Providers {
+    fun getProviders(): List<Provider> {
         val providers = Security.getProviders()
-        val listOfProviders : List<Provider> = providers.asList()
+        val listOfProviders: List<Provider> = providers.asList()
         return listOfProviders
     }
 
     /**
      * Returns a list of provider details
      * */
-    fun getAllProviders(): List<ProviderDetails>{
+    fun getAllProviders(): List<ProviderDetails> {
         val providers = Security.getProviders()
         val listOfProviders = mutableListOf<ProviderDetails>()
 
@@ -79,16 +79,17 @@ class Providers{
      * Returns a list of filtered provider details
      * @param filter what to filter
      * */
-    fun getFilteredProviders(filter: String): List<ProviderDetails>{
+    fun getFilteredProviders(filter: String): List<ProviderDetails> {
         val providers = Security.getProviders()
         val listOfProviders = mutableListOf<ProviderDetails>()
 
         // iterate over providers and create provider details from it
         providers.forEach {
             provider ->
-            val providerDetails = provider.entries.filter{
+            val providerDetails = provider.entries.filter {
                 // check if the ke has the filter and ignore case
-                it -> it.key.toString().contains(filter, true)
+                it ->
+                it.key.toString().contains(filter, true)
             }.map {
                 ProviderDetails(provider.name, it.key.toString())
             }
@@ -97,31 +98,33 @@ class Providers{
 
         return listOfProviders
     }
+
     /**
      * Returns a list of filtered provider details using flatMap
      * @param filter what to filter
      * */
-    fun getFilteredProvidersEx(filter: String): List<ProviderDetails>{
+    fun getFilteredProvidersEx(filter: String): List<ProviderDetails> {
         val providers = Security.getProviders()
 
         // iterate over providers and create provider details from it
         return providers.flatMap {
             provider ->
-                provider.entries.filter{
-                    // check if the ke has the filter and ignore case
-                    it -> it.key.toString().contains(filter, true)
-                }.map {
-                    ProviderDetails(provider.name, it.key.toString())
-                }
+            provider.entries.filter {
+                // check if the ke has the filter and ignore case
+                it ->
+                it.key.toString().contains(filter, true)
+            }.map {
+                ProviderDetails(provider.name, it.key.toString())
             }
+        }
 
     }
 
     // this allows calling this function without creating an instance of Providers class
-    companion object{
-        fun getProviders() : List<Provider>{
+    companion object {
+        fun getProviders(): List<Provider> {
             val providers = Security.getProviders()
-            val listOfProviders : List<Provider> = providers.asList()
+            val listOfProviders: List<Provider> = providers.asList()
             return listOfProviders
         }
     }

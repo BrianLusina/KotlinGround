@@ -1,8 +1,7 @@
 package com.kotlinapp.kotlinintro
 
 import hello
-import org.junit.Assert.*
-import org.junit.Ignore
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**

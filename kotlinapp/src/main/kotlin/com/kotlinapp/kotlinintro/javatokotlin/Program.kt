@@ -5,7 +5,7 @@ package com.kotlinapp.kotlinintro.javatokotlin
  */
 class Program {
 
-    companion object{
+    companion object {
         /**
          * this annotation means that this method is static as far as Java is concerned
          * */
@@ -24,7 +24,7 @@ class Program {
             // using a try catch helps catch the error
             try {
                 person.name = ""
-            }catch (e: Exception){
+            } catch (e: Exception) {
                 println("Error thrown: ${e.message}")
             }
 

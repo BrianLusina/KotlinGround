@@ -13,9 +13,9 @@ import groovy.transform.TypeChecked
  More info: http://www.infoq.com/articles/new-groovy-20
  * */
 class TypeCheck {
-    static void main(String[] args){
+    static void main(String[] args) {
         test()
-        assert sum(2,5) == 7
+        assert sum(2, 5) == 7
     }
 
     static void testMethod() {}

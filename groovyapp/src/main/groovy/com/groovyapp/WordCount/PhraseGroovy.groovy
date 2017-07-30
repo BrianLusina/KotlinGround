@@ -1,13 +1,13 @@
 package com.groovyapp.WordCount
 
 class PhraseGroovy {
-  String input 
+    String input
 
-  def PhraseGroovy(s) {
-    input = s
-  }
+    def PhraseGroovy(s) {
+        input = s
+    }
 
-  def wordCount() {
-    input.toLowerCase().findAll(/[\w']+/).countBy { it }  
-  }
+    def wordCount() {
+        input.toLowerCase().findAll(/[\w']+/).countBy { it }
+    }
 }

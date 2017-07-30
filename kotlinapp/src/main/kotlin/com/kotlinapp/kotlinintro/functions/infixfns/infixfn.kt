@@ -25,11 +25,11 @@ class Header(var Name: String)
 // without infix, this is an extension function
 // operator overloading
 // this allows us to overload an operator and use it as a custom function
-operator fun Header.plus(other: Header) : Header{
+operator fun Header.plus(other: Header): Header {
     return Header(this.Name + other.Name)
 }
 
 // with infix
-infix fun Header.plusIfx(other: Header) : Header{
+infix fun Header.plusIfx(other: Header): Header {
     return Header(this.Name + other.Name)
 }

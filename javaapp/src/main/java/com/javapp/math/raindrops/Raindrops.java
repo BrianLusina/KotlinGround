@@ -8,27 +8,27 @@ package com.javapp.math.raindrops;
  */
 public class Raindrops {
 
-    public static String convert(int number) {
-        String rain = "";
+  public static String convert(int number) {
+    String rain = "";
 
-        if (number % 3 == 0) {
-            rain += "Pling";
-        }
+    if (number % 3 == 0) {
+      rain += "Pling";
+    }
 
-        if (number % 5 == 0) {
-            rain += "Plang";
-        }
+    if (number % 5 == 0) {
+      rain += "Plang";
+    }
 
-        if (number % 7 == 0) {
-            rain += "Plong";
-        }
+    if (number % 7 == 0) {
+      rain += "Plong";
+    }
 
-        if (rain.isEmpty()) {
-            rain = Integer.toString(number);
-        }
+    if (rain.isEmpty()) {
+      rain = Integer.toString(number);
+    }
 
-        return rain;
-    }/*METHOD END*/
+    return rain;
+  }/*METHOD END*/
 
 /*CLASS END*/
 }

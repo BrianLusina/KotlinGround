@@ -6,13 +6,14 @@ package com.javapp.objects.AbstractionInterfaces.AnimalKingdom;
  * Description: class that extends the {@link Animal} class
  */
 public class Dog extends Animal {
-    @Override
-    public void eat(String food) {
-        System.out.println("Dogs love to eat " + food);
-    }
 
-    @Override
-    public void makeNoise() {
-        System.out.println("Dogs bark a lot more than they should");
-    }
+  @Override
+  public void eat(String food) {
+    System.out.println("Dogs love to eat " + food);
+  }
+
+  @Override
+  public void makeNoise() {
+    System.out.println("Dogs bark a lot more than they should");
+  }
 }

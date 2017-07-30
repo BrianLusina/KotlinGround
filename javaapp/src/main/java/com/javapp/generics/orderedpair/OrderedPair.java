@@ -5,22 +5,23 @@ package com.javapp.generics.orderedpair;
  * Created by lusinabrian on 25/12/16.
  * Description:
  */
-public class OrderedPair<K, V> implements Pair<K, V>{
-    private K key;
-    private V value;
+public class OrderedPair<K, V> implements Pair<K, V> {
 
-    public OrderedPair(K key, V value){
-        this.key = key;
-        this.value = value;
-    }
+  private K key;
+  private V value;
 
-    @Override
-    public K getKey() {
-        return key;
-    }
+  public OrderedPair(K key, V value) {
+    this.key = key;
+    this.value = value;
+  }
 
-    @Override
-    public V getValue() {
-        return value;
-    }
+  @Override
+  public K getKey() {
+    return key;
+  }
+
+  @Override
+  public V getValue() {
+    return value;
+  }
 }

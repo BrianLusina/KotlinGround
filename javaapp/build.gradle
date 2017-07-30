@@ -2,22 +2,22 @@ apply plugin: "java"
 apply plugin: "eclipse"
 apply plugin: "idea"
 
-sourceSets{
- main{
-  java{
-    srcDir 'java'
-  }
- }
+sourceSets {
+    main {
+        java {
+            srcDir 'java'
+        }
+    }
 
- test{
-  java {
-   srcDir 'java'
-  }
- }
+    test {
+        java {
+            srcDir 'java'
+        }
+    }
 }
 
 repositories {
-  mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
@@ -30,7 +30,7 @@ dependencies {
     testCompile "org.assertj:assertj-core:3.2.0"
 }
 
-jar{
- baseName = 'javaapp'
- version =  rootProject.ext.versionName
+jar {
+    baseName = 'javaapp'
+    version = rootProject.ext.versionName
 }

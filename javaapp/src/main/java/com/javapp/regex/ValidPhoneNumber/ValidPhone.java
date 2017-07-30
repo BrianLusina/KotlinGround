@@ -11,18 +11,19 @@ import java.util.regex.Pattern;
  * Description:
  */
 public class ValidPhone {
-    public static void main(String[] args) {
 
-        System.out.println("Testing for validPhoneNumber()");
-        System.out.println(validPhoneNumber("(123) 456-7890"));
-        System.out.println(validPhoneNumber("(1111)555 2345"));
-        System.out.println(validPhoneNumber("(098) 123 4567"));
-    }
+  public static void main(String[] args) {
 
-    public static boolean validPhoneNumber(String phoneNumber) {
-        String number = "^\\([0-9]{3}\\)\\s[0-9]{3}\\-[0-9]{4}$";
-        Pattern pattern = Pattern.compile(number);
-        Matcher matcher = pattern.matcher(phoneNumber);
-        return matcher.find();
-    }
+    System.out.println("Testing for validPhoneNumber()");
+    System.out.println(validPhoneNumber("(123) 456-7890"));
+    System.out.println(validPhoneNumber("(1111)555 2345"));
+    System.out.println(validPhoneNumber("(098) 123 4567"));
+  }
+
+  public static boolean validPhoneNumber(String phoneNumber) {
+    String number = "^\\([0-9]{3}\\)\\s[0-9]{3}\\-[0-9]{4}$";
+    Pattern pattern = Pattern.compile(number);
+    Matcher matcher = pattern.matcher(phoneNumber);
+    return matcher.find();
+  }
 }

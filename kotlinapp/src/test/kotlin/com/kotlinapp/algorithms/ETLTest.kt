@@ -4,9 +4,8 @@ package com.kotlinapp.algorithms
  * @author lusinabrian on 31/05/17.
  */
 import com.kotlinapp.algorithms.etl.ETL
-import org.junit.Test
-import org.junit.Ignore
 import org.junit.Assert.assertEquals
+import org.junit.Test
 
 class ETLTest {
 

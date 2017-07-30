@@ -12,7 +12,7 @@ package com.groovyapp.HelloGroovy
  http://mrhaki.blogspot.mx/2009/10/groovy-goodness-expando-as-dynamic-bean.html
  */
 class ExpandoGroovy {
-    static void main(String[] args){
+    static void main(String[] args) {
         def user = new Expando(name: "Brian")
         assert "Brian" == user.name
 

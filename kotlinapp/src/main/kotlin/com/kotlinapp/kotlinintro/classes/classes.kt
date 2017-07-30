@@ -23,14 +23,14 @@ open class Animal(val name: String) {
     /**
      * Returns the sound an animal can make
      * open annotation means this method can be overridden*/
-    open fun makeSound(sound: String): String{
+    open fun makeSound(sound: String): String {
         return sound
     }
 
     /**
      * This class member belongs to Animal class and can not be overridden
      * */
-    fun modeOfMovement(){
+    fun modeOfMovement() {
 
     }
 }
@@ -38,12 +38,12 @@ open class Animal(val name: String) {
 /**
  * class inheriting from Animal
  * */
-open class Mammal(name: String) : Animal(name){
+open class Mammal(name: String) : Animal(name) {
 
     // property declaration
     open val hasFur = true
 
-    constructor(name: String, noOfLegs: Int) : this(name){
+    constructor(name: String, noOfLegs: Int) : this(name) {
         println("Mammal $name created with $noOfLegs legs")
     }
 
@@ -51,14 +51,14 @@ open class Mammal(name: String) : Animal(name){
         return "$sound !!!"
     }
 
-    open fun canMove() : Boolean{
+    open fun canMove(): Boolean {
         return true
     }
 }
 
 /**
  * Person class, which is obviously a mammal*/
-class Person(name: String, age: Int) : Mammal(name){
+class Person(name: String, age: Int) : Mammal(name) {
 
     // overriding property declaration
     override val hasFur: Boolean = false

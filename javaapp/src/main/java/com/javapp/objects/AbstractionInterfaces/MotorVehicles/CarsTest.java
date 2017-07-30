@@ -6,10 +6,11 @@ package com.javapp.objects.AbstractionInterfaces.MotorVehicles;
  * Description:
  */
 public class CarsTest {
-    public static void main(String[] args) {
-        VehicleInterface vehicleInterface = new MercedezBenz("S class", "sclass1200");
 
-        vehicleInterface.bodyColor("black");
-        vehicleInterface.hasStereo(true);
-    }
+  public static void main(String[] args) {
+    VehicleInterface vehicleInterface = new MercedezBenz("S class", "sclass1200");
+
+    vehicleInterface.bodyColor("black");
+    vehicleInterface.hasStereo(true);
+  }
 }

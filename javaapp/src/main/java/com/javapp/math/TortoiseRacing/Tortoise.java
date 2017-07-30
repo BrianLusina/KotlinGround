@@ -9,8 +9,8 @@ package com.javapp.math.TortoiseRacing;
  */
 public class Tortoise {
 
-    public static int[] race(int speedA, int speedB, int lead) {
-        return new int[]{};
-    }
+  public static int[] race(int speedA, int speedB, int lead) {
+    return new int[]{};
+  }
 /*class end*/
 }

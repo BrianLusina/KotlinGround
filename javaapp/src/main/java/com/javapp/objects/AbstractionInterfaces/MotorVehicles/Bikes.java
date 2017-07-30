@@ -7,15 +7,15 @@ package com.javapp.objects.AbstractionInterfaces.MotorVehicles;
  */
 abstract class Bikes extends Vehicles {
 
-    /**
-     * Constructor for vehicles
-     *
-     * @param name  Name of vehicle
-     * @param model Model of vehicle
-     */
-    Bikes(String name, String model) {
-        super(name, model);
-    }
+  /**
+   * Constructor for vehicles
+   *
+   * @param name Name of vehicle
+   * @param model Model of vehicle
+   */
+  Bikes(String name, String model) {
+    super(name, model);
+  }
 
 
 }

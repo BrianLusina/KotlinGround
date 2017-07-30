@@ -14,14 +14,14 @@ fun main(args: Array<String>) {
 }
 
 /*without using extenstion functions*/
-fun replaceWhiteSpace(text: String) : String{
+fun replaceWhiteSpace(text: String): String {
     var regex = Regex("\\s+")
     return regex.replace(text, " ")
 }
 
 // with an extension function
 // this is the receiver of this function
-fun String.replaceWhiteSpaceEx() : String{
+fun String.replaceWhiteSpaceEx(): String {
     var regex = Regex("\\s+")
     return regex.replace(this, " ")
 }

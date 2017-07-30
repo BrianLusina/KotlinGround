@@ -6,7 +6,8 @@ package com.javapp.generics.orderedpair;
  * Description:
  */
 public interface Pair<K, V> {
-    public K getKey();
 
-    public V getValue();
+  public K getKey();
+
+  public V getValue();
 }

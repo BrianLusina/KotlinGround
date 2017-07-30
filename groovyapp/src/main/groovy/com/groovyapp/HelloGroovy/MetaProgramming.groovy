@@ -6,7 +6,7 @@ package com.groovyapp.HelloGroovy
  * Description:
  */
 class MetaProgramming {
-    static void main(String[] args){
+    static void main(String[] args) {
         //Using ExpandoMetaClass to add behaviour
         String.metaClass.testAdd = {
             println "we added this"
@@ -16,8 +16,8 @@ class MetaProgramming {
         x?.testAdd()
 
         def test = new TestMeta()
-        test?.sum(2,3)
-        test?.multiply(2,3)
+        test?.sum(2, 3)
+        test?.multiply(2, 3)
     }
 
     //Intercepting method calls

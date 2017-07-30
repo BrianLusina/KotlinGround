@@ -7,48 +7,49 @@ package com.javapp.objects.AbstractionInterfaces.MotorVehicles;
  */
 
 abstract class Vehicles implements VehicleInterface {
-    /**
-     * Constructor for vehicles
-     *
-     * @param name  Name of vehicle
-     * @param model Model of vehicle
-     */
-    Vehicles(String name, String model) {
-    }
 
-    /**
-     * Speed of the Vehicle
-     *
-     * @param maxSpeed The maximum speed this vehicle can attain
-     */
-    abstract void speed(int maxSpeed);
+  /**
+   * Constructor for vehicles
+   *
+   * @param name Name of vehicle
+   * @param model Model of vehicle
+   */
+  Vehicles(String name, String model) {
+  }
 
-    /**
-     * The number of wheels of the vehicle
-     *
-     * @param wheels Number of wheels of the vehicle
-     */
-    abstract void numberOfWheels(int wheels);
+  /**
+   * Speed of the Vehicle
+   *
+   * @param maxSpeed The maximum speed this vehicle can attain
+   */
+  abstract void speed(int maxSpeed);
 
-    /**
-     * Engine Capacity
-     *
-     * @param capacity Engine capacity
-     */
-    abstract void engineCapacity(int capacity);
+  /**
+   * The number of wheels of the vehicle
+   *
+   * @param wheels Number of wheels of the vehicle
+   */
+  abstract void numberOfWheels(int wheels);
 
-    /**
-     * Number of passengers this vehicle can accomodate
-     *
-     * @param seats Number of seats
-     */
-    abstract void numberOfSeats(int seats);
+  /**
+   * Engine Capacity
+   *
+   * @param capacity Engine capacity
+   */
+  abstract void engineCapacity(int capacity);
 
-    /**
-     * Implemented when the car is moving, the gear it will change to
-     */
-    void changeGear(int number) {
+  /**
+   * Number of passengers this vehicle can accomodate
+   *
+   * @param seats Number of seats
+   */
+  abstract void numberOfSeats(int seats);
 
-    }
+  /**
+   * Implemented when the car is moving, the gear it will change to
+   */
+  void changeGear(int number) {
+
+  }
 
 }

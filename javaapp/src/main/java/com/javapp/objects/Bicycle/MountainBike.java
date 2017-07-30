@@ -7,8 +7,9 @@ package com.javapp.objects.Bicycle;
  */
 class MountainBike extends Bicycle {
 
-    MountainBike(int currentGear, int currentSpeed, int currentPedal, int yearMade, String name, String model) {
-        super(currentGear, currentSpeed, currentPedal, yearMade, name, model);
-    }
+  MountainBike(int currentGear, int currentSpeed, int currentPedal, int yearMade, String name,
+      String model) {
+    super(currentGear, currentSpeed, currentPedal, yearMade, name, model);
+  }
 
 }

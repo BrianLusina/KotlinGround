@@ -8,8 +8,9 @@ package com.javapp.datastructures.Array.sublists;
  * Description:
  */
 public class sublist_checks {
-    public static final int SUBLIST = 0;
-    public static final int SUPERLIST = 1;
-    public static final int EQUAL = 2;
-    public static final int UNEQUAL = 3;
+
+  public static final int SUBLIST = 0;
+  public static final int SUPERLIST = 1;
+  public static final int EQUAL = 2;
+  public static final int UNEQUAL = 3;
 }

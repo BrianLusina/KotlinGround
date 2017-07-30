@@ -18,6 +18,6 @@ fun main(args: Array<String>) {
  * */
 
 @JvmOverloads
-fun logger(message: String, loglevel : Int = 1){
+fun logger(message: String, loglevel: Int = 1) {
     println("Msg: $message, Log Level: $loglevel")
 }

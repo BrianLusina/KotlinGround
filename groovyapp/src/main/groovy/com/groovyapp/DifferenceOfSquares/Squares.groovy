@@ -9,12 +9,12 @@ class Squares {
     }
 
     def squareOfSums() {
-        (1..naturalNum).inject(0) {result, i -> result += i } ** 2
+        (1..naturalNum).inject(0) { result, i -> result += i }**2
     }
 
     def sumOfSquares() {
-        (1..naturalNum).inject(0) {result, i ->
-            result += i ** 2
+        (1..naturalNum).inject(0) { result, i ->
+            result += i**2
         }
     }
 

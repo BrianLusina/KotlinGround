@@ -15,6 +15,6 @@ fun main(args: Array<String>) {
 
 // without the key word tailrec, this function would result in stack over flow error
 // for large numbers
-tailrec fun fib(n: Int, a : BigInteger, b : BigInteger) : BigInteger{
-    return if(n == 0) b else fib(n - 1, a + b, a)
+tailrec fun fib(n: Int, a: BigInteger, b: BigInteger): BigInteger {
+    return if (n == 0) b else fib(n - 1, a + b, a)
 }

@@ -6,5 +6,5 @@ package com.javapp.enums;
  * Description: Days of the week
  */
 public enum DaysOfWeek {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+  MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }

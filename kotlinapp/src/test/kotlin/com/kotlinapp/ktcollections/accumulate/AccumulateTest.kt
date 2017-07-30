@@ -14,7 +14,7 @@ class AccumulateTest {
         assertEquals(expectedOutput, Accumulate.accumulate(input, { x -> x * x }))
     }
 
-    
+
     @Test
     fun accumulateSquares() {
         val input = listOf(1, 2, 3)
@@ -22,7 +22,7 @@ class AccumulateTest {
         assertEquals(expectedOutput, Accumulate.accumulate(input, { x -> x * x }))
     }
 
-    
+
     @Test
     fun accumulateUpperCases() {
         val input = listOf("hello", "world")
@@ -30,7 +30,7 @@ class AccumulateTest {
         assertEquals(expectedOutput, Accumulate.accumulate(input, { it.toUpperCase() }))
     }
 
-    
+
     @Test
     fun accumulateReversedStrings() {
         val input = "the quick brown fox etc".split(" ")
@@ -38,7 +38,7 @@ class AccumulateTest {
         assertEquals(expectedOutput, Accumulate.accumulate(input, { it.reversed() }))
     }
 
-    
+
     @Test
     fun accumulateWithinAccumulate() {
         val input1 = listOf("a", "b", "c")
@@ -49,7 +49,7 @@ class AccumulateTest {
         ))
     }
 
-    
+
     @Test
     fun accumulateToDifferentType() {
         val input = listOf(1, 2, 3)

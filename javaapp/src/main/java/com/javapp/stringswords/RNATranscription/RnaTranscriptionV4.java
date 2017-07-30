@@ -12,15 +12,16 @@ import java.util.stream.Collectors;
  * Description:
  */
 public class RnaTranscriptionV4 {
-    public static String ofDna(String input) {
-        Map<Character, Character> dnarnaMap = new HashMap<>();
-        dnarnaMap.put('G', 'C');
-        dnarnaMap.put('C', 'G');
-        dnarnaMap.put('T', 'A');
-        dnarnaMap.put('A', 'U');
 
-        return input.chars().mapToObj(c -> (char) c)
-                .map(n -> dnarnaMap.get(n).toString())
-                .collect(Collectors.joining());
-    }
+  public static String ofDna(String input) {
+    Map<Character, Character> dnarnaMap = new HashMap<>();
+    dnarnaMap.put('G', 'C');
+    dnarnaMap.put('C', 'G');
+    dnarnaMap.put('T', 'A');
+    dnarnaMap.put('A', 'U');
+
+    return input.chars().mapToObj(c -> (char) c)
+        .map(n -> dnarnaMap.get(n).toString())
+        .collect(Collectors.joining());
+  }
 }

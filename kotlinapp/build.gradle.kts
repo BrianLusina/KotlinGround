@@ -35,6 +35,7 @@ fun JUnitPlatformExtension.filters(setup: FiltersExtension.() -> Unit) {
         else -> throw Exception("${this::class} must be an instance of ExtensionAware")
     }
 }
+
 fun FiltersExtension.engines(setup: EnginesExtension.() -> Unit) {
     when (this) {
         is ExtensionAware -> extensions.getByType(EnginesExtension::class.java).setup()

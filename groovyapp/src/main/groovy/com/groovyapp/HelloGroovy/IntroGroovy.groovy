@@ -22,11 +22,11 @@ class IntroGroovy {
         println "My name is ${firstName[0]}. $lastName"
 
         //implicit truthy
-        if(x){
+        if (x) {
             println true
         }
 
-        if(!str){
+        if (!str) {
             println(true)
         }
 

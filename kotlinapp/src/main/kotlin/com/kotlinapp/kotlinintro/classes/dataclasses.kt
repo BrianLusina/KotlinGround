@@ -9,19 +9,19 @@ fun main(args: Array<String>) {
     var brian = Student(1, "lusina")
     var lusina = Student(1, "lusina")
 
-    if(brian == lusina){
+    if (brian == lusina) {
         println("Equal")
-    }else{
+    } else {
         // we expect this output
         println("Not Equal")
     }
 
     val sensei1 = Teacher(1, "brian")
     val sensei2 = Teacher(1, "brian")
-    if(sensei1 == sensei2){
+    if (sensei1 == sensei2) {
         // we expect this output
         println("Equal")
-    }else{
+    } else {
         println("Not Equal")
     }
 

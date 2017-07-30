@@ -6,25 +6,26 @@ package com.javapp.objects.AbstractionInterfaces.MotorVehicles;
  * Description: Subclass of {@link Vehicles}
  */
 abstract class Cars extends Vehicles {
-    /**
-     * Constructor for vehicles
-     *
-     * @param name  Name of vehicle
-     * @param model Model of vehicle
-     */
-    Cars(String name, String model) {
-        super(name, model);
-    }
 
-    /**
-     * Name of the manufacturer
-     */
-    abstract String manufacturer();
+  /**
+   * Constructor for vehicles
+   *
+   * @param name Name of vehicle
+   * @param model Model of vehicle
+   */
+  Cars(String name, String model) {
+    super(name, model);
+  }
+
+  /**
+   * Name of the manufacturer
+   */
+  abstract String manufacturer();
 
 
-    /**
-     * Date of manufacture
-     */
-    abstract void dateOfManufacture();
+  /**
+   * Date of manufacture
+   */
+  abstract void dateOfManufacture();
 
 }

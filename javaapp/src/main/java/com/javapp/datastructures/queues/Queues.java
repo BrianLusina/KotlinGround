@@ -1,39 +1,41 @@
 package com.javapp.datastructures.queues;
+
 import java.util.Queue;
 
 /**
  * java.java.javapp.datastructures.queues
  * Created by lusinabrian on 26/12/16.
  * Description: Implementation of a queue data structure
- *
  */
-public class Queues<T> implements QueueInterface{
-    private Queue<Object> queue;
+public class Queues<T> implements QueueInterface {
 
-    private Queues(){}
+  private Queue<Object> queue;
 
-    @Override
-    public void enqueue(Object element) {
-        queue.add(element);
-    }
+  private Queues() {
+  }
 
-    @Override
-    public Object dequeue() {
-        return queue.remove();
-    }
+  @Override
+  public void enqueue(Object element) {
+    queue.add(element);
+  }
 
-    @Override
-    public Object peek() {
-        return queue.peek();
-    }
+  @Override
+  public Object dequeue() {
+    return queue.remove();
+  }
 
-    @Override
-    public boolean isEmpty() {
-        return queue.isEmpty();
-    }
+  @Override
+  public Object peek() {
+    return queue.peek();
+  }
 
-    @Override
-    public boolean isFull() {
-        return false;
-    }
+  @Override
+  public boolean isEmpty() {
+    return queue.isEmpty();
+  }
+
+  @Override
+  public boolean isFull() {
+    return false;
+  }
 }

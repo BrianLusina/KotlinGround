@@ -8,17 +8,17 @@ import org.junit.Test;
  * AnagramDetection Tester.
  *
  * @author <Brian Lusina>
- * @since <pre>12/23/2016</pre>
  * @version 1.0
+ * @since <pre>12/23/2016</pre>
  */
 //todo: configure these tests
 @Ignore
-public class AnagramDetectionTest{
+public class AnagramDetectionTest {
 
-    @Test
-    public void shouldDetectNoChangeInCharacters(){
-        //assertEquals(anagramDetection('abc', 'abc'), 1);
-    }
+  @Test
+  public void shouldDetectNoChangeInCharacters() {
+    //assertEquals(anagramDetection('abc', 'abc'), 1);
+  }
 /*
   it('should detect no change in the characters', function () {
   });

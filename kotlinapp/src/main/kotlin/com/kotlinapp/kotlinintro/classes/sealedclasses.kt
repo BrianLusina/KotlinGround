@@ -8,14 +8,14 @@ package com.kotlinapp.kotlinintro.classes
  * Sealed classes are abstract
  */
 
-sealed class PersonEvent{
+sealed class PersonEvent {
     class Awake : PersonEvent()
     class Sleep : PersonEvent()
     class Eat(val food: String) : PersonEvent()
 }
 
 fun handlePersonEvent(e: PersonEvent) {
-    when(e){
+    when (e) {
         is PersonEvent.Awake -> println("Awake")
         is PersonEvent.Sleep -> println("sleep")
         is PersonEvent.Eat -> println("eat")

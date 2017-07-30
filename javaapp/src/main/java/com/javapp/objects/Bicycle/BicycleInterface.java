@@ -6,12 +6,13 @@ package com.javapp.objects.Bicycle;
  * Description:Interface for {@link Bicycle}
  */
 interface BicycleInterface {
-    //  wheel revolutions per minute
-    void changeCadence(int newValue);
 
-    void changeGear(int newValue);
+  //  wheel revolutions per minute
+  void changeCadence(int newValue);
 
-    void speedUp(int increment);
+  void changeGear(int newValue);
 
-    void applyBrakes(int decrement);
+  void speedUp(int increment);
+
+  void applyBrakes(int decrement);
 }

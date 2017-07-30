@@ -13,18 +13,20 @@ import java.util.stream.Collectors;
  * Description:
  */
 public class Allergies {
-    int score;
 
-    public Allergies(int score) {
-        this.score = score;
-    }
+  int score;
 
-    public boolean isAllergicTo(Allergen allergen) {
-        return (allergen.getScore() & score) == allergen.getScore();
-    }/*method end*/
+  public Allergies(int score) {
+    this.score = score;
+  }
 
-    public List<Allergen> getList() {
-        return EnumSet.allOf(Allergen.class).stream().filter(this::isAllergicTo).collect(Collectors.toList());
-    }/*method end*/
+  public boolean isAllergicTo(Allergen allergen) {
+    return (allergen.getScore() & score) == allergen.getScore();
+  }/*method end*/
+
+  public List<Allergen> getList() {
+    return EnumSet.allOf(Allergen.class).stream().filter(this::isAllergicTo)
+        .collect(Collectors.toList());
+  }/*method end*/
 /*CLASS END*/
 }

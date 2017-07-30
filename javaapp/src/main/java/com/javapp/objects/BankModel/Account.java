@@ -1,62 +1,67 @@
 package com.javapp.objects.BankModel;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class Account {
-    //global or instance variable
-    private double balance;
-    private JOptionPane joptionPane = new JOptionPane();
-    private String userAccountName;
 
-    //constructor will validate the amount in the bank account balance
-    public Account(double initialBal, String accountName) {
-        if (initialBal > 0.0)
-            balance = initialBal;
+  //global or instance variable
+  private double balance;
+  private JOptionPane joptionPane = new JOptionPane();
+  private String userAccountName;
 
-        userAccountName = accountName;
+  //constructor will validate the amount in the bank account balance
+  public Account(double initialBal, String accountName) {
+    if (initialBal > 0.0) {
+      balance = initialBal;
     }
 
-    //setting the name
-    public void setUserAccounName(String accountName) {
-        userAccountName = accountName;
-    }
+    userAccountName = accountName;
+  }
 
-    //get the name
-    public String getUserAccountName() {
-        return userAccountName;
-    }
+  //setting the name
+  public void setUserAccounName(String accountName) {
+    userAccountName = accountName;
+  }
 
-    //add an amount to the balance
-    public void credit(double amount) {
-        balance = balance + amount;
-    }
+  //get the name
+  public String getUserAccountName() {
+    return userAccountName;
+  }
 
-    //method that withdraws money
-    public void debit(double amount) {
-        if (amount > balance) {
-            String userR = JOptionPane.showInputDialog("You can't withdraw more than what you have, do you wish for an overdraft?(Y/N)");
-            if (userR.equals("Y")) {
-                balance = balance - amount;
-                String message = String.format("Your new balance is: %.2f", balance);
-                JOptionPane.showMessageDialog(null, message);
-            } else {
-                displayBankDetails();
-            }
-        } else {
-            balance = balance - amount;
-        }
-    }
+  //add an amount to the balance
+  public void credit(double amount) {
+    balance = balance + amount;
+  }
 
-    //return the final amount in the account
-    public double getBalance() {
-        return balance;
-    }
-
-    public void displayBankDetails() {
-        String userAcName = getUserAccountName();
-        Double userBankBal = getBalance();
-        String message = String.format("Your BankModel.Account details\n BankModel.Account name: %s\n Balance %.2f\n Thank your for banking with LuDynamic", userAcName, userBankBal);
+  //method that withdraws money
+  public void debit(double amount) {
+    if (amount > balance) {
+      String userR = JOptionPane.showInputDialog(
+          "You can't withdraw more than what you have, do you wish for an overdraft?(Y/N)");
+      if (userR.equals("Y")) {
+        balance = balance - amount;
+        String message = String.format("Your new balance is: %.2f", balance);
         JOptionPane.showMessageDialog(null, message);
+      } else {
+        displayBankDetails();
+      }
+    } else {
+      balance = balance - amount;
     }
+  }
+
+  //return the final amount in the account
+  public double getBalance() {
+    return balance;
+  }
+
+  public void displayBankDetails() {
+    String userAcName = getUserAccountName();
+    Double userBankBal = getBalance();
+    String message = String.format(
+        "Your BankModel.Account details\n BankModel.Account name: %s\n Balance %.2f\n Thank your for banking with LuDynamic",
+        userAcName, userBankBal);
+    JOptionPane.showMessageDialog(null, message);
+  }
 //end
 }

@@ -7,15 +7,15 @@ package com.javapp.objects.AbstractionInterfaces.MotorVehicles;
  */
 interface VehicleInterface {
 
-    /**
-     * Does this car have a stero
-     */
-    void hasStereo(boolean hasStereo);
+  /**
+   * Does this car have a stero
+   */
+  void hasStereo(boolean hasStereo);
 
-    /**
-     * Color of the body of the car
-     */
-    String bodyColor(String color);
+  /**
+   * Color of the body of the car
+   */
+  String bodyColor(String color);
 
 
 }

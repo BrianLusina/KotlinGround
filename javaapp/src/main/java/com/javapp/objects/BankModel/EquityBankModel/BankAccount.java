@@ -3,75 +3,76 @@ package com.javapp.objects.BankModel.EquityBankModel;
 /*** Description:Main Bank account that is the parent of all bank accounts in the Bank.
  * Contains methods and fields that will be inherited from subclasses*/
 class BankAccount {
-    private int id;
-    private String owner;
-    private double balance, minimumBalance;
 
-    BankAccount() {
-    }
+  private int id;
+  private String owner;
+  private double balance, minimumBalance;
 
-    /**
-     * Constructor
-     *
-     * @param id             user id
-     * @param owner          bank account owner
-     * @param balance        balance in the account
-     * @param minimumBalance minimum balance allowed by the bank for the account
-     */
-    BankAccount(int id, String owner, double balance, double minimumBalance) {
-        this.id = id;
-        this.owner = owner;
-        this.balance = balance;
-        this.minimumBalance = minimumBalance;
-    }
+  BankAccount() {
+  }
 
-    /**
-     * Withdraw amount from account
-     *
-     * @param amount amount withdrawn from the account
-     */
-    public double withdraw(double amount) {
-        return this.getBalance() - amount;
-    }
+  /**
+   * Constructor
+   *
+   * @param id user id
+   * @param owner bank account owner
+   * @param balance balance in the account
+   * @param minimumBalance minimum balance allowed by the bank for the account
+   */
+  BankAccount(int id, String owner, double balance, double minimumBalance) {
+    this.id = id;
+    this.owner = owner;
+    this.balance = balance;
+    this.minimumBalance = minimumBalance;
+  }
 
-    /**
-     * Deposit into bank account
-     *
-     * @param amount Amount to deposit into bank account
-     */
-    public double deposit(double amount) {
-        return this.getBalance() + amount;
-    }
+  /**
+   * Withdraw amount from account
+   *
+   * @param amount amount withdrawn from the account
+   */
+  public double withdraw(double amount) {
+    return this.getBalance() - amount;
+  }
 
-    public int getId() {
-        return id;
-    }
+  /**
+   * Deposit into bank account
+   *
+   * @param amount Amount to deposit into bank account
+   */
+  public double deposit(double amount) {
+    return this.getBalance() + amount;
+  }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public String getOwner() {
-        return owner;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
+  public String getOwner() {
+    return owner;
+  }
 
-    public double getBalance() {
-        return balance;
-    }
+  public void setOwner(String owner) {
+    this.owner = owner;
+  }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
+  public double getBalance() {
+    return balance;
+  }
 
-    public double getMinimumBalance() {
-        return minimumBalance;
-    }
+  public void setBalance(double balance) {
+    this.balance = balance;
+  }
 
-    public void setMinimumBalance(double minimumBalance) {
-        this.minimumBalance = minimumBalance;
-    }
+  public double getMinimumBalance() {
+    return minimumBalance;
+  }
+
+  public void setMinimumBalance(double minimumBalance) {
+    this.minimumBalance = minimumBalance;
+  }
 }

@@ -12,12 +12,12 @@ package com.javapp.stringswords.Capitalize;
  */
 public class Capitalize {
 
-    public String capitalize(String str) {
-        String res = "";
-        for (String s : str.split(" ")) {
-            s = s.substring(0, 1).toUpperCase() + s.substring(1);
-            res += s + " ";
-        }
-        return res.trim();
+  public String capitalize(String str) {
+    String res = "";
+    for (String s : str.split(" ")) {
+      s = s.substring(0, 1).toUpperCase() + s.substring(1);
+      res += s + " ";
     }
+    return res.trim();
+  }
 }

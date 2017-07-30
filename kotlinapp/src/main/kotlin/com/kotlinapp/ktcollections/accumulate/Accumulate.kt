@@ -12,5 +12,5 @@ object Accumulate {
      * @param fn function/operation to perform
      * @return [List] of objects with the operation performed on each of them
      * */
-    fun <T, R> accumulate(input : List<T>, fn: (T) -> R) : List<R> = input.map { fn.invoke(it) }
+    fun <T, R> accumulate(input: List<T>, fn: (T) -> R): List<R> = input.map { fn.invoke(it) }
 }

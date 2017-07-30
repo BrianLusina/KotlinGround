@@ -6,7 +6,7 @@ package com.groovyapp.HelloGroovy
  * Description: A quick fire course in Groovy
  */
 class LearnGroovy {
-    static void main(String[] args){
+    static void main(String[] args) {
         // single line comment
         /*
         * Multi line comments*/
@@ -42,8 +42,8 @@ class LearnGroovy {
         println "Technologies: $technologies"
 
         /**Iteration*/
-        technologies.each {println "Technology: $it"}
-        technologies.eachWithIndex{ it, i -> println "$i: $it"}
+        technologies.each { println "Technology: $it" }
+        technologies.eachWithIndex { it, i -> println "$i: $it" }
 
         // checking list contents
 
@@ -80,15 +80,15 @@ class LearnGroovy {
 
         def devMap = [:]
         // add values
-        devMap = ["name": "Brian", "lastName": "Lusina", "frameworks": ["Android", "Flask", "Gradle", "React"],
+        devMap = ["name"     : "Brian", "lastName": "Lusina", "frameworks": ["Android", "Flask", "Gradle", "React"],
                   "Languages": ["Java", "Python", "JavaScript"]]
 
         devMap.put("age", "23")
         println "DevMap: $devMap"
 
         //iterate over elements of a map
-        devMap.each{println "$it.key: $it.value"}
-        devMap.eachWithIndex { it, i -> println "$i: $it"}
+        devMap.each { println "$it.key: $it.value" }
+        devMap.eachWithIndex { it, i -> println "$i: $it" }
 
         //evaluate a map contains a key
         assert devMap.containsKey("name")
@@ -105,9 +105,9 @@ class LearnGroovy {
         /*Logical branching*/
         def m = 3
 
-        if(m==1) {
+        if (m == 1) {
             println "One"
-        } else if(m==2) {
+        } else if (m == 2) {
             println "Two"
         } else {
             println "X greater than Two"
@@ -127,28 +127,28 @@ class LearnGroovy {
         // for loop
         // iterate over a range
         def n = 0
-        for (i in 0 .. 30){
-            n+=i
+        for (i in 0..30) {
+            n += i
         }
         println "Sum range $n"
 
         // iterate over a list
-        for (i in [5, 4, 3, 2, 1]){
-            n+=i
+        for (i in [5, 4, 3, 2, 1]) {
+            n += i
         }
         println "Sum of list:$n"
 
         // iterate over an array
-        def array = (0 .. 20).toArray()
+        def array = (0..20).toArray()
         def b = 0
-        for (a in array){
+        for (a in array) {
             b += a
         }
 
         //Iterate over a map
-        def map = ['name':'Roberto', 'framework':'Grails', 'language':'Groovy']
+        def map = ['name': 'Roberto', 'framework': 'Grails', 'language': 'Groovy']
         x = 0
-        for ( e in map ) {
+        for (e in map) {
             x += e.value
         }
         println "Map iteration: $x"

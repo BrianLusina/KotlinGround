@@ -11,21 +11,22 @@ import java.util.regex.Pattern;
  * Description:
  */
 public class VowelCount {
-    public static void main(String[] args) {
-        System.out.println("Testing for getCount()");
-        System.out.println(getCount("Power"));
-        System.out.println(getCount("Oops"));
-    }
 
-    public static int getCount(String str) {
-        String vow = "[aeiou]";
-        int vowelCount = 0;
-        Pattern pattern = Pattern.compile(vow, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(str);
-        while (matcher.find()) {
-            vowelCount++;
-        }
-        return vowelCount;
+  public static void main(String[] args) {
+    System.out.println("Testing for getCount()");
+    System.out.println(getCount("Power"));
+    System.out.println(getCount("Oops"));
+  }
+
+  public static int getCount(String str) {
+    String vow = "[aeiou]";
+    int vowelCount = 0;
+    Pattern pattern = Pattern.compile(vow, Pattern.CASE_INSENSITIVE);
+    Matcher matcher = pattern.matcher(str);
+    while (matcher.find()) {
+      vowelCount++;
     }
+    return vowelCount;
+  }
 
 }
