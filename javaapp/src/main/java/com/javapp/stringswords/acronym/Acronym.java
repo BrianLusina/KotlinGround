@@ -4,26 +4,26 @@ public class Acronym {
 
   public static String generate(String phrase) {
     String[] words = phrase.split("\\W+");
-    String acro = "";
+    StringBuilder acro = new StringBuilder();
     for (String w : words) {
             /*add the first character and capitalize it*/
-      acro += Character.toUpperCase(w.charAt(0));
+      acro.append(Character.toUpperCase(w.charAt(0)));
       //obtain remaining letters
       String rem = w.substring(1, w.length());
       //check in remaining letters if there is a capital letter, add to acro
       for (String s : rem.split("")) {
         if (s.toUpperCase().equals(s)) {
-          acro += s;
+          acro.append(s);
         }
       }
             /*replace all upper case letters and assign to upper remainder*/
       String upperRem = rem.replaceAll("^[A-Z]]", "");
             /*if not equal to empty or equal to remainder, add t0 acro*/
       if (!upperRem.equals("") && !upperRem.equals(rem)) {
-        acro += upperRem;
+        acro.append(upperRem);
       }
     }
-    return acro;
+    return acro.toString();
   }
 
 /*CLASS END*/
