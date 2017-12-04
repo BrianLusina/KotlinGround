@@ -1,13 +1,16 @@
 package com.javapp.DeadAnts;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 import com.javapp.puzzles.DeadAnts.Deadants;
+
+import org.junit.Ignore;
 
 
 public class DeadantsTest {
 
   @org.junit.Test
+  @Ignore
   public void example() {
     assertEquals(0, Deadants.deadAntCount("ant ant ant ant"));
     assertEquals(0, Deadants.deadAntCount(null));

@@ -26,7 +26,7 @@ public class MatrixTest {
       this.numberOfRows = numberOfRows;
     }
 
-    @Parameterized.Parameters(name = "{index}: expected matrix constructed with string \n\"{0}\" to have {1} row(s).")
+    @Parameterized.Parameters
     public static Collection<Object[]> data() {
       return Arrays.asList(new Object[][]{
           {"0", 1},
@@ -58,7 +58,7 @@ public class MatrixTest {
       this.numberOfColumns = numberOfColumns;
     }
 
-    @Parameterized.Parameters(name = "{index}: expected matrix constructed with string \n\"{0}\" to have {1} column(s).")
+    @Parameterized.Parameters()
     public static Collection<Object[]> data() {
       return Arrays.asList(new Object[][]{
           {"0", 1},
@@ -90,7 +90,7 @@ public class MatrixTest {
       this.firstRow = firstRow;
     }
 
-    @Parameterized.Parameters(name = "{index}: checking first row of matrix constructed with string \n\"{0}\".")
+    @Parameterized.Parameters
     public static Collection<Object[]> data() {
       return Arrays.asList(new Object[][]{
           {"0", new int[]{0}},
@@ -122,7 +122,7 @@ public class MatrixTest {
       this.lastRow = lastRow;
     }
 
-    @Parameterized.Parameters(name = "{index}: checking last row of matrix constructed with string \n\"{0}\".")
+    @Parameterized.Parameters
     public static Collection<Object[]> data() {
       return Arrays.asList(new Object[][]{
           {"0", new int[]{0}},
@@ -154,7 +154,7 @@ public class MatrixTest {
       this.firstColumn = firstColumn;
     }
 
-    @Parameterized.Parameters(name = "{index}: checking first column of matrix constructed with string \n\"{0}\".")
+    @Parameterized.Parameters
     public static Collection<Object[]> data() {
       return Arrays.asList(new Object[][]{
           {"0", new int[]{0}},
@@ -187,7 +187,7 @@ public class MatrixTest {
       this.lastColumn = lastColumn;
     }
 
-    @Parameterized.Parameters(name = "{index}: checking last column of matrix constructed with string \n\"{0}\".")
+    @Parameterized.Parameters
     public static Collection<Object[]> data() {
       return Arrays.asList(new Object[][]{
           {"0", new int[]{0}},

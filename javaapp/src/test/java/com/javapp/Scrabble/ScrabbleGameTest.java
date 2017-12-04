@@ -1,7 +1,5 @@
 package com.javapp.Scrabble;
 
-import static org.testng.AssertJUnit.assertEquals;
-
 import com.javapp.puzzles.Scrabble.ScrabbleGame;
 
 import org.junit.Test;
@@ -10,6 +8,7 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class ScrabbleGameTest {

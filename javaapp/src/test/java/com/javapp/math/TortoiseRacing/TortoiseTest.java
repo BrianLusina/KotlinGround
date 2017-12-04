@@ -2,8 +2,10 @@ package com.javapp.math.TortoiseRacing;
 
 import static org.junit.Assert.assertArrayEquals;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class TortoiseTest {
 
   @Test

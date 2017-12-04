@@ -1,8 +1,7 @@
 package com.javapp.functionalprog.Triangle;
 
-import static org.testng.AssertJUnit.assertEquals;
-
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class TriangleFuncProgramTest {
 

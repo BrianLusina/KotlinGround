@@ -5,4 +5,7 @@ package com.javapp.math.pascalstriangle;
  */
 public class PascalsTriangleGenerator {
 
+  public int[][] generateTriangle(int i) {
+    return new int[][]{};
+  }
 }

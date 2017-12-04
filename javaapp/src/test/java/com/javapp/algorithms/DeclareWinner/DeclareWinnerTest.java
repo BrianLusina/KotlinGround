@@ -1,4 +1,4 @@
-package javapp.algorithms.DeclareWinner;
+package com.javapp.algorithms.DeclareWinner;
 
 import com.javapp.algorithms.DeclareWinner.DeclareWinner;
 
