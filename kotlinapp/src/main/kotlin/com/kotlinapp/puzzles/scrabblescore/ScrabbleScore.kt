@@ -5,6 +5,17 @@ package com.kotlinapp.puzzles.scrabblescore
  */
 object ScrabbleScore {
 
+    private fun scoreMap(letter: Char) = when (letter) {
+        'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T' -> 1
+        'D', 'G' -> 2
+        'B', 'C', 'M', 'P' -> 3
+        'F', 'H', 'V', 'W', 'Y' -> 4
+        'K' -> 5
+        'J', 'X' -> 8
+        'Q', 'Z' -> 10
+        else -> 0
+    }
+
     private val scoreMap = mapOf(
             arrayListOf("A", "E", "I", "O", "U", "L", "N", "R", "S", "T") to 1,
             arrayListOf("D", "G") to 2,
@@ -26,4 +37,6 @@ object ScrabbleScore {
         // return the total
         return total
     }
+
+    val scoreWord = { word: String -> word.toUpperCase().map { scoreMap(it) }.sum() }
 }
