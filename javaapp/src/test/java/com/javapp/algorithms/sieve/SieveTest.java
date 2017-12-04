@@ -1,11 +1,11 @@
 package com.javapp.algorithms.sieve;
 
-import static org.testng.AssertJUnit.assertEquals;
 
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import static org.junit.Assert.assertEquals;
 
 public class SieveTest {
 

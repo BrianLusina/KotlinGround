@@ -3,6 +3,7 @@ package com.javapp.functionalprog.DragonCurve;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -12,6 +13,7 @@ import java.util.Map;
 import java.util.stream.IntStream;
 
 
+@Ignore
 public class DragonsCurveTest {
 
   final List<Integer> ns = Arrays.asList(0, 1, 2, 3, 5);

@@ -5,6 +5,8 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /*** author lusinabrian on 26/04/17.*/
 public class PascalsTriangleGeneratorTest {
@@ -19,6 +21,7 @@ public class PascalsTriangleGeneratorTest {
   }
 
   @Test
+  @Ignore
   public void testTriangleWithZeroRows() {
     int[][] expectedOutput = new int[][]{};
 

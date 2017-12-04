@@ -24,8 +24,8 @@ class CalculatorTest : Spek({
         }
 
         it("should accumulate 1 number") {
-            val result = calculcator?.accumulate(25)
-            assertEquals(25, result)
+            calculcator?.accumulate(25)
+            assertEquals(25, calculcator?.total)
         }
 
         it("should accumulate 2 numbers") {

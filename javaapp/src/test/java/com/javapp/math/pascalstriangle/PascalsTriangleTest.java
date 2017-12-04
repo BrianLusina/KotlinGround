@@ -7,6 +7,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 /*** author lusinabrian on 26/04/17.*/
+@Ignore
 public class PascalsTriangleTest {
 
   @Test

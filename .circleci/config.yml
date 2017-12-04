@@ -12,7 +12,7 @@ jobs:
 
       - run:
           name: Download dependencies
-          command: ./gradle dependencies
+          command: ./gradlew dependencies
 
       - run:
           name: Download jpm
@@ -47,7 +47,7 @@ jobs:
           command: |
             codacy-coverage-reporter -l Java -r coverage.xml
             jpm install com.codacy:codacy-coverage-reporter:assembly
-            gradle jacocoTestReport
+            ./gradlew jacocoTestReport
             bash <(curl -s https://codecov.io/bash)
 
       - store_test_results:
