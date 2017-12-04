@@ -45,6 +45,7 @@ jobs:
       - run:
           name: Run tests
           command: |
+            ./gradlew test
             codacy-coverage-reporter -l Java -r coverage.xml
             jpm install com.codacy:codacy-coverage-reporter:assembly
             ./gradlew jacocoTestReport
