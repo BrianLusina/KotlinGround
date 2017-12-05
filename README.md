@@ -1,5 +1,9 @@
 # KotlinGround
 
+[![Build Status](https://travis-ci.org/BrianLusina/KotlinGround.svg?branch=master)](https://travis-ci.org/BrianLusina/KotlinGround)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/132a1eb4abe1424790c4832984f6e73b)](https://www.codacy.com/app/BrianLusina/KotlinGround?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/KotlinGround&amp;utm_campaign=Badge_Grade)
+[![CircleCI](https://circleci.com/gh/BrianLusina/KotlinGround.svg?style=svg)](https://circleci.com/gh/BrianLusina/KotlinGround)
+
 A series of code snippets written in Kotlin. This is used as a learning tool into the [Kotlin](https://kotlinlang.org/) programming language.
 
 ## Getting Started
