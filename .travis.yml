@@ -12,8 +12,6 @@ addons:
     packages:
       - oracle-java8-installer
 
-# todo configure installing jpm
-
 before_install:
   - gradle wrapper --gradle-version 2.13
   - gradle assemble
