@@ -1,30 +1,28 @@
 buildscript {
     ext.kotlin_version = '1.2.0'
+    ext.detekt_version = "1.0.0.RC5-6"
     repositories {
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
         mavenCentral()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$rootProject.ext.detekt_version"
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
     }
 }
 
-apply plugin: "java"
-apply plugin: "idea"
-apply plugin: "groovy"
-apply plugin: "jacoco"
-apply plugin: "kotlin"
-
-jacoco {
-    toolVersion = "0.7.8"
+plugins {
+    id "io.gitlab.arturbosch.detekt" version "1.0.0.RC5-6"
 }
-
-configurations { codacy }
 
 allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
         maven { url "http://dl.bintray.com/typesafe/maven-releases" }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
 }
 
@@ -32,61 +30,8 @@ allprojects {
 repositories {
     mavenCentral()
     jcenter()
-}
-
-dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
-    //compile "joda-time:joda-time:2.3+"
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
-    testCompile "com.google.guava:guava:16+"
-    testCompile "junit:junit:4.12"
-    testCompile "org.assertj:assertj-core:3.2.0"
-    codacy 'com.github.codacy:codacy-coverage-reporter:-SNAPSHOT'
-}
-
-
-
-jacocoTestReport {
-    reports {
-        xml.enabled true
-        html.enabled true
-    }
-}
-
-task codeCoverageReport(type: JacocoReport) {
-    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
-
-    subprojects.each {
-        sourceSets it.sourceSets.main
-    }
-
-    reports {
-        xml.enabled true
-        xml.destination "${buildDir}/reports/jacoco/report.xml"
-        html.enabled true
-        csv.enabled false
-    }
-}
-
-codeCoverageReport.dependsOn {
-    subprojects*.test
-}
-
-task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
-    main = "com.codacy.CodacyCoverageReporter"
-    classpath = configurations.codacy
-    args = [
-            "-l",
-            "Java",
-            "-r",
-            "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
-    ]
-}
-
-jar {
-    baseName = 'javaplayground'
-    version = "1.0"
+    maven { url "http://dl.bintray.com/jetbrains/spek" }
+    maven { url "https://plugins.gradle.org/m2/" }
 }
 
 ext {
@@ -94,3 +39,25 @@ ext {
     versionName = "1.0"
 }
 
+
+String USER_HOME = System.getProperty("user.home")
+String IDEA_PATH = ".IntelliJIdea2017.3"
+
+detekt {
+    version = "1.0.0.RC5-6"
+    profile("main") {
+        input = "$projectDir/app/src/main/kotlin"
+        output = "$projectDir/reports/report.xml"
+        // outputFormat = "xml"
+        config = "$projectDir/detekt.yml"
+        filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+        parallel = true
+    }
+    idea {
+        path = "$USER_HOME/$IDEA_PATH"
+        codeStyleScheme = "$USER_HOME/$IDEA_PATH/config/codestyles/Default.xml"
+        inspectionsProfile = "$USER_HOME/$IDEA_PATH/inspection/Default.xml"
+        report = "project.projectDir/reports"
+        mask = "*.kt,"
+    }
+}

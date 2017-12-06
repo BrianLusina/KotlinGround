@@ -5,7 +5,7 @@ out/
 *.iml
 *.ipr
 scripts/init.sh
-
+reports/
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

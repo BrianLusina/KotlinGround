@@ -42,4 +42,9 @@ class RaindropsTest(val input: Int, val expectedOutput: String) {
         assertEquals(expectedOutput, Raindrops.convert(input))
     }
 
+    @Test
+    fun testUsingBuildStr(){
+        assertEquals(expectedOutput, Raindrops.convertUsingBuildStr(input))
+    }
+
 }
