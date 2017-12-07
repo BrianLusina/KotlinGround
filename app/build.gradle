@@ -1,18 +1,8 @@
-buildscript {
-    ext.kotlin_version = '1.2.0'
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-apply plugin: 'org.junit.platform.gradle.plugin'
-apply plugin: "kotlin"
-apply plugin: "eclipse"
 apply plugin: "idea"
+apply plugin: "jacoco"
+apply plugin: "kotlin"
+apply plugin: 'org.junit.platform.gradle.plugin'
+apply plugin: "eclipse"
 
 junitPlatform {
     filters {
@@ -22,34 +12,40 @@ junitPlatform {
     }
 }
 
-sourceSets {
-    main {
-        kotlin {
-            srcDir 'kotlin'
-        }
-    }
+//sourceSets {
+//    main {
+//        kotlin {
+//            srcDir 'kotlin'
+//        }
+//    }
+//
+//    test {
+//        kotlin {
+//            srcDir 'kotlin'
+//        }
+//    }
+//}
+//
 
-    test {
-        kotlin {
-            srcDir 'kotlin'
-        }
-    }
-}
 
-repositories {
-    mavenCentral()
-    maven { url "http://dl.bintray.com/jetbrains/spek" }
-}
+configurations { codacy }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile fileTree(dir: 'libs', include: '*.jar')
 
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    //compile "joda-time:joda-time:2.3+"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+    codacy 'com.github.codacy:codacy-coverage-reporter:-SNAPSHOT'
+
+    testCompile "com.google.guava:guava:16+"
+    testCompile "org.assertj:assertj-core:3.2.0"
     testCompile 'junit:junit:4.12'
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
     testCompile 'org.jetbrains.spek:spek-api:1.1.5'
     testCompile "com.nhaarman:mockito-kotlin:1.5.0"
     testRuntime 'org.jetbrains.spek:spek-junit-platform-engine:1.1.5'
-
 }
 
 test {
@@ -57,6 +53,75 @@ test {
         exceptionFormat = 'full'
         events = ["passed", "failed", "skipped"]
     }
+//    jacoco {
+//        append = false
+//        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+//        classDumpDir = file("$buildDir/jacoco/classpathdumps")
+//    }
 }
 
+jacoco {
+    toolVersion = "0.7.9"
+    reportsDir = file("${buildDir}/reports/jacoco")
+}
 
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+        csv.enabled = false
+        html.destination = new File("$buildDir/reports/jacocoHtml")
+    }
+
+    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+    def kotlinTree = fileTree(dir: "${project.projectDir}/app/build/classes/kotlin/", excludes: fileFilter)
+    def mainSrc = "${project.projectDir}/app/src/main/kotlin"
+
+    sourceDirectories = files([mainSrc])
+    classDirectories = files([kotlinTree])
+    executionData = files("${buildDir}/jacoco/test.exec")
+}
+
+task codeCoverageReport(type: JacocoReport) {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+    reports {
+        xml.enabled = true
+        xml.destination new File("${buildDir}/reports/jacoco/report.xml")
+        html.enabled = true
+        csv.enabled = false
+    }
+}
+
+task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
+    main = "com.codacy.CodacyCoverageReporter"
+    classpath = configurations.codacy
+    args = [
+            "-l",
+            "Java",
+            "-r",
+            "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+    ]
+}
+
+//task coverage(dependsOn: 'jacocoTestReport') {
+//    def reports = new File(project.buildDir, '/reports/jacoco/')
+//    def index = new File(reports, 'index.html').getText('UTF-8')
+//    def footer = '<div class="footer">'
+//    def result = new StringBuilder(index.substring(0, index.indexOf(footer)))
+//
+//    reports.eachDirMatch({ !new File(it).name.startsWith(".") }) { dir ->
+//        def moduleIndex = new File(dir, 'index.source.html')
+//        def content = moduleIndex.getText('UTF-8')
+//                .replaceAll('\\.\\./\\.resources', '.resources')
+//                .replaceAll('href="', "href=\"${dir.name}/")
+//        result.append(content.substring(content.indexOf('<h1>'), content.indexOf(footer)))
+//    }
+//    result.append(index.substring(index.indexOf(footer)))
+//
+//    def output = new File(reports, 'index.source.html')
+//
+//    output.delete()
+//    output << result.toString()
+//    println("open $output.path")
+//}
