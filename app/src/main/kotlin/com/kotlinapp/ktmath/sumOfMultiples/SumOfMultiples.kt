@@ -1,6 +1,6 @@
 object SumOfMultiples{
 
-    fun sum(numbers: Set<Int>, limit: Int) : Int{
+    fun sum(numbers: Set<Int> = emptySet(), limit: Int) : Int{
         if( limit <= 1){
             return 0
         }
@@ -17,4 +17,14 @@ object SumOfMultiples{
 
         return multiples.sum()
     }
+
+
+    fun sumV2(numbers: Set<Int> = emptySet(), limit: Int) =
+            (1 until limit)
+                    .filter {
+                        value -> numbers.any{ it.hasMultiple(value) }
+                    }.sum()
+
+
+    private fun Int.hasMultiple(number : Int) = (number >= this) && (number % this == 0)
 }

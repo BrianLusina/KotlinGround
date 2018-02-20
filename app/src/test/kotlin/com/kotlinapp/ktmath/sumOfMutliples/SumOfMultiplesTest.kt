@@ -68,4 +68,71 @@ class SumOfMultiplesTest {
         assertEquals(0, SumOfMultiples.sum(emptySet(), 10000))
     }
 
+    
+    //====
+    @Test
+    fun `multiples of 3 or 5 up to 1_v2`() {
+        assertEquals(0, SumOfMultiples.sumV2(setOf(3, 5), 1))
+    }
+
+    @Test
+    fun `multiples of 3 or 5 up to 4_v2`() {
+        assertEquals(3, SumOfMultiples.sumV2(setOf(3, 5), 4))
+    }
+
+    @Test
+    fun `multiples of 3 up to 7_v2`() {
+        assertEquals(9, SumOfMultiples.sumV2(setOf(3), 7))
+    }
+
+    @Test
+    fun `multiples of 3 or 5 up to 10_v2`() {
+        assertEquals(23, SumOfMultiples.sumV2(setOf(3, 5), 10))
+    }
+
+    @Test
+    fun `multiples of 3 or 5 up to 100_v2`() {
+        assertEquals(2318, SumOfMultiples.sumV2(setOf(3, 5), 100))
+    }
+
+    @Test
+    fun `multiples of 3 or 5 up to 1000_v2`() {
+        assertEquals(233168, SumOfMultiples.sumV2(setOf(3, 5), 1000))
+    }
+
+    @Test
+    fun `multiples of 7, 13 or 17 up to 20_v2`() {
+        assertEquals(51, SumOfMultiples.sumV2(setOf(7, 13, 17), 20))
+    }
+
+    @Test
+    fun `multiples of 4 or 6 up to 15_v2`() {
+        assertEquals(30, SumOfMultiples.sumV2(setOf(4, 6), 15))
+    }
+
+    @Test
+    fun `multiples of 5, 6 or 8 up to 150_v2`() {
+        assertEquals(4419, SumOfMultiples.sumV2(setOf(5, 6, 8), 150))
+    }
+
+    @Test
+    fun `multiples of 5 or 25 up to 51_v2`() {
+        assertEquals(275, SumOfMultiples.sumV2(setOf(5, 25), 51))
+    }
+
+    @Test
+    fun `multiples of 43 or 47 up to 10000_v2`() {
+        assertEquals(2203160, SumOfMultiples.sumV2(setOf(43, 47), 10000))
+    }
+
+    @Test
+    fun `multiples of 1 up to 100_v2`() {
+        assertEquals(4950, SumOfMultiples.sumV2(setOf(1), 100))
+    }
+
+    @Test
+    fun `multiples of an empty set up to 10000_v2`() {
+        assertEquals(0, SumOfMultiples.sumV2(emptySet(), 10000))
+    }
+
 }
