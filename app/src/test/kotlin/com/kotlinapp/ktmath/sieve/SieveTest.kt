@@ -4,7 +4,6 @@ package com.kotlinapp.ktmath.sieve
  * @author lusinabrian on 16/04/18.
  */
 import org.junit.Test
-import org.junit.Ignore
 import kotlin.test.assertEquals
 
 class SieveTest {
