@@ -9,7 +9,7 @@ fun permMissingElement(numbers: Array<Int>): Int {
     var missingElement = numbers.size + 1
 
     numbers.forEachIndexed { index, it ->
-        missingElement = missingElement or it or (index + 1)
+        missingElement = missingElement xor it xor (index + 1)
     }
 
     return missingElement
