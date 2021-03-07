@@ -43,26 +43,25 @@ abstract class LinkedList<Node> {
     /**
      * Detects node that has a cycle
      */
-    abstract fun detectNodeWithCycle(head: Node?): Node?
+    abstract fun detectNodeWithCycle(): Node?
 
     /**
      * Checks if the linked list has a cycle
      */
-    abstract fun hasCycle(head: Node): Boolean
+    abstract fun hasCycle(): Boolean
 
     /**
      * Removes cycle from linked list given the head of the linked list
-     * @param head [Node]
      * @return [Node] head of linked list without cycle
      */
-    abstract fun removeCycle(head: Node): Node
+    abstract fun removeCycle(): Node
 
     /**
      * Reverse a linked list so that the tail becomes the head and the head becomes the tail
      * @param head [Node]
      * @return [Node]
      */
-    abstract fun reverse(head: Node): Node
+    abstract fun reverse(): Node
 
     /**
      * Inserts a node at the specified position of the linked list
@@ -79,4 +78,10 @@ abstract class LinkedList<Node> {
      * @return [Node]
      */
     abstract fun insertAfter(nodeToInsert: Node, currentNode: Node): Node
+
+    /**
+     * Alternate split a linked list such that a linked list such as
+     * a->b->c->d->e becomes a->c->e->None and b->d->None
+     */
+    abstract fun alternateSplit(): Pair<Node, Node>
 }

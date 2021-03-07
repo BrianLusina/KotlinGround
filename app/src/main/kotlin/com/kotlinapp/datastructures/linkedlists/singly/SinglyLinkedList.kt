@@ -2,6 +2,7 @@ package com.kotlinapp.datastructures.linkedlists.singly
 
 import com.kotlinapp.datastructures.linkedlists.LinkedList
 import com.kotlinapp.datastructures.linkedlists.SinglyLinkedListNode
+import java.lang.IllegalArgumentException
 
 class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
     LinkedList<SinglyLinkedListNode>() {
@@ -34,7 +35,7 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
         return head != null
     }
 
-    override fun detectNodeWithCycle(head: SinglyLinkedListNode?): SinglyLinkedListNode? {
+    override fun detectNodeWithCycle(): SinglyLinkedListNode? {
         if (head?.next == null) {
             return null
         }
@@ -65,11 +66,11 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
         return current
     }
 
-    override fun hasCycle(head: SinglyLinkedListNode): Boolean {
+    override fun hasCycle(): Boolean {
         TODO("Not yet implemented")
     }
 
-    override fun reverse(head: SinglyLinkedListNode): SinglyLinkedListNode {
+    override fun reverse(): SinglyLinkedListNode {
         TODO("Not yet implemented")
     }
 
@@ -84,7 +85,41 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
         TODO("Not yet implemented")
     }
 
-    override fun removeCycle(head: SinglyLinkedListNode): SinglyLinkedListNode {
+    override fun removeCycle(): SinglyLinkedListNode {
         TODO("Not yet implemented")
+    }
+
+    override fun alternateSplit(): Pair<SinglyLinkedListNode, SinglyLinkedListNode> {
+        if (head == null) {
+            throw IllegalArgumentException("Cannot split linked list with no head")
+        }
+        if (head.next == null) {
+            throw IllegalArgumentException("Cannot split linked list with only 1 node")
+        }
+
+        var current = head
+        val first = current
+        val second = current.next
+
+        while (current?.next != null) {
+            val temp = current.next
+            if (temp != null) {
+                current.next = temp.next
+            }
+
+            if (current.next != null && current.next!!.next != null) {
+                if (temp != null) {
+                    temp.next = current.next!!.next
+                }
+            } else {
+                if (temp != null) {
+                    temp.next = null
+                }
+            }
+
+            current = current.next
+        }
+
+        return Pair(first, second!!)
     }
 }

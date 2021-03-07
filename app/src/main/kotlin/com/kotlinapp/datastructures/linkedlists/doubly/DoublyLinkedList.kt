@@ -34,7 +34,7 @@ class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
         return head != null
     }
 
-    override fun detectNodeWithCycle(head: DoublyLinkedListNode?): DoublyLinkedListNode? {
+    override fun detectNodeWithCycle(): DoublyLinkedListNode? {
         if (head?.next == null) {
             return null
         }
@@ -65,11 +65,11 @@ class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
         return current
     }
 
-    override fun hasCycle(head: DoublyLinkedListNode): Boolean {
+    override fun hasCycle(): Boolean {
         TODO("Not yet implemented")
     }
 
-    override fun reverse(head: DoublyLinkedListNode): DoublyLinkedListNode {
+    override fun reverse(): DoublyLinkedListNode {
         TODO("Not yet implemented")
     }
 
@@ -84,7 +84,11 @@ class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
         TODO("Not yet implemented")
     }
 
-    override fun removeCycle(head: DoublyLinkedListNode): DoublyLinkedListNode {
+    override fun removeCycle(): DoublyLinkedListNode {
+        TODO("Not yet implemented")
+    }
+
+    override fun alternateSplit(): Pair<DoublyLinkedListNode, DoublyLinkedListNode> {
         TODO("Not yet implemented")
     }
 }
