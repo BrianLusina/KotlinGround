@@ -55,13 +55,14 @@ fun quicksortSubArray(theArray: Array<Int>, startIndex: Int, endIndex: Int) {
 }
 
 // quicksort sorts a slice of integers using quicksort algorithm
-fun quicksort(theArray: Array<Int>) {
+fun quicksort(theArray: Array<Int>): Array<Int> {
     val length = theArray.size
 
     // Nothing to sort here
     if (length <= 1) {
-        return
+        return theArray
     }
 
     quicksortSubArray(theArray, 0, length - 1)
+    return theArray
 }
