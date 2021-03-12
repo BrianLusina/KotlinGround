@@ -79,4 +79,36 @@ class BinaryTree(private val root: BinaryTreeNode? = null) : Trees<BinaryTreeNod
 
         return result
     }
+
+    override fun postorderTraversal(): Collection<Any> {
+        val values = arrayListOf<Any>()
+        val stackOne = arrayListOf<BinaryTreeNode>()
+        val stackTwo = arrayListOf<BinaryTreeNode>()
+
+        if (root == null) {
+            return values
+        }
+
+        stackOne.add(root)
+
+        while (stackOne.size != 0) {
+            val node = stackOne.removeAt(stackOne.size - 1)
+            stackTwo.add(node)
+
+            if (node.left != null) {
+                stackOne.add(node.left!!)
+            }
+
+            if (node.right != null) {
+                stackOne.add(node.right!!)
+            }
+        }
+
+        while (stackTwo.size != 0) {
+            val node = stackTwo.removeAt(stackTwo.size - 1)
+            values.add(node.data)
+        }
+
+        return values
+    }
 }

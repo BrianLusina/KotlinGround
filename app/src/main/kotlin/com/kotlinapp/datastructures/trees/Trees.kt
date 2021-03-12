@@ -8,4 +8,5 @@ abstract class Trees<TreeNode> {
     abstract fun inorderTraversalIteratively(): Collection<Any>
     abstract fun inorderMorrisTraversal(): Collection<Any>
     abstract fun preorderTraversal(): Collection<Any>
+    abstract fun postorderTraversal(): Collection<Any>
 }
