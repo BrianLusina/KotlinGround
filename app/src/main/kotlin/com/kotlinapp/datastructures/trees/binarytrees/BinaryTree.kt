@@ -32,7 +32,51 @@ class BinaryTree(private val root: BinaryTreeNode? = null) : Trees<BinaryTreeNod
     }
 
     override fun inorderMorrisTraversal(): Collection<Any> {
-        TODO("Not yet implemented")
+        val result = arrayListOf<Any>()
+        var current = root
+        var pre: BinaryTreeNode?
+
+        while (current != null) {
+            if (current.left == null) {
+                result.add(current.data)
+                current = current.right
+            }
+
+            pre = current?.left
+
+            while (pre?.right != null) {
+                pre = pre.right
+            }
+
+            pre?.right = current
+            val temp = current
+            current = current?.left
+            temp?.left = null
+        }
+        return result
     }
 
+    override fun preorderTraversal(): Collection<Any> {
+        val result = arrayListOf<Any>()
+        val stack = arrayListOf<BinaryTreeNode>()
+
+        if (root == null) {
+            return result
+        }
+
+        var current = root
+
+        while (current != null || stack.isNotEmpty()) {
+            while (current != null) {
+                result.add(current.data)
+                stack.add(current)
+                current = current.left
+            }
+
+            current = stack.removeAt(stack.size - 1)
+            current = current.right
+        }
+
+        return result
+    }
 }
