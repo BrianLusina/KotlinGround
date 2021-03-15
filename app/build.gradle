@@ -65,22 +65,22 @@ jacoco {
     reportsDir = file("${buildDir}/reports/jacoco")
 }
 
-jacocoTestReport {
-    reports {
-        xml.enabled = true
-        html.enabled = true
-        csv.enabled = false
-        html.destination = new File("$buildDir/reports/jacocoHtml")
-    }
-
-    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
-    def kotlinTree = fileTree(dir: "${project.projectDir}/app/build/classes/kotlin/", excludes: fileFilter)
-    def mainSrc = "${project.projectDir}/app/src/main/kotlin"
-
-    sourceDirectories = files([mainSrc])
-    classDirectories = files([kotlinTree])
-    executionData = files("${buildDir}/jacoco/test.exec")
-}
+//jacocoTestReport {
+//    reports {
+//        xml.enabled = true
+//        html.enabled = true
+//        csv.enabled = false
+//        html.destination = new File("$buildDir/reports/jacocoHtml")
+//    }
+//
+//    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+//    def kotlinTree = fileTree(dir: "${project.projectDir}/app/build/classes/kotlin/", excludes: fileFilter)
+//    def mainSrc = "${project.projectDir}/app/src/main/kotlin"
+//
+//    sourceDirectories.add(files([mainSrc]))
+//    classDirectories = files([kotlinTree])
+//    executionData = files("${buildDir}/jacoco/test.exec")
+//}
 
 task codeCoverageReport(type: JacocoReport) {
     executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")

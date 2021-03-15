@@ -1,0 +1,114 @@
+package com.kotlinground.datastructures.trees.binarytrees
+
+import com.kotlinground.datastructures.trees.BinaryTreeNode
+import com.kotlinground.datastructures.trees.Trees
+
+class BinaryTree(private val root: BinaryTreeNode? = null) : Trees<BinaryTreeNode>() {
+    override fun addTreeNode(data: Any) {
+        TODO("Not yet implemented")
+    }
+
+    override fun inorderTraversalRecurse(root: BinaryTreeNode): Collection<Any> {
+        TODO("Not yet implemented")
+    }
+
+    override fun inorderTraversalIteratively(): Collection<Any> {
+        val stack = arrayListOf<BinaryTreeNode>()
+        val result = arrayListOf<Any>()
+        var current = root;
+
+        while (current != null || stack.isNotEmpty()) {
+            while (current != null) {
+                stack.add(current)
+                current = current.left
+            }
+
+            current = stack.removeAt(stack.size - 1)
+            result.add(current.data)
+            current = current.right
+        }
+
+        return result
+    }
+
+    override fun inorderMorrisTraversal(): Collection<Any> {
+        val result = arrayListOf<Any>()
+        var current = root
+        var pre: BinaryTreeNode?
+
+        while (current != null) {
+            if (current.left == null) {
+                result.add(current.data)
+                current = current.right
+            }
+
+            pre = current?.left
+
+            while (pre?.right != null) {
+                pre = pre.right
+            }
+
+            pre?.right = current
+            val temp = current
+            current = current?.left
+            temp?.left = null
+        }
+        return result
+    }
+
+    override fun preorderTraversal(): Collection<Any> {
+        val result = arrayListOf<Any>()
+        val stack = arrayListOf<BinaryTreeNode>()
+
+        if (root == null) {
+            return result
+        }
+
+        var current = root
+
+        while (current != null || stack.isNotEmpty()) {
+            while (current != null) {
+                result.add(current.data)
+                stack.add(current)
+                current = current.left
+            }
+
+            current = stack.removeAt(stack.size - 1)
+            current = current.right
+        }
+
+        return result
+    }
+
+    override fun postorderTraversal(): Collection<Any> {
+        val values = arrayListOf<Any>()
+        val stackOne = arrayListOf<BinaryTreeNode>()
+        val stackTwo = arrayListOf<BinaryTreeNode>()
+
+        if (root == null) {
+            return values
+        }
+
+        stackOne.add(root)
+
+        while (stackOne.size != 0) {
+            val node = stackOne.removeAt(stackOne.size - 1)
+            stackTwo.add(node)
+
+            if (node.left != null) {
+                stackOne.add(node.left!!)
+            }
+
+            if (node.right != null) {
+                stackOne.add(node.right!!)
+            }
+        }
+
+        while (stackTwo.size != 0) {
+            val node = stackTwo.removeAt(stackTwo.size - 1)
+            values.add(node.data)
+        }
+
+        return values
+    }
+}
