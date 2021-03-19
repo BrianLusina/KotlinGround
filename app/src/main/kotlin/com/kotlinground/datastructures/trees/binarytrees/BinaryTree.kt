@@ -13,6 +13,43 @@ class BinaryTree(private var root: BinaryTreeNode? = null) : Trees<BinaryTreeNod
         return this as Int
     }
 
+    override fun height(): Int {
+        if (root == null) {
+            return 0
+        }
+
+        if (root!!.left == null && root!!.right == null) {
+            return 0
+        }
+
+        var height = 0
+        val queue = arrayListOf<BinaryTreeNode>()
+
+        while (true) {
+            var currentLevelNodes = queue.size
+
+            if (currentLevelNodes == 0) {
+                return height
+            }
+
+            height++
+
+            while (currentLevelNodes > 0) {
+                val node = queue.removeAt(1)
+
+                if (node.left != null) {
+                    queue.add(node.left!!)
+                }
+
+                if (node.right != null) {
+                    queue.add(node.right!!)
+                }
+
+                currentLevelNodes--
+            }
+        }
+    }
+
     /**
      * Inserts a Tree node into this Binary Search Tree
      */
