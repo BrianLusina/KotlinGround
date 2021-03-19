@@ -3,7 +3,7 @@ package com.kotlinground.datastructures.trees.binarytrees
 import com.kotlinground.datastructures.trees.BinaryTreeNode
 import com.kotlinground.datastructures.trees.Trees
 
-class BinaryTree(private var root: BinaryTreeNode? = null) : Trees<BinaryTreeNode>() {
+class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryTreeNode>() {
 
     private operator fun Any.plusAssign(i: Int) {
         this += i
@@ -202,5 +202,42 @@ class BinaryTree(private var root: BinaryTreeNode? = null) : Trees<BinaryTreeNod
         }
 
         return values
+    }
+
+    /**
+     * LowestCommonAncestor returns the LCA of 2 nodes
+     * Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
+     * If both of the values in the 2 nodes provided are greater than the root node, then we move to the right.
+     * if the nodes are less than the root node, we move to the left.
+     * If there is no root node, then we exit and return None, as no common ancestor could exist in such a case with
+     * no root node.
+     * Assumptions:
+     * - assumes that the node itself can also be an ancestor/descendant of itself
+     * Complexity Analysis:
+     * Time Complexity: O(h).
+     * The Time Complexity of the above solution is O(h), where h is the height of the tree.
+     * Space Complexity: O(1).
+     * The space complexity of the above solution is constant.
+     */
+    override fun lowestCommonAncestor(nodeOne: BinaryTreeNode, nodeTwo: BinaryTreeNode): BinaryTreeNode? {
+        if (root == null) {
+            return null
+        }
+
+        if (root!!.data == nodeOne.data || root!!.data == nodeTwo.data) {
+            return root
+        }
+
+        while (root != null) {
+            root = if (root!!.data > nodeOne.data && root!!.data > nodeTwo.data) {
+                root!!.left
+            } else if (root!!.data < nodeOne.data && root!!.data < nodeTwo.data) {
+                root!!.right
+            } else {
+                break
+            }
+        }
+
+        return root
     }
 }

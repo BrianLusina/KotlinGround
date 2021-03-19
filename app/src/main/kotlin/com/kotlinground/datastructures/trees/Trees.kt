@@ -23,4 +23,12 @@ abstract class Trees<TreeNode> {
     abstract fun inorderMorrisTraversal(): Collection<Any>
     abstract fun preorderTraversal(): Collection<Any>
     abstract fun postorderTraversal(): Collection<Any>
+
+    /**
+     * Finds the lowest common ancestor of 2 nodes in a Tree
+     * @param nodeOne [TreeNode]
+     * @param nodeTwo [TreeNode]
+     * @return [TreeNode]
+     */
+    abstract fun lowestCommonAncestor(nodeOne: TreeNode, nodeTwo: TreeNode): TreeNode?
 }
