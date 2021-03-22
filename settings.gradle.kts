@@ -1,4 +1,10 @@
 rootProject.name = "kotlin-ground"
 include(
-    "app"
+    "datastructures",
+    "algorithms",
+    "puzzles",
+    "ktmath",
+    "ktstrings",
+    "ktintro",
+    "kttime"
 )

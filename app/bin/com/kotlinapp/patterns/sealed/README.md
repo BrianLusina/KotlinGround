@@ -1,1 +1,0 @@
-Demonstrates patterns that can be used in Kotlin when using Sealed classes.
