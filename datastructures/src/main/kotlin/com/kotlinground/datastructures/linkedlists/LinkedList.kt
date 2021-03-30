@@ -84,4 +84,17 @@ abstract class LinkedList<Node> {
      * a->b->c->d->e becomes a->c->e->None and b->d->None
      */
     abstract fun alternateSplit(): Pair<Node, Node>
+
+    /**
+     * Swaps nodes in a linked list in pairs.
+     * As there are different kinds of LinkedLists, it is up to the child class to implement this
+     * The premise(idea) is to swap the data of each node with the data of the next node. This is while using
+     * an iterative approach
+     * Example:
+     * 1 -> 2 -> 3 -> 4
+     * becomes
+     * 2 -> 1 -> 4 -> 3
+     * @returns [Node] new head of linked list
+     */
+    abstract fun pairwiseSwap(): Node?
 }

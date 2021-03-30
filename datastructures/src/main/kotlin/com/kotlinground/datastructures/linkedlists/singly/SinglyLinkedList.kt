@@ -122,4 +122,32 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
 
         return Pair(first, second!!)
     }
+
+    override fun pairwiseSwap(): SinglyLinkedListNode? {
+        // if the head is null, nothing to do here
+        if (head == null) {
+            return head
+        }
+
+        var current = head
+
+        // Only traverse as long as we have 2 nodes left
+        while (current?.next != null) {
+            // if the data in the pair of nodes is the same
+            if (current.data == current.next?.data) {
+                // move on to the next pair
+                current = current.next?.next
+            } else {
+                // swap the data
+                val temp = current.data
+                current.data = current.next!!.data
+                current.next?.data = temp
+
+                // move to the next pair
+                current = current.next?.next
+            }
+        }
+
+        return head
+    }
 }
