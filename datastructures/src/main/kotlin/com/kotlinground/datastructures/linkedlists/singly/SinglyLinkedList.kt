@@ -150,4 +150,29 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
 
         return head
     }
+
+    // TODO: swap nodes in place
+    override fun swapNodes(k: Int): SinglyLinkedListNode? {
+        val current = head
+        var a = current
+        var b = current
+
+        for (next in 1..k) {
+            a = a?.next
+        }
+
+        val node = a
+        a = a?.next
+
+        while (a != null) {
+            a = a.next
+            b = b?.next
+        }
+
+        val temp = node?.data
+        node?.data = b!!.data
+        b.data = temp!!
+
+        return head
+    }
 }
