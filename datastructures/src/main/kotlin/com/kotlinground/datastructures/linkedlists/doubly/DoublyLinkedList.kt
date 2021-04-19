@@ -91,4 +91,12 @@ class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
     override fun alternateSplit(): Pair<DoublyLinkedListNode, DoublyLinkedListNode> {
         TODO("Not yet implemented")
     }
+
+    override fun pairwiseSwap(): DoublyLinkedListNode? {
+        TODO("Not yet implemented")
+    }
+
+    override fun swapNodes(k: Int): DoublyLinkedListNode? {
+        TODO("Not yet implemented")
+    }
 }
