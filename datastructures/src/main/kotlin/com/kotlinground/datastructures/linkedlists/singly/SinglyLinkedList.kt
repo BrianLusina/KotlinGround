@@ -7,8 +7,12 @@ import java.lang.IllegalArgumentException
 class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
     LinkedList<SinglyLinkedListNode>() {
 
-    override fun push(data: Any) {
+    override fun append(data: Any) {
 
+    }
+
+    override fun prepend(data: Any) {
+        TODO("Not yet implemented")
     }
 
     override fun count(data: Any): Int {
@@ -152,7 +156,7 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
     }
 
     // TODO: swap nodes in place
-    override fun swapNodes(k: Int): SinglyLinkedListNode? {
+    override fun swapNodesAtKthAndKPlusOne(k: Int): SinglyLinkedListNode? {
         val current = head
         var a = current
         var b = current
@@ -174,5 +178,17 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
         b.data = temp!!
 
         return head
+    }
+
+    override fun deleteNode(node: SinglyLinkedListNode) {
+        TODO("Not yet implemented")
+    }
+
+    override fun deleteNodeAtPosition(position: Int) {
+        TODO("Not yet implemented")
+    }
+
+    override fun deleteNodeByData(data: Any) {
+        TODO("Not yet implemented")
     }
 }

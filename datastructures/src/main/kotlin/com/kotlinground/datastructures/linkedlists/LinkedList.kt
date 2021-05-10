@@ -5,7 +5,30 @@ abstract class LinkedList<Node> {
     /**
      * Adds a node to the end of the linked list given the data to insert to the node
      */
-    abstract fun push(data: Any)
+    abstract fun append(data: Any)
+
+    /**
+     * Adds a node to the beginning of the linked list given the data to insert to the node
+     */
+    abstract fun prepend(data: Any)
+
+    /**
+     * Deletes a given node from the LinkedList
+     * @param node [Node]
+     */
+    abstract fun deleteNode(node: Node)
+
+    /**
+     * Deletes a given node from the LinkedList given its position
+     * @param position [Int]
+     */
+    abstract fun deleteNodeAtPosition(position: Int)
+
+    /**
+     * Deletes a given node from the LinkedList given its data. This will delete the first occurrence of data
+     * @param data [Any]
+     */
+    abstract fun deleteNodeByData(data: Any)
 
     /**
      * Searches for a node in the provided linked list
@@ -104,5 +127,5 @@ abstract class LinkedList<Node> {
      * Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
      * Output: [7,9,6,6,8,7,3,0,9,5]
      */
-    abstract fun swapNodes(k: Int): Node?
+    abstract fun swapNodesAtKthAndKPlusOne(k: Int): Node?
 }

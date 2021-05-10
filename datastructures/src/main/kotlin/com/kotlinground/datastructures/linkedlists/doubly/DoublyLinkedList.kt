@@ -6,8 +6,12 @@ import com.kotlinground.datastructures.linkedlists.LinkedList
 class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
     LinkedList<DoublyLinkedListNode>() {
 
-    override fun push(data: Any) {
+    override fun append(data: Any) {
 
+    }
+
+    override fun prepend(data: Any) {
+        TODO("Not yet implemented")
     }
 
     override fun count(data: Any): Int {
@@ -96,7 +100,19 @@ class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
         TODO("Not yet implemented")
     }
 
-    override fun swapNodes(k: Int): DoublyLinkedListNode? {
+    override fun swapNodesAtKthAndKPlusOne(k: Int): DoublyLinkedListNode? {
+        TODO("Not yet implemented")
+    }
+
+    override fun deleteNode(node: DoublyLinkedListNode) {
+        TODO("Not yet implemented")
+    }
+
+    override fun deleteNodeAtPosition(position: Int) {
+        TODO("Not yet implemented")
+    }
+
+    override fun deleteNodeByData(data: Any) {
         TODO("Not yet implemented")
     }
 }
