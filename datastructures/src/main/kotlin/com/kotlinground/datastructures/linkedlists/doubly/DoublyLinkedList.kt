@@ -3,7 +3,7 @@ package com.kotlinground.datastructures.linkedlists.doubly
 import com.kotlinground.datastructures.linkedlists.DoublyLinkedListNode
 import com.kotlinground.datastructures.linkedlists.LinkedList
 
-class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
+class DoublyLinkedList(private var head: DoublyLinkedListNode? = null) :
     LinkedList<DoublyLinkedListNode>() {
 
     override fun append(data: Any) {
@@ -73,8 +73,29 @@ class DoublyLinkedList(private val head: DoublyLinkedListNode? = null) :
         TODO("Not yet implemented")
     }
 
-    override fun reverse(): DoublyLinkedListNode {
-        TODO("Not yet implemented")
+    override fun reverse() {
+        if (head?.next == null) {
+            return
+        }
+
+        var current = head
+        var previous: DoublyLinkedListNode? = null
+        var next: DoublyLinkedListNode?
+
+        while (current != null) {
+            // copy a pointer to the next element, before we overwrite the current
+            next = current.next
+
+            // reverse the next pointer & previous pointer
+            current.next = previous
+            current.prev = next
+
+            // step forward in the list
+            previous = current
+            current = next
+        }
+
+        head = previous
     }
 
     override fun insert(node: DoublyLinkedListNode, position: Int): DoublyLinkedListNode {

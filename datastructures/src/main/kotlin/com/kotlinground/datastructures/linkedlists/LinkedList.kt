@@ -81,10 +81,9 @@ abstract class LinkedList<Node> {
 
     /**
      * Reverse a linked list so that the tail becomes the head and the head becomes the tail
-     * @param head [Node]
      * @return [Node]
      */
-    abstract fun reverse(): Node
+    abstract fun reverse()
 
     /**
      * Inserts a node at the specified position of the linked list

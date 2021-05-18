@@ -4,7 +4,7 @@ import com.kotlinground.datastructures.linkedlists.LinkedList
 import com.kotlinground.datastructures.linkedlists.SinglyLinkedListNode
 import java.lang.IllegalArgumentException
 
-class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) : LinkedList<SinglyLinkedListNode>() {
+class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedList<SinglyLinkedListNode>() {
 
     override fun append(data: Any) {
 
@@ -73,8 +73,26 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) : LinkedL
         TODO("Not yet implemented")
     }
 
-    override fun reverse(): SinglyLinkedListNode {
-        TODO("Not yet implemented")
+    override fun reverse() {
+        if (head?.next == null) {
+            return
+        }
+
+        var listToReverse = head!!.next
+        var reversedList = head
+        reversedList?.next = null
+
+        while (listToReverse != null) {
+            val temp = listToReverse
+
+            // move pointer to next node
+            listToReverse = listToReverse.next
+
+            temp.next = reversedList
+            reversedList = temp
+        }
+
+        head = reversedList
     }
 
     override fun insert(node: SinglyLinkedListNode, position: Int): SinglyLinkedListNode {
@@ -96,13 +114,13 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) : LinkedL
         if (head == null) {
             throw IllegalArgumentException("Cannot split linked list with no head")
         }
-        if (head.next == null) {
+        if (head!!.next == null) {
             throw IllegalArgumentException("Cannot split linked list with only 1 node")
         }
 
         var current = head
         val first = current
-        val second = current.next
+        val second = current?.next
 
         while (current?.next != null) {
             val temp = current.next
@@ -123,7 +141,7 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) : LinkedL
             current = current.next
         }
 
-        return Pair(first, second!!)
+        return Pair(first!!, second!!)
     }
 
     override fun pairwiseSwap(): SinglyLinkedListNode? {
