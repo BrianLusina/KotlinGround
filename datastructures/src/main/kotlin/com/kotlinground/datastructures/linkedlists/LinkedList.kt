@@ -128,4 +128,14 @@ abstract class LinkedList<Node> {
      * Output: [7,9,6,6,8,7,3,0,9,5]
      */
     abstract fun swapNodesAtKthAndKPlusOne(k: Int): Node?
+
+    /**
+     * Swaps two nodes based on the data they contain. We search through the LinkedList looking for the data item in
+     * each node. Once the first is found, we keep track of it and move on until we find the next data item. Once that
+     * is found, we swap the two nodes' data items.
+     * If we can't find the first data item nor the second. No need to perform swap. If the 2 data items are similar
+     * no need to perform swap as well.
+     * If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
+     */
+    abstract fun swapNodes(dataOne: Any, dataTwo: Any)
 }

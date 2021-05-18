@@ -4,8 +4,7 @@ import com.kotlinground.datastructures.linkedlists.LinkedList
 import com.kotlinground.datastructures.linkedlists.SinglyLinkedListNode
 import java.lang.IllegalArgumentException
 
-class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
-    LinkedList<SinglyLinkedListNode>() {
+class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) : LinkedList<SinglyLinkedListNode>() {
 
     override fun append(data: Any) {
 
@@ -190,5 +189,36 @@ class SinglyLinkedList(private val head: SinglyLinkedListNode? = null) :
 
     override fun deleteNodeByData(data: Any) {
         TODO("Not yet implemented")
+    }
+
+    override fun swapNodes(dataOne: Any, dataTwo: Any) {
+        if (head == null) {
+            throw Exception("Empty LinkedList")
+        }
+
+        if (dataOne == dataTwo) {
+            return
+        }
+
+        var currentOne = head
+        var currentTwo = head
+
+        while (currentOne != null && currentOne.data != dataOne) {
+            currentOne = currentOne.next
+        }
+
+        while (currentTwo != null && currentTwo.data != dataTwo) {
+            currentTwo = currentTwo.next
+        }
+
+        if (currentOne == null || currentTwo == null) {
+            return
+        }
+
+        val tempOne = currentOne.data
+        val tempTwo = currentTwo.data
+
+        currentOne.data = tempOne
+        currentTwo.data = tempTwo
     }
 }
