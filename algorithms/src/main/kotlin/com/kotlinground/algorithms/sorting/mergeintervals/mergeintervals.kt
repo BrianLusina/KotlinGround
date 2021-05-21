@@ -2,7 +2,7 @@ package com.kotlinground.algorithms.sorting.mergeintervals
 
 import kotlin.math.max
 
-fun merge(intervals: Array<IntArray>): Array<IntArray> {
+fun mergeintervals(intervals: Array<IntArray>): Array<IntArray> {
     intervals.sortBy { it[0] }
     val merged = arrayListOf<IntArray>()
 
