@@ -6,5 +6,6 @@ include(
     "ktmath",
     "ktstrings",
     "ktintro",
-    "kttime"
+    "kttime",
+    "bitmanipulation"
 )
