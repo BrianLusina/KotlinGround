@@ -209,6 +209,21 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
         TODO("Not yet implemented")
     }
 
+    override fun deleteNodesByData(data: Any): SinglyLinkedListNode? {
+        val dummyHead = SinglyLinkedListNode(-1, head)
+        var current = dummyHead
+
+        while (current.next != null) {
+            if (current.next!!.data === data) {
+                current.next = current.next!!.next;
+            } else {
+                current = current.next!!
+            }
+        }
+
+        return dummyHead.next
+    }
+
     override fun swapNodes(dataOne: Any, dataTwo: Any) {
         if (head == null) {
             throw Exception("Empty LinkedList")

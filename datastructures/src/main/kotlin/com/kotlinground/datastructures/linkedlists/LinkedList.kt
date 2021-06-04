@@ -31,6 +31,12 @@ abstract class LinkedList<Node> {
     abstract fun deleteNodeByData(data: Any)
 
     /**
+     * Deletes all given node from the LinkedList given its data.
+     * @param data [Any]
+     */
+    abstract fun deleteNodesByData(data: Any): Node?
+
+    /**
      * Searches for a node in the provided linked list
      * @param node
      */

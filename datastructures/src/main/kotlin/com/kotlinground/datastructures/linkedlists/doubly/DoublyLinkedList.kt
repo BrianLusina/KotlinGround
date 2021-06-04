@@ -137,6 +137,10 @@ class DoublyLinkedList(private var head: DoublyLinkedListNode? = null) :
         TODO("Not yet implemented")
     }
 
+    override fun deleteNodesByData(data: Any): DoublyLinkedListNode? {
+        TODO("Not yet implemented")
+    }
+
     override fun swapNodes(dataOne: Any, dataTwo: Any) {
         if (head == null) {
             throw Exception("Empty LinkedList")
