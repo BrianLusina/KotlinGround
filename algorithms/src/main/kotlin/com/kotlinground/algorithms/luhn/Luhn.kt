@@ -3,6 +3,7 @@ package com.kotlinground.algorithms.luhn
 /**
  * @author lusinabrian on 13/03/18.
  */
+@Suppress("MagicNumber")
 object Luhn {
 
     fun isValid(cardNumber: String): Boolean {
@@ -14,7 +15,8 @@ object Luhn {
 
         val reversed = newCardNumber.reversed()
         val evenlyPositioned = reversed.filterIndexed { index, _ -> index % 2 == 0 }.sumBy { it - '0' }
-        val oddlyPositioned = reversed.filterIndexed { index, _ -> index % 2 == 1 }.map { sumDigits((it - '0') * 2) }.sum()
+        val oddlyPositioned =
+            reversed.filterIndexed { index, _ -> index % 2 == 1 }.map { sumDigits((it - '0') * 2) }.sum()
 
         return (evenlyPositioned + oddlyPositioned) % 10 == 0
 
@@ -32,13 +34,13 @@ object Luhn {
         }
 
         val sum = code.reversed().map { Character.getNumericValue(it) }
-                .mapIndexed { index, num ->
-                    if (index % 2 == 0) {
-                        doubleDigit(num)
-                    } else {
-                        num
-                    }
-                }.sum()
+            .mapIndexed { index, num ->
+                if (index % 2 == 0) {
+                    doubleDigit(num)
+                } else {
+                    num
+                }
+            }.sum()
 
         return sum % 10 == 0
     }

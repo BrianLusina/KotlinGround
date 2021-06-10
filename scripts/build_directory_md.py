@@ -3,7 +3,7 @@
 import os
 from typing import Iterator
 
-URL_BASE = "https://github.com/BrianLusina/KotlingGround/blob/master"
+URL_BASE = "https://github.com/BrianLusina/KotlinGround/blob/master"
 
 
 def good_file_paths(top_dir: str = ".") -> Iterator[str]:

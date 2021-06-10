@@ -1,5 +1,6 @@
 package com.kotlinground.algorithms.climbstairs
 
+@Suppress("MagicNumber")
 fun climbStairs(n: Int): Int {
     if (n == 1) {
         return 1

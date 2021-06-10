@@ -40,6 +40,7 @@ The number of elements at the level of i is up to 9 * 2^{i-1}
 
 To sum up, the space complexity of the algorithm would be {O}(9 * 2^{N-1} + 9 * 2^{N-2}) = O(2^N).
  */
+@Suppress("NestedBlockDepth", "MagicNumber")
 fun numsSameConsecDiff(n: Int, k: Int): IntArray {
     if (n == 1) {
         return IntRange(0, 9).toList().toIntArray()

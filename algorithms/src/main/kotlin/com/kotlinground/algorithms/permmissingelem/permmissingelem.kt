@@ -5,7 +5,7 @@ package com.kotlinground.algorithms.permmissingelem
  * @param numbers [Array<Int>]
  * @return [Int] Missing element
  */
-fun permMissingElement(numbers: Array<Int>): Int {
+fun permMissingElement(numbers: IntArray): Int {
     var missingElement = numbers.size + 1
 
     numbers.forEachIndexed { index, it ->

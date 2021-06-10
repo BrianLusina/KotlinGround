@@ -11,6 +11,7 @@ reports/
 
 # Package java.utilities #
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 *.ear
 

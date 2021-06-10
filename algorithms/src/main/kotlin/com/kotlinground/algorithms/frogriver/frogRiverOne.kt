@@ -9,7 +9,7 @@ package com.kotlinground.algorithms.frogJumps.frogriver
  * @param leafPositions [Array] Array of the leaf positions
  * @return [Int] Earliest time that a frog can jump to the other side of the river
  */
-fun timeFrogJump(endPosition: Int, leafPositions: Array<Int>): Int {
+fun timeFrogJump(endPosition: Int, leafPositions: IntArray): Int {
     val values = HashSet<Int>()
 
     for (time in leafPositions) {

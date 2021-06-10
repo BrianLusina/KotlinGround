@@ -8,7 +8,7 @@ import kotlin.math.min
  * @param tape [Array] Array of integer values denoting points on a tape
  * @return [Int] minimum difference between 2 parts on a tape
  */
-fun tapeEquilibrium(tape: Array<Int>): Int {
+fun tapeEquilibrium(tape: IntArray): Int {
     var parts = arrayOfNulls<Int>(tape.size)
 
     for (index in 1..tape.size) {
