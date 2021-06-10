@@ -8,6 +8,7 @@ buildscript {
     }
     dependencies {
         classpath(Plugins.KOTLIN_GRADLE)
+        classpath("com.android.tools.build:gradle:2.3.0")
     }
 }
 
