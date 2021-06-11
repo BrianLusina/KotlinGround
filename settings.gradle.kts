@@ -5,7 +5,6 @@ include(
     "puzzles",
     "ktmath",
     "ktstrings",
-    "ktintro",
     "kttime",
     "bitmanipulation"
 )

@@ -23,7 +23,7 @@ allprojects {
     }
 
     configure<JavaPluginConvention> {
-        sourceCompatibility = JavaVersion.VERSION_14
+        sourceCompatibility = JavaVersion.VERSION_11
     }
 
     configure<JacocoPluginExtension> {
@@ -64,14 +64,14 @@ subprojects {
     tasks {
 
         withType<JavaCompile> {
-            sourceCompatibility = "${JavaVersion.VERSION_14}"
-            targetCompatibility = "${JavaVersion.VERSION_14}"
+            sourceCompatibility = "${JavaVersion.VERSION_11}"
+            targetCompatibility = "${JavaVersion.VERSION_11}"
         }
 
         withType<KotlinCompile> {
             kotlinOptions {
                 freeCompilerArgs = listOf("-Xjsr305=strict")
-                jvmTarget = "${JavaVersion.VERSION_14}"
+                jvmTarget = "${JavaVersion.VERSION_11}"
             }
         }
 
@@ -105,7 +105,7 @@ subprojects {
 //    codacy "com.github.codacy:codacy-coverage-reporter:-SNAPSHOT"
 
         implementation(kotlin("stdlib-jdk8", Versions.KOTLIN))
-        testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Versions.KOTLIN}")
+        testImplementation(Libs.Test.kotlinTestJunit)
         testImplementation(Libs.Test.jUnitJupiterApi)
         testImplementation(Libs.Test.jUnitJupiterEngine)
         testImplementation(Libs.Test.mockK)
