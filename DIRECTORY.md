@@ -93,7 +93,15 @@
                 * [Treenode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/TreeNode.kt)
                 * [Trees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/Trees.kt)
 
+## Design
+            * Design
+              * Orderedstream
+                * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/orderedstream/OrderedStream.kt)
+    * Test
+                * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/orderedstream/OrderedStreamTest.kt)
+
 ## Ktmath
+    * Main
             * Ktmath
               * Circleofnumbers
                 * [Circleofnumbers](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/circleofnumbers/circleofnumbers.kt)
