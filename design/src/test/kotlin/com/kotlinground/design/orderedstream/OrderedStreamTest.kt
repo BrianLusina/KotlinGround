@@ -3,7 +3,7 @@ package com.kotlinground.design.orderedstream
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-
+@Suppress("MagicNumber")
 class OrderedStreamTest {
 
     @Test
