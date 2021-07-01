@@ -95,9 +95,14 @@
 
 ## Design
             * Design
+              * Hashset
+                * [Myhashset](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashset/MyHashSet.kt)
               * Orderedstream
                 * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/orderedstream/OrderedStream.kt)
     * Test
+              * Hashset
+                * [Myhashsettest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashset/MyHashSetTest.kt)
+              * Orderedstream
                 * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/orderedstream/OrderedStreamTest.kt)
 
 ## Ktmath
