@@ -191,6 +191,8 @@
                 * [Removechars](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/firstandlast/removeChars.kt)
               * Highlows
                 * [Highlow](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/highlows/highlow.kt)
+              * Isomorphic
+                * [Isomorphic](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/isomorphic/isomorphic.kt)
               * Longestsubstring
                 * [Longestsubstring](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/longestsubstring/longestsubstring.kt)
               * Pangram
@@ -204,6 +206,8 @@
                 * [Acronymtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/acronym/AcronymTest.kt)
               * Firstandlast
                 * [Removecharskttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/firstandlast/RemoveCharsKtTest.kt)
+              * Isomorphic
+                * [Isomorphictest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/isomorphic/IsomorphicTest.kt)
               * Pangram
                 * [Pangramtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/pangram/PangramTest.kt)
               * Rnatranscription
