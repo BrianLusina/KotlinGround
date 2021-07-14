@@ -10,6 +10,6 @@ class MergeintervalsKtTest {
         val intervals = arrayOf(intArrayOf(1, 3), intArrayOf(2, 6), intArrayOf(8, 10), intArrayOf(15, 18))
         val actual = mergeintervals(intervals)
         val expected = arrayOf(intArrayOf(1, 6), intArrayOf(8, 10), intArrayOf(15, 18))
-        Assertions.assertEquals(expected, actual)
+        Assertions.assertArrayEquals(expected, actual)
     }
 }

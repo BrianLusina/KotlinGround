@@ -62,7 +62,6 @@ subprojects {
     }
 
     tasks {
-
         withType<JavaCompile> {
             sourceCompatibility = "${JavaVersion.VERSION_11}"
             targetCompatibility = "${JavaVersion.VERSION_11}"
@@ -77,14 +76,8 @@ subprojects {
 
         withType<Test> {
             useJUnitPlatform {
-                includeEngines = setOf("spek", "spek2")
-                // Set the property includeIntegration to include integration tests e.g.
-                // ./gradlew test -PincludeIntegration
-                val includeIntegration: String? by project
-                val shouldInclude = project.hasProperty("includeIntegration") && includeIntegration != "false"
-                if (!shouldInclude) {
-                    excludeTags = setOf("integration")
-                }
+//                TODO: including this engine fails test discovery
+//                includeEngines = setOf("spek2")
             }
 
             testLogging {
@@ -100,17 +93,18 @@ subprojects {
 
     dependencies {
 
-//    implementation(fileTree(dir to "libs", include= "*.jar"))
-
 //    codacy "com.github.codacy:codacy-coverage-reporter:-SNAPSHOT"
 
         implementation(kotlin("stdlib-jdk8", Versions.KOTLIN))
         testImplementation(Libs.Test.kotlinTestJunit)
         testImplementation(Libs.Test.jUnitJupiterApi)
-        testImplementation(Libs.Test.jUnitJupiterEngine)
         testImplementation(Libs.Test.mockK)
         testImplementation(Libs.Test.spekDslJvm)
-        testImplementation(Libs.Test.spekRunnerJunit5)
+
+        testRuntimeOnly(Libs.Test.kotlinReflect)
+        testRuntimeOnly(Libs.Test.spekRunnerJunit5)
+        testRuntimeOnly(Libs.Test.jUnitJupiterEngine)
+        testRuntimeOnly(Libs.Test.jUnitJupiterVintageEngine)
     }
 }
 

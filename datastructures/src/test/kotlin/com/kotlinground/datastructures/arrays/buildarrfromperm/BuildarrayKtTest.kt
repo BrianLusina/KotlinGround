@@ -11,7 +11,7 @@ class BuildArrayTest {
         val expected = intArrayOf(0, 1, 2, 4, 5, 3)
         val actual = buildArray(nums)
 
-        Assertions.assertEquals(expected, actual)
+        Assertions.assertArrayEquals(expected, actual)
     }
 
     @Test
@@ -20,6 +20,6 @@ class BuildArrayTest {
         val expected = intArrayOf(4, 5, 0, 1, 2, 3)
         val actual = buildArray(nums)
 
-        Assertions.assertEquals(expected, actual)
+        Assertions.assertArrayEquals(expected, actual)
     }
 }
