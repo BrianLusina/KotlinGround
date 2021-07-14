@@ -72,6 +72,9 @@
         * Com
           * Kotlinground
             * Datastructures
+              * Arrays
+                * Buildarrfromperm
+                  * [Buildarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/buildarray.kt)
               * Findtownjudge
                 * [Findtownjudge](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/findtownjudge/findTownJudge.kt)
               * Graphs
@@ -92,8 +95,13 @@
                 * [Mergetrees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/mergeTrees.kt)
                 * [Treenode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/TreeNode.kt)
                 * [Trees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/Trees.kt)
+    * Test
+              * Arrays
+                * Buildarrfromperm
+                  * [Buildarraykttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/BuildarrayKtTest.kt)
 
 ## Design
+    * Main
             * Design
               * Hashset
                 * [Myhashset](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashset/MyHashSet.kt)
