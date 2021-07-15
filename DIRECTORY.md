@@ -103,11 +103,16 @@
 ## Design
     * Main
             * Design
+              * Hashmap
+                * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/HashTable.kt)
+                * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/Item.kt)
               * Hashset
                 * [Myhashset](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashset/MyHashSet.kt)
               * Orderedstream
                 * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/orderedstream/OrderedStream.kt)
     * Test
+              * Hashmap
+                * [Hashtabletest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashmap/HashTableTest.kt)
               * Hashset
                 * [Myhashsettest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashset/MyHashSetTest.kt)
               * Orderedstream
