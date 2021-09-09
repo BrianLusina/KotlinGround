@@ -1,8 +1,5 @@
-package com.kotlinground.ktmath.sieve
+package com.kotlinground.ktmath.sieveoferastothenes
 
-/**
- * @author lusinabrian on 16/04/18.
- */
 import org.junit.Test
 import kotlin.test.assertEquals
 
@@ -12,21 +9,21 @@ class SieveTest {
     fun noPrimesUnder2() {
         val expectedOutput = emptyList<Int>()
 
-        assertEquals(expectedOutput, Sieve.primesUpTo(1))
+        assertEquals(expectedOutput, SieveOfErastothenes.primesUpTo(1))
     }
 
     @Test
     fun findFirstPrime() {
         val expectedOutput = listOf(2)
 
-        assertEquals(expectedOutput, Sieve.primesUpTo(2))
+        assertEquals(expectedOutput, SieveOfErastothenes.primesUpTo(2))
     }
 
     @Test
     fun findPrimesUpTo10() {
         val expectedOutput = listOf(2, 3, 5, 7)
 
-        assertEquals(expectedOutput, Sieve.primesUpTo(10))
+        assertEquals(expectedOutput, SieveOfErastothenes.primesUpTo(10))
     }
 
     @Test
@@ -41,7 +38,7 @@ class SieveTest {
                 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983,
                 991, 997)
 
-        assertEquals(expectedOutput, Sieve.primesUpTo(1000))
+        assertEquals(expectedOutput, SieveOfErastothenes.primesUpTo(1000))
     }
 
 }

@@ -19,3 +19,7 @@ fun isPrime(number: Int): Boolean {
     }
     return true
 }
+
+fun isPrime(number: Long): Boolean {
+    return isPrime(number.toInt())
+}
