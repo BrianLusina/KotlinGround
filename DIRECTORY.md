@@ -152,12 +152,14 @@
               * Powersofi
                 * [Powersofi](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/powersofi/powersofi.kt)
               * Primes
+                * Backwardsreadprimes
+                  * [Backwardsreadprimes](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/primes/backwardsreadprimes/backwardsReadPrimes.kt)
                 * [Isprime](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/primes/isprime.kt)
                 * [Stepsinprimes](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/primes/stepsinprimes.kt)
               * Raindrops
                 * [Raindrops](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/raindrops/Raindrops.kt)
-              * Sieve
-                * [Sieve](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/sieve/Sieve.kt)
+              * Sieveoferastothenes
+                * [Sieveoferastothenes](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/sieveoferastothenes/SieveOfErastothenes.kt)
               * Spaceage
                 * [Spaceage](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/spaceage/SpaceAge.kt)
               * Sumofmultiples
@@ -166,6 +168,8 @@
                 * [Tanktruck](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/tanktruck/tanktruck.kt)
               * Triangle
                 * [Triangle](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/triangle/Triangle.kt)
+              * Utils
+                * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/utils/Utils.kt)
     * Test
               * Circleofnumbers
                 * [Circleofnumberskttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/circleofnumbers/CircleofnumbersKtTest.kt)
@@ -178,10 +182,13 @@
               * Perfectnumbers
                 * [Naturalnumbertest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/perfectNumbers/NaturalNumberTest.kt)
               * Primes
+                * Backwardsreadprimes
+                  * [Backwardsreadprimestest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/primes/backwardsreadprimes/BackwardsReadPrimesTest.kt)
+                * [Isprimetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/primes/IsprimeTest.kt)
                 * [Stepsinprimeskttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/primes/StepsinprimesKtTest.kt)
               * [Raindropstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/RaindropsTest.kt)
-              * Sieve
-                * [Sievetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/sieve/SieveTest.kt)
+              * Sieveoferastothenes
+                * [Sievetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/sieveoferastothenes/SieveTest.kt)
               * Spaceage
                 * [Spaceagetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/spaceage/SpaceAgeTest.kt)
               * Sumofmutliples
@@ -190,6 +197,8 @@
                 * [Tanktrucktest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/tanktruck/TanktruckTest.kt)
               * Triangle
                 * [Triangletest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/triangle/TriangleTest.kt)
+              * Utils
+                * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/utils/UtilsTest.kt)
 
 ## Ktstrings
     * Main
