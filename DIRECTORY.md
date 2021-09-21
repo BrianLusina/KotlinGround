@@ -213,6 +213,8 @@
                 * [Isomorphic](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/isomorphic/isomorphic.kt)
               * Longestsubstring
                 * [Longestsubstring](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/longestsubstring/longestsubstring.kt)
+              * Maximumtime
+                * [Maximumtime](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/maximumtime/maximumTime.kt)
               * Pangram
                 * [Pangrams](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/pangram/Pangrams.kt)
               * Rnatranscription
@@ -226,6 +228,8 @@
                 * [Removecharskttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/firstandlast/RemoveCharsKtTest.kt)
               * Isomorphic
                 * [Isomorphictest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/isomorphic/IsomorphicTest.kt)
+              * Maximumtime
+                * [Maximumtimetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/maximumtime/MaximumTimeTest.kt)
               * Pangram
                 * [Pangramtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/pangram/PangramTest.kt)
               * Rnatranscription
