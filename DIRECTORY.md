@@ -248,6 +248,8 @@
 ## Puzzles
     * Main
             * Puzzles
+              * Furthestbuilding
+                * [Furthestbuilding](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/furthestbuilding/furthestBuilding.kt)
               * Grains
                 * [Board](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/grains/Board.kt)
               * Scrabblescore
@@ -256,6 +258,8 @@
                 * [Handshakecalculator](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/secrethandshake/HandshakeCalculator.kt)
                 * [Signal](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/secrethandshake/Signal.kt)
     * Test
+              * Furthestbuilding
+                * [Furthestbuildingtest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/furthestbuilding/FurthestBuildingTest.kt)
               * Grains
                 * [Boardtest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/grains/BoardTest.kt)
               * Scrabblescore
