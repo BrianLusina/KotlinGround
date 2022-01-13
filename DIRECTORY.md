@@ -79,6 +79,8 @@
                   * [Containsduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsDuplicate.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlen](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/findmaxlen.kt)
+                * Twosum
+                  * [Twosum](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/twosum/twoSum.kt)
               * Findtownjudge
                 * [Findtownjudge](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/findtownjudge/findTownJudge.kt)
               * Graphs
@@ -107,6 +109,8 @@
                   * [Containsduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsDuplicateTest.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlentest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/FindMaxLenTest.kt)
+                * Twosum
+                  * [Twosumtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/twosum/TwoSumTest.kt)
 
 ## Design
     * Main
