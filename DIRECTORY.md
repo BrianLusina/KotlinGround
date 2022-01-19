@@ -77,6 +77,8 @@
                   * [Buildarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/buildarray.kt)
                 * Containsduplicates
                   * [Containsduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsDuplicate.kt)
+                * Intersectionofarrays
+                  * [Intersectionofarrays](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/intersectionOfArrays.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlen](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/findmaxlen.kt)
                 * Maxprofit
@@ -109,6 +111,8 @@
                   * [Buildarraykttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/BuildarrayKtTest.kt)
                 * Containsduplicates
                   * [Containsduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsDuplicateTest.kt)
+                * Intersectionofarrays
+                  * [Intersectionofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/IntersectionOfArraysTest.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlentest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/FindMaxLenTest.kt)
                 * Maxprofit
