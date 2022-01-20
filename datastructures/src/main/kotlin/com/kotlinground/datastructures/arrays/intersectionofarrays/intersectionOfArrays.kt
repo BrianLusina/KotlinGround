@@ -20,3 +20,19 @@ fun intersectionOne(nums1: IntArray, nums2: IntArray): IntArray {
         setIntersection(setTwo, setOne)
     }
 }
+
+fun intersectionTwo(nums1: IntArray, nums2: IntArray): IntArray {
+    val counter = hashMapOf<Int, Int>()
+    val result = arrayListOf<Int>()
+
+    nums1.forEach { counter[it] = counter.getOrDefault(it, 0) + 1 }
+
+    nums2.forEach {
+        if (counter.containsKey(it) && counter[it]!! > 0) {
+            result.add(it)
+            counter[it] = counter[it]!! - 1
+        }
+    }
+
+    return result.toIntArray()
+}
