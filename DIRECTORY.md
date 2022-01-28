@@ -77,6 +77,7 @@
                   * [Buildarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/buildarray.kt)
                 * Containsduplicates
                   * [Containsduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsDuplicate.kt)
+                  * [Containsnearbyalmostduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsNearbyAlmostDuplicate.kt)
                   * [Containsnearbyduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsNearbyDuplicate.kt)
                 * Intersectionofarrays
                   * [Intersectionofarrays](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/intersectionOfArrays.kt)
@@ -112,6 +113,7 @@
                   * [Buildarraykttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/BuildarrayKtTest.kt)
                 * Containsduplicates
                   * [Containsduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsDuplicateTest.kt)
+                  * [Containsnearbyalmostduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsNearbyAlmostDuplicateTest.kt)
                   * [Containsnearbyduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsNearbyDuplicateTest.kt)
                 * Intersectionofarrays
                   * [Intersectionofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/IntersectionOfArraysTest.kt)
