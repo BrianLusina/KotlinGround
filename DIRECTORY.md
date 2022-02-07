@@ -106,6 +106,9 @@
               * Trees
                 * Binarytrees
                   * [Binarysearchtree](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinarySearchTree.kt)
+                  * Utils
+                    * Generatetrees
+                      * [Generateuniquebinarytrees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/utils/generatetrees/generateUniqueBinaryTrees.kt)
                 * [Mergetrees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/mergeTrees.kt)
                 * [Treenode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/TreeNode.kt)
                 * [Trees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/Trees.kt)
@@ -128,6 +131,11 @@
                   * [Maxsubarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxsumsubarray/MaxSubArrayTest.kt)
                 * Twosum
                   * [Twosumtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/twosum/TwoSumTest.kt)
+              * Trees
+                * Binarytrees
+                  * Utils
+                    * Generatetrees
+                      * [Generateuniquebinarytreestest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/utils/generatetrees/GenerateUniqueBinaryTreesTest.kt)
 
 ## Design
     * Main
