@@ -15,14 +15,12 @@ allprojects {
     apply(plugin = Plugins.DETEKT)
 
     repositories {
-        jcenter()
         mavenCentral()
         maven { url = URI.create("https://jitpack.io") }
-        maven { url = URI.create("http://dl.bintray.com/typesafe/maven-releases") }
         maven { url = URI.create("https://plugins.gradle.org/m2/") }
     }
 
-    configure<JavaPluginConvention> {
+    configure<JavaPluginExtension> {
         sourceCompatibility = JavaVersion.VERSION_11
     }
 
@@ -35,12 +33,10 @@ allprojects {
 subprojects {
     buildscript {
         repositories {
-            jcenter()
             mavenCentral()
         }
 
         dependencies {
-//            classpath(Plugins.springBootGradlePlugin)
         }
     }
 
@@ -51,13 +47,11 @@ subprojects {
 
     repositories {
         mavenCentral()
-        jcenter()
         flatDir {
             dirs("libs")
         }
         maven { url = URI.create("https://jitpack.io") }
-        maven { url = URI.create("http://dl.bintray.com/typesafe/maven-releases") }
-        maven { url = URI.create("http://dl.bintray.com/jetbrains/spek") }
+//        maven { url = URI.create("http://dl.bintray.com/jetbrains/spek") }
         maven { url = URI.create("https://plugins.gradle.org/m2/") }
     }
 
@@ -92,8 +86,6 @@ subprojects {
     }
 
     dependencies {
-
-//    codacy "com.github.codacy:codacy-coverage-reporter:-SNAPSHOT"
 
         implementation(kotlin("stdlib-jdk8", Versions.KOTLIN))
         testImplementation(Libs.Test.kotlinTestJunit)

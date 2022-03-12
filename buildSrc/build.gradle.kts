@@ -5,8 +5,7 @@ plugins {
 }
 
 repositories {
-    jcenter()
-    jcenter {
+    mavenCentral {
         content {
             // just allow to include kotlinx projects
             // detekt needs 'kotlinx-html' for the html report
@@ -21,5 +20,5 @@ repositories {
 
 dependencies {
     implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.9.1")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
 }

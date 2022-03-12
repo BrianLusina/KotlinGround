@@ -1,36 +1,35 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
-import com.kotlinground.datastructures.linkedlists.SinglyLinkedListNode
 import java.lang.IllegalArgumentException
 
-class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedList<SinglyLinkedListNode>() {
+class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : LinkedList<SinglyLinkedListNode<T>, T> {
 
-    override fun append(data: Any) {
+    override fun append(data: T) {
 
     }
 
-    override fun prepend(data: Any) {
+    override fun prepend(data: T) {
         TODO("Not yet implemented")
     }
 
-    override fun count(data: Any): Int {
+    override fun count(data: T): Int {
         TODO("Not yet implemented")
     }
 
-    override fun getLast(): SinglyLinkedListNode {
+    override fun getLast(): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun search(node: SinglyLinkedListNode): SinglyLinkedListNode {
+    override fun search(node: SinglyLinkedListNode<T>): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun deleteFirst(): SinglyLinkedListNode {
+    override fun deleteFirst(): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun removeLast(): SinglyLinkedListNode {
+    override fun removeLast(): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
@@ -38,7 +37,7 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
         return head != null
     }
 
-    override fun detectNodeWithCycle(): SinglyLinkedListNode? {
+    override fun detectNodeWithCycle(): SinglyLinkedListNode<T>? {
         if (head?.next == null) {
             return null
         }
@@ -95,22 +94,22 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
         head = reversedList
     }
 
-    override fun insert(node: SinglyLinkedListNode, position: Int): SinglyLinkedListNode {
+    override fun insert(node: SinglyLinkedListNode<T>, position: Int): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
     override fun insertAfter(
-        nodeToInsert: SinglyLinkedListNode,
-        currentNode: SinglyLinkedListNode
-    ): SinglyLinkedListNode {
+        nodeToInsert: SinglyLinkedListNode<T>,
+        currentNode: SinglyLinkedListNode<T>
+    ): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun removeCycle(): SinglyLinkedListNode {
+    override fun removeCycle(): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun alternateSplit(): Pair<SinglyLinkedListNode, SinglyLinkedListNode> {
+    override fun alternateSplit(): Pair<SinglyLinkedListNode<T>, SinglyLinkedListNode<T>> {
         if (head == null) {
             throw IllegalArgumentException("Cannot split linked list with no head")
         }
@@ -144,7 +143,7 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
         return Pair(first!!, second!!)
     }
 
-    override fun pairwiseSwap(): SinglyLinkedListNode? {
+    override fun pairwiseSwap(): SinglyLinkedListNode<T>? {
         // if the head is null, nothing to do here
         if (head == null) {
             return head
@@ -173,7 +172,7 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
     }
 
     // TODO: swap nodes in place
-    override fun swapNodesAtKthAndKPlusOne(k: Int): SinglyLinkedListNode? {
+    override fun swapNodesAtKthAndKPlusOne(k: Int): SinglyLinkedListNode<T>? {
         val current = head
         var a = current
         var b = current
@@ -197,7 +196,7 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
         return head
     }
 
-    override fun deleteNode(node: SinglyLinkedListNode) {
+    override fun deleteNode(node: SinglyLinkedListNode<T>) {
         TODO("Not yet implemented")
     }
 
@@ -205,26 +204,29 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeByData(data: Any) {
+    override fun deleteNodeByData(data: T) {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodesByData(data: Any): SinglyLinkedListNode? {
-        val dummyHead = SinglyLinkedListNode(-1, head)
-        var current = dummyHead
+    override fun deleteNodesByData(data: T): SinglyLinkedListNode<T>? {
+        if (head != null) {
+            val dummyHead = SinglyLinkedListNode(data = head!!.data, next = head)
+            var current = dummyHead
 
-        while (current.next != null) {
-            if (current.next!!.data === data) {
-                current.next = current.next!!.next;
-            } else {
-                current = current.next!!
+            while (current.next != null) {
+                if (current.next!!.data === data) {
+                    current.next = current.next!!.next;
+                } else {
+                    current = current.next!!
+                }
             }
-        }
 
-        return dummyHead.next
+            return dummyHead.next
+        }
+        return null
     }
 
-    override fun swapNodes(dataOne: Any, dataTwo: Any) {
+    override fun swapNodes(dataOne: T, dataTwo: T) {
         if (head == null) {
             throw Exception("Empty LinkedList")
         }
@@ -253,5 +255,13 @@ class SinglyLinkedList(private var head: SinglyLinkedListNode? = null) : LinkedL
 
         currentOne.data = tempOne
         currentTwo.data = tempTwo
+    }
+
+    override fun pop(): T? {
+        TODO("Not yet implemented")
+    }
+
+    override fun shift(): T? {
+        TODO("Not yet implemented")
     }
 }

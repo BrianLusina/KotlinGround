@@ -1,36 +1,79 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
-import com.kotlinground.datastructures.linkedlists.DoublyLinkedListNode
 import com.kotlinground.datastructures.linkedlists.LinkedList
 
-class DoublyLinkedList(private var head: DoublyLinkedListNode? = null) :
-    LinkedList<DoublyLinkedListNode>() {
+class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) : LinkedList<DoublyLinkedListNode<T>, T> {
 
-    override fun append(data: Any) {
-
+    override fun append(data: T) {
+        val newNode = DoublyLinkedListNode(data)
+        if (head == null) {
+            head = newNode
+        } else {
+            var current = head
+            while (current?.next != null) {
+                current = current.next
+            }
+            current?.next = newNode
+            newNode.prev = current
+        }
     }
 
-    override fun prepend(data: Any) {
+    override fun pop(): T? {
+        if (head == null) {
+            return null
+        }
+
+        var current = head
+
+        while (current?.next != null) {
+            current = current.next
+        }
+
+        val prevNode = current?.prev
+        prevNode?.next = null
+        current?.prev = null
+
+        return current?.data
+    }
+
+    override fun prepend(data: T) {
+        if (head == null) {
+            head = DoublyLinkedListNode(data)
+        } else {
+            val newHead = DoublyLinkedListNode(data)
+            newHead.next = head
+            head?.prev = newHead
+            head = newHead
+        }
+    }
+
+    override fun shift(): T? {
+        if (head != null) {
+            val currentHead = head
+            head = currentHead?.next
+            currentHead?.next = null
+            return currentHead?.data
+        }
+        return null
+    }
+
+    override fun count(data: T): Int {
         TODO("Not yet implemented")
     }
 
-    override fun count(data: Any): Int {
+    override fun getLast(): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun getLast(): DoublyLinkedListNode {
+    override fun search(node: DoublyLinkedListNode<T>): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun search(node: DoublyLinkedListNode): DoublyLinkedListNode {
+    override fun deleteFirst(): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun deleteFirst(): DoublyLinkedListNode {
-        TODO("Not yet implemented")
-    }
-
-    override fun removeLast(): DoublyLinkedListNode {
+    override fun removeLast(): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
@@ -38,7 +81,7 @@ class DoublyLinkedList(private var head: DoublyLinkedListNode? = null) :
         return head != null
     }
 
-    override fun detectNodeWithCycle(): DoublyLinkedListNode? {
+    override fun detectNodeWithCycle(): DoublyLinkedListNode<T>? {
         if (head?.next == null) {
             return null
         }
@@ -79,8 +122,8 @@ class DoublyLinkedList(private var head: DoublyLinkedListNode? = null) :
         }
 
         var current = head
-        var previous: DoublyLinkedListNode? = null
-        var next: DoublyLinkedListNode?
+        var previous: DoublyLinkedListNode<T>? = null
+        var next: DoublyLinkedListNode<T>?
 
         while (current != null) {
             // copy a pointer to the next element, before we overwrite the current
@@ -98,34 +141,34 @@ class DoublyLinkedList(private var head: DoublyLinkedListNode? = null) :
         head = previous
     }
 
-    override fun insert(node: DoublyLinkedListNode, position: Int): DoublyLinkedListNode {
+    override fun insert(node: DoublyLinkedListNode<T>, position: Int): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
     override fun insertAfter(
-        nodeToInsert: DoublyLinkedListNode,
-        currentNode: DoublyLinkedListNode
-    ): DoublyLinkedListNode {
+        nodeToInsert: DoublyLinkedListNode<T>,
+        currentNode: DoublyLinkedListNode<T>
+    ): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun removeCycle(): DoublyLinkedListNode {
+    override fun removeCycle(): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun alternateSplit(): Pair<DoublyLinkedListNode, DoublyLinkedListNode> {
+    override fun alternateSplit(): Pair<DoublyLinkedListNode<T>, DoublyLinkedListNode<T>> {
         TODO("Not yet implemented")
     }
 
-    override fun pairwiseSwap(): DoublyLinkedListNode? {
+    override fun pairwiseSwap(): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
-    override fun swapNodesAtKthAndKPlusOne(k: Int): DoublyLinkedListNode? {
+    override fun swapNodesAtKthAndKPlusOne(k: Int): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNode(node: DoublyLinkedListNode) {
+    override fun deleteNode(node: DoublyLinkedListNode<T>) {
         TODO("Not yet implemented")
     }
 
@@ -133,15 +176,15 @@ class DoublyLinkedList(private var head: DoublyLinkedListNode? = null) :
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeByData(data: Any) {
+    override fun deleteNodeByData(data: T) {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodesByData(data: Any): DoublyLinkedListNode? {
+    override fun deleteNodesByData(data: T): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
-    override fun swapNodes(dataOne: Any, dataTwo: Any) {
+    override fun swapNodes(dataOne: T, dataTwo: T) {
         if (head == null) {
             throw Exception("Empty LinkedList")
         }

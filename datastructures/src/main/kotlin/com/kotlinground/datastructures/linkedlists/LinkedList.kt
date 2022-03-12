@@ -1,95 +1,104 @@
 package com.kotlinground.datastructures.linkedlists
 
-abstract class LinkedList<Node> {
-
+interface LinkedList<Node, T> {
     /**
      * Adds a node to the end of the linked list given the data to insert to the node
      */
-    abstract fun append(data: Any)
+    fun append(data: T)
+
+    /**
+     * Remove value at back
+     */
+    fun pop(): T?
+
+    /**
+     * Remove value at front
+     */
+    fun shift(): T?
 
     /**
      * Adds a node to the beginning of the linked list given the data to insert to the node
      */
-    abstract fun prepend(data: Any)
+    fun prepend(data: T)
 
     /**
      * Deletes a given node from the LinkedList
      * @param node [Node]
      */
-    abstract fun deleteNode(node: Node)
+    fun deleteNode(node: Node)
 
     /**
      * Deletes a given node from the LinkedList given its position
      * @param position [Int]
      */
-    abstract fun deleteNodeAtPosition(position: Int)
+    fun deleteNodeAtPosition(position: Int)
 
     /**
      * Deletes a given node from the LinkedList given its data. This will delete the first occurrence of data
      * @param data [Any]
      */
-    abstract fun deleteNodeByData(data: Any)
+    fun deleteNodeByData(data: T)
 
     /**
      * Deletes all given node from the LinkedList given its data.
      * @param data [Any]
      */
-    abstract fun deleteNodesByData(data: Any): Node?
+    fun deleteNodesByData(data: T): Node?
 
     /**
      * Searches for a node in the provided linked list
      * @param node
      */
-    abstract fun search(node: Node): Node
+    fun search(node: Node): Node
 
 
     /**
      * Counts the number of occurrences of data in a linked list
      * @param data
      */
-    abstract fun count(data: Any): Int
+    fun count(data: T): Int
 
     /**
      * Gets the last node in the LinkedList
      */
-    abstract fun getLast(): Node
+    fun getLast(): Node
 
     /**
      * Deletes the first node in the linked list and returns it
      */
-    abstract fun deleteFirst(): Node?
+    fun deleteFirst(): Node?
 
     /**
      * Removes the last node in the linked list
      */
-    abstract fun removeLast(): Node?
+    fun removeLast(): Node?
 
     /**
      * Returns true is the linked list is empty, false otherwise
      */
-    abstract fun isEmpty(): Boolean
+    fun isEmpty(): Boolean
 
     /**
      * Detects node that has a cycle
      */
-    abstract fun detectNodeWithCycle(): Node?
+    fun detectNodeWithCycle(): Node?
 
     /**
      * Checks if the linked list has a cycle
      */
-    abstract fun hasCycle(): Boolean
+    fun hasCycle(): Boolean
 
     /**
      * Removes cycle from linked list given the head of the linked list
      * @return [Node] head of linked list without cycle
      */
-    abstract fun removeCycle(): Node
+    fun removeCycle(): Node
 
     /**
      * Reverse a linked list so that the tail becomes the head and the head becomes the tail
      * @return [Node]
      */
-    abstract fun reverse()
+    fun reverse()
 
     /**
      * Inserts a node at the specified position of the linked list
@@ -97,7 +106,7 @@ abstract class LinkedList<Node> {
      * @param position [Int]
      * @return [Node]
      */
-    abstract fun insert(node: Node, position: Int): Node
+    fun insert(node: Node, position: Int): Node
 
     /**
      * Inserts a node after the currently provided node. This is not necessarily the head of the linked list
@@ -105,13 +114,13 @@ abstract class LinkedList<Node> {
      * @param currentNode [Node]
      * @return [Node]
      */
-    abstract fun insertAfter(nodeToInsert: Node, currentNode: Node): Node
+    fun insertAfter(nodeToInsert: Node, currentNode: Node): Node
 
     /**
      * Alternate split a linked list such that a linked list such as
      * a->b->c->d->e becomes a->c->e->None and b->d->None
      */
-    abstract fun alternateSplit(): Pair<Node, Node>
+    fun alternateSplit(): Pair<Node, Node>
 
     /**
      * Swaps nodes in a linked list in pairs.
@@ -124,7 +133,7 @@ abstract class LinkedList<Node> {
      * 2 -> 1 -> 4 -> 3
      * @returns [Node] new head of linked list
      */
-    abstract fun pairwiseSwap(): Node?
+    fun pairwiseSwap(): Node?
 
     /**
      * Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node
@@ -132,7 +141,7 @@ abstract class LinkedList<Node> {
      * Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
      * Output: [7,9,6,6,8,7,3,0,9,5]
      */
-    abstract fun swapNodesAtKthAndKPlusOne(k: Int): Node?
+    fun swapNodesAtKthAndKPlusOne(k: Int): Node?
 
     /**
      * Swaps two nodes based on the data they contain. We search through the LinkedList looking for the data item in
@@ -142,5 +151,5 @@ abstract class LinkedList<Node> {
      * no need to perform swap as well.
      * If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
      */
-    abstract fun swapNodes(dataOne: Any, dataTwo: Any)
+    fun swapNodes(dataOne: T, dataTwo: T)
 }
