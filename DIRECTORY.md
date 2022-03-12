@@ -107,10 +107,12 @@
               * Linkedlists
                 * Doubly
                   * [Doublylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedList.kt)
+                  * [Doublylinkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListNode.kt)
                 * [Linkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/LinkedList.kt)
                 * [Linkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/LinkedListNode.kt)
                 * Singly
                   * [Singlylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedList.kt)
+                  * [Singlylinkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListNode.kt)
               * Trees
                 * Binarytrees
                   * [Binarysearchtree](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinarySearchTree.kt)
@@ -139,6 +141,9 @@
                   * [Maxsubarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxsumsubarray/MaxSubArrayTest.kt)
                 * Twosum
                   * [Twosumtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/twosum/TwoSumTest.kt)
+              * Linkedlists
+                * Doubly
+                  * [Doublylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListTest.kt)
               * Trees
                 * Binarytrees
                   * Utils
@@ -148,6 +153,8 @@
 ## Design
     * Main
             * Design
+              * Browserhistory
+                * [Browserhistory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/browserhistory/BrowserHistory.kt)
               * Hashmap
                 * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/HashTable.kt)
                 * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/Item.kt)
@@ -156,6 +163,8 @@
               * Orderedstream
                 * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/orderedstream/OrderedStream.kt)
     * Test
+              * Browserhistory
+                * [Browserhistorytest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/browserhistory/BrowserHistoryTest.kt)
               * Hashmap
                 * [Hashtabletest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashmap/HashTableTest.kt)
               * Hashset
