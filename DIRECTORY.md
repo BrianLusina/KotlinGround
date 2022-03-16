@@ -113,6 +113,15 @@
                 * Singly
                   * [Singlylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedList.kt)
                   * [Singlylinkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListNode.kt)
+              * Queues
+                * Exceptions
+                  * [Queueemptyexception](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/exceptions/QueueEmptyException.kt)
+                  * [Queueexception](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/exceptions/QueueException.kt)
+                  * [Queuefullexception](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/exceptions/QueueFullException.kt)
+                * Fifo
+                  * [Arraylistfifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueue.kt)
+                  * [Fifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/FifoQueue.kt)
+                * [Queue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/Queue.kt)
               * Trees
                 * Binarytrees
                   * [Binarysearchtree](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinarySearchTree.kt)
@@ -144,6 +153,11 @@
               * Linkedlists
                 * Doubly
                   * [Doublylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListTest.kt)
+              * Queues
+                * Fifo
+                  * [Arraylistfifoqueuespec](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueueSpec.kt)
+                  * [Arraylistfifoqueuetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueueTest.kt)
+                  * [Fifoqueuetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/FifoQueueTest.kt)
               * Trees
                 * Binarytrees
                   * Utils
