@@ -71,7 +71,7 @@ subprojects {
         withType<Test> {
             useJUnitPlatform {
 //                TODO: including this engine fails test discovery
-//                includeEngines = setOf("spek2")
+                includeEngines = setOf("spek2")
             }
 
             testLogging {

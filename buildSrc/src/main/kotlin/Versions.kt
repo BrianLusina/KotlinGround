@@ -7,7 +7,7 @@ object Versions {
 
     const val DETEKT = "1.9.1"
 
-    const val JACOCO = "0.8.5"
+    const val JACOCO = "0.8.7"
     const val JAVA = "1.8"
 
     const val JUNIT = "5.5.2"
