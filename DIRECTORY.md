@@ -10,6 +10,9 @@
               * Arrays
                 * Removeelement
                   * [Removeelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/removeelement/removeelement.kt)
+              * Backtracking
+                * Generateparenthesis
+                  * [Generateparenthesis](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/generateparenthesis.kt)
               * Climbstairs
                 * [Climbstairs](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/climbstairs/climbstairs.kt)
               * Climbstairsmincost
@@ -46,6 +49,9 @@
               * Arrays
                 * Removeelement
                   * [Removeelementkttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveelementKtTest.kt)
+              * Backtracking
+                * Generateparenthesis
+                  * [Generateparenthesistest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/GenerateParenthesisTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
               * Luhn
