@@ -21,6 +21,8 @@
                 * [Duplicate](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/duplicatechars/Duplicate.kt)
               * Etl
                 * [Etl](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/etl/ETL.kt)
+              * Floodfill
+                * [Floodfill](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/floodfill/floodfill.kt)
               * Frogriver
                 * [Frogriverone](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/frogriver/frogRiverOne.kt)
               * Graph
@@ -53,6 +55,8 @@
                 * Generateparenthesis
                   * [Generateparenthesistest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/GenerateParenthesisTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
+              * Floodfill
+                * [Floodfilltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/floodfill/FloodFillTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
               * Luhn
                 * [Luhntest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/luhn/LuhnTest.kt)
@@ -294,6 +298,8 @@
     * Test
               * Acronym
                 * [Acronymtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/acronym/AcronymTest.kt)
+              * Anagram
+                * [Validanagramtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/anagram/ValidAnagramTest.kt)
               * Firstandlast
                 * [Removecharskttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/firstandlast/RemoveCharsKtTest.kt)
               * Isomorphic
