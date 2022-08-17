@@ -32,6 +32,8 @@
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
               * Luhn
                 * [Luhn](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/luhn/Luhn.kt)
+              * Maxareaofisland
+                * [Maxareaofisland](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/maxareaofisland/maxareaofisland.kt)
               * Numssameconsecdiff
                 * [Numssameconsecdiff](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/numssameconsecdiff/numssameconsecdiff.kt)
               * Onlinestockspan
@@ -60,6 +62,10 @@
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
               * Luhn
                 * [Luhntest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/luhn/LuhnTest.kt)
+              * Maxareaofisland
+                * [Maxareaofislandtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/maxareaofisland/MaxAreaOfIslandTest.kt)
+              * Numberofislands
+                * [Numberofislandstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/numberofislands/NumberOfIslandsTest.kt)
               * Sorting
                 * Mergeintervals
                   * [Mergeintervalskttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/MergeintervalsKtTest.kt)
