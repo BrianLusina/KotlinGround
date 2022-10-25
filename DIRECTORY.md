@@ -34,6 +34,8 @@
                 * [Luhn](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/luhn/Luhn.kt)
               * Maxareaofisland
                 * [Maxareaofisland](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/maxareaofisland/maxareaofisland.kt)
+              * Numberofislands
+                * [Numberofislands](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/numberofislands/numberOfIslands.kt)
               * Numssameconsecdiff
                 * [Numssameconsecdiff](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/numssameconsecdiff/numssameconsecdiff.kt)
               * Onlinestockspan
@@ -137,6 +139,7 @@
                 * Fifo
                   * [Arraylistfifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueue.kt)
                   * [Fifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/FifoQueue.kt)
+                  * [Linkedlistfifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/LinkedListFifoQueue.kt)
                 * [Queue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/Queue.kt)
               * Trees
                 * Binarytrees
@@ -285,6 +288,8 @@
             * Strings
               * Acronym
                 * [Acronym](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/acronym/Acronym.kt)
+              * Anagram
+                * [Validanagram](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/anagram/ValidAnagram.kt)
               * Firstandlast
                 * [Removechars](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/firstandlast/removeChars.kt)
               * Highlows
