@@ -5,6 +5,10 @@ import java.lang.IllegalArgumentException
 
 class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : LinkedList<SinglyLinkedListNode<T>, T> {
 
+    override fun headNode(): SinglyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
     override fun append(data: T) {
 
     }
@@ -256,6 +260,7 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
         currentOne.data = tempOne
         currentTwo.data = tempTwo
     }
+
 
     override fun pop(): T? {
         TODO("Not yet implemented")

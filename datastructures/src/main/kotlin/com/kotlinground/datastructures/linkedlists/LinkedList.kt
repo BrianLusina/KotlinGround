@@ -1,6 +1,8 @@
 package com.kotlinground.datastructures.linkedlists
 
 interface LinkedList<Node, T> {
+
+    fun headNode(): Node?
     /**
      * Adds a node to the end of the linked list given the data to insert to the node
      */

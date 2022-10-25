@@ -2,9 +2,16 @@ package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
 
-class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) : LinkedList<DoublyLinkedListNode<T>, T> {
+class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
+    private var head: DoublyLinkedListNode<T>? = null
+    public var size: Int = 0
+
+    override fun headNode(): DoublyLinkedListNode<T>? {
+        return head
+    }
 
     override fun append(data: T) {
+        size++
         val newNode = DoublyLinkedListNode(data)
         if (head == null) {
             head = newNode
@@ -211,7 +218,7 @@ class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) : L
         val tempOne = currentOne.data
         val tempTwo = currentTwo.data
 
-        currentOne.data = tempOne
-        currentTwo.data = tempTwo
+//        currentOne.data = tempOne
+//        currentTwo.data = tempTwo
     }
 }
