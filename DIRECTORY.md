@@ -189,6 +189,8 @@
               * Browserhistory
                 * [Browserhistory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/browserhistory/BrowserHistory.kt)
               * Creationalpatterns
+                * Builder
+                  * [Mailbuilder](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/builder/MailBuilder.kt)
                 * Factory
                   * [Chess](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Chess.kt)
                   * Gui
