@@ -188,6 +188,28 @@
             * Design
               * Browserhistory
                 * [Browserhistory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/browserhistory/BrowserHistory.kt)
+              * Creationalpatterns
+                * Builder
+                  * [Mailbuilder](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/builder/MailBuilder.kt)
+                * Factory
+                  * [Chess](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Chess.kt)
+                  * Gui
+                    * [App](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/App.kt)
+                    * [Button](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/Button.kt)
+                    * [Checkbox](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/Checkbox.kt)
+                    * [Guifactory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/GUIFactory.kt)
+                    * Mac
+                      * [Macbutton](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/mac/MacButton.kt)
+                      * [Maccheckbox](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/mac/MacCheckBox.kt)
+                      * [Macfactory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/mac/MacFactory.kt)
+                    * Win
+                      * [Winbutton](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinButton.kt)
+                      * [Wincheckbox](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinCheckBox.kt)
+                      * [Winfactory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinFactory.kt)
+                  * [Parser](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Parser.kt)
+                  * [Server](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Server.kt)
+                * Singleton
+                  * [Logger](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/singleton/Logger.kt)
               * Hashmap
                 * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/HashTable.kt)
                 * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/Item.kt)
