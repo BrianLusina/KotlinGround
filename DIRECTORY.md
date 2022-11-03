@@ -218,6 +218,12 @@
               * Orderedstream
                 * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/orderedstream/OrderedStream.kt)
               * Structuralpatterns
+                * Adapter
+                  * [Pegs](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/adapter/pegs.kt)
+                  * [Plugs](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/adapter/plugs.kt)
+                * Bridge
+                  * [Devices](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/bridge/devices.kt)
+                  * [Troopers](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/bridge/troopers.kt)
                 * Decorators
                   * [Datasource](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/decorators/Datasource.kt)
                   * [Startrek](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/decorators/StarTrek.kt)
