@@ -224,6 +224,9 @@
                 * Bridge
                   * [Devices](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/bridge/devices.kt)
                   * [Troopers](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/bridge/troopers.kt)
+                * Composite
+                  * [Graphics](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/composite/graphics.kt)
+                  * [Squads](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/composite/squads.kt)
                 * Decorators
                   * [Datasource](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/decorators/Datasource.kt)
                   * [Startrek](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/decorators/StarTrek.kt)
