@@ -62,5 +62,7 @@ class JsonParser : Parser {
     }
 }
 
-val portProperty = property("port: 8080")
-val environmentProperty = property("environment: production")
+fun main() {
+    val portProperty = property("port: 8080")
+    val environmentProperty = property("environment: production")
+}
