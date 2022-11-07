@@ -230,6 +230,9 @@
                 * Decorators
                   * [Datasource](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/decorators/Datasource.kt)
                   * [Startrek](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/decorators/StarTrek.kt)
+                * Facade
+                  * [Media](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/facade/media.kt)
+                  * [Server](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/facade/server.kt)
     * Test
               * Browserhistory
                 * [Browserhistorytest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/browserhistory/BrowserHistoryTest.kt)
