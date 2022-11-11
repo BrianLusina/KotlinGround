@@ -13,5 +13,7 @@ class Server(port: Long) {
     }
 }
 
-val server = Server.withPort(8080)
-val server2 = Server(8080)
+fun main() {
+    val server = Server.withPort(8080)
+    val server2 = Server(8080)
+}
