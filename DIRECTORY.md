@@ -236,6 +236,9 @@
                 * Flyweight
                   * [Forest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/flyweight/forest.kt)
                   * [Snails](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/flyweight/snails.kt)
+                * Proxy
+                  * [Catimage](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/proxy/catimage.kt)
+                  * [Youtubemanager](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/proxy/youtubemanager.kt)
     * Test
               * Browserhistory
                 * [Browserhistorytest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/browserhistory/BrowserHistoryTest.kt)
