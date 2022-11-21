@@ -49,7 +49,7 @@ data class StormTrooper(private val weapon: Weapon, private val legs: Legs) : Tr
     }
 }
 
-class Squad(private val units: List<Trooper>) : Trooper {
+open class Squad(private val units: List<Trooper>) : Trooper {
     constructor(vararg units: Trooper) : this(units.toList())
 
     override fun move(x: Long, y: Long) {
