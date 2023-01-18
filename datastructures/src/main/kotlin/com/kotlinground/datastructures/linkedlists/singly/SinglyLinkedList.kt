@@ -6,7 +6,7 @@ import java.lang.IllegalArgumentException
 class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : LinkedList<SinglyLinkedListNode<T>, T> {
 
     override fun headNode(): SinglyLinkedListNode<T>? {
-        TODO("Not yet implemented")
+        return head
     }
 
     override fun append(data: T) {
@@ -81,21 +81,18 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
             return
         }
 
-        var listToReverse = head!!.next
-        var reversedList = head
-        reversedList?.next = null
+        var current = head
+        var previous: SinglyLinkedListNode<T>? = null
+        var next: SinglyLinkedListNode<T>?
 
-        while (listToReverse != null) {
-            val temp = listToReverse
-
-            // move pointer to next node
-            listToReverse = listToReverse.next
-
-            temp.next = reversedList
-            reversedList = temp
+        while (current != null) {
+            next = current.next
+            current.next = previous
+            previous = current
+            current = next
         }
 
-        head = reversedList
+        head = previous
     }
 
     override fun insert(node: SinglyLinkedListNode<T>, position: Int): SinglyLinkedListNode<T> {
