@@ -10,6 +10,6 @@ class AddButton(override val mediator: Mediator) : JButton(), Component {
         get() = "Add"
 
     override fun fireActionPerformed(event: ActionEvent?) {
-        mediator.addNewNote(Note())
+        mediator.addNewNote(Note(g))
     }
 }
