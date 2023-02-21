@@ -19,4 +19,5 @@ tasks {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    implementation(Dependencies.Utils.Jetbrains.kotlinXDatetime)
 }

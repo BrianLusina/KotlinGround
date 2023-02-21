@@ -1,4 +1,10 @@
-object Libs {
+object Dependencies {
+    object Utils {
+        object Jetbrains {
+            val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:0.4.0"
+        }
+    }
+
     object Test {
         const val kotlinTestJunit = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.KOTLIN}"
         const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${Versions.KOTLIN}"

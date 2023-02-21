@@ -88,15 +88,15 @@ subprojects {
     dependencies {
 
         implementation(kotlin("stdlib-jdk8", Versions.KOTLIN))
-        testImplementation(Libs.Test.kotlinTestJunit)
-        testImplementation(Libs.Test.jUnitJupiterApi)
-        testImplementation(Libs.Test.mockK)
-        testImplementation(Libs.Test.spekDslJvm)
+        testImplementation(Dependencies.Test.kotlinTestJunit)
+        testImplementation(Dependencies.Test.jUnitJupiterApi)
+        testImplementation(Dependencies.Test.mockK)
+        testImplementation(Dependencies.Test.spekDslJvm)
 
-        testRuntimeOnly(Libs.Test.kotlinReflect)
-        testRuntimeOnly(Libs.Test.spekRunnerJunit5)
-        testRuntimeOnly(Libs.Test.jUnitJupiterEngine)
-        testRuntimeOnly(Libs.Test.jUnitJupiterVintageEngine)
+        testRuntimeOnly(Dependencies.Test.kotlinReflect)
+        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
+        testRuntimeOnly(Dependencies.Test.jUnitJupiterEngine)
+        testRuntimeOnly(Dependencies.Test.jUnitJupiterVintageEngine)
     }
 }
 
