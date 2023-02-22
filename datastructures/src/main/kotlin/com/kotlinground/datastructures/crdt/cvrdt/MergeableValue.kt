@@ -1,12 +1,14 @@
 package com.kotlinground.datastructures.crdt.cvrdt
 
 import kotlinx.datetime.Instant
+import kotlinx.serialization.Serializable
 import kotlin.random.Random
 
 
+@Serializable
 class MergeableValue<T>(
     val value: T,
-    private val timestamp: Instant,
+    val timestamp: Instant,
     val discriminant: Int = Random.nextInt()
 ) : Mergeable<MergeableValue<T>> {
 

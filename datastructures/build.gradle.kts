@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm")
     kotlin("plugin.allopen")
+    kotlin("plugin.serialization") version "1.6.10"
     idea
 }
 
@@ -20,4 +21,6 @@ tasks {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(Dependencies.Utils.Jetbrains.kotlinXDatetime)
+    implementation(Dependencies.Utils.Jetbrains.kotlinXCollectionsImmutable)
+    implementation(Dependencies.Utils.Jetbrains.kotlinXSerializationJson)
 }
