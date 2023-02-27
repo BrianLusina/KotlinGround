@@ -63,9 +63,12 @@ subprojects {
 
         withType<KotlinCompile> {
             kotlinOptions {
-                freeCompilerArgs = listOf("-Xjsr305=strict")
+                freeCompilerArgs = listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn")
                 jvmTarget = "${JavaVersion.VERSION_11}"
             }
+        }
+        compileTestKotlin {
+            kotlinOptions.jvmTarget = "${JavaVersion.VERSION_11}"
         }
 
         withType<Test> {
@@ -86,17 +89,16 @@ subprojects {
     }
 
     dependencies {
-
         implementation(kotlin("stdlib-jdk8", Versions.KOTLIN))
+
         testImplementation(Dependencies.Test.kotlinTestJunit)
         testImplementation(Dependencies.Test.jUnitJupiterApi)
         testImplementation(Dependencies.Test.mockK)
         testImplementation(Dependencies.Test.spekDslJvm)
-
-        testRuntimeOnly(Dependencies.Test.kotlinReflect)
-        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
-        testRuntimeOnly(Dependencies.Test.jUnitJupiterEngine)
-        testRuntimeOnly(Dependencies.Test.jUnitJupiterVintageEngine)
+        testImplementation(Dependencies.Test.kotlinReflect)
+        testImplementation(Dependencies.Test.spekRunnerJunit5)
+        testImplementation(Dependencies.Test.jUnitJupiterEngine)
+        testImplementation(Dependencies.Test.jUnitJupiterVintageEngine)
     }
 }
 
