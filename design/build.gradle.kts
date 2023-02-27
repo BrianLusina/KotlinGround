@@ -1,6 +1,5 @@
 plugins {
-    kotlin("jvm")
-    idea
+    kotlin("plugin.serialization") version "1.6.10"
 }
 
 repositories {
