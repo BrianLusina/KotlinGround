@@ -12,6 +12,7 @@ repositories {
 tasks {
     compileKotlin {
         kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
@@ -23,4 +24,6 @@ dependencies {
     implementation(Dependencies.Utils.Jetbrains.kotlinXDatetime)
     implementation(Dependencies.Utils.Jetbrains.kotlinXCollectionsImmutable)
     implementation(Dependencies.Utils.Jetbrains.kotlinXSerializationJson)
+    implementation(Dependencies.Utils.Jetbrains.kotlinXCoroutinesCore)
+    implementation(Dependencies.Utils.Jetbrains.kotlinXCoroutinesTest)
 }
