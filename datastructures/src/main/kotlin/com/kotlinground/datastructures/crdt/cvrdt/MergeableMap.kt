@@ -4,7 +4,9 @@ import kotlinx.collections.immutable.PersistentMap
 import kotlinx.collections.immutable.toPersistentMap
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
+import kotlinx.serialization.Serializable
 
+@Serializable(with = MergeableMapSerializer::class)
 data class MergeableMap<K, V>(
     val map: PersistentMap<K, MergeableValue<V>>,
     val tombstones: PersistentMap<K, Instant>
