@@ -25,3 +25,11 @@ object Utils {
 
     fun reverseLong(number: Long) = number.toString().reversed().toLong()
 }
+
+fun gcd(x: Int, y: Int): Int {
+    return if (y == 0) {
+        x
+    } else {
+        gcd(y, x % y)
+    }
+}

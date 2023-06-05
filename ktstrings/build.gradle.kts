@@ -2,4 +2,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {}
+dependencies {
+    implementation(project(":ktmath"))
+}

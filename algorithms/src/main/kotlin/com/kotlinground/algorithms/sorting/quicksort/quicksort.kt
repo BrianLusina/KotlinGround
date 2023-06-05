@@ -1,9 +1,9 @@
 package com.kotlinground.algorithms.sorting.quicksort
 
 // partitions a slice into 2 and returns the pivot index. Assumes the pivot is at the end of the slice
-fun partition(theArray: IntArray, startIndex: Int, endIndex: Int): Int {
+fun <T> partition(collection: Array<T>, startIndex: Int, endIndex: Int): Int {
 
-    val pivot = theArray[endIndex]
+    val pivot = collection[endIndex]
 
     var leftIndex = startIndex
     var rightIndex = endIndex - 1
@@ -11,60 +11,65 @@ fun partition(theArray: IntArray, startIndex: Int, endIndex: Int): Int {
     while (leftIndex <= rightIndex) {
 
         // walk until we find something on the left side that belongs on the right (less than the pivot)
-        while (leftIndex <= endIndex && theArray[leftIndex] < pivot) {
+        while (leftIndex <= endIndex && collection[leftIndex] < pivot) {
             leftIndex++
         }
 
         // walk until we find something on the right side that belongs on the left(greater than or equal to the pivot)
-        while (rightIndex >= startIndex && theArray[rightIndex] >= pivot) {
+        while (rightIndex >= startIndex && collection[rightIndex] >= pivot) {
             rightIndex--
         }
 
         if (leftIndex < rightIndex) {
             // swap the items at the left_index and right_index, moving the element that's smaller than the pivot to
-                // the left
+            // the left
             // half and the element that's larger than the pivot to the right half
-            val temp = theArray[leftIndex]
-            theArray[leftIndex] = theArray[rightIndex]
-            theArray[rightIndex] = temp
+            val temp = collection[leftIndex]
+            collection[leftIndex] = collection[rightIndex]
+            collection[rightIndex] = temp
         } else {
             // unless we have looked at all the elements in the list and are done partitioning. In that case, move the
-                // pivot element
+            // pivot element
             // into it's final position
-            val temp = theArray[leftIndex]
-            theArray[leftIndex] = theArray[endIndex]
-            theArray[endIndex] = temp
+            val temp = collection[leftIndex]
+            collection[leftIndex] = collection[endIndex]
+            collection[endIndex] = temp
         }
     }
 
     return leftIndex
 }
 
+private operator fun <T> T.compareTo(pivot: T): Int {
+    TODO("Not yet implemented")
+}
+
 // quicksortSubArray uses recurstion to sort each partition of the slice
-fun quicksortSubArray(theArray: IntArray, startIndex: Int, endIndex: Int) {
+fun <T> quicksortSubCollection(collection: Array<T>, startIndex: Int, endIndex: Int) {
 
     // base case, list with 0 or 1 element
     if (startIndex >= endIndex) {
         return
     }
 
-    // divide the list into 2 smaller sublists
-    val pivotIndex = partition(theArray, startIndex, endIndex)
+    // divide the list into 2 smaller sub lists
+    val pivotIndex = partition(collection, startIndex, endIndex)
 
     // Recursively sort each sublist
-    quicksortSubArray(theArray, startIndex, pivotIndex - 1)
-    quicksortSubArray(theArray, pivotIndex + 1, endIndex)
+    quicksortSubCollection(collection, startIndex, pivotIndex - 1)
+    quicksortSubCollection(collection, pivotIndex + 1, endIndex)
 }
 
 // quicksort sorts a slice of integers using quicksort algorithm
-fun quicksort(theArray: IntArray): IntArray {
-    val length = theArray.size
+fun <T> quicksort(collection: Array<T>): Array<T> {
+    val length = collection.size
+    collection.reversed()
 
     // Nothing to sort here
     if (length <= 1) {
-        return theArray
+        return collection
     }
 
-    quicksortSubArray(theArray, 0, length - 1)
-    return theArray
+    quicksortSubCollection(collection, 0, length - 1)
+    return collection
 }
