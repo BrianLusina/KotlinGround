@@ -8,14 +8,14 @@ class BrowserHistory(homepage: String) {
     fun visit(url: String) {
         val newNode = DoublyLinkedListNode(url)
         currentNode.next = newNode
-        newNode.prev = currentNode
+        newNode.previous = currentNode
         currentNode = newNode
     }
 
     fun back(steps: Int): String {
         for (i in 0 until steps) {
-            if (currentNode.prev != null) {
-                currentNode = currentNode.prev!!
+            if (currentNode.previous != null) {
+                currentNode = currentNode.previous!!
             }
         }
         return currentNode.data

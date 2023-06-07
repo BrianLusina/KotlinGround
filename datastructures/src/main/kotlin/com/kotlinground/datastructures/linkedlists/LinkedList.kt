@@ -1,15 +1,21 @@
 package com.kotlinground.datastructures.linkedlists
 
 interface LinkedList<Node, T> {
-
-    fun headNode(): Node?
     /**
      * Adds a node to the end of the linked list given the data to insert to the node
      */
     fun append(data: T)
 
+    fun headNode(): Node?
+
     /**
-     * Remove value at back
+     * Removes last node in the linked list and returns it. Depending on the type of linked list used, this will have
+     * different Time Complexities:
+     * DoublyLinkedList with a tail reference or tail field will result in an O(1) operation as there will be no need
+     * to traverse the enter linked list to remove the last node and update the pointers
+     * DoubleLinkedList with no tail reference or field and SinglyLinkedList will have an O(n) operation where n is the
+     * number of nodes in the list as the algorithm has to traverse the entire list before removing the last node in the
+     * list
      */
     fun pop(): T?
 

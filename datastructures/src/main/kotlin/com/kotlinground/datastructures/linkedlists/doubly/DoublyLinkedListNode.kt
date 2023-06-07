@@ -8,5 +8,5 @@ import com.kotlinground.datastructures.linkedlists.LinkedListNode
 data class DoublyLinkedListNode<T>(
     override val data: T,
     var next: DoublyLinkedListNode<T>? = null,
-    var prev: DoublyLinkedListNode<T>? = null
+    var previous: DoublyLinkedListNode<T>? = null
 ) : LinkedListNode<T>

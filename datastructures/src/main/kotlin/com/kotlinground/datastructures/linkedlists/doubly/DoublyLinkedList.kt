@@ -4,6 +4,7 @@ import com.kotlinground.datastructures.linkedlists.LinkedList
 
 class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     private var head: DoublyLinkedListNode<T>? = null
+    private var tail: DoublyLinkedListNode<T>? = null
     public var size: Int = 0
 
     override fun headNode(): DoublyLinkedListNode<T>? {
@@ -15,13 +16,20 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         val newNode = DoublyLinkedListNode(data)
         if (head == null) {
             head = newNode
+            tail = newNode
         } else {
-            var current = head
-            while (current?.next != null) {
-                current = current.next
-            }
-            current?.next = newNode
-            newNode.prev = current
+            newNode.previous = tail
+            tail?.next = newNode
+            tail = newNode
+
+            // This is also viable if the doubly linked list does not have a tail node reference. This will traverse
+            // the entire list until it reaches the end and add this node to the end, this results in an O(n) operation
+//            var current = head
+//            while (current?.next != null) {
+//                current = current.next
+//            }
+//            current?.next = newNode
+//            newNode.prev = current
         }
     }
 
@@ -30,35 +38,68 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
             return null
         }
 
-        var current = head
-
-        while (current?.next != null) {
-            current = current.next
+        size--
+        // instances where the list is of size 1, that is has only 1 node
+        if (head?.next == null) {
+            val node = head
+            head = null
+            tail = null
+            return node?.data
         }
 
-        val prevNode = current?.prev
-        prevNode?.next = null
-        current?.prev = null
+        val lastNode = tail
+        val lastNodePrev = tail?.previous
+        lastNodePrev?.next = null
+        tail = lastNodePrev
+        return lastNode?.data
 
-        return current?.data
+//        Below is a viable option if we are not keeping track of the tail node in the linked list. This involves
+//        needing to traverse the whole linked list to reach the last node. Note that this ends up being an O(n) operation
+//        var current = head
+//
+//        while (current?.next != null) {
+//            current = current.next
+//        }
+//
+//        //if the current node has a pointer to the previous node
+//        if (current?.previous != null) {
+//            // we assign the previous pointer to a 'temp' variable
+//            val lastNodePrev = current.previous
+//
+//            // then assign the next node to None
+//            lastNodePrev?.next = null
+//
+//            // and lastly set the new tail
+//            tail = lastNodePrev
+//        }
+//
+//        return current?.data
     }
 
     override fun prepend(data: T) {
+        size++
+        val node = DoublyLinkedListNode(data)
         if (head == null) {
-            head = DoublyLinkedListNode(data)
+            head = node
+            tail = node
         } else {
-            val newHead = DoublyLinkedListNode(data)
-            newHead.next = head
-            head?.prev = newHead
-            head = newHead
+            head?.previous = node
+            node.next = head
+            head = node
         }
     }
 
     override fun shift(): T? {
         if (head != null) {
+            size--
             val currentHead = head
-            head = currentHead?.next
-            currentHead?.next = null
+            val newHead = currentHead?.next
+
+            if (newHead != null) {
+                newHead.previous = null
+            }
+
+            head = newHead
             return currentHead?.data
         }
         return null
@@ -138,7 +179,7 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
 
             // reverse the next pointer & previous pointer
             current.next = previous
-            current.prev = next
+            current.previous = next
 
             // step forward in the list
             previous = current
