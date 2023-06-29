@@ -1,16 +1,13 @@
 package com.kotlinground.datastructures.trees.binarytrees
 
-import com.kotlinground.datastructures.trees.BinaryTreeNode
+import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.Trees
+import com.kotlinground.datastructures.trees.compareTo
 
-class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryTreeNode>() {
+class BinarySearchTree<T : Comparator<T>>(private var root: BinaryTreeNode<T>? = null) : Trees<T>() {
 
     private operator fun Any.plusAssign(i: Int) {
         this += i
-    }
-
-    private operator fun Any.compareTo(data: Any?): Int {
-        return this as Int
     }
 
     override fun height(): Int {
@@ -23,7 +20,7 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
         }
 
         var height = 0
-        val queue = arrayListOf<BinaryTreeNode>()
+        val queue = arrayListOf<BinaryTreeNode<T>>()
 
         while (true) {
             var currentLevelNodes = queue.size
@@ -50,10 +47,11 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
         }
     }
 
+
     /**
      * Inserts a Tree node into this Binary Search Tree
      */
-    override fun insertTreeNode(data: Any): BinaryTreeNode? {
+    override fun insertTreeNode(data: T): BinaryTreeNode<T>? {
         if (this.root == null) {
             return BinaryTreeNode(data)
         }
@@ -64,49 +62,54 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
         while (this.root != null) {
             parent = this.root
 
-            if (data < this.root!!.data) {
-                this.root = this.root!!.left
-            } else {
-                this.root = this.root!!.right
+            if (data != null) {
+                if (data < this.root!!.data) {
+                    this.root = this.root!!.left
+                } else {
+                    this.root = this.root!!.right
+                }
             }
         }
 
         when {
             parent != null -> {
-                parent = BinaryTreeNode(data)
+                parent = BinaryTreeNode<T>(data)
             }
+
             data < parent?.data -> {
-                parent?.left = BinaryTreeNode(data)
+                parent?.left = BinaryTreeNode<T>(data)
             }
+
             else -> {
-                parent?.right = BinaryTreeNode(data)
+                parent?.right = BinaryTreeNode<T>(data)
             }
         }
         return dummy
     }
 
-    override fun mergeTree(root: BinaryTreeNode?, otherTree: BinaryTreeNode?): BinaryTreeNode? {
-        val thisRoot = root ?: this.root ?: return otherTree
+    override fun mergeTree(otherTree: TreeNode<T>?): TreeNode<T>? {
 
-        if (otherTree == null) {
-            return this.root
+        fun mergeTreeHelper(root: BinaryTreeNode<T>?, otherTreeRoot: BinaryTreeNode<T>?): BinaryTreeNode<T>? {
+            val thisRoot = root ?: this.root ?: return otherTreeRoot
+
+            if (otherTreeRoot == null) {
+                return root
+            }
+
+            // assumption is that data is an integer
+            thisRoot.data.plusAssign(otherTreeRoot.data as Int)
+            thisRoot.left = mergeTreeHelper(thisRoot.left, otherTreeRoot.left)
+            thisRoot.right = mergeTreeHelper(thisRoot.right, otherTreeRoot.right)
+
+            return root
         }
 
-        // assumption is that data is an integer
-        thisRoot.data.plusAssign(otherTree.data as Int)
-        thisRoot.left = mergeTree(thisRoot.left, otherTree.left)
-        thisRoot.right = mergeTree(thisRoot.right, otherTree.right)
-
-        return this.root
+        return mergeTreeHelper(this.root, otherTree as BinaryTreeNode<T>)
     }
 
-    override fun inorderTraversalRecurse(root: BinaryTreeNode): Collection<Any> {
-        TODO("Not yet implemented")
-    }
-
-    override fun inorderTraversalIteratively(): Collection<Any> {
-        val stack = arrayListOf<BinaryTreeNode>()
-        val result = arrayListOf<Any>()
+    override fun inorderTraversalIteratively(): Collection<T> {
+        val stack = arrayListOf<BinaryTreeNode<T>>()
+        val result = arrayListOf<T>()
         var current = root;
 
         while (current != null || stack.isNotEmpty()) {
@@ -123,10 +126,10 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
         return result
     }
 
-    override fun inorderMorrisTraversal(): Collection<Any> {
-        val result = arrayListOf<Any>()
+    override fun inorderMorrisTraversal(): Collection<T> {
+        val result = arrayListOf<T>()
         var current = root
-        var pre: BinaryTreeNode?
+        var pre: BinaryTreeNode<T>?
 
         while (current != null) {
             if (current.left == null) {
@@ -148,9 +151,9 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
         return result
     }
 
-    override fun preorderTraversal(): Collection<Any> {
-        val result = arrayListOf<Any>()
-        val stack = arrayListOf<BinaryTreeNode>()
+    override fun preorderTraversal(): Collection<T> {
+        val result = arrayListOf<T>()
+        val stack = arrayListOf<BinaryTreeNode<T>>()
 
         if (root == null) {
             return result
@@ -172,10 +175,10 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
         return result
     }
 
-    override fun postorderTraversal(): Collection<Any> {
-        val values = arrayListOf<Any>()
-        val stackOne = arrayListOf<BinaryTreeNode>()
-        val stackTwo = arrayListOf<BinaryTreeNode>()
+    override fun postorderTraversal(): Collection<T> {
+        val values = arrayListOf<T>()
+        val stackOne = arrayListOf<BinaryTreeNode<T>>()
+        val stackTwo = arrayListOf<BinaryTreeNode<T>>()
 
         if (root == null) {
             return values
@@ -209,7 +212,7 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
      * Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
      * If both of the values in the 2 nodes provided are greater than the root node, then we move to the right.
      * if the nodes are less than the root node, we move to the left.
-     * If there is no root node, then we exit and return None, as no common ancestor could exist in such a case with
+     * If there is no root node, then we exit and return Null, as no common ancestor could exist in such a case with
      * no root node.
      * Assumptions:
      * - assumes that the node itself can also be an ancestor/descendant of itself
@@ -219,7 +222,7 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
      * Space Complexity: O(1).
      * The space complexity of the above solution is constant.
      */
-    override fun lowestCommonAncestor(nodeOne: BinaryTreeNode, nodeTwo: BinaryTreeNode): BinaryTreeNode? {
+    override fun lowestCommonAncestor(nodeOne: TreeNode<T>, nodeTwo: TreeNode<T>): TreeNode<T>? {
         if (root == null) {
             return null
         }
@@ -229,9 +232,9 @@ class BinarySearchTree(private var root: BinaryTreeNode? = null) : Trees<BinaryT
         }
 
         while (root != null) {
-            root = if (root!!.data > nodeOne.data && root!!.data > nodeTwo.data) {
+            root = if (root!!.data!! > nodeOne.data && root!!.data!! > nodeTwo.data) {
                 root!!.left
-            } else if (root!!.data < nodeOne.data && root!!.data < nodeTwo.data) {
+            } else if (root!!.data!! < nodeOne.data && root!!.data!! < nodeTwo.data) {
                 root!!.right
             } else {
                 break
