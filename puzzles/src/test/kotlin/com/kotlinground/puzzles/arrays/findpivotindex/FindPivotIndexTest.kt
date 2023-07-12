@@ -1,5 +1,6 @@
 package com.kotlinground.puzzles.arrays.findpivotindex
 
+import com.kotlinground.puzzles.prefixsum.findpivotindex.pivotIndex
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

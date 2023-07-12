@@ -1,5 +1,6 @@
 package com.kotlinground.puzzles.arrays.highestaltitude
 
+import com.kotlinground.puzzles.prefixsum.highestaltitude.largestAltitude
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

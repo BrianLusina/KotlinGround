@@ -1,4 +1,4 @@
-package com.kotlinground.puzzles.arrays.highestaltitude
+package com.kotlinground.puzzles.prefixsum.highestaltitude
 
 fun largestAltitude(gain: IntArray): Int {
     var highestAltitude = 0

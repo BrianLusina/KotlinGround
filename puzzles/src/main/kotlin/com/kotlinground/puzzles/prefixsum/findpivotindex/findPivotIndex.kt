@@ -1,4 +1,4 @@
-package com.kotlinground.puzzles.arrays.findpivotindex
+package com.kotlinground.puzzles.prefixsum.findpivotindex
 
 fun pivotIndex(nums: IntArray): Int {
     val totalSum = nums.sum()
