@@ -1,9 +1,24 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
-import java.lang.IllegalArgumentException
 
 class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : LinkedList<SinglyLinkedListNode<T>, T> {
+
+    override fun size(): Int {
+        if (head == null) {
+            return 0
+        }
+
+        var count = 0
+        var current = head
+
+        while (current != null) {
+            count++
+            current = current.next
+        }
+
+        return count
+    }
 
     override fun headNode(): SinglyLinkedListNode<T>? {
         return head
@@ -225,6 +240,47 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
             return dummyHead.next
         }
         return null
+    }
+
+    override fun deleteMiddle(): SinglyLinkedListNode<T>? {
+        if (head == null || head?.next == null) {
+            return null
+        }
+
+        val nodeCount = size()
+        val middleIndex = nodeCount / 2
+
+        var current = head
+
+        for (x in 0 until middleIndex - 1) {
+            current = current?.next
+        }
+
+        val middleNode = current?.next
+
+        current?.next = current?.next?.next
+
+        return middleNode
+    }
+
+    fun deleteMiddle2Pointers(): SinglyLinkedListNode<T>? {
+        if (head == null || head?.next == null) {
+            return null
+        }
+
+        var slowPointer = head
+        var fastPointer = head?.next?.next
+
+        while (fastPointer?.next != null) {
+            slowPointer = slowPointer?.next
+            fastPointer = fastPointer.next?.next
+        }
+
+        val middleNode = slowPointer?.next
+
+        slowPointer?.next = slowPointer?.next?.next
+
+        return middleNode
     }
 
     override fun swapNodes(dataOne: T, dataTwo: T) {

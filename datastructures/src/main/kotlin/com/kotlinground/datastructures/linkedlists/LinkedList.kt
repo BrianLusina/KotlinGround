@@ -54,6 +54,12 @@ interface LinkedList<Node, T> {
     fun deleteNodesByData(data: T): Node?
 
     /**
+     * Deletes and returns the middle node of a linked list
+     * @return [Node]
+     */
+    fun deleteMiddle(): Node?
+
+    /**
      * Searches for a node in the provided linked list
      * @param node
      */
@@ -160,4 +166,9 @@ interface LinkedList<Node, T> {
      * If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
      */
     fun swapNodes(dataOne: T, dataTwo: T)
+
+    /**
+     * Returns the number of nodes in the linked list
+     */
+    fun size(): Int
 }

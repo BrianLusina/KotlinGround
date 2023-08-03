@@ -232,6 +232,10 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         TODO("Not yet implemented")
     }
 
+    override fun deleteMiddle(): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
     override fun swapNodes(dataOne: T, dataTwo: T) {
         if (head == null) {
             throw Exception("Empty LinkedList")
@@ -261,5 +265,21 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
 
 //        currentOne.data = tempOne
 //        currentTwo.data = tempTwo
+    }
+
+    override fun size(): Int {
+        if (head == null) {
+            return 0
+        }
+
+        var count = 0
+        var current = head
+
+        while (current != null) {
+            count++
+            current = current.next
+        }
+
+        return count
     }
 }

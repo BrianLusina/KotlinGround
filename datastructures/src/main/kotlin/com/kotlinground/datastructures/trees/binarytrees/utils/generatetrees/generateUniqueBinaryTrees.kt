@@ -1,6 +1,6 @@
 package com.kotlinground.datastructures.trees.binarytrees.utils.generatetrees
 
-import com.kotlinground.datastructures.trees.BinaryTreeNode
+import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
 
 /**
  * Utility function that generates all unique binary trees with n nodes.

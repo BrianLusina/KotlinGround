@@ -42,3 +42,31 @@ class SinglyLinkedListTest {
         assertNull(actualHead)
     }
 }
+
+class SingleLinkedListDeleteMiddleNodeTest {
+    @Test
+    fun `should delete middle node from linked list of (1,3,4,7,1,2,6)`() {
+        val values = intArrayOf(1, 3, 4, 7, 1, 2, 6)
+        val singlyLinkedList = SinglyLinkedList<Int>()
+        for (value in values) {
+            singlyLinkedList.append(value)
+        }
+        val expected = SinglyLinkedListNode(7)
+        val actual = singlyLinkedList.deleteMiddle()
+
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should delete middle node from linked list of (1,3,4,7,1,2,6) using 2 pointers`() {
+        val values = intArrayOf(1, 3, 4, 7, 1, 2, 6)
+        val singlyLinkedList = SinglyLinkedList<Int>()
+        for (value in values) {
+            singlyLinkedList.append(value)
+        }
+        val expected = SinglyLinkedListNode(7)
+        val actual = singlyLinkedList.deleteMiddle2Pointers()
+
+        assertEquals(expected, actual)
+    }
+}
