@@ -171,4 +171,6 @@ interface LinkedList<Node, T> {
      * Returns the number of nodes in the linked list
      */
     fun size(): Int
+
+    fun oddEvenList(): Node?
 }

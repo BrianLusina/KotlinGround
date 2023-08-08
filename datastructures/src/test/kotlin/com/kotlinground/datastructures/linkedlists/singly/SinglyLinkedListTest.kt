@@ -70,3 +70,40 @@ class SingleLinkedListDeleteMiddleNodeTest {
         assertEquals(expected, actual)
     }
 }
+
+class SingleLinkedListOddEvenTest {
+    private fun runTest(data: IntArray, expected: IntArray) {
+        val linkedList = SinglyLinkedList<Int>()
+        for (d in data) {
+            linkedList.append(d)
+        }
+
+        var actualHead = linkedList.oddEvenList()
+        val actualNodes = arrayListOf<Int>()
+
+        while (actualHead != null) {
+            actualNodes.add(actualHead.data)
+            actualHead = actualHead.next
+        }
+
+        val zipped = actualNodes.toIntArray() zip expected
+
+        for ((expectedNode, actualNode) in zipped) {
+            assertEquals(expectedNode, actualNode)
+        }
+    }
+
+    @Test
+    fun `should return (1,3,5,2,4) from linked list of (1,2,3,4,5)`() {
+        val values = intArrayOf(1, 2, 3, 4, 5)
+        val expected = intArrayOf(1, 2, 3, 4, 5)
+        runTest(values, expected)
+    }
+
+    @Test
+    fun `should return (2,1,3,5,6,4,7) from linked list of (2,3,6,7,1,5,4)`() {
+        val values = intArrayOf(2, 1, 3, 5, 6, 4, 7)
+        val expected = intArrayOf(2, 3, 6, 7, 1, 5, 4)
+        runTest(values, expected)
+    }
+}

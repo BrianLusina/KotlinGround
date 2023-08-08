@@ -322,4 +322,24 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
     override fun shift(): T? {
         TODO("Not yet implemented")
     }
+
+    override fun oddEvenList(): SinglyLinkedListNode<T>? {
+        if (head?.next == null) {
+            return head
+        }
+
+        var odd = head
+        var even = head?.next
+        val evenHead = even
+
+        while (even?.next != null) {
+            odd?.next = even.next
+            odd = odd?.next
+            even.next = odd?.next
+            even = even.next
+        }
+
+        odd?.next = evenHead
+        return head
+    }
 }

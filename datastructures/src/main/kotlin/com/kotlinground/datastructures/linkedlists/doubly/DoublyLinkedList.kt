@@ -282,4 +282,8 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
 
         return count
     }
+
+    override fun oddEvenList(): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
 }
