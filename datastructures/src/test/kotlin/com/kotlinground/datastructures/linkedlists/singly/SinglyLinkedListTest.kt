@@ -96,7 +96,7 @@ class SingleLinkedListOddEvenTest {
     @Test
     fun `should return (1,3,5,2,4) from linked list of (1,2,3,4,5)`() {
         val values = intArrayOf(1, 2, 3, 4, 5)
-        val expected = intArrayOf(1, 2, 3, 4, 5)
+        val expected = intArrayOf(1, 3, 5, 2, 4)
         runTest(values, expected)
     }
 
@@ -105,5 +105,124 @@ class SingleLinkedListOddEvenTest {
         val values = intArrayOf(2, 1, 3, 5, 6, 4, 7)
         val expected = intArrayOf(2, 3, 6, 7, 1, 5, 4)
         runTest(values, expected)
+    }
+}
+
+class SingleLinkedListMaxPairSumTest {
+    @Test
+    fun `should return 6 from a linked list of (5,4,2,1) using list of integers`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(5, 4, 2, 1)
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val expected = 6
+        val actual = maximumPairSum(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 7 from a linked list of (4,2,2,3) using list of integers`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(4, 2, 2, 3)
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val expected = 7
+        val actual = maximumPairSum(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 7 from a linked list of (1,100000) using list of integers`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(1, 100000)
+        val expected = 100001
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val actual = maximumPairSum(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 6 from a linked list of (5,4,2,1) using stack`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(5, 4, 2, 1)
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val expected = 6
+        val actual = maximumPairSumStack(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 7 from a linked list of (4,2,2,3) using stack`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(4, 2, 2, 3)
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val expected = 7
+        val actual = maximumPairSumStack(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 7 from a linked list of (1,100000) using stack`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(1, 100000)
+        val expected = 100001
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val actual = maximumPairSumStack(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 6 from a linked list of (5,4,2,1) using reverse in place`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(5, 4, 2, 1)
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val expected = 6
+        val actual = maximumPairSumReverseInPlace(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 7 from a linked list of (4,2,2,3) using reverse in place`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(4, 2, 2, 3)
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val expected = 7
+        val actual = maximumPairSumReverseInPlace(linkedList.headNode())
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `should return 7 from a linked list of (1,100000) using reverse in place`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val values = intArrayOf(1, 100000)
+        val expected = 100001
+        for (d in values) {
+            linkedList.append(d)
+        }
+
+        val actual = maximumPairSumReverseInPlace(linkedList.headNode())
+        assertEquals(expected, actual)
     }
 }

@@ -60,6 +60,12 @@ interface LinkedList<Node, T> {
     fun deleteMiddle(): Node?
 
     /**
+     * Finds the middle node in a linked list
+     * @return [Node] Middle node
+     */
+    fun findMiddleNode(): Node?
+
+    /**
      * Searches for a node in the provided linked list
      * @param node
      */

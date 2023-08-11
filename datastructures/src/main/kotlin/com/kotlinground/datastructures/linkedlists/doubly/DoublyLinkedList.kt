@@ -236,6 +236,10 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         TODO("Not yet implemented")
     }
 
+    override fun findMiddleNode(): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
     override fun swapNodes(dataOne: T, dataTwo: T) {
         if (head == null) {
             throw Exception("Empty LinkedList")

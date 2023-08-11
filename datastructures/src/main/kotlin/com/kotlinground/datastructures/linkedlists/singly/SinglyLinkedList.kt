@@ -283,6 +283,22 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
         return middleNode
     }
 
+    override fun findMiddleNode(): SinglyLinkedListNode<T>? {
+        if (head == null || head?.next == null) {
+            return null
+        }
+
+        var slowPointer = head
+        var fastPointer = head?.next?.next
+
+        while (fastPointer?.next != null) {
+            slowPointer = slowPointer?.next
+            fastPointer = fastPointer.next?.next
+        }
+
+        return slowPointer?.next
+    }
+
     override fun swapNodes(dataOne: T, dataTwo: T) {
         if (head == null) {
             throw Exception("Empty LinkedList")
