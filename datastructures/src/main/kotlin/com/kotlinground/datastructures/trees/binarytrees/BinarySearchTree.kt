@@ -4,7 +4,7 @@ import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.Trees
 import com.kotlinground.datastructures.trees.compareTo
 
-class BinarySearchTree<T : Comparator<T>>(private var root: BinaryTreeNode<T>? = null) : Trees<T>() {
+class BinarySearchTree<T>(private var root: BinaryTreeNode<T>? = null) : Trees<T>() {
 
     private operator fun Any.plusAssign(i: Int) {
         this += i
@@ -15,36 +15,14 @@ class BinarySearchTree<T : Comparator<T>>(private var root: BinaryTreeNode<T>? =
             return 0
         }
 
-        if (root!!.left == null && root!!.right == null) {
-            return 0
+        fun heightHelper(node: BinaryTreeNode<T>?): Int {
+            if (node == null) {
+                return 0
+            }
+            return maxOf(heightHelper(node.left), heightHelper(node.right)) + 1
         }
 
-        var height = 0
-        val queue = arrayListOf<BinaryTreeNode<T>>()
-
-        while (true) {
-            var currentLevelNodes = queue.size
-
-            if (currentLevelNodes == 0) {
-                return height
-            }
-
-            height++
-
-            while (currentLevelNodes > 0) {
-                val node = queue.removeAt(1)
-
-                if (node.left != null) {
-                    queue.add(node.left!!)
-                }
-
-                if (node.right != null) {
-                    queue.add(node.right!!)
-                }
-
-                currentLevelNodes--
-            }
-        }
+        return heightHelper(root)
     }
 
 
@@ -71,17 +49,19 @@ class BinarySearchTree<T : Comparator<T>>(private var root: BinaryTreeNode<T>? =
             }
         }
 
-        when {
-            parent != null -> {
-                parent = BinaryTreeNode<T>(data)
-            }
+        if (data != null) {
+            when {
+                parent != null -> {
+                    parent = BinaryTreeNode(data)
+                }
 
-            data < parent?.data -> {
-                parent?.left = BinaryTreeNode<T>(data)
-            }
+                data < parent?.data -> {
+                    parent?.left = BinaryTreeNode(data)
+                }
 
-            else -> {
-                parent?.right = BinaryTreeNode<T>(data)
+                else -> {
+                    parent?.right = BinaryTreeNode(data)
+                }
             }
         }
         return dummy
@@ -97,7 +77,7 @@ class BinarySearchTree<T : Comparator<T>>(private var root: BinaryTreeNode<T>? =
             }
 
             // assumption is that data is an integer
-            thisRoot.data.plusAssign(otherTreeRoot.data as Int)
+            thisRoot.data?.plusAssign(otherTreeRoot.data as Int)
             thisRoot.left = mergeTreeHelper(thisRoot.left, otherTreeRoot.left)
             thisRoot.right = mergeTreeHelper(thisRoot.right, otherTreeRoot.right)
 

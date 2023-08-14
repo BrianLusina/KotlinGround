@@ -136,7 +136,7 @@ class SingleLinkedListMaxPairSumTest {
     }
 
     @Test
-    fun `should return 7 from a linked list of (1,100000) using list of integers`() {
+    fun `should return 100001 from a linked list of (1,100000) using list of integers`() {
         val linkedList = SinglyLinkedList<Int>()
         val values = intArrayOf(1, 100000)
         val expected = 100001

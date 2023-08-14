@@ -1,6 +1,6 @@
 package com.kotlinground.datastructures.trees
 
-abstract class Trees<T : Comparator<T>> {
+abstract class Trees<T> {
 
     abstract fun insertTreeNode(data: T): TreeNode<T>?
 
