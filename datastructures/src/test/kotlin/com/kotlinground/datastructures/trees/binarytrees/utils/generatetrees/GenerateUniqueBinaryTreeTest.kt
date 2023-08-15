@@ -1,10 +1,10 @@
 package com.kotlinground.datastructures.trees.binarytrees.utils.generatetrees
 
-import com.kotlinground.datastructures.trees.BinaryTreeNode
+import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class GenerateUniqueBinaryTreesTest {
+class GenerateUniqueBinaryTreeTest {
 
     @Test
     fun `Should return tree with root node only for input of 1`() {

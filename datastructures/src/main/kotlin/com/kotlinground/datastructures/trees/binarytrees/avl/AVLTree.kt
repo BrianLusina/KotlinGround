@@ -1,10 +1,10 @@
 package com.kotlinground.datastructures.trees.binarytrees.avl
 
 import com.kotlinground.datastructures.trees.TreeNode
-import com.kotlinground.datastructures.trees.Trees
+import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.compareTo
 
-class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Trees<T>() {
+class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tree<T>() {
 
     override fun insertTreeNode(data: T): TreeNode<T> {
         if (root == null) {
@@ -110,4 +110,7 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
         return y
     }
 
+    override fun leafSimilar(other: Tree<T>): Boolean {
+        TODO("Not yet implemented")
+    }
 }

@@ -1,6 +1,6 @@
 package com.kotlinground.datastructures.trees
 
-abstract class Trees<T> {
+abstract class Tree<T> {
 
     abstract fun insertTreeNode(data: T): TreeNode<T>?
 
@@ -33,4 +33,14 @@ abstract class Trees<T> {
      * @return [TreeNode]
      */
     abstract fun lowestCommonAncestor(nodeOne: TreeNode<T>, nodeTwo: TreeNode<T>): TreeNode<T>?
+
+    /**
+     * Returns true if this tree has similar leaf value sequence to another tree.
+     * For example: If this tree has nodes = [3,5,1,6,2,9,8,null,null,7,4] and other tree has nodes =
+     * [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]. Then the leaf value sequence of both is [6,7,4,9,8] which is
+     * similar
+     * @param other [Tree] Other tree to compare this tree to
+     * @return boolean [Boolean] true if the leaves are similar, false otherwise.
+     */
+    abstract fun leafSimilar(other: Tree<T>): Boolean
 }

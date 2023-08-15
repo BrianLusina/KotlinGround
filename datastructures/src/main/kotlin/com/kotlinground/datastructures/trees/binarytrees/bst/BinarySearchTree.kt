@@ -1,7 +1,8 @@
-package com.kotlinground.datastructures.trees.binarytrees
+package com.kotlinground.datastructures.trees.binarytrees.bst
 
 import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.Tree
+import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
 import com.kotlinground.datastructures.trees.compareTo
 
 class BinarySearchTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {

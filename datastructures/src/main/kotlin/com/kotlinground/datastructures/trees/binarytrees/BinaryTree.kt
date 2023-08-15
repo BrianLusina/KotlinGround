@@ -4,7 +4,7 @@ import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.compareTo
 
-class BinarySearchTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
+class BinaryTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
 
     private operator fun Any.plusAssign(i: Int) {
         this += i
@@ -225,7 +225,7 @@ class BinarySearchTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>
     }
 
     override fun leafSimilar(other: Tree<T>): Boolean {
-        other as BinarySearchTree<T>
+        other as BinaryTree<T>
         if ((root == null && other.root != null) || (other.root == null && root != null)) {
             return false
         }
