@@ -43,4 +43,11 @@ abstract class Tree<T> {
      * @return boolean [Boolean] true if the leaves are similar, false otherwise.
      */
     abstract fun leafSimilar(other: Tree<T>): Boolean
+
+    /**
+     * Finds the number of good nodes in a tree. A good node is a node in which in the path from root to the node there
+     * are no nodes with a value greater than it
+     * @return [Int] The number of good nodes
+     */
+    abstract fun countGoodNodes(): Int
 }

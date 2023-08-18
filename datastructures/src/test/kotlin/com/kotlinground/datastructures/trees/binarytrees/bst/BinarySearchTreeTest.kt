@@ -1,6 +1,5 @@
 package com.kotlinground.datastructures.trees.binarytrees.bst
 
-import com.kotlinground.datastructures.trees.binarytrees.BinarySearchTree
 import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

@@ -113,4 +113,8 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
     override fun leafSimilar(other: Tree<T>): Boolean {
         TODO("Not yet implemented")
     }
+
+    override fun countGoodNodes(): Int {
+        TODO("Not yet implemented")
+    }
 }

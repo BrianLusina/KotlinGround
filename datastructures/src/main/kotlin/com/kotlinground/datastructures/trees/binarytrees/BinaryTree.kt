@@ -4,11 +4,7 @@ import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.compareTo
 
-class BinaryTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
-
-    private operator fun Any.plusAssign(i: Int) {
-        this += i
-    }
+open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
 
     override fun height(): Int {
         if (root == null) {
@@ -40,34 +36,41 @@ class BinaryTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
         while (this.root != null) {
             parent = this.root
 
-            if (data != null) {
-                if (data < this.root!!.data) {
-                    this.root = this.root!!.left
-                } else {
-                    this.root = this.root!!.right
-                }
+            if (data < this.root!!.data) {
+                this.root = this.root!!.left
+            } else {
+                this.root = this.root!!.right
             }
         }
 
-        if (data != null) {
-            when {
-                parent != null -> {
-                    parent = BinaryTreeNode(data)
-                }
+        when {
+            parent != null -> {
+                parent = BinaryTreeNode(data)
+            }
 
-                data < parent?.data -> {
-                    parent?.left = BinaryTreeNode(data)
-                }
+            data < parent?.data -> {
+                parent?.left = BinaryTreeNode(data)
+            }
 
-                else -> {
-                    parent?.right = BinaryTreeNode(data)
-                }
+            else -> {
+                parent?.right = BinaryTreeNode(data)
             }
         }
         return dummy
     }
 
     override fun mergeTree(otherTree: TreeNode<T>?): TreeNode<T>? {
+
+        operator fun <T> T.plus(data: T) {
+            when (data) {
+                is Int -> this as Int + data
+                is Float -> this as Float + data
+            }
+        }
+
+        operator fun <T> T.plusAssign(data: T) {
+            this + data
+        }
 
         fun mergeTreeHelper(root: BinaryTreeNode<T>?, otherTreeRoot: BinaryTreeNode<T>?): BinaryTreeNode<T>? {
             val thisRoot = root ?: this.root ?: return otherTreeRoot
@@ -77,7 +80,7 @@ class BinaryTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
             }
 
             // assumption is that data is an integer
-            thisRoot.data?.plusAssign(otherTreeRoot.data as Int)
+            thisRoot.data += otherTreeRoot.data
             thisRoot.left = mergeTreeHelper(thisRoot.left, otherTreeRoot.left)
             thisRoot.right = mergeTreeHelper(thisRoot.right, otherTreeRoot.right)
 
@@ -212,9 +215,9 @@ class BinaryTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
         }
 
         while (root != null) {
-            root = if (root!!.data!! > nodeOne.data && root!!.data!! > nodeTwo.data) {
+            root = if (root!!.data > nodeOne.data && root!!.data > nodeTwo.data) {
                 root!!.left
-            } else if (root!!.data!! < nodeOne.data && root!!.data!! < nodeTwo.data) {
+            } else if (root!!.data < nodeOne.data && root!!.data < nodeTwo.data) {
                 root!!.right
             } else {
                 break
@@ -248,4 +251,31 @@ class BinaryTree<T>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
 
         return leaves1.equals(leaves2)
     }
+
+    override fun countGoodNodes(): Int {
+        if (root == null) {
+            return 0
+        }
+
+        // root is regarded as good
+        if (root?.left == null && root?.right == null) {
+            return 1
+        }
+
+        fun goodNodesHelper(node: BinaryTreeNode<T>?, data: T): Int {
+            if (node != null) {
+                var nodeCount = goodNodesHelper(node.left, maxOf(data, node.data)) +
+                        goodNodesHelper(node.right, maxOf(data, node.data))
+                if (node.data >= data) {
+                    nodeCount += 1
+                }
+                return nodeCount
+            }
+            return 0
+        }
+
+        return goodNodesHelper(root, root?.data!!)
+    }
 }
+
+
