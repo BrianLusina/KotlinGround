@@ -23,6 +23,5 @@ fun trap(height: IntArray): Int {
         }
     }
 
-
     return trappedRain
 }

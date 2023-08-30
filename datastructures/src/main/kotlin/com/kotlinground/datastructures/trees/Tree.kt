@@ -50,4 +50,6 @@ abstract class Tree<T> {
      * @return [Int] The number of good nodes
      */
     abstract fun countGoodNodes(): Int
+
+    abstract fun pathSum(target: Int): Int
 }

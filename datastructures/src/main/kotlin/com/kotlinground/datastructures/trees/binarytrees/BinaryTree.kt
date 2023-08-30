@@ -276,6 +276,33 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         return goodNodesHelper(root, root?.data!!)
     }
-}
 
+    override fun pathSum(target: Int): Int {
+        if (root == null) {
+            return 0
+        }
+
+        var count = 0
+        val sumHashMap = hashMapOf(0L to 1)
+
+        fun countPaths(node: BinaryTreeNode<T>?, prefixSum: Long = 0L) {
+            if (node == null) {
+                return
+            }
+
+            val nextSum = prefixSum + node.data as Int
+            count += sumHashMap[nextSum - target] ?: 0
+
+            sumHashMap[nextSum] = (sumHashMap[nextSum] ?: 0) + 1
+
+            countPaths(node.left, nextSum)
+            countPaths(node.right, nextSum)
+
+            sumHashMap[nextSum] = (sumHashMap[nextSum] ?: 0) - 1
+        }
+
+        countPaths(root)
+        return count
+    }
+}
 

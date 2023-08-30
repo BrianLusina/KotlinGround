@@ -14,7 +14,7 @@ class TrappedRainWaterTest {
 
     @Test
     fun `should return 0 for input of (1, 2)`() {
-        val heights = intArrayOf(0, 2)
+        val heights = intArrayOf(1, 2)
         val expected = 0
         val actual = trap(heights)
         assertEquals(expected, actual)
