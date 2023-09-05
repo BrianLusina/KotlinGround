@@ -64,7 +64,7 @@ class LongestIncreasingSubsequenceTest {
     @Test
     fun `should return 4 from input of (7,7,7,7,7,7,7)`() {
         val nums = intArrayOf(7, 7, 7, 7, 7, 7, 7)
-        val expected = 4
+        val expected = 1
         val actual = longestIncreasingSubsequence(nums)
         assertEquals(expected, actual)
     }

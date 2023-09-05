@@ -117,4 +117,12 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
     override fun countGoodNodes(): Int {
         TODO("Not yet implemented")
     }
+
+    override fun pathSum(target: Int): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun maxLevelSum(): Int {
+        TODO("Not yet implemented")
+    }
 }

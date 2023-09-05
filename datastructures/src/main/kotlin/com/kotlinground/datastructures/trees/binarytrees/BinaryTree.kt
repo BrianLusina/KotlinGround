@@ -1,8 +1,9 @@
 package com.kotlinground.datastructures.trees.binarytrees
 
-import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.Tree
+import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.compareTo
+import java.util.*
 
 open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : Tree<T>() {
 
@@ -303,6 +304,48 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         countPaths(root)
         return count
+    }
+
+    override fun maxLevelSum(): Int {
+        if (root == null) {
+            return 0
+        }
+
+        if (root?.left == null && root?.right == null) {
+            return 1
+        }
+
+        var maximumSum = Int.MIN_VALUE
+        var level = 0
+        var smallestLevel = 0
+
+        val levels = LinkedList<BinaryTreeNode<T>>()
+        levels.offer(root)
+
+        while (!levels.isEmpty()) {
+            level++
+
+            var sumAtCurrentLevel = 0
+
+            for (i in levels.size downTo 1) {
+                val node = levels.poll()
+                sumAtCurrentLevel += node.data as Int
+
+                if (node.left != null) {
+                    levels.offer(node.left)
+                }
+
+                if (node.right != null) {
+                    levels.offer(node.right)
+                }
+            }
+
+            if (sumAtCurrentLevel > maximumSum) {
+                maximumSum = sumAtCurrentLevel
+                smallestLevel = level
+            }
+        }
+        return smallestLevel
     }
 }
 

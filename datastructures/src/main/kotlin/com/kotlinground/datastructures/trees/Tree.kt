@@ -52,4 +52,10 @@ abstract class Tree<T> {
     abstract fun countGoodNodes(): Int
 
     abstract fun pathSum(target: Int): Int
+
+    /**
+     * Returns the smallest level x such that the sum of all the values of nodes at level x is maximal
+     * Returns [Int] maximum value at level x
+     */
+    abstract fun maxLevelSum(): Int
 }
