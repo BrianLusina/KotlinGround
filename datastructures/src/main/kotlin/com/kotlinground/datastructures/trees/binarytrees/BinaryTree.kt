@@ -60,6 +60,10 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         return dummy
     }
 
+    override fun delete(data: T): BinaryTreeNode<T>? {
+        TODO()
+    }
+
     override fun mergeTree(otherTree: TreeNode<T>?): TreeNode<T>? {
 
         operator fun <T> T.plus(data: T) {

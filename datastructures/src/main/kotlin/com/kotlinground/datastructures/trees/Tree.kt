@@ -5,6 +5,11 @@ abstract class Tree<T> {
     abstract fun insertTreeNode(data: T): TreeNode<T>?
 
     /**
+     * Deletes a value from a tree
+     */
+    abstract fun delete(data: T): TreeNode<T>?
+
+    /**
      * Merge another tree into this tree
      * @param otherTree Root Node of other tree
      * @return New root to new merged tree

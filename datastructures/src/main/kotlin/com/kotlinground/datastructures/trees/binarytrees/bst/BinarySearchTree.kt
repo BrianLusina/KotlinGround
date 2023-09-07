@@ -51,22 +51,82 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
             }
         }
 
-        if (data != null) {
-            when {
-                parent != null -> {
-                    parent = BinaryTreeNode(data)
-                }
+        when {
+            parent != null -> {
+                parent = BinaryTreeNode(data)
+            }
 
-                data < parent?.data -> {
-                    parent?.left = BinaryTreeNode(data)
-                }
+            data < parent?.data -> {
+                parent?.left = BinaryTreeNode(data)
+            }
 
-                else -> {
-                    parent?.right = BinaryTreeNode(data)
-                }
+            else -> {
+                parent?.right = BinaryTreeNode(data)
             }
         }
         return dummy
+    }
+
+    override fun delete(data: T): BinaryTreeNode<T>? {
+        if (root == null) {
+            return null
+        }
+
+        fun lift(node: BinaryTreeNode<T>?, nodeToDelete: BinaryTreeNode<T>): BinaryTreeNode<T>? {
+            if (node == null) {
+                return null
+            }
+
+            // if the current node of this function has a left child, we recursively call this function to continue down
+            // the left subtree to find the successor node
+            return if (node.left != null) {
+                node.left = lift(node.left, nodeToDelete)
+                node
+            } else {
+                // if the current node has no left child, that means the current node of this function is the successor
+                // node therefore we take its value and make it the new value of the node that we are deleting.
+                nodeToDelete.data = node.data
+                // we return the successor node's right child to be now used as its parent's left child
+                node.right
+            }
+        }
+
+        fun deleteHelper(value: T, node: BinaryTreeNode<T>?): BinaryTreeNode<T>? {
+            // base case when we have hit the bottom of the tree, and the parent node has no children
+            if (node == null) {
+                return null
+            }
+            // if the value to delete is less than or greater than the current node, we set the left or right child
+            // respectively to be the return value of a recursive call of this very method on the current node's left or
+            // right subtree
+            else if (value < node.data) {
+                node.left = deleteHelper(value, node.left)
+                // we return the current node (and its subtree if existent) to be used as the new value of its parent's
+                // left or right child
+                return node
+            } else if (value > node.data) {
+                node.right = deleteHelper(value, node.right)
+                return node
+                // if the current node is the one we want to delete
+            } else {
+                // if the current node has no left child, we delete it by returning it's right child (and it's subtree if
+                // existent) to be its parent's new subtree
+                return if (node.left == null) {
+                    node.right
+                    // if the node has no left nor right child, this ends up being None as per the first line of code in
+                    // this function
+                } else if (node.right == null) {
+                    node.left
+                } else {
+                    // if the current node has 2 children, we delete the current node by calling the lift function,
+                    // which changes the current node's value to the value of its successor node
+                    node.right = lift(node.right, node)
+                    node
+                }
+            }
+        }
+
+        return deleteHelper(data, root)
     }
 
     override fun mergeTree(otherTree: TreeNode<T>?): TreeNode<T>? {
