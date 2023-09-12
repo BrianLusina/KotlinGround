@@ -1,4 +1,4 @@
-package com.kotlinground.algorithms.searching.binary.rotatedsortedarray
+package com.kotlinground.puzzles.search.binarysearch.searchrotatedsortedarray
 
 import org.junit.Test
 import kotlin.test.assertEquals
