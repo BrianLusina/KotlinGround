@@ -31,7 +31,7 @@ class NextGreaterTest {
     @Test
     fun `should return (-1, 12, 12, -1) from an input (13, 7, 6, 12)`() {
         val nums = intArrayOf(13, 7, 6, 12)
-        val expected = intArrayOf(5, 25, 25, -1)
+        val expected = intArrayOf(-1, 12, 12, -1)
         val actual = nextGreater(nums)
         assertArrayEquals(expected, actual)
     }
@@ -47,7 +47,7 @@ class NextGreaterTest {
     @Test
     fun `should return (35 42 42 -1 28 39 -1 28 -1) from an input (34, 35, 27, 42, 5, 28, 39, 20, 28)`() {
         val nums = intArrayOf(34, 35, 27, 42, 5, 28, 39, 20, 28)
-        val expected = intArrayOf(35, 42, 42, -1, 28, 39, -1, 28 - 1)
+        val expected = intArrayOf(35, 42, 42, -1, 28, 39, -1, 28, - 1)
         val actual = nextGreater(nums)
         assertArrayEquals(expected, actual)
     }
