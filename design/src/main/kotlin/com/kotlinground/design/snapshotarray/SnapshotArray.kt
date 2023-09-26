@@ -1,4 +1,4 @@
-package com.kotlinground.puzzles.search.binarysearch.snapshotarray
+package com.kotlinground.design.snapshotarray
 
 import java.util.TreeMap
 
