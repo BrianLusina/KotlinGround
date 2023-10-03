@@ -6,4 +6,17 @@ data class BinaryTreeNode<T>(
     override var data: T,
     var left: BinaryTreeNode<T>? = null,
     var right: BinaryTreeNode<T>? = null
-) : TreeNode<T>
+) : TreeNode<T> {
+    val children: ArrayList<BinaryTreeNode<T>?>
+        get() {
+            return if (left != null && right != null) {
+                arrayListOf(left, right)
+            } else if (left != null && right == null) {
+                arrayListOf(left)
+            } else if (left == null && right != null) {
+                arrayListOf(right)
+            } else {
+                arrayListOf()
+            }
+        }
+}
