@@ -63,4 +63,14 @@ abstract class Tree<T> {
      * Returns [Int] maximum value at level x
      */
     abstract fun maxLevelSum(): Int
+
+    /**
+     * Serializes a tree to a string
+     */
+    abstract fun serialize(): String
+
+    /**
+     * Deserializes a string to a  tree
+     */
+    abstract fun deserialize(tree: String): TreeNode<T>?
 }

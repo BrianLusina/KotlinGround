@@ -5,8 +5,8 @@ import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
 /**
  * Utility function that generates all unique binary trees with n nodes.
  */
-fun generate(start: Int, end: Int): List<BinaryTreeNode?> {
-    val bsts = mutableListOf<BinaryTreeNode?>()
+fun generate(start: Int, end: Int): List<BinaryTreeNode<Int>?> {
+    val bsts = mutableListOf<BinaryTreeNode<Int>?>()
 
     if (start > end) {
         bsts.add(null)
@@ -38,6 +38,6 @@ fun generate(start: Int, end: Int): List<BinaryTreeNode?> {
 /**
  * Generate all unique binary trees with n nodes.
  */
-fun generateTrees(n: Int): List<BinaryTreeNode?> {
+fun generateTrees(n: Int): List<BinaryTreeNode<Int>?> {
     return generate(1, n)
 }

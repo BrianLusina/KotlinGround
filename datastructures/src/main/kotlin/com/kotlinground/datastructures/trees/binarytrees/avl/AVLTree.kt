@@ -52,6 +52,10 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
         TODO("Not yet implemented")
     }
 
+    override fun delete(data: T): TreeNode<T>? {
+        TODO("Not yet implemented")
+    }
+
     override fun height(): Int {
         TODO("Not yet implemented")
     }
@@ -123,6 +127,14 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
     }
 
     override fun maxLevelSum(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun deserialize(tree: String): AVLTreeNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    override fun serialize(): String {
         TODO("Not yet implemented")
     }
 }

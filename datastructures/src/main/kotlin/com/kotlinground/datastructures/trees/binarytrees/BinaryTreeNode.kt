@@ -19,4 +19,18 @@ data class BinaryTreeNode<T>(
                 arrayListOf()
             }
         }
+
+    override fun equals(other: Any?): Boolean {
+        if (other == null) {
+            return false
+        }
+
+        other as BinaryTreeNode<*>
+
+        return this.data == other.data
+    }
+
+    override fun hashCode(): Int {
+        return data.hashCode()
+    }
 }

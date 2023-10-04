@@ -351,5 +351,41 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         }
         return smallestLevel
     }
+
+    override fun serialize(): String {
+        val result = StringJoiner(" ")
+
+        fun dfs(node: BinaryTreeNode<T>?) {
+            if (node == null) {
+                result.add("x")
+                return
+            }
+            result.add(node.data.toString())
+            dfs(node.left)
+            dfs(node.right)
+        }
+
+        dfs(root)
+        return result.toString()
+    }
+
+    override fun deserialize(tree: String): BinaryTreeNode<T>? {
+        fun dfs(nodes: Iterator<String>): BinaryTreeNode<T>? {
+            val data = nodes.next()
+            if (data == "x") {
+                return null
+            }
+
+            @Suppress("UNCHECKED_CAST")
+            val current = BinaryTreeNode(data as T)
+            current.left = dfs(nodes)
+            current.right = dfs(nodes)
+            return current
+        }
+
+        val nodeData = tree.split(" ")
+
+        return dfs(nodeData.iterator())
+    }
 }
 
