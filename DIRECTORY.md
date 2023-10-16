@@ -577,6 +577,9 @@
                   * [Closestrings](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/hashmap/twostringsareclose/closeStrings.kt)
                 * Uniqueoccurrences
                   * [Uniqueoccurrences](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/hashmap/uniqueoccurrences/uniqueOccurrences.kt)
+              * Heap
+                * Totalcostkworkers
+                  * [Totalcost](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/heap/totalcostkworkers/totalCost.kt)
               * Prefixsum
                 * Findpivotindex
                   * [Findpivotindex](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/prefixsum/findpivotindex/findPivotIndex.kt)
@@ -669,6 +672,9 @@
                   * [Closestringstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/hashmap/twostringsareclose/CloseStringsTest.kt)
                 * Uniqueoccurrences
                   * [Uniqueoccurrencestest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/hashmap/uniqueoccurrences/UniqueOccurrencesTest.kt)
+              * Heap
+                * Totalcostkworkers
+                  * [Totalcosttest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/heap/totalcostkworkers/TotalCostTest.kt)
               * Queue
                 * Recentcounter
                   * [Recentcountertest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/queue/recentcounter/RecentCounterTest.kt)
