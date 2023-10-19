@@ -592,6 +592,8 @@
                 * [Scrabblescore](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/scrabblescore/ScrabbleScore.kt)
               * Search
                 * Binarysearch
+                  * Findpeakelement
+                    * [Findpeakelement](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/findpeakelement/findPeakElement.kt)
                   * Kokoeatingbananas
                     * [Mineatingspeed](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/kokoeatingbananas/minEatingSpeed.kt)
                   * Mycalendar
@@ -684,6 +686,8 @@
                 * [Scrabblescoretest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/scrabblescore/ScrabbleScoreTest.kt)
               * Search
                 * Binarysearch
+                  * Findpeakelement
+                    * [Findpeakelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/search/binarysearch/findpeakelement/FindPeakElementTest.kt)
                   * Kokoeatingbananas
                     * [Mineatingspeedtest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/search/binarysearch/kokoeatingbananas/MinEatingSpeedTest.kt)
                   * Mycalendar
