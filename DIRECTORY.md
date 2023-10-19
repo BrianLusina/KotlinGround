@@ -604,6 +604,8 @@
                     * [Rotatedsortedarray](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/searchrotatedsortedarray/rotatedSortedArray.kt)
                   * Singlenonduplicate
                     * [Singlenonduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/singlenonduplicate/singleNonDuplicate.kt)
+                  * Successfulpairsspellspotions
+                    * [Successfulpairs](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/successfulpairsspellspotions/successfulPairs.kt)
               * Secrethandshake
                 * [Handshakecalculator](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/secrethandshake/HandshakeCalculator.kt)
                 * [Signal](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/secrethandshake/Signal.kt)
@@ -695,6 +697,8 @@
                     * [Rotatedsortedarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/search/binarysearch/searchrotatedsortedarray/RotatedSortedArrayTest.kt)
                   * Singlenonduplicate
                     * [Singlenonduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/search/binarysearch/singlenonduplicate/SingleNonDuplicateTest.kt)
+                  * Successfulpairsspellspotions
+                    * [Successfulpairstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/search/binarysearch/successfulpairsspellspotions/SuccessfulPairsTest.kt)
               * Secrethandshake
                 * [Handshakecalculatortest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/secrethandshake/HandshakeCalculatorTest.kt)
               * Stack
