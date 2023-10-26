@@ -20,6 +20,8 @@
               * Duplicatechars
                 * [Duplicate](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/duplicatechars/Duplicate.kt)
               * Dynamicprogramming
+                * Dominotrominotiling
+                  * [Numtilings](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/numTilings.kt)
                 * Houserobber
                   * [Rob](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/rob.kt)
               * Etl
@@ -62,6 +64,8 @@
                 * Generateparenthesis
                   * [Generateparenthesistest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/GenerateParenthesisTest.kt)
               * Dynamicprogramming
+                * Dominotrominotiling
+                  * [Numtilingstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/NumTilingsTest.kt)
                 * Houserobber
                   * [Robtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/RobTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
