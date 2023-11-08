@@ -24,6 +24,8 @@
                   * [Numtilings](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/numTilings.kt)
                 * Houserobber
                   * [Rob](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/rob.kt)
+                * Uniquepaths
+                  * [Uniquepaths](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/uniquePaths.kt)
               * Etl
                 * [Etl](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/etl/ETL.kt)
               * Floodfill
@@ -68,6 +70,8 @@
                   * [Numtilingstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/NumTilingsTest.kt)
                 * Houserobber
                   * [Robtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/RobTest.kt)
+                * Uniquepaths
+                  * [Uniquepathstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/UniquePathsTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
               * Floodfill
                 * [Floodfilltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/floodfill/FloodFillTest.kt)
