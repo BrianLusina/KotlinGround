@@ -6,4 +6,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {}
+dependencies {
+    implementation(project(":ktstrings"))
+}

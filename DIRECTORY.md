@@ -13,6 +13,10 @@
               * Backtracking
                 * Generateparenthesis
                   * [Generateparenthesis](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/generateparenthesis.kt)
+                * Lettercombination
+                  * [Lettercombination](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/letterCombination.kt)
+                * Partitionstring
+                  * [Partition](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/partition.kt)
               * Climbstairs
                 * [Climbstairs](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/climbstairs/climbstairs.kt)
               * Climbstairsmincost
@@ -72,6 +76,10 @@
                   * [Robtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/RobTest.kt)
                 * Uniquepaths
                   * [Uniquepathstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/UniquePathsTest.kt)
+                * Lettercombination
+                  * [Lettercombinationtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/LetterCombinationTest.kt)
+                * Partitionstring
+                  * [Partitiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/PartitionTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
               * Floodfill
                 * [Floodfilltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/floodfill/FloodFillTest.kt)
@@ -495,6 +503,8 @@
                 * [Maxvowels](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/maxvowelsinsubstr/maxVowels.kt)
               * Mergstrings
                 * [Mergestrings](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/mergstrings/mergestrings.kt)
+              * Palindromes
+                * [Ispalindrome](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/palindromes/isPalindrome.kt)
               * Pangram
                 * [Pangrams](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/pangram/Pangrams.kt)
               * Rnatranscription
