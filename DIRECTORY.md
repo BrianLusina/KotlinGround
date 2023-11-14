@@ -28,6 +28,8 @@
                   * [Numtilings](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/numTilings.kt)
                 * Houserobber
                   * [Rob](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/rob.kt)
+                * Longestcommonsubsequence
+                  * [Longestcommonsubsequence](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/longestcommonsubsequence/longestCommonSubsequence.kt)
                 * Uniquepaths
                   * [Uniquepaths](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/uniquePaths.kt)
               * Etl
@@ -69,17 +71,19 @@
               * Backtracking
                 * Generateparenthesis
                   * [Generateparenthesistest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/GenerateParenthesisTest.kt)
+                * Lettercombination
+                  * [Lettercombinationtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/LetterCombinationTest.kt)
+                * Partitionstring
+                  * [Partitiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/PartitionTest.kt)
               * Dynamicprogramming
                 * Dominotrominotiling
                   * [Numtilingstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/NumTilingsTest.kt)
                 * Houserobber
                   * [Robtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/RobTest.kt)
+                * Longestcommonsubsequence
+                  * [Longestcommonsubsequencetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/longestcommonsubsequence/LongestCommonSubsequenceTest.kt)
                 * Uniquepaths
                   * [Uniquepathstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/UniquePathsTest.kt)
-                * Lettercombination
-                  * [Lettercombinationtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/LetterCombinationTest.kt)
-                * Partitionstring
-                  * [Partitiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/PartitionTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
               * Floodfill
                 * [Floodfilltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/floodfill/FloodFillTest.kt)
