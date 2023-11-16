@@ -17,6 +17,8 @@
                   * [Lettercombination](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/letterCombination.kt)
                 * Partitionstring
                   * [Partition](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/partition.kt)
+                * Permutations
+                  * [Generatepermutations](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/permutations/generatePermutations.kt)
               * Climbstairs
                 * [Climbstairs](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/climbstairs/climbstairs.kt)
               * Climbstairsmincost
@@ -24,6 +26,10 @@
               * Duplicatechars
                 * [Duplicate](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/duplicatechars/Duplicate.kt)
               * Dynamicprogramming
+                * Buyandsell
+                  * [Maxprofit](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/buyandsell/maxProfit.kt)
+                  * [Maxprofit2](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/buyandsell/maxProfit2.kt)
+                  * [Maxprofitwithfee](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/buyandsell/maxProfitWithFee.kt)
                 * Dominotrominotiling
                   * [Numtilings](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/numTilings.kt)
                 * Houserobber
@@ -75,7 +81,13 @@
                   * [Lettercombinationtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/LetterCombinationTest.kt)
                 * Partitionstring
                   * [Partitiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/PartitionTest.kt)
+                * Permutations
+                  * [Generatepermutationstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/permutations/GeneratePermutationsTest.kt)
               * Dynamicprogramming
+                * Buyandsell
+                  * [Maxprofit2Test](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/buyandsell/MaxProfit2Test.kt)
+                  * [Maxprofittest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/buyandsell/MaxProfitTest.kt)
+                  * [Maxprofitwithfeetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/buyandsell/MaxProfitWithFeeTest.kt)
                 * Dominotrominotiling
                   * [Numtilingstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/dominotrominotiling/NumTilingsTest.kt)
                 * Houserobber
@@ -137,9 +149,6 @@
                   * [Intersectionofarrays](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/intersectionOfArrays.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlen](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/findmaxlen.kt)
-                * Maxprofit
-                  * [Maxprofit](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/maxprofit/maxProfit.kt)
-                  * [Maxprofit2](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/maxprofit/maxProfit2.kt)
                 * Maxsumsubarray
                   * [Maxsubarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/maxsumsubarray/maxSubArray.kt)
                 * Twosum
@@ -210,9 +219,6 @@
                   * [Intersectiontwoofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/IntersectionTwoOfArraysTest.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlentest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/FindMaxLenTest.kt)
-                * Maxprofit
-                  * [Maxprofit2Test](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxprofit/MaxProfit2Test.kt)
-                  * [Maxprofittest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxprofit/MaxProfitTest.kt)
                 * Maxsumsubarray
                   * [Maxsubarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxsumsubarray/MaxSubArrayTest.kt)
                 * Twosum

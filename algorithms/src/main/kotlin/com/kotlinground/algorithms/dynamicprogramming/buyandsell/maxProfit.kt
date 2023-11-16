@@ -1,4 +1,4 @@
-package com.kotlinground.datastructures.arrays.maxprofit
+package com.kotlinground.algorithms.dynamicprogramming.buyandsell
 
 fun maxProfit(prices: IntArray): Int {
     var maxProfit = 0
