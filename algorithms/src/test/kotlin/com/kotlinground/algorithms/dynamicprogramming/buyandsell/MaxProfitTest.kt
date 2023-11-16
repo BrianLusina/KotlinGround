@@ -1,4 +1,4 @@
-package com.kotlinground.datastructures.arrays.maxprofit
+package com.kotlinground.algorithms.dynamicprogramming.buyandsell
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

@@ -1,4 +1,4 @@
-package com.kotlinground.datastructures.arrays.maxprofit
+package com.kotlinground.algorithms.dynamicprogramming.buyandsell
 
 fun maxProfit2(prices: IntArray): Int {
     if (prices.isEmpty() || prices.size < 2) {
