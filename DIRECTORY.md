@@ -11,6 +11,8 @@
                 * Removeelement
                   * [Removeelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/removeelement/removeelement.kt)
               * Backtracking
+                * Decodemessage
+                  * [Numberofwaystodecodemessage](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/decodemessage/numberOfWaysToDecodeMessage.kt)
                 * Generateparenthesis
                   * [Generateparenthesis](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/generateparenthesis.kt)
                 * Lettercombination
@@ -75,6 +77,8 @@
                 * Removeelement
                   * [Removeelementkttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveelementKtTest.kt)
               * Backtracking
+                * Decodemessage
+                  * [Numberofwaystodecodemessagetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/decodemessage/NumberOfWaysToDecodeMessageTest.kt)
                 * Generateparenthesis
                   * [Generateparenthesistest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/generateparenthesis/GenerateParenthesisTest.kt)
                 * Lettercombination
