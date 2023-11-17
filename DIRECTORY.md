@@ -38,6 +38,8 @@
                   * [Rob](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/rob.kt)
                 * Longestcommonsubsequence
                   * [Longestcommonsubsequence](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/longestcommonsubsequence/longestCommonSubsequence.kt)
+                * Mindistance
+                  * [Mindistance](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/mindistance/minDistance.kt)
                 * Uniquepaths
                   * [Uniquepaths](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/uniquePaths.kt)
               * Etl
@@ -98,6 +100,8 @@
                   * [Robtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/houserobber/RobTest.kt)
                 * Longestcommonsubsequence
                   * [Longestcommonsubsequencetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/longestcommonsubsequence/LongestCommonSubsequenceTest.kt)
+                * Mindistance
+                  * [Mindistancetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/mindistance/MinDistanceTest.kt)
                 * Uniquepaths
                   * [Uniquepathstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/UniquePathsTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
