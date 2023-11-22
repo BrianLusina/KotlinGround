@@ -127,11 +127,15 @@
                 * [Countbits](https://github.com/BrianLusina/KotlinGround/blob/master/bitmanipulation/src/main/kotlin/com/kotlinground/bitmanipulation/countbits/countBits.kt)
               * Int32Toipv4
                 * [Longtoip](https://github.com/BrianLusina/KotlinGround/blob/master/bitmanipulation/src/main/kotlin/com/kotlinground/bitmanipulation/int32toipv4/longtoip.kt)
+              * Singlenumber
+                * [Singlenumber](https://github.com/BrianLusina/KotlinGround/blob/master/bitmanipulation/src/main/kotlin/com/kotlinground/bitmanipulation/singlenumber/singleNumber.kt)
     * Test
               * Countbits
                 * [Countbitstest](https://github.com/BrianLusina/KotlinGround/blob/master/bitmanipulation/src/test/kotlin/com/kotlinground/bitmanipulation/countbits/CountBitsTest.kt)
               * Int32Toipv4
                 * [Longtoipkttest](https://github.com/BrianLusina/KotlinGround/blob/master/bitmanipulation/src/test/kotlin/com/kotlinground/bitmanipulation/int32toipv4/LongtoipKtTest.kt)
+              * Singlenumber
+                * [Singlenumbertest](https://github.com/BrianLusina/KotlinGround/blob/master/bitmanipulation/src/test/kotlin/com/kotlinground/bitmanipulation/singlenumber/SingleNumberTest.kt)
 
 ## Buildsrc
     * Main
