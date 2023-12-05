@@ -21,6 +21,8 @@
                   * [Partition](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/partition.kt)
                 * Permutations
                   * [Generatepermutations](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/permutations/generatePermutations.kt)
+                * Restoreipaddresses
+                  * [Restoreipaddresses](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/restoreipaddresses/restoreIpAddresses.kt)
               * Climbstairs
                 * [Climbstairs](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/climbstairs/climbstairs.kt)
               * Climbstairsmincost
@@ -65,6 +67,10 @@
                 * [Stockspanner](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/onlinestockspan/StockSpanner.kt)
               * Permmissingelem
                 * [Permmissingelem](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/permmissingelem/permmissingelem.kt)
+              * Searching
+                * Trie
+                  * Searchsuggestions
+                    * [Suggestedproducts](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/suggestedProducts.kt)
               * Sorting
                 * Mergeintervals
                   * [Mergeintervals](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/mergeintervals.kt)
@@ -89,6 +95,8 @@
                   * [Partitiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/PartitionTest.kt)
                 * Permutations
                   * [Generatepermutationstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/permutations/GeneratePermutationsTest.kt)
+                * Restoreipaddresses
+                  * [Restoreipaddressestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/restoreipaddresses/RestoreIpAddressesTest.kt)
               * Dynamicprogramming
                 * Buyandsell
                   * [Maxprofit2Test](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/buyandsell/MaxProfit2Test.kt)
@@ -114,6 +122,10 @@
                 * [Maxareaofislandtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/maxareaofisland/MaxAreaOfIslandTest.kt)
               * Numberofislands
                 * [Numberofislandstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/numberofislands/NumberOfIslandsTest.kt)
+              * Searching
+                * Trie
+                  * Searchsuggestions
+                    * [Suggestedproductstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/SuggestedProductsTest.kt)
               * Sorting
                 * Mergeintervals
                   * [Mergeintervalskttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/MergeintervalsKtTest.kt)
@@ -222,6 +234,9 @@
                 * [Mergetrees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/mergeTrees.kt)
                 * [Tree](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/Tree.kt)
                 * [Treenode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/TreeNode.kt)
+                * Trie
+                  * [Trie](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/Trie.kt)
+                  * [Trienode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/TrieNode.kt)
                 * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/utils.kt)
     * Test
               * Arrays
@@ -268,6 +283,8 @@
                   * Utils
                     * Generatetrees
                       * [Generateuniquebinarytreetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/utils/generatetrees/GenerateUniqueBinaryTreeTest.kt)
+                * Trie
+                  * [Trietest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/trie/TrieTest.kt)
 
 ## Design
     * Main

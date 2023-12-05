@@ -8,4 +8,5 @@ repositories {
 
 dependencies {
     implementation(project(":ktstrings"))
+    implementation(project(":datastructures"))
 }
