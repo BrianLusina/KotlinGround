@@ -204,7 +204,7 @@
                 * [Directedgraph](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/DirectedGraph.kt)
                 * [Edge](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Edge.kt)
                 * [Graph](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Graph.kt)
-                * [Graphnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/GraphNode.kt)
+                * [Vertex](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Vertex.kt)
               * Linkedlists
                 * Doubly
                   * [Doublylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedList.kt)
@@ -267,6 +267,8 @@
                   * [Mergeablestateflowimpltest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableStateFlowImplTest.kt)
                   * [Mergeablevaluetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableValueTest.kt)
                   * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/UtilsTest.kt)
+              * Graphs
+                * [Vertextest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/graphs/VertexTest.kt)
               * Linkedlists
                 * Doubly
                   * [Doublylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListTest.kt)
