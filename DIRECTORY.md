@@ -81,6 +81,9 @@
                   * [Mergesort](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/mergesort/mergesort.kt)
                 * Quicksort
                   * [Quicksort](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/quicksort/quicksort.kt)
+              * Stack
+                * Dailytemperatures
+                  * [Dailytemperatures](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/dailyTemperatures.kt)
               * Tapeequilibrium
                 * [Tapequilibrium](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/tapeequilibrium/tapequilibrium.kt)
     * Test
@@ -137,6 +140,9 @@
                   * [Mergeintervalskttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/MergeintervalsKtTest.kt)
                 * Quicksort
                   * [Quicksorttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/quicksort/QuicksortTest.kt)
+              * Stack
+                * Dailytemperatures
+                  * [Dailytemperaturestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/DailyTemperaturesTest.kt)
 
 ## Bitmanipulation
     * Main
