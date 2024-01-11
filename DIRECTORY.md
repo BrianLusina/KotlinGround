@@ -86,6 +86,9 @@
                   * [Dailytemperatures](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/dailyTemperatures.kt)
               * Tapeequilibrium
                 * [Tapequilibrium](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/tapeequilibrium/tapequilibrium.kt)
+              * Twopointers
+                * Mergesortedarray
+                  * [Merge](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/twopointers/mergesortedarray/merge.kt)
     * Test
               * Arrays
                 * Removeelement
@@ -143,6 +146,9 @@
               * Stack
                 * Dailytemperatures
                   * [Dailytemperaturestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/DailyTemperaturesTest.kt)
+              * Twopointers
+                * Mergesortedarray
+                  * [Mergetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/twopointers/mergesortedarray/MergeTest.kt)
 
 ## Bitmanipulation
     * Main
