@@ -92,7 +92,7 @@
     * Test
               * Arrays
                 * Removeelement
-                  * [Removeelementkttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveelementKtTest.kt)
+                  * [Removeelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveElementTest.kt)
               * Backtracking
                 * Decodemessage
                   * [Numberofwaystodecodemessagetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/decodemessage/NumberOfWaysToDecodeMessageTest.kt)
