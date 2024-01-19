@@ -8,6 +8,8 @@
           * Kotlinground
             * Algorithms
               * Arrays
+                * Majorityelement
+                  * [Majorityelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/majorityelement/majorityElement.kt)
                 * Removeelement
                   * [Removeelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/removeelement/removeelement.kt)
               * Backtracking
@@ -91,6 +93,8 @@
                   * [Merge](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/twopointers/mergesortedarray/merge.kt)
     * Test
               * Arrays
+                * Majorityelement
+                  * [Majorityelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/majorityelement/MajorityElementTest.kt)
                 * Removeelement
                   * [Removeelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveElementTest.kt)
               * Backtracking
