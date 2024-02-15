@@ -627,6 +627,7 @@
                   * [Finddifference](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/finddiffoftwoarrays/findDifference.kt)
                 * Jumpgame
                   * [Canjump](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/jumpgame/canJump.kt)
+                  * [Jump](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/jumpgame/jump.kt)
                 * Longestincreasingsubsequence
                   * [Longestincreasingsubsequence](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/longestincreasingsubsequence/longestIncreasingSubsequence.kt)
                 * Longestsubarrayofones
@@ -728,6 +729,7 @@
                   * [Largestaltitudetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/highestaltitude/LargestAltitudeTest.kt)
                 * Jumpgame
                   * [Canjumptest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/jumpgame/CanJumpTest.kt)
+                  * [Jumptest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/jumpgame/JumpTest.kt)
                 * Longestincreasingsubsequence
                   * [Longestincreasingsubsequencetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/longestincreasingsubsequence/LongestIncreasingSubsequenceTest.kt)
                 * Longestsubarrayofones
