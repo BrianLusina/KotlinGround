@@ -1,4 +1,4 @@
-package com.kotlinground.design.snapshotarray
+package com.kotlinground.datastructures.snapshotarray
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

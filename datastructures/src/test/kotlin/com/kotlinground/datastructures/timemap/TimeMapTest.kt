@@ -1,4 +1,4 @@
-package com.kotlinground.design.timemap
+package com.kotlinground.datastructures.timemap
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

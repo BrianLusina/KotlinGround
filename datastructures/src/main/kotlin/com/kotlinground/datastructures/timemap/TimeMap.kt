@@ -1,4 +1,4 @@
-package com.kotlinground.design.timemap
+package com.kotlinground.datastructures.timemap
 
 class TimeMap {
     private val histories = hashMapOf<String, ArrayList<Pair<Int, String>>>()
