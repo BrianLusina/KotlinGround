@@ -1,4 +1,4 @@
-package com.kotlinground.design.hashset
+package com.kotlinground.datastructures.hashset
 
 class MyHashSet() {
 

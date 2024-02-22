@@ -1,4 +1,4 @@
-package com.kotlinground.design.orderedstream
+package com.kotlinground.datastructures.orderedstream
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

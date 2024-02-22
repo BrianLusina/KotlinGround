@@ -1,4 +1,4 @@
-package com.kotlinground.design.hashmap
+package com.kotlinground.datastructures.hashmap
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

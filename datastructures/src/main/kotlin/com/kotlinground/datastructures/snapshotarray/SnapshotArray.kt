@@ -1,4 +1,4 @@
-package com.kotlinground.design.snapshotarray
+package com.kotlinground.datastructures.snapshotarray
 
 import java.util.TreeMap
 

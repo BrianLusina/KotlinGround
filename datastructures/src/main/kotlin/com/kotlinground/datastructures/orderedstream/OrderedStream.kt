@@ -1,4 +1,4 @@
-package com.kotlinground.design.orderedstream
+package com.kotlinground.datastructures.orderedstream
 
 class OrderedStream(n: Int) {
     private var pointer = 0

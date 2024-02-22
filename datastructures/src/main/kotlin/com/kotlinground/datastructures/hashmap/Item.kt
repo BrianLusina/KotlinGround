@@ -1,4 +1,4 @@
-package com.kotlinground.design.hashmap
+package com.kotlinground.datastructures.hashmap
 
 /**
  * Describes item stored in the HashMap

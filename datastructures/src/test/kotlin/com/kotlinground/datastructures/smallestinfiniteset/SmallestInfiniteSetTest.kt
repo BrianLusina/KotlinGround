@@ -1,4 +1,4 @@
-package com.kotlinground.design.smallestinfiniteset
+package com.kotlinground.datastructures.smallestinfiniteset
 
 import org.junit.jupiter.api.Assertions.*
 import kotlin.test.Test
