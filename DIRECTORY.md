@@ -221,6 +221,11 @@
                 * [Edge](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Edge.kt)
                 * [Graph](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Graph.kt)
                 * [Graphnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/GraphNode.kt)
+              * Hashmap
+                * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashmap/HashTable.kt)
+                * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashmap/Item.kt)
+              * Hashset
+                * [Myhashset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashset/MyHashSet.kt)
               * Linkedlists
                 * Doubly
                   * [Doublylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedList.kt)
@@ -231,6 +236,8 @@
                   * [Singlylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedList.kt)
                   * [Singlylinkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListNode.kt)
                   * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/utils.kt)
+              * Orderedstream
+                * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/orderedstream/OrderedStream.kt)
               * Queues
                 * Exceptions
                   * [Queueemptyexception](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/exceptions/QueueEmptyException.kt)
@@ -241,6 +248,14 @@
                   * [Fifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/FifoQueue.kt)
                   * [Linkedlistfifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/LinkedListFifoQueue.kt)
                 * [Queue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/Queue.kt)
+              * Randomizedset
+                * [Randomizedset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/randomizedset/RandomizedSet.kt)
+              * Smallestinfiniteset
+                * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSet.kt)
+              * Snapshotarray
+                * [Snapshotarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArray.kt)
+              * Timemap
+                * [Timemap](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/timemap/TimeMap.kt)
               * Trees
                 * Binarytrees
                   * Avl
@@ -283,16 +298,30 @@
                   * [Mergeablestateflowimpltest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableStateFlowImplTest.kt)
                   * [Mergeablevaluetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableValueTest.kt)
                   * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/UtilsTest.kt)
+              * Hashmap
+                * [Hashtabletest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/hashmap/HashTableTest.kt)
+              * Hashset
+                * [Myhashsettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/hashset/MyHashSetTest.kt)
               * Linkedlists
                 * Doubly
                   * [Doublylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListTest.kt)
                 * Singly
                   * [Singlylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListTest.kt)
+              * Orderedstream
+                * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/orderedstream/OrderedStreamTest.kt)
               * Queues
                 * Fifo
                   * [Arraylistfifoqueuespec](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueueSpec.kt)
                   * [Arraylistfifoqueuetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueueTest.kt)
                   * [Fifoqueuetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/FifoQueueTest.kt)
+              * Randomizedset
+                * [Randomizedsettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/randomizedset/RandomizedSetTest.kt)
+              * Smallestinfiniteset
+                * [Smallestinfinitesettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSetTest.kt)
+              * Snapshotarray
+                * [Snapshotarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArrayTest.kt)
+              * Timemap
+                * [Timemaptest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/timemap/TimeMapTest.kt)
               * Trees
                 * Binarytrees
                   * [Binarytreecountgoodnodestest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeCountGoodNodesTest.kt)
@@ -407,23 +436,12 @@
                   * [Server](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Server.kt)
                 * Singleton
                   * [Logger](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/singleton/Logger.kt)
-              * Hashmap
-                * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/HashTable.kt)
-                * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/Item.kt)
-              * Hashset
-                * [Myhashset](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashset/MyHashSet.kt)
               * Oop
                 * Interfaces
                   * [Lgremote](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/LGRemote.kt)
                   * [Remote](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/Remote.kt)
                   * [Samsungremote](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/SamsungRemote.kt)
                   * [Tv](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/TV.kt)
-              * Orderedstream
-                * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/orderedstream/OrderedStream.kt)
-              * Smallestinfiniteset
-                * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/smallestinfiniteset/SmallestInfiniteSet.kt)
-              * Snapshotarray
-                * [Snapshotarray](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/snapshotarray/SnapshotArray.kt)
               * Structuralpatterns
                 * Adapter
                   * [Pegs](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/adapter/pegs.kt)
@@ -446,23 +464,9 @@
                 * Proxy
                   * [Catimage](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/proxy/catimage.kt)
                   * [Youtubemanager](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/proxy/youtubemanager.kt)
-              * Timemap
-                * [Timemap](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/timemap/TimeMap.kt)
     * Test
               * Browserhistory
                 * [Browserhistorytest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/browserhistory/BrowserHistoryTest.kt)
-              * Hashmap
-                * [Hashtabletest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashmap/HashTableTest.kt)
-              * Hashset
-                * [Myhashsettest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashset/MyHashSetTest.kt)
-              * Orderedstream
-                * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/orderedstream/OrderedStreamTest.kt)
-              * Smallestinfiniteset
-                * [Smallestinfinitesettest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/smallestinfiniteset/SmallestInfiniteSetTest.kt)
-              * Snapshotarray
-                * [Snapshotarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/snapshotarray/SnapshotArrayTest.kt)
-              * Timemap
-                * [Timemaptest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/timemap/TimeMapTest.kt)
 
 ## Ktmath
     * Main
