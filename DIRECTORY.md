@@ -629,6 +629,8 @@
                   * [Containerwithmostwater](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/containerwithmostwater/containerWithMostWater.kt)
                 * Finddiffoftwoarrays
                   * [Finddifference](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/finddiffoftwoarrays/findDifference.kt)
+                * Gasstations
+                  * [Cancompletecircuit](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/gasstations/canCompleteCircuit.kt)
                 * Hindex
                   * [Hindex](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/hindex/hIndex.kt)
                 * Jumpgame
@@ -731,6 +733,8 @@
                   * [Finddifferencetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/finddiffoftwoarrays/FindDifferenceTest.kt)
                 * Findpivotindex
                   * [Findpivotindextest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/findpivotindex/FindPivotIndexTest.kt)
+                * Gasstations
+                  * [Cancompletecircuittest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/gasstations/CanCompleteCircuitTest.kt)
                 * Highestaltitude
                   * [Largestaltitudetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/highestaltitude/LargestAltitudeTest.kt)
                 * Hindex
