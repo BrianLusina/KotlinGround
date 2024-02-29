@@ -623,6 +623,8 @@
               * Arrays
                 * Array Three Pointers
                   * [Minimize](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/array_three_pointers/minimize.kt)
+                * Candy
+                  * [Candy](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/candy/candy.kt)
                 * Canplaceflowers
                   * [Canplaceflowers](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/canplaceflowers/canplaceflowers.kt)
                 * Containerwithmostwater
@@ -725,6 +727,8 @@
               * Arrays
                 * Array Three Pointers
                   * [Minimizetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/array_three_pointers/MinimizeTest.kt)
+                * Candy
+                  * [Candytest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/candy/CandyTest.kt)
                 * Canplaceflowers
                   * [Canplaceflowerstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/canplaceflowers/CanplaceflowersTest.kt)
                 * Containerwithmostwater
