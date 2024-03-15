@@ -12,6 +12,8 @@
                   * [Majorityelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/majorityelement/majorityElement.kt)
                 * Removeelement
                   * [Removeelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/removeelement/removeelement.kt)
+                * Twosum
+                  * [Twosum](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/twosum/twoSum.kt)
               * Backtracking
                 * Decodemessage
                   * [Numberofwaystodecodemessage](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/decodemessage/numberOfWaysToDecodeMessage.kt)
@@ -97,6 +99,8 @@
                   * [Majorityelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/majorityelement/MajorityElementTest.kt)
                 * Removeelement
                   * [Removeelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveElementTest.kt)
+                * Twosum
+                  * [Twosumtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/twosum/TwoSumTest.kt)
               * Backtracking
                 * Decodemessage
                   * [Numberofwaystodecodemessagetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/decodemessage/NumberOfWaysToDecodeMessageTest.kt)
@@ -493,6 +497,8 @@
                 * [Series](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/largestSeriesProduct/Series.kt)
               * Ntheven
                 * [Ntheven](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/ntheven/ntheven.kt)
+              * Pascalstriangle
+                * [Pascalstriangle](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/pascalstriangle/pascalsTriangle.kt)
               * Perfectnumbers
                 * [Naturalnumber](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/perfectNumbers/NaturalNumber.kt)
               * Powersofi
@@ -525,6 +531,8 @@
                 * [Squarestest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/diffOfSquares/SquaresTest.kt)
               * Largestseriesproduct
                 * [Seriestest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/largestSeriesProduct/SeriesTest.kt)
+              * Pascalstriangle
+                * [Pascalstriangletest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/pascalstriangle/PascalsTriangleTest.kt)
               * Perfectnumbers
                 * [Naturalnumbertest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/perfectNumbers/NaturalNumberTest.kt)
               * Primes
@@ -557,6 +565,8 @@
                 * [Findcapitals](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/findcapitals/findCapitals.kt)
               * Firstandlast
                 * [Removechars](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/firstandlast/removeChars.kt)
+              * Firstoccurrence
+                * [Strstr](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/firstoccurrence/strStr.kt)
               * Gcdofstrings
                 * [Gcdofstrings](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/gcdofstrings/gcdOfStrings.kt)
               * Highlows
@@ -590,6 +600,8 @@
                 * [Findcapitalstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/findcapitals/FindCapitalsTest.kt)
               * Firstandlast
                 * [Removecharskttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/firstandlast/RemoveCharsKtTest.kt)
+              * Firstoccurrence
+                * [Strstrtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/firstoccurrence/StrStrTest.kt)
               * Gcdofstrings
                 * [Gcdofstringstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/gcdofstrings/GcdOfStringsTest.kt)
               * Isomorphic
@@ -623,6 +635,8 @@
               * Arrays
                 * Array Three Pointers
                   * [Minimize](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/array_three_pointers/minimize.kt)
+                * Candy
+                  * [Candy](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/candy/candy.kt)
                 * Canplaceflowers
                   * [Canplaceflowers](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/canplaceflowers/canplaceflowers.kt)
                 * Containerwithmostwater
@@ -725,6 +739,8 @@
               * Arrays
                 * Array Three Pointers
                   * [Minimizetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/array_three_pointers/MinimizeTest.kt)
+                * Candy
+                  * [Candytest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/candy/CandyTest.kt)
                 * Canplaceflowers
                   * [Canplaceflowerstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/canplaceflowers/CanplaceflowersTest.kt)
                 * Containerwithmostwater
