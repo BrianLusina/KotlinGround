@@ -21,7 +21,7 @@ allprojects {
     }
 
     configure<JavaPluginExtension> {
-        sourceCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_16
     }
 
     configure<JacocoPluginExtension> {

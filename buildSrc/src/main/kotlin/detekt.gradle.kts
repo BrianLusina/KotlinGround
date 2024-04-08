@@ -38,7 +38,7 @@ subprojects {
     }
 
     tasks.withType<Detekt> {
-        jvmTarget = Versions.JAVA
+        jvmTarget = "16.0.0"
     }
 }
 

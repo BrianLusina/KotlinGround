@@ -3,8 +3,12 @@ object Dependencies {
         val kotlinXDatetime = "org.jetbrains.kotlinx:kotlinx-datetime:0.4.0"
         val kotlinXCollectionsImmutable = "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.5"
         val kotlinXSerializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0-RC"
-        val kotlinXCoroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
-        val kotlinXCoroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+
+        object Coroutines {
+            val version = "1.8.1-Beta"
+            val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+            val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
+        }
     }
 
     object Test {
