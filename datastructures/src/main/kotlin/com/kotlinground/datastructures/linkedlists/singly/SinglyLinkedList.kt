@@ -25,11 +25,26 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
     }
 
     override fun append(data: T) {
+        val node = SinglyLinkedListNode(data)
 
+        if (head == null) {
+            head = node
+            return
+        }
+
+        var lastNode = head
+
+        while (lastNode?.next != null) {
+            lastNode = lastNode.next
+        }
+
+        lastNode?.next = node
     }
 
     override fun prepend(data: T) {
-        TODO("Not yet implemented")
+        val node = SinglyLinkedListNode(data)
+        node.next = head
+        head = node
     }
 
     override fun count(data: T): Int {
