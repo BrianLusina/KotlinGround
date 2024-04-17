@@ -373,4 +373,10 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
         odd?.next = evenHead
         return head
     }
+
+    override fun insertAfter(node: SinglyLinkedListNode<T>, data: T) {
+        val newNode = SinglyLinkedListNode(data)
+        newNode.next = node.next
+        node.next = newNode
+    }
 }

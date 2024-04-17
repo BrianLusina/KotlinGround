@@ -179,4 +179,9 @@ interface LinkedList<Node, T> {
     fun size(): Int
 
     fun oddEvenList(): Node?
+
+    /**
+     * Inserts a given data item after the given node
+     */
+    fun insertAfter(node: Node, data: T)
 }
