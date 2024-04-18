@@ -220,7 +220,7 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeAtPosition(position: Int) {
+    override fun deleteNodeAtPosition(position: Int): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
@@ -288,6 +288,10 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     }
 
     override fun oddEvenList(): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    override fun insertAfter(node: DoublyLinkedListNode<T>, data: T) {
         TODO("Not yet implemented")
     }
 }

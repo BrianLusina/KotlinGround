@@ -39,7 +39,7 @@ interface LinkedList<Node, T> {
      * Deletes a given node from the LinkedList given its position
      * @param position [Int]
      */
-    fun deleteNodeAtPosition(position: Int)
+    fun deleteNodeAtPosition(position: Int): Node?
 
     /**
      * Deletes a given node from the LinkedList given its data. This will delete the first occurrence of data

@@ -231,8 +231,32 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeAtPosition(position: Int) {
-        TODO("Not yet implemented")
+    override fun deleteNodeAtPosition(position: Int): SinglyLinkedListNode<T>? {
+        if (head == null) {
+            return null
+        }
+        var currentNode = head
+
+        if (position == 0) {
+            head = currentNode?.next
+            return currentNode
+        }
+
+        var previous: SinglyLinkedListNode<T>? = null
+        var count = 0
+
+        while (currentNode != null && count != position) {
+            previous = currentNode
+            currentNode = currentNode.next
+            count++
+        }
+
+        if (currentNode == null) {
+            return currentNode
+        }
+
+        previous?.next = currentNode.next
+        return currentNode
     }
 
     override fun deleteNodeByData(data: T) {
