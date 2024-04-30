@@ -323,6 +323,7 @@
                 * Singly
                   * [Singlylinkedlistspec](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListSpec.kt)
                   * [Singlylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListTest.kt)
+                  * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/UtilsTest.kt)
               * Orderedstream
                 * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/orderedstream/OrderedStreamTest.kt)
               * Queues
