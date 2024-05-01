@@ -1,6 +1,7 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import org.junit.jupiter.api.Test
+import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 
@@ -224,5 +225,38 @@ class SingleLinkedListMaxPairSumTest {
 
         val actual = maximumPairSumReverseInPlace(linkedList.headNode())
         assertEquals(expected, actual)
+    }
+}
+
+class SinglyLinkedListRemoveDuplicatesTest {
+
+    @Test
+    fun `should return null for empty list`() {
+        val singlyLinkedList = SinglyLinkedList<Any>(null)
+        val actual = singlyLinkedList.removeDuplicates()
+
+        assertNull(actual)
+    }
+
+    @Test
+    fun `should removes duplicates from (1,6,1,4,2,2,4) to become (1,6,4,2)`() {
+        val singlyLinkedList = SinglyLinkedList<Int>()
+        val data = intArrayOf(1, 6, 1, 4, 2, 2, 4)
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val actualHead = singlyLinkedList.removeDuplicates()
+        var current = actualHead
+        val actualData = arrayListOf<Int>()
+
+        while (current != null) {
+            actualData.add(current.data)
+            current = current.next
+        }
+
+        val expected = arrayListOf(1, 6, 4, 2)
+
+        assertContentEquals(expected, actualData)
     }
 }

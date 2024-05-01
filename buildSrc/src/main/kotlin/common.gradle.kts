@@ -98,7 +98,7 @@ subprojects {
         testImplementation(Dependencies.Test.mockK)
 
         testImplementation(Dependencies.Test.spekDslJvm)
-        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
+//        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
 
         testImplementation(Dependencies.Test.jUnitJupiterEngine)
         testImplementation(Dependencies.Test.jUnitJupiterVintageEngine)

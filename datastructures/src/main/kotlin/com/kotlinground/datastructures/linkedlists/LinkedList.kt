@@ -94,6 +94,11 @@ interface LinkedList<Node, T> {
     fun removeLast(): Node?
 
     /**
+     * Removes duplicates from the linked list
+     */
+    fun removeDuplicates(): Node?
+
+    /**
      * Returns true is the linked list is empty, false otherwise
      */
     fun isEmpty(): Boolean

@@ -429,4 +429,26 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
         newNode.next = node.next
         node.next = newNode
     }
+
+    override fun removeDuplicates(): SinglyLinkedListNode<T>? {
+        if (head == null || head?.next == null) {
+            return head
+        }
+
+        val seen = hashMapOf<T, Boolean>()
+        var current = head
+        var previous: SinglyLinkedListNode<T>? = null
+
+        while (current != null) {
+            if (seen.containsKey(current.data)) {
+                previous?.next = current
+            } else {
+                seen[current.data] = true
+                previous = current
+            }
+            current = previous?.next
+        }
+
+        return head
+    }
 }

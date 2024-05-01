@@ -294,4 +294,8 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     override fun insertAfter(node: DoublyLinkedListNode<T>, data: T) {
         TODO("Not yet implemented")
     }
+
+    override fun removeDuplicates(): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
 }
