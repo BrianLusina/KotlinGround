@@ -451,4 +451,26 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
 
         return head
     }
+
+    override fun nthToLastNode(n: Int): SinglyLinkedListNode<T>? {
+        require(n >= 0) { "N $n must be greater than or equal to 0" }
+        require(n <= size()) { "N $n must be less than or equal to size of linked list" }
+
+        var fastPointer = head
+        var slowPointer = head
+
+        for (i in 0 until n) {
+            fastPointer = fastPointer?.next
+            if (fastPointer == null) {
+                return null
+            }
+        }
+
+        while (fastPointer != null) {
+            fastPointer = fastPointer.next
+            slowPointer = slowPointer?.next
+        }
+
+        return slowPointer
+    }
 }

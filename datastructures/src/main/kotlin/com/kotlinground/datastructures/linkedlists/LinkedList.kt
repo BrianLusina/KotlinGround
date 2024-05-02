@@ -189,4 +189,10 @@ interface LinkedList<Node, T> {
      * Inserts a given data item after the given node
      */
     fun insertAfter(node: Node, data: T)
+
+    /**
+     * Retrieves the nth to the last node
+     * If n is less than 0, an error must be raised
+     */
+    fun nthToLastNode(n: Int): Node?
 }

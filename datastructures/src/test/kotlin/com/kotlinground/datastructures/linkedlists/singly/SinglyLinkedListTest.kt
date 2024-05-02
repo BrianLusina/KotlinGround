@@ -3,6 +3,7 @@ package com.kotlinground.datastructures.linkedlists.singly
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 
 class SinglyLinkedListTest {
@@ -258,5 +259,29 @@ class SinglyLinkedListRemoveDuplicatesTest {
         val expected = arrayListOf(1, 6, 4, 2)
 
         assertContentEquals(expected, actualData)
+    }
+}
+
+class SinglyLinkedListNtToLastNodeTest {
+
+    @Test
+    fun `should return null for empty list`() {
+        val singlyLinkedList = SinglyLinkedList<Any>(null)
+        val actual = singlyLinkedList.nthToLastNode(1)
+
+        assertNull(actual)
+    }
+
+    @Test
+    fun `should return C for (A,B,C,D) for n = 2`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("A", "B", "C", "D")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+        val expected = "C"
+        val actualNode = singlyLinkedList.nthToLastNode(2)
+        assertNotNull(actualNode)
+        assertEquals(expected, actualNode.data)
     }
 }

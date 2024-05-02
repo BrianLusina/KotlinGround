@@ -298,4 +298,8 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     override fun removeDuplicates(): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
+
+    override fun nthToLastNode(n: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
 }
