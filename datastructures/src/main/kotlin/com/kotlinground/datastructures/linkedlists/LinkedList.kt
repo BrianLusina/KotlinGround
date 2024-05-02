@@ -73,10 +73,23 @@ interface LinkedList<Node, T> {
 
 
     /**
-     * Counts the number of occurrences of data in a linked list
-     * @param data
+     * Counts the number of occurrences of a data in a LinkedList. If the linked list is empty(no head). 0 is returned.
+     * otherwise the occurrences of the data element will be sought using the equality operator. This assumes that the
+     * data element in each node already implements this operator
+     *
+     * Complexity:
+     * The assumption here is that n is the number of nodes in the linked
+     *
+     * Time O(n): This is because the algorithm iterates through each node in the linked list to find data values in
+     * each node that equal the provided data argument in the function. This is both for the worst and best case as
+     * each node in the linked list has to be checked
+     *
+     * Space O(1): no extra space is required other than the value being incremented for each node whose data element
+     * equals the provided data argument.
+     * @param data [T] data to count.
+     * @return [Int] number of occurrences
      */
-    fun count(data: T): Int
+    fun countOccurrences(data: T): Int
 
     /**
      * Gets the last node in the LinkedList

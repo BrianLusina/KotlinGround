@@ -47,8 +47,19 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
         head = node
     }
 
-    override fun count(data: T): Int {
-        TODO("Not yet implemented")
+    override fun countOccurrences(data: T): Int {
+        if (head == null) {
+            return 0
+        }
+        var occurrences = 0
+        var current = head
+        while (current != null) {
+            if (current.data == data) {
+                occurrences++
+            }
+            current = current.next
+        }
+        return occurrences
     }
 
     override fun getLast(): SinglyLinkedListNode<T> {
