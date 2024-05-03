@@ -313,4 +313,8 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     override fun nthToLastNode(n: Int): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
+
+    override fun rotate(k: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
 }

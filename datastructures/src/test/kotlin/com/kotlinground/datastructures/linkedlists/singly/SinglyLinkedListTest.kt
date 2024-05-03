@@ -285,3 +285,19 @@ class SinglyLinkedListNtToLastNodeTest {
         assertEquals(expected, actualNode.data)
     }
 }
+
+class SinglyLinkedListRotateTest {
+
+    @Test
+    fun `should rotate (1,2,3,4,5,6) by k = 4 to (5, 6, 1, 2, 3, 4)`() {
+        val singlyLinkedList = SinglyLinkedList<Int>()
+        val data = arrayOf(1, 2, 3, 4, 5, 6)
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+        val expected = 5
+        val actualNode = singlyLinkedList.rotate(4)
+        assertNotNull(actualNode)
+        assertEquals(expected, actualNode.data)
+    }
+}

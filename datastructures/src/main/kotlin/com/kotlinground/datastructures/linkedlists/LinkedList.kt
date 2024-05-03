@@ -208,4 +208,9 @@ interface LinkedList<Node, T> {
      * If n is less than 0, an error must be raised
      */
     fun nthToLastNode(n: Int): Node?
+
+    /**
+     * Rotate a linked list by k where k is the position of the pivot node to rotate the linked list by
+     */
+    fun rotate(k: Int): Node?
 }

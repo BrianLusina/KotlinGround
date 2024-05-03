@@ -484,4 +484,50 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
 
         return slowPointer
     }
+
+    override fun rotate(k: Int): SinglyLinkedListNode<T>? {
+        if (k == 0 || head == null || (head != null && head?.next == null)) {
+            return head
+        }
+
+        // initialize two pointers, a pivot node which will be set to the pivot point & last node which will be set to
+        // the tail of the linked list. count helps in making the pivot_node & the last_node point to the right nodes in
+        // the linked list.
+        var pivotNode = head
+        var lastNode = head
+        var previous: SinglyLinkedListNode<T>? = null
+        var count = 0
+
+        // pivot_node and the last_node pointers are moved to the right positions as long as the pivot_node pointer is
+        // not None & the count is less than the k position. Additionally, previous is updated to the pivot_node to
+        // mark the previous node(or the node before the pivot point)
+        while (pivotNode != null && count < k) {
+            previous = pivotNode
+            pivotNode = pivotNode.next
+            lastNode = lastNode?.next
+            count++
+        }
+
+        // this positions the first pointer correctly
+        pivotNode = previous
+
+        // now we move the last_node pointer to the last node in the linked list. This also keeps track of the previous
+        // node before the last node
+        while (lastNode != null) {
+            previous = lastNode
+            lastNode = lastNode.next
+        }
+
+        lastNode = previous
+
+        // make the last node's next pointer point to the head node, This temporarily makes the linked list circular
+        lastNode?.next = head
+        // the new head node is now the next node after the pivot point.
+        head = pivotNode?.next
+
+        // next we set the pivot points' next node. This breaks the circular linked list into a linear linked list
+        pivotNode?.next = null
+
+        return head
+    }
 }
