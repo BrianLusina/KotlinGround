@@ -213,4 +213,9 @@ interface LinkedList<Node, T> {
      * Rotate a linked list by k where k is the position of the pivot node to rotate the linked list by
      */
     fun rotate(k: Int): Node?
+
+    /**
+     * Checks if a linked list is a palindrome
+     */
+    fun isPalindrome(): Boolean
 }

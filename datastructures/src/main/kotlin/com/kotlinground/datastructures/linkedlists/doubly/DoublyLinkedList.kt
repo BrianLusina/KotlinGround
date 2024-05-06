@@ -317,4 +317,8 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     override fun rotate(k: Int): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
+
+    override fun isPalindrome(): Boolean {
+        TODO("Not yet implemented")
+    }
 }

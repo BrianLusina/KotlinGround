@@ -1,6 +1,7 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
+import java.util.Stack
 
 class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : LinkedList<SinglyLinkedListNode<T>, T> {
 
@@ -529,5 +530,59 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
         pivotNode?.next = null
 
         return head
+    }
+
+    override fun isPalindrome(): Boolean {
+        if (head == null || head?.next == null) {
+            return true
+        }
+        var firstPointer = head
+        val stack = Stack<T>()
+
+        while (firstPointer != null) {
+            stack.push(firstPointer.data)
+            firstPointer = firstPointer.next
+        }
+
+        firstPointer = head
+
+        while (stack.isNotEmpty()) {
+            val data = stack.pop()
+            if (data != firstPointer?.data) {
+                return false
+            }
+            firstPointer = firstPointer?.next
+        }
+
+        return true
+    }
+
+    fun isPalindromeTwoPointers(): Boolean {
+        if (head == null || head?.next == null) {
+            return true
+        }
+        var firstPointer = head
+        var lastPointer = head
+        val previous = arrayListOf<SinglyLinkedListNode<T>>()
+        var i = 0
+
+        while (lastPointer != null) {
+            previous.add(lastPointer)
+            lastPointer = lastPointer.next
+            i++
+        }
+
+        lastPointer = previous[i - 1]
+        var count = 0
+
+        while (count <= i / 2 + 1) {
+            if (previous[previous.size - count - 1].data != firstPointer?.data) {
+                return false
+            }
+            firstPointer = firstPointer?.next
+            count++
+        }
+
+        return true
     }
 }

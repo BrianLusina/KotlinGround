@@ -5,6 +5,7 @@ import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
+import kotlin.test.assertTrue
 
 class SinglyLinkedListTest {
 
@@ -299,5 +300,32 @@ class SinglyLinkedListRotateTest {
         val actualNode = singlyLinkedList.rotate(4)
         assertNotNull(actualNode)
         assertEquals(expected, actualNode.data)
+    }
+}
+
+class SinglyLinkedListIsPalindromeTest {
+
+    @Test
+    fun `should return true for (r, a, c, e, c, a, r)`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("r", "a", "c", "e", "c", "a", "r")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val actual = singlyLinkedList.isPalindrome()
+        assertTrue(actual)
+    }
+
+    @Test
+    fun `should return true for (r, a, c, e, c, a, r) using two pointers`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("r", "a", "c", "e", "c", "a", "r")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val actual = singlyLinkedList.isPalindromeTwoPointers()
+        assertTrue(actual)
     }
 }
