@@ -585,4 +585,18 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
 
         return true
     }
+
+    override fun moveTailToHead() {
+        if (head != null && head?.next != null) {
+            var last = head
+            var secondToLast: SinglyLinkedListNode<T>? = null
+            while (last?.next != null) {
+                secondToLast = last
+                last = last.next
+            }
+            last?.next = head
+            secondToLast?.next = null
+            head = last
+        }
+    }
 }

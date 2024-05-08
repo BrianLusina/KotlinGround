@@ -321,4 +321,32 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     override fun isPalindrome(): Boolean {
         TODO("Not yet implemented")
     }
+
+    override fun moveTailToHead() {
+        if (head != null && head?.next != null) {
+            var last = head
+
+            while (last?.next != null) {
+                last = last.next
+            }
+
+            // we can obtain the second_to_last node from the last node
+            val secondToLast = last?.previous
+
+            // set the current head node's second_to_last pointer to the last node
+            head?.previous = last
+
+            // set the next pointer of the last node to the head node
+            last?.next = head
+
+            // remove the secondToLast pointer of the last node
+            last?.previous = null
+
+            // remove the next pointer of the secondToLast node
+            secondToLast?.next = null
+
+            // set the head node as the last node
+            head = last
+        }
+    }
 }
