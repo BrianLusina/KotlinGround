@@ -1,9 +1,14 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
+import com.kotlinground.datastructures.linkedlists.LinkedListNode
+import com.kotlinground.datastructures.trees.compareTo
 import java.util.Stack
+import com.kotlinground.datastructures.utils.plus
+import com.kotlinground.datastructures.utils.rem
 
-class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : LinkedList<SinglyLinkedListNode<T>, T> {
+class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
+    LinkedList<SinglyLinkedListNode<T>, T>() {
 
     override fun size(): Int {
         if (head == null) {
@@ -598,5 +603,38 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) : L
             secondToLast?.next = null
             head = last
         }
+    }
+
+    operator fun <T : Number> plus(other: SinglyLinkedList<T>): SinglyLinkedList<T> {
+        var firstHead = head
+        var secondHead = other.head
+        val summedList = SinglyLinkedList<T>()
+
+        var carry = 0
+
+        while (firstHead != null || secondHead != null) {
+            val i = firstHead?.data ?: 0
+            val j = secondHead?.data ?: 0
+
+            val s = (i + j + carry) as T
+
+            if (s >= 10) {
+                carry = 1
+                val remainder = s.rem(10)
+                summedList.append(remainder as T)
+            } else {
+                carry = 0
+                summedList.append(s)
+            }
+
+            if (firstHead != null) {
+                firstHead = firstHead.next
+            }
+            if (secondHead != null) {
+                secondHead = secondHead.next
+            }
+        }
+
+        return summedList
     }
 }

@@ -389,3 +389,34 @@ class SinglyLinkedListMoveTailToHead {
         assertContentEquals(expectedData, actualData)
     }
 }
+
+class SinglyLinkedSumTwoLinkedLists {
+
+    @Test
+    fun `Should sum 5-6-3 to 8-4-2 to become 3-1-6`() {
+        val firstNumber = arrayOf(5, 6, 3)
+        val firstLinkedList = SinglyLinkedList<Int>()
+        for (num in firstNumber) {
+            firstLinkedList.append(num)
+        }
+
+        val secondNumber = intArrayOf(8, 4, 2)
+        val secondLinkedList = SinglyLinkedList<Int>()
+        for (num in secondNumber) {
+            secondLinkedList.append(num)
+        }
+
+        val expectedNumber = arrayListOf(3, 1, 6)
+
+        val actual = firstLinkedList + secondLinkedList
+        var current = actual.headNode()
+
+        val actualNumber = arrayListOf<Int>()
+        while (current != null) {
+            actualNumber.add(current.data)
+            current = current.next
+        }
+
+        assertContentEquals(expectedNumber, actualNumber)
+    }
+}

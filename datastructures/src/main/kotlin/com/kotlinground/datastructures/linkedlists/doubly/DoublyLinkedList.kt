@@ -2,7 +2,7 @@ package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
 
-class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
+class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     private var head: DoublyLinkedListNode<T>? = null
     private var tail: DoublyLinkedListNode<T>? = null
     public var size: Int = 0
