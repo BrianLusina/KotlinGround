@@ -1,7 +1,104 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
+import java.util.ArrayList
 import java.util.Stack
 
+/**
+ * This merges an arbitrary length of singly linked lists
+ */
+fun <T : Comparable<T>> mergeKLists(lists: ArrayList<SinglyLinkedListNode<T>?>): SinglyLinkedListNode<T>? {
+    val length = lists.size
+
+    if (lists.isEmpty()) {
+        return null
+    }
+
+    if (length == 1) {
+        return lists[0]
+    }
+
+    var interval = 1
+
+    while (interval < length) {
+        var index = 0
+
+        while (index + interval < length) {
+            lists[index] = mergeTwoSortedLists(lists[index], lists[index + interval])
+            index += interval * 2
+        }
+        interval *= 2
+    }
+
+    return lists[0]
+}
+
+/**
+ * Merges two sorted linked list into 1 sorted linked list. Note that the assumption here is that the 2 linked lists
+ * are already sorted. If either of the heads of the linked list that is provided is None, the other head node is
+ * returned instead. If both are None, then none is returned.
+ *
+ * Complexity:
+ * Time O(n+m) where n is the number of nodes in 1 linked list while m is the number of nodes in the other linked list.
+ * This is because both linked lists have to be traversed to merge into a single linked list
+ *
+ * Space O(n+m) where n & m are the number of nodes in the respective linked list. This is because a new linked list
+ * is created from both linked lists and the nodes from each are merged into a single linke list.
+ *
+ * @param headOne [SinglyLinkedListNode]: optional head node of linked list one
+ * @param headTwo [SinglyLinkedListNode]: optional head node of linked list two
+ * @return [SinglyLinkedListNode] optional head node of merged linked list
+ */
+fun <T : Comparable<T>> mergeTwoSortedLists(
+    headOne: SinglyLinkedListNode<T>?,
+    headTwo: SinglyLinkedListNode<T>?
+): SinglyLinkedListNode<T>? {
+    if (headOne == null && headTwo == null) {
+        return null
+    }
+
+    if (headOne == null) {
+        return headTwo
+    }
+
+    if (headTwo == null) {
+        return headOne
+    }
+
+    var pointerOne = headOne
+    var pointerTwo = headTwo
+    val mergedList: SinglyLinkedListNode<T>?
+
+    if (pointerOne.data < pointerTwo.data) {
+        mergedList = pointerOne
+        pointerOne = pointerOne.next
+    } else {
+        mergedList = pointerTwo
+        pointerTwo = pointerTwo.next
+    }
+
+    var current = mergedList
+
+    while (pointerOne != null && pointerTwo != null) {
+        if (pointerOne.data > pointerTwo.data) {
+            current?.next = pointerTwo
+            pointerTwo = pointerTwo.next
+        } else {
+            current?.next = pointerOne
+            pointerOne = pointerOne.next
+        }
+        current = current?.next
+    }
+
+    if (pointerOne != null) {
+        current?.next = pointerOne
+    }
+
+    if (pointerTwo != null) {
+        current?.next = pointerTwo
+    }
+
+    return mergedList
+}
 
 /**
  * Returns the maximum twin sum of a node and its twin, where a node's twin is at the index (n-1-i) where n is the

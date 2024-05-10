@@ -7,5 +7,5 @@ import com.kotlinground.datastructures.linkedlists.LinkedListNode
  */
 data class SinglyLinkedListNode<T>(
     override var data: T,
-    var next: SinglyLinkedListNode<T>? = null
+    override var next: SinglyLinkedListNode<T>? = null
 ) : LinkedListNode<T>

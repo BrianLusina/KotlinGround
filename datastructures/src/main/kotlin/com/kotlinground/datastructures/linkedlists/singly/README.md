@@ -461,3 +461,34 @@ Here `n` is the number of nodes in the linked list
 - Stack
 
 ---
+
+## Sum Two Linked Lists
+
+In this exercise, you are required to sum two linked lists and return the sum embedded in another linked list.
+
+The first number that we append to the linked list represents the unit place and will be the least significant digit of
+a number. The next numbers appended to the linked list will subsequently represent the tenth, hundredth, thousandth, and
+so on places.
+
+For example,
+
+```kotlin
+val llist1 = LinkedList()
+llist1.append(5)
+llist1.append(6)
+llist1.append(3)
+```
+
+in the code above, llist1 represents the number 365.
+
+Below is an illustration to make the task clearer to you:
+
+![](../../../../../../../../../datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/sum_linkedlists_1.png)
+
+![](../../../../../../../../../datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/sum_linkedlists_2.png)
+
+![](../../../../../../../../../datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/sum_linkedlists_3.png)
+
+As you can see from the illustration above, we have two linked lists from which we calculate the sum, and the third
+linked list represents that sum.
+

@@ -2,7 +2,7 @@ package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
 
-class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
+class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     private var head: DoublyLinkedListNode<T>? = null
     private var tail: DoublyLinkedListNode<T>? = null
     public var size: Int = 0
@@ -105,8 +105,19 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         return null
     }
 
-    override fun count(data: T): Int {
-        TODO("Not yet implemented")
+    override fun countOccurrences(data: T): Int {
+        if (head == null) {
+            return 0
+        }
+        var occurrences = 0
+        var current = head
+        while (current != null) {
+            if (current.data == data) {
+                occurrences++
+            }
+            current = current.next
+        }
+        return occurrences
     }
 
     override fun getLast(): DoublyLinkedListNode<T> {
@@ -220,7 +231,7 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeAtPosition(position: Int) {
+    override fun deleteNodeAtPosition(position: Int): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
@@ -289,5 +300,53 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
 
     override fun oddEvenList(): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
+    }
+
+    override fun insertAfter(node: DoublyLinkedListNode<T>, data: T) {
+        TODO("Not yet implemented")
+    }
+
+    override fun removeDuplicates(): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    override fun nthToLastNode(n: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    override fun rotate(k: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    override fun isPalindrome(): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun moveTailToHead() {
+        if (head != null && head?.next != null) {
+            var last = head
+
+            while (last?.next != null) {
+                last = last.next
+            }
+
+            // we can obtain the second_to_last node from the last node
+            val secondToLast = last?.previous
+
+            // set the current head node's second_to_last pointer to the last node
+            head?.previous = last
+
+            // set the next pointer of the last node to the head node
+            last?.next = head
+
+            // remove the secondToLast pointer of the last node
+            last?.previous = null
+
+            // remove the next pointer of the secondToLast node
+            secondToLast?.next = null
+
+            // set the head node as the last node
+            head = last
+        }
     }
 }

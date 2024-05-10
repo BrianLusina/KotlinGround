@@ -5,4 +5,5 @@ package com.kotlinground.datastructures.linkedlists
  */
 interface LinkedListNode<T> {
     val data: T
+    val next: LinkedListNode<T>?
 }

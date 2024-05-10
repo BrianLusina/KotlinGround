@@ -1,12 +1,12 @@
 package com.kotlinground.datastructures.linkedlists
 
-interface LinkedList<Node, T> {
+abstract class LinkedList<Node, T> {
     /**
      * Adds a node to the end of the linked list given the data to insert to the node
      */
-    fun append(data: T)
+    abstract fun append(data: T)
 
-    fun headNode(): Node?
+    abstract fun headNode(): Node?
 
     /**
      * Removes last node in the linked list and returns it. Depending on the type of linked list used, this will have
@@ -17,108 +17,126 @@ interface LinkedList<Node, T> {
      * number of nodes in the list as the algorithm has to traverse the entire list before removing the last node in the
      * list
      */
-    fun pop(): T?
+    abstract fun pop(): T?
 
     /**
      * Remove value at front
      */
-    fun shift(): T?
+    abstract fun shift(): T?
 
     /**
      * Adds a node to the beginning of the linked list given the data to insert to the node
      */
-    fun prepend(data: T)
+    abstract fun prepend(data: T)
 
     /**
      * Deletes a given node from the LinkedList
      * @param node [Node]
      */
-    fun deleteNode(node: Node)
+    abstract fun deleteNode(node: Node)
 
     /**
      * Deletes a given node from the LinkedList given its position
      * @param position [Int]
      */
-    fun deleteNodeAtPosition(position: Int)
+    abstract fun deleteNodeAtPosition(position: Int): Node?
 
     /**
      * Deletes a given node from the LinkedList given its data. This will delete the first occurrence of data
      * @param data [Any]
      */
-    fun deleteNodeByData(data: T)
+    abstract fun deleteNodeByData(data: T)
 
     /**
      * Deletes all given node from the LinkedList given its data.
      * @param data [Any]
      */
-    fun deleteNodesByData(data: T): Node?
+    abstract fun deleteNodesByData(data: T): Node?
 
     /**
      * Deletes and returns the middle node of a linked list
      * @return [Node]
      */
-    fun deleteMiddle(): Node?
+    abstract fun deleteMiddle(): Node?
 
     /**
      * Finds the middle node in a linked list
      * @return [Node] Middle node
      */
-    fun findMiddleNode(): Node?
+    abstract fun findMiddleNode(): Node?
 
     /**
      * Searches for a node in the provided linked list
      * @param node
      */
-    fun search(node: Node): Node
+    abstract fun search(node: Node): Node
 
 
     /**
-     * Counts the number of occurrences of data in a linked list
-     * @param data
+     * Counts the number of occurrences of a data in a LinkedList. If the linked list is empty(no head). 0 is returned.
+     * otherwise the occurrences of the data element will be sought using the equality operator. This assumes that the
+     * data element in each node already implements this operator
+     *
+     * Complexity:
+     * The assumption here is that n is the number of nodes in the linked
+     *
+     * Time O(n): This is because the algorithm iterates through each node in the linked list to find data values in
+     * each node that equal the provided data argument in the abstract function. This is both for the worst and best case as
+     * each node in the linked list has to be checked
+     *
+     * Space O(1): no extra space is required other than the value being incremented for each node whose data element
+     * equals the provided data argument.
+     * @param data [T] data to count.
+     * @return [Int] number of occurrences
      */
-    fun count(data: T): Int
+    abstract fun countOccurrences(data: T): Int
 
     /**
      * Gets the last node in the LinkedList
      */
-    fun getLast(): Node
+    abstract fun getLast(): Node
 
     /**
      * Deletes the first node in the linked list and returns it
      */
-    fun deleteFirst(): Node?
+    abstract fun deleteFirst(): Node?
 
     /**
      * Removes the last node in the linked list
      */
-    fun removeLast(): Node?
+    abstract fun removeLast(): Node?
+
+    /**
+     * Removes duplicates from the linked list
+     */
+    abstract fun removeDuplicates(): Node?
 
     /**
      * Returns true is the linked list is empty, false otherwise
      */
-    fun isEmpty(): Boolean
+    abstract fun isEmpty(): Boolean
 
     /**
      * Detects node that has a cycle
      */
-    fun detectNodeWithCycle(): Node?
+    abstract fun detectNodeWithCycle(): Node?
 
     /**
      * Checks if the linked list has a cycle
      */
-    fun hasCycle(): Boolean
+    abstract fun hasCycle(): Boolean
 
     /**
      * Removes cycle from linked list given the head of the linked list
      * @return [Node] head of linked list without cycle
      */
-    fun removeCycle(): Node
+    abstract fun removeCycle(): Node
 
     /**
      * Reverse a linked list so that the tail becomes the head and the head becomes the tail
      * @return [Node]
      */
-    fun reverse()
+    abstract fun reverse()
 
     /**
      * Inserts a node at the specified position of the linked list
@@ -126,7 +144,7 @@ interface LinkedList<Node, T> {
      * @param position [Int]
      * @return [Node]
      */
-    fun insert(node: Node, position: Int): Node
+    abstract fun insert(node: Node, position: Int): Node
 
     /**
      * Inserts a node after the currently provided node. This is not necessarily the head of the linked list
@@ -134,13 +152,13 @@ interface LinkedList<Node, T> {
      * @param currentNode [Node]
      * @return [Node]
      */
-    fun insertAfter(nodeToInsert: Node, currentNode: Node): Node
+    abstract fun insertAfter(nodeToInsert: Node, currentNode: Node): Node
 
     /**
      * Alternate split a linked list such that a linked list such as
      * a->b->c->d->e becomes a->c->e->None and b->d->None
      */
-    fun alternateSplit(): Pair<Node, Node>
+    abstract fun alternateSplit(): Pair<Node, Node>
 
     /**
      * Swaps nodes in a linked list in pairs.
@@ -153,7 +171,7 @@ interface LinkedList<Node, T> {
      * 2 -> 1 -> 4 -> 3
      * @returns [Node] new head of linked list
      */
-    fun pairwiseSwap(): Node?
+    abstract fun pairwiseSwap(): Node?
 
     /**
      * Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node
@@ -161,7 +179,7 @@ interface LinkedList<Node, T> {
      * Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
      * Output: [7,9,6,6,8,7,3,0,9,5]
      */
-    fun swapNodesAtKthAndKPlusOne(k: Int): Node?
+    abstract fun swapNodesAtKthAndKPlusOne(k: Int): Node?
 
     /**
      * Swaps two nodes based on the data they contain. We search through the LinkedList looking for the data item in
@@ -171,12 +189,51 @@ interface LinkedList<Node, T> {
      * no need to perform swap as well.
      * If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
      */
-    fun swapNodes(dataOne: T, dataTwo: T)
+    abstract fun swapNodes(dataOne: T, dataTwo: T)
 
     /**
      * Returns the number of nodes in the linked list
      */
-    fun size(): Int
+    abstract fun size(): Int
 
-    fun oddEvenList(): Node?
+    abstract fun oddEvenList(): Node?
+
+    /**
+     * Inserts a given data item after the given node
+     */
+    abstract fun insertAfter(node: Node, data: T)
+
+    /**
+     * Retrieves the nth to the last node
+     * If n is less than 0, an error must be raised
+     */
+    abstract fun nthToLastNode(n: Int): Node?
+
+    /**
+     * Rotate a linked list by k where k is the position of the pivot node to rotate the linked list by
+     */
+    abstract fun rotate(k: Int): Node?
+
+    /**
+     * Checks if a linked list is a palindrome
+     */
+    abstract fun isPalindrome(): Boolean
+
+    /**
+     * Moves the tail node of a linked list to the head node
+     * Moves the tail node to the head node making the tail node the new head of the linked list
+     * Uses two pointers where last pointer will be moved until it points to the last node in the linked list.
+     * The second pointer, previous, will point to the second last node in the linked list.
+     *
+     * Complexity Analysis:
+     *
+     * An assumption is made where n is the number of nodes in the linked list
+     * - Time: O(n) as the pointers have to be moved through each node in the linked list until both point to the
+     * last and second last nodes in the linked list
+     *
+     * - Space O(1) as no extra space is incurred in the iteration. Only pointers are moved at the end to move the tail
+     * node to the head and make the second to last node the new tail     *
+     */
+    abstract fun moveTailToHead()
 }
+

@@ -1,8 +1,11 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import org.junit.jupiter.api.Test
+import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 import kotlin.test.assertNull
+import kotlin.test.assertTrue
 
 class SinglyLinkedListTest {
 
@@ -224,5 +227,196 @@ class SingleLinkedListMaxPairSumTest {
 
         val actual = maximumPairSumReverseInPlace(linkedList.headNode())
         assertEquals(expected, actual)
+    }
+}
+
+class SinglyLinkedListRemoveDuplicatesTest {
+
+    @Test
+    fun `should return null for empty list`() {
+        val singlyLinkedList = SinglyLinkedList<Any>(null)
+        val actual = singlyLinkedList.removeDuplicates()
+
+        assertNull(actual)
+    }
+
+    @Test
+    fun `should removes duplicates from (1,6,1,4,2,2,4) to become (1,6,4,2)`() {
+        val singlyLinkedList = SinglyLinkedList<Int>()
+        val data = intArrayOf(1, 6, 1, 4, 2, 2, 4)
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val actualHead = singlyLinkedList.removeDuplicates()
+        var current = actualHead
+        val actualData = arrayListOf<Int>()
+
+        while (current != null) {
+            actualData.add(current.data)
+            current = current.next
+        }
+
+        val expected = arrayListOf(1, 6, 4, 2)
+
+        assertContentEquals(expected, actualData)
+    }
+}
+
+class SinglyLinkedListNtToLastNodeTest {
+
+    @Test
+    fun `should return null for empty list`() {
+        val singlyLinkedList = SinglyLinkedList<Any>(null)
+        val actual = singlyLinkedList.nthToLastNode(1)
+
+        assertNull(actual)
+    }
+
+    @Test
+    fun `should return C for (A,B,C,D) for n = 2`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("A", "B", "C", "D")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+        val expected = "C"
+        val actualNode = singlyLinkedList.nthToLastNode(2)
+        assertNotNull(actualNode)
+        assertEquals(expected, actualNode.data)
+    }
+}
+
+class SinglyLinkedListRotateTest {
+
+    @Test
+    fun `should rotate (1,2,3,4,5,6) by k = 4 to (5, 6, 1, 2, 3, 4)`() {
+        val singlyLinkedList = SinglyLinkedList<Int>()
+        val data = arrayOf(1, 2, 3, 4, 5, 6)
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+        val expected = 5
+        val actualNode = singlyLinkedList.rotate(4)
+        assertNotNull(actualNode)
+        assertEquals(expected, actualNode.data)
+    }
+}
+
+class SinglyLinkedListIsPalindromeTest {
+
+    @Test
+    fun `should return true for (r, a, c, e, c, a, r)`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("r", "a", "c", "e", "c", "a", "r")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val actual = singlyLinkedList.isPalindrome()
+        assertTrue(actual)
+    }
+
+    @Test
+    fun `should return true for (r, a, c, e, c, a, r) using two pointers`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("r", "a", "c", "e", "c", "a", "r")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val actual = singlyLinkedList.isPalindromeTwoPointers()
+        assertTrue(actual)
+    }
+}
+
+class SinglyLinkedListMoveTailToHead {
+
+    @Test
+    fun `should move tail of (r, a, c, e, c, a, r) to become (r, r, a, c, e, c, a)`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("r", "a", "c", "e", "c", "a", "r")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val expected = "r"
+
+        singlyLinkedList.moveTailToHead()
+        val actual = singlyLinkedList.headNode()
+        assertNotNull(actual)
+        assertEquals(expected, actual.data)
+
+        var current = actual
+        val actualData = arrayListOf<String>()
+
+        while (current != null) {
+            actualData.add(current.data)
+            current = current.next
+        }
+
+        val expectedData = arrayListOf("r", "r", "a", "c", "e", "c", "a")
+
+        assertContentEquals(expectedData, actualData)
+    }
+
+    @Test
+    fun `should move tail of (a, b, c, d) to become (d, a, b, c)`() {
+        val singlyLinkedList = SinglyLinkedList<String>()
+        val data = arrayOf("a", "b", "c", "d")
+        for (d in data) {
+            singlyLinkedList.append(d)
+        }
+
+        val expected = "d"
+
+        singlyLinkedList.moveTailToHead()
+
+        val actual = singlyLinkedList.headNode()
+        assertNotNull(actual)
+        assertEquals(expected, actual.data)
+
+        var current = actual
+        val actualData = arrayListOf<String>()
+
+        while (current != null) {
+            actualData.add(current.data)
+            current = current.next
+        }
+
+        val expectedData = arrayListOf("d", "a", "b", "c")
+
+        assertContentEquals(expectedData, actualData)
+    }
+}
+
+class SinglyLinkedSumTwoLinkedLists {
+
+    @Test
+    fun `Should sum 5-6-3 to 8-4-2 to become 3-1-6`() {
+        val firstNumber = arrayOf(5, 6, 3)
+        val firstLinkedList = SinglyLinkedList<Int>()
+        for (num in firstNumber) {
+            firstLinkedList.append(num)
+        }
+
+        val secondNumber = intArrayOf(8, 4, 2)
+        val secondLinkedList = SinglyLinkedList<Int>()
+        for (num in secondNumber) {
+            secondLinkedList.append(num)
+        }
+
+        val expectedNumber = arrayListOf(3, 1, 6)
+
+        val actual = firstLinkedList + secondLinkedList
+        var current = actual.headNode()
+
+        val actualNumber = arrayListOf<Int>()
+        while (current != null) {
+            actualNumber.add(current.data)
+            current = current.next
+        }
+
+        assertContentEquals(expectedNumber, actualNumber)
     }
 }

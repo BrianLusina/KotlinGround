@@ -51,7 +51,6 @@ subprojects {
             dirs("libs")
         }
         maven { url = URI.create("https://jitpack.io") }
-//        maven { url = URI.create("http://dl.bintray.com/jetbrains/spek") }
         maven { url = URI.create("https://plugins.gradle.org/m2/") }
     }
 
@@ -67,6 +66,7 @@ subprojects {
                 jvmTarget = "${JavaVersion.VERSION_11}"
             }
         }
+
         compileTestKotlin {
             kotlinOptions.jvmTarget = "${JavaVersion.VERSION_11}"
         }
@@ -91,12 +91,15 @@ subprojects {
     dependencies {
         implementation(kotlin("stdlib-jdk8", Versions.KOTLIN))
 
+        testRuntimeOnly(Dependencies.Test.kotlinReflect)
+
         testImplementation(Dependencies.Test.kotlinTestJunit)
         testImplementation(Dependencies.Test.jUnitJupiterApi)
         testImplementation(Dependencies.Test.mockK)
+
         testImplementation(Dependencies.Test.spekDslJvm)
-        testImplementation(Dependencies.Test.kotlinReflect)
-        testImplementation(Dependencies.Test.spekRunnerJunit5)
+//        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
+
         testImplementation(Dependencies.Test.jUnitJupiterEngine)
         testImplementation(Dependencies.Test.jUnitJupiterVintageEngine)
     }

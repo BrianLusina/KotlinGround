@@ -187,7 +187,18 @@
             * Concurrency
               * Bankaccount
                 * [Bankaccount](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/bankaccount/BankAccount.kt)
+              * Coroutines
+                * Sample
+                  * [Main](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sample/main.kt)
+                * Sequences
+                  * [Fibonacci](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/fibonacci.kt)
+                  * [Randomnumbers](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/randomNumbers.kt)
+                  * [Randomstring](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/randomString.kt)
+                  * [Sequences](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/sequences.kt)
+                * Suspension
+                  * [Sample](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/suspension/sample.kt)
     * Test
+              * Bankaccount
                 * [Bankaccounttest](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/test/kotlin/com/kotlinground/concurrency/bankaccount/BankAccountTest.kt)
 
 ## Datastructures
@@ -279,6 +290,8 @@
                   * [Trie](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/Trie.kt)
                   * [Trienode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/TrieNode.kt)
                 * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/utils.kt)
+              * Utils
+                * [Extensions](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/extensions.kt)
     * Test
               * Arrays
                 * Buildarrfromperm
@@ -310,7 +323,9 @@
                 * Doubly
                   * [Doublylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListTest.kt)
                 * Singly
+                  * [Singlylinkedlistspec](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListSpec.kt)
                   * [Singlylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListTest.kt)
+                  * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/UtilsTest.kt)
               * Orderedstream
                 * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/orderedstream/OrderedStreamTest.kt)
               * Queues
