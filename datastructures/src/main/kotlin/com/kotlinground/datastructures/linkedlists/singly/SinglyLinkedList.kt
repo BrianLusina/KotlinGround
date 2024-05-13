@@ -1,7 +1,6 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
-import com.kotlinground.datastructures.linkedlists.LinkedListNode
 import com.kotlinground.datastructures.trees.compareTo
 import java.util.Stack
 import com.kotlinground.datastructures.utils.plus
