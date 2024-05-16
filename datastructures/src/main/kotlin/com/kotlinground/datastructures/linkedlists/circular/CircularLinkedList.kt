@@ -33,6 +33,25 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         }
     }
 
+    /**
+     * Adds a new data item making it the head of the circular linked list
+     */
+    override fun prepend(data: T) {
+        val newNode = CircularLinkedListNode(data)
+        var current = head
+        newNode.next = head
+
+        if (head == null) {
+            newNode.next = newNode
+        } else {
+            while (current?.next != head) {
+                current = current?.next
+            }
+            current?.next = newNode
+        }
+        head = newNode
+    }
+
     override fun headNode(): CircularLinkedListNode<T>? {
         return head
     }
@@ -168,7 +187,5 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         TODO("Not yet implemented")
     }
 
-    override fun prepend(data: T) {
-        TODO("Not yet implemented")
-    }
+
 }
