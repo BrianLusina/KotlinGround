@@ -275,12 +275,12 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
         return currentNode
     }
 
-    override fun deleteNodeByData(data: T) {
+    override fun deleteNodeByKey(key: String) {
         var current = head
 
         // If the data we are deleting is at the head, then change the head to the next node in the linked list
         // and return
-        if (current != null && current.data == data) {
+        if (current != null && current.key == key) {
             this.head = current.next;
             return
         }
@@ -289,7 +289,7 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
         var previous: SinglyLinkedListNode<T>? = null
 
         // we move the pointer down the LinkedList until we find the Node whose data matches what we want to delete
-        while (current != null && current.data != data) {
+        while (current != null && current.key != key) {
             previous = current;
             current = current.next;
         }
@@ -305,13 +305,13 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
         return
     }
 
-    override fun deleteNodesByData(data: T): SinglyLinkedListNode<T>? {
+    override fun deleteNodesByKey(key: String): SinglyLinkedListNode<T>? {
         if (head != null) {
             val dummyHead = SinglyLinkedListNode(data = head!!.data, next = head)
             var current = dummyHead
 
             while (current.next != null) {
-                if (current.next!!.data === data) {
+                if (current.next!!.key === key) {
                     current.next = current.next!!.next;
                 } else {
                     current = current.next!!

@@ -43,15 +43,15 @@ abstract class LinkedList<Node, T> {
 
     /**
      * Deletes a given node from the LinkedList given its data. This will delete the first occurrence of data
-     * @param data [Any]
+     * @param key [Any]
      */
-    abstract fun deleteNodeByData(data: T)
+    abstract fun deleteNodeByKey(key: String)
 
     /**
      * Deletes all given node from the LinkedList given its data.
-     * @param data [Any]
+     * @param key [Any]
      */
-    abstract fun deleteNodesByData(data: T): Node?
+    abstract fun deleteNodesByKey(key: String): Node?
 
     /**
      * Deletes and returns the middle node of a linked list
