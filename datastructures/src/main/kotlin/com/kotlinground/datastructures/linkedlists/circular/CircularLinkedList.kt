@@ -175,6 +175,45 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         TODO("Not yet implemented")
     }
 
+    /**
+     * Splits a circular linked list into two halves and returns the two halves in a tuple. If the size is 0, i.e. no
+     * nodes are in this linked list, then it returns None. If the size is 1, then the first portion of the tuple, at
+     * index 0 will be the head of this circular linked list, while the second portion will be None.
+     */
+    fun splitList(): Pair<CircularLinkedList<T>, CircularLinkedList<T>?>? {
+        val size = size()
+        if (size == 0) {
+            return null
+        }
+
+        if (size == 1) {
+            return Pair(this, null)
+        }
+
+        val mid = size / 2
+        var count = 0
+
+        var previous: CircularLinkedListNode<T>? = null
+        var current = head
+
+        while (current != null && count < mid) {
+            count += 1
+            previous = current
+            current = current.next
+        }
+
+        previous?.next = head
+
+        val secondList = CircularLinkedList<T>()
+        while (current?.next != head) {
+            secondList.append(current?.data!!)
+            current = current.next
+        }
+
+        secondList.append(current?.data!!)
+        return Pair(this, secondList)
+    }
+
     override fun pairwiseSwap(): CircularLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
@@ -184,7 +223,17 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
     }
 
     override fun size(): Int {
-        TODO("Not yet implemented")
+        var current = head
+        var count = 0
+        while (current != null) {
+            count += 1
+            current = current.next
+
+            if (current == head) {
+                break
+            }
+        }
+        return count
     }
 
     override fun oddEvenList(): CircularLinkedListNode<T>? {
