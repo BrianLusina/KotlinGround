@@ -62,6 +62,8 @@
                   * [Findminarrowshots](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/minarrows/findMinArrowShots.kt)
               * Hamming
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
+              * Josephuscircle
+                * [Josephuscircle](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/josephuscircle/josephusCircle.kt)
               * Luhn
                 * [Luhn](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/luhn/Luhn.kt)
               * Maxareaofisland
@@ -136,6 +138,8 @@
                 * Minarrows
                   * [Findminarrowshotstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/minarrows/FindMinArrowShotsTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
+              * Josephuscircle
+                * [Josephuscircletest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/josephuscircle/JosephusCircleTest.kt)
               * Luhn
                 * [Luhntest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/luhn/LuhnTest.kt)
               * Maxareaofisland
