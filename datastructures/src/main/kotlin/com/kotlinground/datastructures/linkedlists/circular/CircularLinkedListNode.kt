@@ -18,4 +18,20 @@ data class CircularLinkedListNode<T>(
     override fun toString(): String {
         return "CircularLinkedListNode(data=$data, key=$key)"
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (other == null) {
+            return false
+        }
+
+        other as CircularLinkedListNode<*>
+
+        return this.key == other.key || this.data == other.data
+    }
+
+    override fun hashCode(): Int {
+        var result = data?.hashCode() ?: 0
+        result = 31 * result + (key?.hashCode() ?: 0)
+        return result
+    }
 }

@@ -120,7 +120,7 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
 
     override fun deleteNode(node: CircularLinkedListNode<T>) {
         if (head != null) {
-            // if the head node's key matches the key we are looking for
+            // if the head node matches the node we are looking for
             if (head == node) {
                 // set the current pointer to the head node. This will be used to track the last node as the pointer
                 // moves through the list
