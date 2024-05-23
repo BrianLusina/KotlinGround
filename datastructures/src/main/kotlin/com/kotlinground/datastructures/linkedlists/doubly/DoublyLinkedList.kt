@@ -235,11 +235,11 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeByData(data: T) {
+    override fun deleteNodeByKey(key: String) {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodesByData(data: T): DoublyLinkedListNode<T>? {
+    override fun deleteNodesByKey(key: String): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
