@@ -11,25 +11,21 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
         return head
     }
 
+    override fun iterator(): Iterator<DoublyLinkedListNode<T>> {
+        return DoublyLinkedListIterator(head)
+    }
+
     override fun append(data: T) {
-        size++
         val newNode = DoublyLinkedListNode(data)
         if (head == null) {
             head = newNode
-            tail = newNode
         } else {
-            newNode.previous = tail
-            tail?.next = newNode
-            tail = newNode
-
-            // This is also viable if the doubly linked list does not have a tail node reference. This will traverse
-            // the entire list until it reaches the end and add this node to the end, this results in an O(n) operation
-//            var current = head
-//            while (current?.next != null) {
-//                current = current.next
-//            }
-//            current?.next = newNode
-//            newNode.prev = current
+            var current = head
+            while (current?.next != null) {
+                current = current.next
+            }
+            current?.next = newNode
+            newNode.previous = current
         }
     }
 
@@ -38,7 +34,6 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
             return null
         }
 
-        size--
         // instances where the list is of size 1, that is has only 1 node
         if (head?.next == null) {
             val node = head
@@ -77,11 +72,9 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     }
 
     override fun prepend(data: T) {
-        size++
         val node = DoublyLinkedListNode(data)
         if (head == null) {
             head = node
-            tail = node
         } else {
             head?.previous = node
             node.next = head
@@ -204,11 +197,22 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
         TODO("Not yet implemented")
     }
 
-    override fun insertAfter(
-        nodeToInsert: DoublyLinkedListNode<T>,
-        currentNode: DoublyLinkedListNode<T>
-    ): DoublyLinkedListNode<T> {
-        TODO("Not yet implemented")
+    override fun insertAfter(data: T, key: Any) {
+        var current = head
+        while (current != null) {
+            if (current.next == null && current.key == key) {
+                append(data)
+                return
+            } else if (current.key == key) {
+                val nodeToInsert = DoublyLinkedListNode(data)
+                val nxt = current.next
+                current.next = nodeToInsert
+                nodeToInsert.next = nxt
+                nodeToInsert.previous = current
+                return
+            }
+            current = current.next
+        }
     }
 
     override fun removeCycle(): DoublyLinkedListNode<T> {
@@ -299,10 +303,6 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     }
 
     override fun oddEvenList(): DoublyLinkedListNode<T>? {
-        TODO("Not yet implemented")
-    }
-
-    override fun insertAfter(node: DoublyLinkedListNode<T>, data: T) {
         TODO("Not yet implemented")
     }
 

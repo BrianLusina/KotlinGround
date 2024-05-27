@@ -306,14 +306,10 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         TODO("Not yet implemented")
     }
 
-    override fun insertAfter(node: CircularLinkedListNode<T>, data: T) {
-        TODO("Not yet implemented")
-    }
-
     override fun insertAfter(
-        nodeToInsert: CircularLinkedListNode<T>,
-        currentNode: CircularLinkedListNode<T>
-    ): CircularLinkedListNode<T> {
+        data: T,
+        key: Any
+    ) {
         TODO("Not yet implemented")
     }
 

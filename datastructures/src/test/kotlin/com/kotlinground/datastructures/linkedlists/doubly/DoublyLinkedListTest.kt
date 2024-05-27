@@ -1,5 +1,6 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
+import com.kotlinground.datastructures.linkedlists.generateKey
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -120,5 +121,33 @@ class DoublyLinkedListMoveTailToHead {
         val expectedData = arrayListOf("d", "a", "b", "c")
 
         assertContentEquals(expectedData, actualData)
+    }
+}
+
+
+class DoublyLinkedInsertAfter {
+
+    @Test
+    fun `Should insert E after B in list A-B-C-D to become A-B-E-C-D`() {
+        val doublyLinkedList = DoublyLinkedList<String>()
+        val data = arrayListOf("A", "B", "C", "D")
+        for (d in data) {
+            doublyLinkedList.append(d)
+        }
+        val actual = doublyLinkedList.headNode()
+        assertNotNull(actual)
+
+        val expected = arrayListOf("A", "B", "E", "C", "D")
+        val newData = "E"
+        val key = generateKey("B")
+        doublyLinkedList.insertAfter(newData, key)
+
+        val actualData = arrayListOf<String>()
+
+        for (node in doublyLinkedList) {
+            actualData.add(node.data)
+        }
+
+        assertContentEquals(expected, actualData)
     }
 }

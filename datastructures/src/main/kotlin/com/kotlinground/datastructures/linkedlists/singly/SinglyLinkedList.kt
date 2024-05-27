@@ -9,6 +9,10 @@ import com.kotlinground.datastructures.utils.rem
 class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
     LinkedList<SinglyLinkedListNode<T>, T>() {
 
+    override fun iterator(): Iterator<SinglyLinkedListNode<T>> {
+        TODO("Not yet implemented")
+    }
+
     override fun size(): Int {
         if (head == null) {
             return 0
@@ -146,9 +150,9 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
     }
 
     override fun insertAfter(
-        nodeToInsert: SinglyLinkedListNode<T>,
-        currentNode: SinglyLinkedListNode<T>
-    ): SinglyLinkedListNode<T> {
+        data: T,
+        key: Any
+    ) {
         TODO("Not yet implemented")
     }
 
@@ -438,12 +442,6 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
 
         odd?.next = evenHead
         return head
-    }
-
-    override fun insertAfter(node: SinglyLinkedListNode<T>, data: T) {
-        val newNode = SinglyLinkedListNode(data)
-        newNode.next = node.next
-        node.next = newNode
     }
 
     override fun removeDuplicates(): SinglyLinkedListNode<T>? {
