@@ -51,7 +51,7 @@ abstract class LinkedList<Node, T> : Iterable<Node> {
      * Deletes all given node from the LinkedList given its data.
      * @param key [Any]
      */
-    abstract fun deleteNodesByKey(key: String): Node?
+    abstract fun deleteNodesByKey(key: String): Collection<Node>
 
     /**
      * Deletes and returns the middle node of a linked list

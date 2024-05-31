@@ -309,22 +309,23 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
         return
     }
 
-    override fun deleteNodesByKey(key: String): SinglyLinkedListNode<T>? {
-        if (head != null) {
-            val dummyHead = SinglyLinkedListNode(data = head!!.data, next = head)
-            var current = dummyHead
-
-            while (current.next != null) {
-                if (current.next!!.key === key) {
-                    current.next = current.next!!.next;
-                } else {
-                    current = current.next!!
-                }
-            }
-
-            return dummyHead.next
+    override fun deleteNodesByKey(key: String): Collection<SinglyLinkedListNode<T>> {
+        if (head == null) {
+            return emptyList()
         }
-        return null
+
+        var current = head
+        val deletedNodes = arrayListOf<SinglyLinkedListNode<T>>()
+
+        while (current != null) {
+            if (current.key == key) {
+                deleteNodeByKey(current.key!!)
+                deletedNodes.add(current)
+            }
+            current = current.next
+        }
+
+        return deletedNodes
     }
 
     override fun deleteMiddle(): SinglyLinkedListNode<T>? {

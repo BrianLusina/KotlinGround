@@ -1,5 +1,6 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
+import com.kotlinground.datastructures.linkedlists.circular.CircularLinkedList
 import com.kotlinground.datastructures.linkedlists.generateKey
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
@@ -149,5 +150,31 @@ class DoublyLinkedInsertAfter {
         }
 
         assertContentEquals(expected, actualData)
+    }
+}
+
+
+class DoublyLinkedDeleteByKeyTest {
+    @Test
+    fun `should delete a node 5 from linked list (1-2-3-4-5-6) to become (1-2-3-4-6)`() {
+        val data = intArrayOf(1, 2, 3, 4, 5, 6)
+        val expected = arrayListOf(1, 2, 3, 4, 6)
+        val linkedList = DoublyLinkedList<Int>()
+
+        for (d in data) {
+            linkedList.append(d)
+        }
+
+        linkedList.deleteNodeByKey("5")
+
+        val actualHead = linkedList.headNode()
+        assertNotNull(actualHead)
+
+        val actualData = arrayListOf<Int>()
+        for (node in linkedList) {
+            actualData.add(node.data)
+        }
+
+        kotlin.test.assertEquals(expected, actualData)
     }
 }

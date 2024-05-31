@@ -114,7 +114,7 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         }
     }
 
-    override fun deleteNodesByKey(key: String): CircularLinkedListNode<T>? {
+    override fun deleteNodesByKey(key: String): Collection<CircularLinkedListNode<T>> {
         TODO("Not yet implemented")
     }
 

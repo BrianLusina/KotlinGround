@@ -1,6 +1,8 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
+import com.kotlinground.datastructures.linkedlists.singly.SinglyLinkedListNode
+import com.kotlinground.datastructures.utils.rem
 
 class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     private var head: DoublyLinkedListNode<T>? = null
@@ -121,9 +123,6 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
         TODO("Not yet implemented")
     }
 
-    override fun deleteFirst(): DoublyLinkedListNode<T> {
-        TODO("Not yet implemented")
-    }
 
     override fun removeLast(): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
@@ -231,6 +230,21 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
         TODO("Not yet implemented")
     }
 
+    override fun deleteFirst(): DoublyLinkedListNode<T>? {
+        val current = head
+        if (current != null) {
+            if (current.next != null) {
+                current.next?.previous = null
+                head = current.next
+                return current
+            }
+            // head not is the only node, so, we set it to null and return the deleted node
+            head = null
+            return current
+        }
+        return null
+    }
+
     override fun deleteNode(node: DoublyLinkedListNode<T>) {
         TODO("Not yet implemented")
     }
@@ -240,10 +254,46 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     }
 
     override fun deleteNodeByKey(key: String) {
-        TODO("Not yet implemented")
+        // no head node, means nothing further to do
+        if (head == null) {
+            return
+        }
+
+        // no next node, means we check if the head node is the node we seek. If this condition evaluates to true, we
+        // set the head node to null and return
+        if (head?.next == null && head?.key == key) {
+            head = null
+            return
+        }
+
+        // otherwise, the node we seek is somewhere down the list, so, we set a pointer called current at the head node
+        // and use it to track which position we are in, in the doubly linked list as we traverse seeking a node with
+        // the same key
+
+        var current = head
+
+        // we move the pointer down the Doubly Linked List until we find the Node whose key matches
+        while (current != null && current.key != key) {
+            current = current.next
+        }
+
+        //if there is no node that matches the condition above, we exit
+        if (current == null) {
+            return
+        }
+
+        // re-assign the pointers of the nodes around the node to delete. That is, moving the previous node's next
+        // pointer to the current node's next pointer. This essentially 'deletes' the node by the data attribute
+        val previous = current.previous
+        previous?.next = current.next
+        if (current.next != null) {
+            current.next?.previous = previous
+        }
+        current = null
+        return
     }
 
-    override fun deleteNodesByKey(key: String): DoublyLinkedListNode<T>? {
+    override fun deleteNodesByKey(key: String): Collection<DoublyLinkedListNode<T>> {
         TODO("Not yet implemented")
     }
 
