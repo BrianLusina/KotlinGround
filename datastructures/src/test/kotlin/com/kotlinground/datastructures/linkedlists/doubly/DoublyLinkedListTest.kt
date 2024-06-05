@@ -1,12 +1,12 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
-import com.kotlinground.datastructures.linkedlists.circular.CircularLinkedList
 import com.kotlinground.datastructures.linkedlists.generateKey
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 
 class DoublyLinkedListTest {
     private lateinit var subject: DoublyLinkedList<Int>
@@ -176,5 +176,45 @@ class DoublyLinkedDeleteByKeyTest {
         }
 
         kotlin.test.assertEquals(expected, actualData)
+    }
+}
+
+
+class DoublyLinkedListReverseTest {
+
+    @Test
+    fun `should reverse the list making the head the tail and vice versa`() {
+        val node5 = DoublyLinkedListNode(5)
+        val node4 = DoublyLinkedListNode(4, node5)
+        val node3 = DoublyLinkedListNode(3, node4)
+        val node2 = DoublyLinkedListNode(2, node3)
+        val head = DoublyLinkedListNode(1, node2)
+        val doublyLinkedList = DoublyLinkedList<Int>(head)
+        doublyLinkedList.reverse()
+
+        val actualHead = doublyLinkedList.headNode()
+
+        assertEquals(node5, actualHead)
+    }
+
+    @Test
+    fun `should reverse list of 1-2 to 2-1`() {
+        val node2 = DoublyLinkedListNode(2)
+        val head = DoublyLinkedListNode(1, node2)
+        val doublyLinkedList = DoublyLinkedList(head)
+        doublyLinkedList.reverse()
+
+        val actualHead = doublyLinkedList.headNode()
+
+        kotlin.test.assertEquals(node2, actualHead)
+    }
+
+    @Test
+    fun `should reverse empty list`() {
+        val doublyLinkedList = DoublyLinkedList<Int>(null)
+        doublyLinkedList.reverse()
+
+        val actualHead = doublyLinkedList.headNode()
+        assertNull(actualHead)
     }
 }

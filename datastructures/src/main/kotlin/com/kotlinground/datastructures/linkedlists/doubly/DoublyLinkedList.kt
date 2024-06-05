@@ -1,11 +1,9 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
-import com.kotlinground.datastructures.linkedlists.singly.SinglyLinkedListNode
-import com.kotlinground.datastructures.utils.rem
 
-class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
-    private var head: DoublyLinkedListNode<T>? = null
+class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
+    LinkedList<DoublyLinkedListNode<T>, T>() {
     private var tail: DoublyLinkedListNode<T>? = null
     public var size: Int = 0
 
@@ -168,17 +166,16 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     }
 
     override fun reverse() {
-        if (head?.next == null) {
+        if (head == null || head?.next == null) {
             return
         }
 
         var current = head
         var previous: DoublyLinkedListNode<T>? = null
-        var next: DoublyLinkedListNode<T>?
 
         while (current != null) {
             // copy a pointer to the next element, before we overwrite the current
-            next = current.next
+            val next = current.next
 
             // reverse the next pointer & previous pointer
             current.next = previous
