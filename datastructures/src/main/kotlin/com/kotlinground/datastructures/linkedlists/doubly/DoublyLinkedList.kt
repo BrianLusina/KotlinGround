@@ -294,7 +294,22 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T>() {
     }
 
     override fun deleteNodesByKey(key: String): Collection<DoublyLinkedListNode<T>> {
-        TODO("Not yet implemented")
+        val deletedNodes = arrayListOf<DoublyLinkedListNode<T>>()
+
+        if (head == null) {
+            return emptyList()
+        }
+
+        var current = head
+        while (current != null) {
+            if (current.key == key) {
+                deleteNodeByKey(key)
+                deletedNodes.add(current)
+            }
+            current = current.next
+        }
+
+        return deletedNodes
     }
 
     override fun deleteMiddle(): DoublyLinkedListNode<T>? {
