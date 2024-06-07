@@ -1,6 +1,7 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
+import com.kotlinground.datastructures.linkedlists.singly.SinglyLinkedListNode
 
 class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
     LinkedList<DoublyLinkedListNode<T>, T>() {
@@ -369,7 +370,29 @@ class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
     }
 
     override fun removeDuplicates(): DoublyLinkedListNode<T>? {
-        TODO("Not yet implemented")
+        if (head == null || head?.next == null) {
+            return head
+        }
+
+        val seen = hashMapOf<String, Boolean>()
+        var current = head
+
+        while (current != null) {
+            if (!seen.containsKey(current.key)) {
+                seen[current.key] = true
+                current = current.next
+            } else {
+                val next = current.next
+                val previous = current.previous
+                previous?.next = next
+                if (next != null) {
+                    next.previous = previous
+                }
+                current = next
+            }
+        }
+
+        return head
     }
 
     override fun nthToLastNode(n: Int): DoublyLinkedListNode<T>? {

@@ -218,3 +218,45 @@ class DoublyLinkedListReverseTest {
         assertNull(actualHead)
     }
 }
+
+
+class DoublyLinkedListRemoveDuplicatesTest {
+
+    private fun <T> runTestAssertion(data: ArrayList<T>, expected: ArrayList<T>) {
+        val doublyLinkedList = DoublyLinkedList<T>()
+        for (d in data) {
+            doublyLinkedList.append(d)
+        }
+
+        doublyLinkedList.removeDuplicates()
+
+        val actualData = arrayListOf<T>()
+        for (current in doublyLinkedList) {
+            actualData.add(current.data)
+        }
+
+        assertContentEquals(expected, actualData)
+    }
+
+    @Test
+    fun `should return null for empty list`() {
+        val doublyLinkedList = DoublyLinkedList<Any>(null)
+        val actual = doublyLinkedList.removeDuplicates()
+
+        assertNull(actual)
+    }
+
+    @Test
+    fun `should removes duplicates from (1,6,1,4,2,2,4) to become (1,6,4,2)`() {
+        val data = arrayListOf(1, 6, 1, 4, 2, 2, 4)
+        val expected = arrayListOf(1, 6, 4, 2)
+        runTestAssertion(data, expected)
+    }
+
+    @Test
+    fun `Should remove duplicates from list of 1-4-7-4 to 1-4-7`() {
+        val data = arrayListOf(1, 4, 7, 4)
+        val expected = arrayListOf(1, 4, 7)
+        runTestAssertion(data, expected)
+    }
+}
