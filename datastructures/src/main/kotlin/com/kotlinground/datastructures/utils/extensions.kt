@@ -48,3 +48,17 @@ operator fun Any.plus(other: Number): Number {
         else -> throw RuntimeException("Unknown numeric type")
     }
 }
+
+operator fun <T> T.plus(data: T): Any {
+    return when (data) {
+        is Int -> this as Int + data
+        is Float -> this as Float + data
+        is String -> this as String + data
+        is Short -> this as Short + data
+        is Byte -> this as Byte + data
+        is Double -> this as Double + data
+        else -> {
+            throw RuntimeException("Unsupported data type")
+        }
+    }
+}

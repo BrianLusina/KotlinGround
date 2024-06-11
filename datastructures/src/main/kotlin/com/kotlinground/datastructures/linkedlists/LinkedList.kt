@@ -1,6 +1,6 @@
 package com.kotlinground.datastructures.linkedlists
 
-abstract class LinkedList<Node, T> {
+abstract class LinkedList<Node, T> : Iterable<Node> {
     /**
      * Adds a node to the end of the linked list given the data to insert to the node
      */
@@ -51,7 +51,7 @@ abstract class LinkedList<Node, T> {
      * Deletes all given node from the LinkedList given its data.
      * @param key [Any]
      */
-    abstract fun deleteNodesByKey(key: String): Node?
+    abstract fun deleteNodesByKey(key: String): Collection<Node>
 
     /**
      * Deletes and returns the middle node of a linked list
@@ -148,11 +148,11 @@ abstract class LinkedList<Node, T> {
 
     /**
      * Inserts a node after the currently provided node. This is not necessarily the head of the linked list
-     * @param nodeToInsert [Node]
-     * @param currentNode [Node]
+     * @param data [Node]
+     * @param key [Node]
      * @return [Node]
      */
-    abstract fun insertAfter(nodeToInsert: Node, currentNode: Node): Node
+    abstract fun insertAfter(data: T, key: Any)
 
     /**
      * Alternate split a linked list such that a linked list such as
@@ -199,11 +199,6 @@ abstract class LinkedList<Node, T> {
     abstract fun oddEvenList(): Node?
 
     /**
-     * Inserts a given data item after the given node
-     */
-    abstract fun insertAfter(node: Node, data: T)
-
-    /**
      * Retrieves the nth to the last node
      * If n is less than 0, an error must be raised
      */
@@ -235,5 +230,7 @@ abstract class LinkedList<Node, T> {
      * node to the head and make the second to last node the new tail     *
      */
     abstract fun moveTailToHead()
+
+    abstract fun pairsWithSum(target: T): Collection<Pair<Node, Node>>
 }
 

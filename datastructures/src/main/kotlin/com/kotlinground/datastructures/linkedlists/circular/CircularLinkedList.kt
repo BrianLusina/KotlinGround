@@ -114,7 +114,7 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         }
     }
 
-    override fun deleteNodesByKey(key: String): CircularLinkedListNode<T>? {
+    override fun deleteNodesByKey(key: String): Collection<CircularLinkedListNode<T>> {
         TODO("Not yet implemented")
     }
 
@@ -306,14 +306,10 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         TODO("Not yet implemented")
     }
 
-    override fun insertAfter(node: CircularLinkedListNode<T>, data: T) {
-        TODO("Not yet implemented")
-    }
-
     override fun insertAfter(
-        nodeToInsert: CircularLinkedListNode<T>,
-        currentNode: CircularLinkedListNode<T>
-    ): CircularLinkedListNode<T> {
+        data: T,
+        key: Any
+    ) {
         TODO("Not yet implemented")
     }
 
@@ -329,5 +325,7 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         TODO("Not yet implemented")
     }
 
-
+    override fun pairsWithSum(target: T): Collection<Pair<CircularLinkedListNode<T>, CircularLinkedListNode<T>>> {
+        TODO("Not yet implemented")
+    }
 }
