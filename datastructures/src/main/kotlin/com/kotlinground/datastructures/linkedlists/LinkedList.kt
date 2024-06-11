@@ -230,5 +230,7 @@ abstract class LinkedList<Node, T> : Iterable<Node> {
      * node to the head and make the second to last node the new tail     *
      */
     abstract fun moveTailToHead()
+
+    abstract fun pairsWithSum(target: T): Collection<Pair<Node, Node>>
 }
 

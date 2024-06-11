@@ -325,5 +325,7 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         TODO("Not yet implemented")
     }
 
-
+    override fun pairsWithSum(target: T): Collection<Pair<CircularLinkedListNode<T>, CircularLinkedListNode<T>>> {
+        TODO("Not yet implemented")
+    }
 }

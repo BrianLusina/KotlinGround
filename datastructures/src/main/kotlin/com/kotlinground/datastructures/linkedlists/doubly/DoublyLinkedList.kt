@@ -1,7 +1,7 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
-import com.kotlinground.datastructures.linkedlists.singly.SinglyLinkedListNode
+import com.kotlinground.datastructures.utils.plus
 
 class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
     LinkedList<DoublyLinkedListNode<T>, T>() {
@@ -434,4 +434,25 @@ class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
             head = last
         }
     }
+
+    override fun pairsWithSum(target: T): Collection<Pair<DoublyLinkedListNode<T>, DoublyLinkedListNode<T>>> {
+        val pairs = arrayListOf<Pair<DoublyLinkedListNode<T>, DoublyLinkedListNode<T>>>()
+        var current = head
+
+        while (current != null) {
+            var next = current.next
+
+            while (next != null) {
+                if (current.data + next.data == target) {
+                    pairs.add(Pair(current, next))
+                }
+                next = next.next
+            }
+
+            current = current.next
+        }
+
+        return pairs
+    }
 }
+

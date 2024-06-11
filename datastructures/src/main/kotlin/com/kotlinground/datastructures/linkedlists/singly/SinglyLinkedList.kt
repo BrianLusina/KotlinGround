@@ -635,4 +635,8 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
 
         return summedList
     }
+
+    override fun pairsWithSum(target: T): Collection<Pair<SinglyLinkedListNode<T>, SinglyLinkedListNode<T>>> {
+        TODO("Not yet implemented")
+    }
 }

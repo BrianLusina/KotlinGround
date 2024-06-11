@@ -16,3 +16,4 @@ data class DoublyLinkedListNode<T>(
         digest.toString()
     }.toString()
 ) : LinkedListNode<T>
+
