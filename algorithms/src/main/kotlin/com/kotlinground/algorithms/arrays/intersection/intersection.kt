@@ -1,7 +1,7 @@
-package com.kotlinground.datastructures.arrays.intersectionofarrays
+package com.kotlinground.algorithms.arrays.intersection
 
-fun setIntersection(setOne: Set<Int>, setTwo: Set<Int>): IntArray {
-    return setOne.intersect(setTwo).toIntArray()
+fun <T> setIntersection(setOne: Set<T>, setTwo: Set<T>): List<T> {
+    return setOne.intersect(setTwo).toList()
 }
 
 /**
@@ -10,9 +10,9 @@ fun setIntersection(setOne: Set<Int>, setTwo: Set<Int>): IntArray {
  * checking the presence of each element in the other larger set. The time complexity is O(n+m) where n is the size of
  * the first array and m is the size of the second array.
  */
-fun intersectionOne(nums1: IntArray, nums2: IntArray): IntArray {
-    val setOne = nums1.toSet()
-    val setTwo = nums2.toSet()
+fun <T> intersectionOne(listOne: Array<T>, listTwo: Array<T>): List<T> {
+    val setOne = listOne.toSet()
+    val setTwo = listTwo.toSet()
 
     return if (setOne.size < setTwo.size) {
         setIntersection(setOne, setTwo)
@@ -21,18 +21,18 @@ fun intersectionOne(nums1: IntArray, nums2: IntArray): IntArray {
     }
 }
 
-fun intersectionTwo(nums1: IntArray, nums2: IntArray): IntArray {
-    val counter = hashMapOf<Int, Int>()
-    val result = arrayListOf<Int>()
+fun <T> intersectionTwo(listOne: Array<T>, listTwo: Array<T>): List<T> {
+    val counter = hashMapOf<T, Int>()
+    val result = arrayListOf<T>()
 
-    nums1.forEach { counter[it] = counter.getOrDefault(it, 0) + 1 }
+    listOne.forEach { counter[it] = counter.getOrDefault(it, 0) + 1 }
 
-    nums2.forEach {
+    listTwo.forEach {
         if (counter.containsKey(it) && counter[it]!! > 0) {
             result.add(it)
             counter[it] = counter[it]!! - 1
         }
     }
 
-    return result.toIntArray()
+    return result
 }
