@@ -9,14 +9,20 @@ data class BinaryTreeNode<T>(
 ) : TreeNode<T> {
     val children: ArrayList<BinaryTreeNode<T>?>
         get() {
-            return if (left != null && right != null) {
-                arrayListOf(left, right)
-            } else if (left != null && right == null) {
-                arrayListOf(left)
-            } else if (left == null && right != null) {
-                arrayListOf(right)
-            } else {
-                arrayListOf()
+            return when {
+                left != null && right != null -> {
+                    arrayListOf(left, right)
+                }
+
+                left != null && right == null -> {
+                    arrayListOf(left)
+                }
+
+                left == null && right != null -> {
+                    arrayListOf(right)
+                }
+
+                else -> arrayListOf()
             }
         }
 
@@ -27,10 +33,10 @@ data class BinaryTreeNode<T>(
 
         other as BinaryTreeNode<*>
 
-        return this.data == other.data
+        return this.key == other.key
     }
 
     override fun hashCode(): Int {
-        return data.hashCode()
+        return key.hashCode()
     }
 }
