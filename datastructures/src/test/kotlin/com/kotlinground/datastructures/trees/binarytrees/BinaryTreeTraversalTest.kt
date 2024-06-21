@@ -110,4 +110,20 @@ class BinaryTreeTraversalTest {
         val actual = tree.postorderTraversal()
         assertContentEquals(expected, actual.toTypedArray())
     }
+
+    @Test
+    fun `should return 1, 2, 3, 4, 5 for in level order traversal`() {
+        val expected = arrayOf(1, 2, 3, 4, 5)
+        val right = BinaryTreeNode(3)
+        val left = BinaryTreeNode(
+            2,
+            left = BinaryTreeNode(4),
+            right = BinaryTreeNode(5)
+        )
+        val root = BinaryTreeNode(1, left = left, right = right)
+
+        val tree = BinaryTree(root = root)
+        val actual = tree.levelOrderTraversal()
+        assertContentEquals(expected, actual.toTypedArray())
+    }
 }

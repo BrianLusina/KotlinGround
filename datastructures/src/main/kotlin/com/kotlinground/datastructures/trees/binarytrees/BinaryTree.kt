@@ -1,5 +1,7 @@
 package com.kotlinground.datastructures.trees.binarytrees
 
+import com.kotlinground.datastructures.queues.Queue
+import com.kotlinground.datastructures.queues.fifo.FifoQueue
 import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.compareTo
@@ -193,6 +195,33 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         }
 
         return values
+    }
+
+    override fun levelOrderTraversal(): Collection<T> {
+        if (root == null) {
+            return emptyList()
+        }
+
+        val queue = FifoQueue<BinaryTreeNode<T>>()
+        queue.enqueue(root!!)
+
+        val result = arrayListOf<T>()
+
+        while (!queue.isEmpty) {
+            val peekedNode = queue.peek()
+            result.add(peekedNode.data)
+
+            val node = queue.dequeue()
+
+            if (node.left != null) {
+                queue.enqueue(node.left!!)
+            }
+            if (node.right != null) {
+                queue.enqueue(node.right!!)
+            }
+        }
+
+        return result
     }
 
     /**

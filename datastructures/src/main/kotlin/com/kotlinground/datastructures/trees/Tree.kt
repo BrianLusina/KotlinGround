@@ -32,6 +32,11 @@ abstract class Tree<T> {
     abstract fun postorderTraversal(): Collection<T>
 
     /**
+     * Performs a level order traversal of a tree returning a collection of data items on every node in the tree
+     */
+    abstract fun levelOrderTraversal(): Collection<T>
+
+    /**
      * Finds the lowest common ancestor of 2 nodes in a Tree
      * @param nodeOne [TreeNode]
      * @param nodeTwo [TreeNode]
