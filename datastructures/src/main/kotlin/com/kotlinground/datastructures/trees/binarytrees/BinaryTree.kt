@@ -224,6 +224,38 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         return result
     }
 
+    override fun reverseLevelOrderTraversal(): Collection<T> {
+        if (root == null) {
+            return emptyList()
+        }
+
+        val fifoQueue = FifoQueue<BinaryTreeNode<T>>()
+        val stack = Stack<BinaryTreeNode<T>>()
+
+        fifoQueue.enqueue(root!!)
+
+        val traversed = arrayListOf<T>()
+        while (!fifoQueue.isEmpty) {
+            val node = fifoQueue.dequeue()
+            stack.push(node)
+
+            node.right?.let {
+                fifoQueue.enqueue(it)
+            }
+
+            node.left?.let {
+                fifoQueue.enqueue(it)
+            }
+        }
+
+        while (stack.isNotEmpty()) {
+            val node = stack.pop()
+            traversed.add(node.data)
+        }
+
+        return traversed
+    }
+
     /**
      * LowestCommonAncestor returns the LCA of 2 nodes
      * Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this

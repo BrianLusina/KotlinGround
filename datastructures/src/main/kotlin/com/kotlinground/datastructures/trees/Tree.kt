@@ -36,6 +36,8 @@ abstract class Tree<T> {
      */
     abstract fun levelOrderTraversal(): Collection<T>
 
+    abstract fun reverseLevelOrderTraversal(): Collection<T>
+
     /**
      * Finds the lowest common ancestor of 2 nodes in a Tree
      * @param nodeOne [TreeNode]
