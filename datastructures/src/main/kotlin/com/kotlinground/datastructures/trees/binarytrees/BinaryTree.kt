@@ -1,6 +1,5 @@
 package com.kotlinground.datastructures.trees.binarytrees
 
-import com.kotlinground.datastructures.queues.Queue
 import com.kotlinground.datastructures.queues.fifo.FifoQueue
 import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.TreeNode
@@ -16,14 +15,16 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         fun heightHelper(node: BinaryTreeNode<T>?): Int {
             if (node == null) {
-                return 0
+                return -1
             }
-            return maxOf(heightHelper(node.left), heightHelper(node.right)) + 1
+
+            val leftHeight = heightHelper(node.left)
+            val rightHeight = heightHelper(node.right)
+            return maxOf(leftHeight, rightHeight) + 1
         }
 
         return heightHelper(root)
     }
-
 
     /**
      * Inserts a Tree node into this Binary Search Tree
