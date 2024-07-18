@@ -60,6 +60,10 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
         TODO("Not yet implemented")
     }
 
+    override fun size(): Int {
+        TODO("Not yet implemented")
+    }
+
     override fun inorderTraversalIteratively(): Collection<T> {
         TODO("Not yet implemented")
     }

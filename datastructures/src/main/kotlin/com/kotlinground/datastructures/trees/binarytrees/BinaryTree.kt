@@ -26,6 +26,32 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         return heightHelper(root)
     }
 
+    override fun size(): Int {
+        if (root == null) {
+            return 0
+        }
+
+        var counter = 1
+        val stack = Stack<BinaryTreeNode<T>>()
+        stack.push(root)
+
+        while (stack.isNotEmpty()) {
+            val node = stack.pop()
+
+            if (node.left != null) {
+                counter += 1
+                stack.push(node.left)
+            }
+
+            if (node.right != null) {
+                counter += 1
+                stack.push(node.right)
+            }
+        }
+
+        return counter
+    }
+
     /**
      * Inserts a Tree node into this Binary Search Tree
      */

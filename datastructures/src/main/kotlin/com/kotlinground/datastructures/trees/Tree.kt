@@ -23,6 +23,12 @@ abstract class Tree<T> {
      */
     abstract fun height(): Int
 
+    /**
+     * Returns the number of nodes of the tree
+     * @return [Int]
+     */
+    abstract fun size(): Int
+
     abstract fun inorderTraversalIteratively(): Collection<T>
 
     abstract fun inorderMorrisTraversal(): Collection<T>
