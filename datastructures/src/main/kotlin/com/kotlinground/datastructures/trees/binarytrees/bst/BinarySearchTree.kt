@@ -12,6 +12,10 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
         this += i
     }
 
+    fun root(): BinaryTreeNode<T>? {
+        return root
+    }
+
     override fun height(): Int {
         if (root == null) {
             return 0
@@ -27,44 +31,30 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
         return heightHelper(root)
     }
 
-
     /**
      * Inserts a Tree node into this Binary Search Tree
      */
     override fun insertTreeNode(data: T): BinaryTreeNode<T>? {
         if (this.root == null) {
-            return BinaryTreeNode(data)
+            this.root = BinaryTreeNode(data)
+            return this.root
         }
 
-        var parent = this.root
-        val dummy = this.root
-
-        while (this.root != null) {
-            parent = this.root
-
-            if (data != null) {
-                if (data < this.root!!.data) {
-                    this.root = this.root!!.left
-                } else {
-                    this.root = this.root!!.right
-                }
+        fun insertHelper(value: T, node: BinaryTreeNode<T>?): BinaryTreeNode<T> {
+            if (node == null) {
+                return BinaryTreeNode(value)
             }
+
+            if (value < node.data) {
+                node.left = insertHelper(value, node.left)
+            } else {
+                node.right = insertHelper(value, node.right)
+            }
+            return node
         }
 
-        when {
-            parent != null -> {
-                parent = BinaryTreeNode(data)
-            }
-
-            data < parent?.data -> {
-                parent?.left = BinaryTreeNode(data)
-            }
-
-            else -> {
-                parent?.right = BinaryTreeNode(data)
-            }
-        }
-        return dummy
+        insertHelper(data, this.root)
+        return this.root
     }
 
     override fun delete(data: T): BinaryTreeNode<T>? {
