@@ -10,11 +10,20 @@ fun isPalindrome(s: String): Boolean {
     var right = s.length - 1
 
     while (left < right) {
-        if (s[left] != s[right]) {
+        while (left < right && !s[left].isLetterOrDigit()) {
+            left++
+        }
+        while (left < right && !s[right].isLetterOrDigit()) {
+            right--
+        }
+
+        if (s[left].lowercase() != s[right].lowercase()) {
             return false
         }
+
         left++
         right--
     }
+
     return true
 }
