@@ -44,7 +44,7 @@ subprojects {
 
 allprojects {
     repositories {
-        jcenter {
+        mavenCentral {
             content {
                 // just allow to include kotlinx projects
                 // detekt needs 'kotlinx-html' for the html report

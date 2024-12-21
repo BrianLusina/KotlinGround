@@ -26,7 +26,7 @@ allprojects {
 
     configure<JacocoPluginExtension> {
         toolVersion = Versions.JACOCO
-        reportsDirectory.set(file("${buildDir}/reports/jacoco"))
+        reportsDirectory.set(file("${layout.buildDirectory}/reports/jacoco"))
     }
 }
 
