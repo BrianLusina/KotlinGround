@@ -1,4 +1,4 @@
-package com.kotlinground.algorithms.backtracking.permutations
+package com.kotlinground.strings.permutations
 
 import java.util.stream.Collectors
 

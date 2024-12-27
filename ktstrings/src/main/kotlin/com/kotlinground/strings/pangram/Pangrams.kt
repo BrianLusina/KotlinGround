@@ -10,7 +10,7 @@ object Pangrams {
             return false
         var i = 0
         sentence.toCharArray()
-                .map { it.toUpperCase().toInt() }
+                .map { it.uppercaseChar().toInt() }
                 .filter { it.toChar() in 'A'..'Z' }
                 .forEach { i = i or (1 shl it.toChar() - 'A') }
 
@@ -18,7 +18,7 @@ object Pangrams {
     }
 
     val alphaLength = 26
-    fun isPangramX(input: String) = input.toLowerCase().replace(Regex("[^a-z]"), "").toSet().size == alphaLength
+    fun isPangramX(input: String) = input.lowercase().replace(Regex("[^a-z]"), "").toSet().size == alphaLength
 
 }
 

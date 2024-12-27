@@ -13,7 +13,7 @@ object Acronym {
         val acronym = StringBuilder()
 
         // for each word
-        words.forEach { acronym.append(it[0].toUpperCase()) }
+        words.forEach { acronym.append(it[0].uppercaseChar()) }
 
         return acronym.toString()
     }
