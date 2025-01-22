@@ -242,7 +242,7 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
 
         val temp = node?.data
         node?.data = b!!.data
-        b.data = temp!!
+        b?.data = temp!!
 
         return head
     }
