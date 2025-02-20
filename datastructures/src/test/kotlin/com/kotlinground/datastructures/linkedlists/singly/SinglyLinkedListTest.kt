@@ -1,6 +1,7 @@
 package com.kotlinground.datastructures.linkedlists.singly
 
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -418,5 +419,72 @@ class SinglyLinkedSumTwoLinkedLists {
         }
 
         assertContentEquals(expectedNumber, actualNumber)
+    }
+}
+
+class SinglyLinkedDeleteNodeByPosition {
+
+    @Test
+    fun `Should delete node at position 0 of linked list (1,3,4,7,1,2,6)`() {
+        val node5 = SinglyLinkedListNode(5)
+        val node4 = SinglyLinkedListNode(4, node5)
+        val node3 = SinglyLinkedListNode(3, node4)
+        val node2 = SinglyLinkedListNode(2, node3)
+        val head = SinglyLinkedListNode(1, node2)
+        val singlyLinkedList = SinglyLinkedList(head)
+
+        val actual = singlyLinkedList.deleteNodeAtPosition(0)
+        assertEquals(head, actual)
+    }
+
+    @Test
+    fun `Should delete node at position 1 of linked list (1,3,4,7,1,2,6)`() {
+        val node5 = SinglyLinkedListNode(5)
+        val node4 = SinglyLinkedListNode(4, node5)
+        val node3 = SinglyLinkedListNode(3, node4)
+        val node2 = SinglyLinkedListNode(2, node3)
+        val head = SinglyLinkedListNode(1, node2)
+        val singlyLinkedList = SinglyLinkedList(head)
+
+        val actual = singlyLinkedList.deleteNodeAtPosition(1)
+        assertEquals(node2, actual)
+    }
+}
+
+class SinglyLinkedDeleteNthLastNode {
+
+    @Test
+    fun `should raise Exception when the value of n is out of bounds`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val data = intArrayOf(43, 68, 11, 5, 69, 37, 70)
+        for(d in data) {
+            linkedList.append(d)
+        }
+
+        assertThrows<IllegalArgumentException> {
+            linkedList.deleteNthLastNode(8)
+        }
+    }
+
+    @Test
+    fun `should delete nth last node where n=1 and list is (43,68,11,5,69,37,70) to become (43,68,11,5,69,37)`() {
+        val linkedList = SinglyLinkedList<Int>()
+        val data = intArrayOf(43,68,11,5,69,37,70)
+        for(d in data) {
+            linkedList.append(d)
+        }
+
+        val newHead = linkedList.deleteNthLastNode(0)
+        assertNotNull(newHead)
+        assertEquals(newHead.data, 43)
+
+        val expected = intArrayOf(43,68,11,5,69,37)
+        val actual = arrayListOf<Int>()
+
+        for (node in linkedList) {
+            actual.add(node.data)
+        }
+
+        assertContentEquals(expected, actual.toIntArray())
     }
 }

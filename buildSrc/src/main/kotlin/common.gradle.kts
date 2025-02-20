@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.net.URI
 
@@ -68,7 +69,7 @@ subprojects {
         }
 
         compileTestKotlin {
-            kotlinOptions.jvmTarget = "${JavaVersion.VERSION_11}"
+            compilerOptions.jvmTarget.set(JvmTarget.JVM_11)
         }
 
         withType<Test> {
@@ -96,12 +97,14 @@ subprojects {
         testImplementation(Dependencies.Test.kotlinTestJunit)
         testImplementation(Dependencies.Test.jUnitJupiterApi)
         testImplementation(Dependencies.Test.mockK)
-
         testImplementation(Dependencies.Test.spekDslJvm)
-//        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
-
         testImplementation(Dependencies.Test.jUnitJupiterEngine)
         testImplementation(Dependencies.Test.jUnitJupiterVintageEngine)
+        testImplementation(Dependencies.Test.koTest)
+        testImplementation(Dependencies.Test.koTestProperty)
+        testImplementation(Dependencies.Test.koTestAssertions)
+        testImplementation(Dependencies.Test.koTestFrameworkDataTest)
+//        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
     }
 }
 

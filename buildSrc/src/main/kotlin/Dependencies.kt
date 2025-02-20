@@ -15,6 +15,12 @@ object Dependencies {
         const val kotlinTestJunit = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.KOTLIN}"
         const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${Versions.KOTLIN}"
 
+        private const val koTestVersion = "5.9.1"
+        const val koTest = "io.kotest:kotest-runner-junit5:$koTestVersion"
+        const val koTestProperty = "io.kotest:kotest-property:$koTestVersion"
+        const val koTestAssertions = "io.kotest:kotest-assertions-core:$koTestVersion"
+        const val koTestFrameworkDataTest = "io.kotest:kotest-framework-datatest:$koTestVersion"
+
         const val jUnitJupiterEngine = "org.junit.jupiter:junit-jupiter-engine"
         const val jUnitJupiterVintageEngine = "org.junit.vintage:junit-vintage-engine"
         const val jUnitJupiterApi = "org.junit.jupiter:junit-jupiter-api:5.7.1"

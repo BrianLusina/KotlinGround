@@ -10,7 +10,7 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
     LinkedList<SinglyLinkedListNode<T>, T>() {
 
     override fun iterator(): Iterator<SinglyLinkedListNode<T>> {
-        TODO("Not yet implemented")
+        return SinglyLinkedListIterator(head)
     }
 
     override fun size(): Int {
@@ -262,21 +262,34 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
             return currentNode
         }
 
-        var previous: SinglyLinkedListNode<T>? = null
-        var count = 0
+        while (currentNode != null) {
+            for (x in 0 until position) {
+                currentNode = currentNode?.next
 
-        while (currentNode != null && count != position) {
-            previous = currentNode
-            currentNode = currentNode.next
-            count++
+                if (currentNode == null) {
+                   throw IllegalArgumentException("Invalid position $position found, reached end of list")
+                }
+            }
+            currentNode.data = currentNode.next!!.data
+            currentNode.next = if (currentNode.next != null) currentNode.next?.next else null
         }
-
-        if (currentNode == null) {
-            return currentNode
-        }
-
-        previous?.next = currentNode.next
-        return currentNode
+        return head
+//
+//        var previous: SinglyLinkedListNode<T>? = null
+//        var count = 0
+//
+//        while (currentNode != null && count != position) {
+//            previous = currentNode
+//            currentNode = currentNode.next
+//            count++
+//        }
+//
+//        if (currentNode == null) {
+//            return currentNode
+//        }
+//
+//        previous?.next = currentNode.next
+//        return currentNode
     }
 
     override fun deleteNodeByKey(key: String) {
@@ -364,9 +377,31 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
 
         val middleNode = slowPointer?.next
 
-        slowPointer?.next = slowPointer?.next?.next
+        slowPointer?.next = slowPointer.next?.next
 
         return middleNode
+    }
+
+    fun deleteNthLastNode(n: Int): SinglyLinkedListNode<T>? {
+        checkNotNull(head) {
+            "Cannot delete from empty linked list"
+        }
+
+        val lengthOfLinkedList = size()
+
+        if (n < 0 || n > lengthOfLinkedList) {
+            throw IllegalArgumentException("Position $n is out of bounds")
+        }
+
+        if (head?.next == null) {
+            return head
+        }
+
+        val positionOfNodeToDelete = lengthOfLinkedList - n
+
+        deleteNodeAtPosition(positionOfNodeToDelete)
+
+        return head
     }
 
     override fun findMiddleNode(): SinglyLinkedListNode<T>? {
