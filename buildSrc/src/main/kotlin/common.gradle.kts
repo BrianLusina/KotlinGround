@@ -44,6 +44,7 @@ subprojects {
     apply {
         plugin("org.jetbrains.kotlin.jvm")
         plugin("jacoco")
+//        plugin(Plugins.KOTLINX_BENCHMARK)
     }
 
     repositories {
@@ -62,9 +63,9 @@ subprojects {
         }
 
         withType<KotlinCompile> {
-            kotlinOptions {
-                freeCompilerArgs = listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn")
-                jvmTarget = "${JavaVersion.VERSION_11}"
+            compilerOptions {
+                freeCompilerArgs.set(listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn"))
+                jvmTarget.set(JvmTarget.JVM_11)
             }
         }
 
@@ -96,6 +97,7 @@ subprojects {
 
         testImplementation(Dependencies.Test.kotlinTestJunit)
         testImplementation(Dependencies.Test.jUnitJupiterApi)
+        testImplementation(Dependencies.Test.jUnitJupiter)
         testImplementation(Dependencies.Test.mockK)
         testImplementation(Dependencies.Test.spekDslJvm)
         testImplementation(Dependencies.Test.jUnitJupiterEngine)

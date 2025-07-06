@@ -23,7 +23,8 @@ object Dependencies {
 
         const val jUnitJupiterEngine = "org.junit.jupiter:junit-jupiter-engine"
         const val jUnitJupiterVintageEngine = "org.junit.vintage:junit-vintage-engine"
-        const val jUnitJupiterApi = "org.junit.jupiter:junit-jupiter-api:5.7.1"
+        const val jUnitJupiterApi = "org.junit.jupiter:junit-jupiter-api:5.8.1"
+        const val jUnitJupiter = "org.junit.jupiter:junit-jupiter:5.8.1"
         const val mockK = "io.mockk:mockk:1.11.0"
 
         private const val spekVersion = "2.0.19"

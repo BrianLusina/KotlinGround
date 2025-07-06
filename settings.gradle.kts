@@ -1,5 +1,11 @@
 rootProject.name = "kotlin-ground"
 
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
 include(
     "datastructures",
     "design",
