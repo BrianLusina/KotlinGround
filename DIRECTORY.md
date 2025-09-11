@@ -12,6 +12,8 @@
                   * [Intersection](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/intersection/intersection.kt)
                 * Majorityelement
                   * [Majorityelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/majorityelement/majorityElement.kt)
+                * Nonconstructiblechange
+                  * [Nonconstructiblechange](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/nonconstructiblechange/nonConstructibleChange.kt)
                 * Optimaltasks
                   * [Optimaltaskassignment](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/optimaltasks/optimalTaskAssignment.kt)
                 * Removeelement
@@ -117,6 +119,8 @@
                   * [Intersectiontwoofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/intersection/IntersectionTwoOfArraysTest.kt)
                 * Majorityelement
                   * [Majorityelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/majorityelement/MajorityElementTest.kt)
+                * Nonconstructiblechange
+                  * [Nonconstructiblechangetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/nonconstructiblechange/NonConstructibleChangeTest.kt)
                 * Optimaltasks
                   * [Optimaltaskassignmenttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/optimaltasks/OptimalTaskAssignmentTest.kt)
                 * Removeelement
