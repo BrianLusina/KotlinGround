@@ -910,6 +910,8 @@
                 * [Scrabblescore](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/scrabblescore/ScrabbleScore.kt)
               * Search
                 * Binarysearch
+                  * Findclosestvalue
+                    * [Findclosestvalueinbst](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/findclosestvalue/findClosestValueInBst.kt)
                   * Findpeakelement
                     * [Findpeakelement](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/findpeakelement/findPeakElement.kt)
                   * Kokoeatingbananas
