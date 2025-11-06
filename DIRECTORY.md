@@ -93,6 +93,9 @@
                 * Trie
                   * Searchsuggestions
                     * [Suggestedproducts](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/suggestedProducts.kt)
+              * Slidingwindow
+                * Repeateddnasequences
+                  * [Findrepeateddnasequences](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/repeateddnasequences/findRepeatedDnaSequences.kt)
               * Sorting
                 * Mergeintervals
                   * [Mergeintervals](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/mergeintervals.kt)
@@ -179,6 +182,9 @@
                 * Trie
                   * Searchsuggestions
                     * [Suggestedproductstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/SuggestedProductsTest.kt)
+              * Slidingwindow
+                * Repeateddnasequences
+                  * [Findrepeateddnasequencestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/repeateddnasequences/FindRepeatedDnaSequencesTest.kt)
               * Sorting
                 * Mergeintervals
                   * [Mergeintervalskttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/MergeintervalsKtTest.kt)
