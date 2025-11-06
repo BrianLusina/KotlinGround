@@ -1,10 +1,10 @@
 package com.kotlinground.algorithms.slidingwindow.repeateddnasequences
 
 fun findRepeatedDnaSequences(dnaSequence: String): List<String> {
-    val toIntMap = mapOf(Pair("A", 0), Pair("C", 1), Pair("G", 2), Pair("T", 3))
+    val toIntMap = mapOf('A' to 0, 'C' to 1, 'G' to 2, 'T' to 3)
     val encodedSequence = arrayListOf<Int>()
     for (c in dnaSequence) {
-        val n = toIntMap[c.toString()] ?: throw IllegalArgumentException()
+        val n = toIntMap[c] ?: throw IllegalArgumentException("Invalid DNA character: $c")
         encodedSequence.add(n)
     }
 
@@ -59,16 +59,10 @@ fun findRepeatedDnaSequencesNaive(dnaSequence: String): List<String> {
     val resultSet = mutableSetOf<String>()
     val seen = mutableSetOf<String>()
 
-    for (idx in 0 until dnaSequence.length) {
-        if (idx + 10 > dnaSequence.length) {
-            break
-        }
+    for (idx in 0 until dnaSequence.length-10) {
         val subsequence = dnaSequence.substring(idx, idx + 10)
-        if (subsequence.length < 10) {
-            continue
-        }
         if (seen.contains(subsequence)) {
-            resultSet.add(subsequence);
+            resultSet.add(subsequence)
         } else {
             seen.add(subsequence);
         }
