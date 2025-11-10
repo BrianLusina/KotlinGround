@@ -239,6 +239,39 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
     }
 
     /**
+     * Checks if the binary search tree is valid.
+     *
+     * @return true if the binary search tree is valid or empty; false otherwise.
+     */
+    fun isValid(): Boolean {
+        if (root == null) {
+            return true
+        }
+
+        val stack = arrayListOf(Triple(root?.left, root, root?.right))
+        while (stack.isNotEmpty()) {
+            val (lowerBound, node, upperBound) = stack.removeFirst()
+            if (node == null) {
+                continue
+            }
+
+            if (node.data <= lowerBound!!.data || node.data >= upperBound!!.data) {
+                return false
+            }
+
+            if (lowerBound != null) {
+                stack.add(Triple(lowerBound, node.left, node))
+            }
+
+            if (upperBound != null) {
+                stack.add(Triple(node, node.right, upperBound))
+            }
+        }
+
+        return true
+    }
+
+    /**
      * LowestCommonAncestor returns the LCA of 2 nodes
      * Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
      * If both of the values in the 2 nodes provided are greater than the root node, then we move to the right.
