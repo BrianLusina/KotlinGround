@@ -32,7 +32,7 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
                     return null
                 }
 
-                val mid = (left + right) / 2
+                val mid = left + (right - left) / 2
                 val node = BinaryTreeNode(values[mid])
                 node.left = constructTreeHelper(left, mid - 1)
                 node.right = constructTreeHelper(mid + 1, right)
