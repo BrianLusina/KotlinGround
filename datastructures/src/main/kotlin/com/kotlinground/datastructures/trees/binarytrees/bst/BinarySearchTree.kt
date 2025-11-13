@@ -15,6 +15,34 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
         return root
     }
 
+    companion object {
+        /**
+         * Constructs a balanced binary search tree from a sorted list of comparable elements.
+         *
+         * @param values A sorted list of comparable elements used to construct the binary search tree.
+         * @return A `BinarySearchTree` constructed from the given sorted list of values, or `null` if the list is empty.
+         */
+        fun <T: Comparable<T>> constructTree(values: List<T>): BinarySearchTree<T>? {
+            if (values.isEmpty()) {
+                return null
+            }
+
+            fun constructTreeHelper(left: Int, right: Int): BinaryTreeNode<T>? {
+                if (left > right) {
+                    return null
+                }
+
+                val mid = (left + right) / 2
+                val node = BinaryTreeNode(values[mid])
+                node.left = constructTreeHelper(left, mid - 1)
+                node.right = constructTreeHelper(mid + 1, right)
+                return node
+            }
+            val root = constructTreeHelper(0, values.size - 1)
+            return BinarySearchTree(root)
+        }
+    }
+
     override fun height(): Int {
         if (root == null) {
             return 0
