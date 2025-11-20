@@ -32,12 +32,14 @@ import com.kotlinground.ktmath.utils.sumOfSquaredDigits
  * The worst case time complexity of this algorithm is given by the case of a non-happy number, since it gets stuck in
  * a cycle, whereas a happy number quickly converges to 1. Let’s first calculate the time complexity of the Sum Digits
  * function. Since we are calculating the sum of all digits in a number, the time complexity of this function is
- * O(log(n)), because the number of digits in the number n log10n.
+ * O(log(n)), because the number of digits in the number n log₁₀(n).
  *
  * @param n the number to check whether it is a happy number
  * @return true if the number is a happy number, false otherwise
  */
 fun isHappyNumber(n: Int): Boolean {
+    require(n > 0) { "Number must be greater than 0" }
+
     var slow = n
     var fast = sumOfSquaredDigits(n)
 
@@ -66,6 +68,7 @@ fun isHappyNumber(n: Int): Boolean {
  * @return true if the number is a happy number, false otherwise
  */
 fun isHappyNumber2(n: Int): Boolean {
+    require(n > 0) { "Number must be greater than 0" }
     val seen = HashSet<Int>()
     var number = n
     while (number != 1 && !seen.contains(number)) {
