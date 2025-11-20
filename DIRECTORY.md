@@ -63,6 +63,8 @@
               * Fastandslow
                 * Circulararrayloop
                   * [Circulararrayloop](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/fastandslow/circulararrayloop/circularArrayLoop.kt)
+                * Happynumber
+                  * [Happynumber](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/fastandslow/happynumber/happynumber.kt)
               * Floodfill
                 * [Floodfill](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/floodfill/floodfill.kt)
               * Frogriver
@@ -164,6 +166,8 @@
               * Fastandslow
                 * Circulararrayloop
                   * [Circulararraylooptest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/fastandslow/circulararrayloop/CircularArrayLoopTest.kt)
+                * Happynumber
+                  * [Ishappynumbertest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/fastandslow/happynumber/IsHappyNumberTest.kt)
               * Floodfill
                 * [Floodfilltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/floodfill/FloodFillTest.kt)
               * Greedy
