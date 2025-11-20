@@ -1,5 +1,7 @@
 package com.kotlinground.ktmath.utils
 
+import kotlin.math.abs
+
 object Utils {
     fun reverseNumber(number: Int) = reverseInt(number)
 
@@ -42,7 +44,10 @@ fun gcd(x: Int, y: Int): Int {
  * @return The least common multiple of the two integers.
  */
 fun lcm(x: Int, y: Int): Int {
-    return (x * y) / gcd(x, y)
+    if(x == 0 || y == 0) return 0
+    val absX = abs(x)
+    val absY = abs(y)
+    return absX / gcd(absX, absY) * absY
 }
 
 /**
@@ -53,7 +58,7 @@ fun lcm(x: Int, y: Int): Int {
  */
 fun sumOfSquaredDigits(n: Int): Int {
     var sum = 0
-    var number = n
+    var number = abs(n)
     while (number > 0) {
         val digit = number % 10
         sum += digit * digit
