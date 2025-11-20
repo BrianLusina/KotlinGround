@@ -42,7 +42,7 @@ fun isHappyNumber(n: Int): Boolean {
     var fast = sumOfSquaredDigits(n)
 
     while (fast != 1 && slow != fast) {
-        slow = sumOfSquaredDigits(n)
+        slow = sumOfSquaredDigits(slow)
         fast = sumOfSquaredDigits(sumOfSquaredDigits(fast))
     }
 
