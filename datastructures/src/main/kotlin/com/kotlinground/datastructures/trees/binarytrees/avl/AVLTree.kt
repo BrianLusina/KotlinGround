@@ -149,4 +149,8 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
     override fun serialize(): String {
         TODO("Not yet implemented")
     }
+
+    override fun findKthLargest(k: Int): TreeNode<T>? {
+        TODO("Not yet implemented")
+    }
 }

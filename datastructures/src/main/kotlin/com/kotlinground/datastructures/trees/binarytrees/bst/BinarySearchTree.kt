@@ -360,4 +360,53 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
 
         return leaves1.equals(leaves2)
     }
+
+    /**
+     * Finds the kth largest node in the binary search tree.
+     *
+     * The method uses a reverse in-order traversal to find the kth largest node efficiently.
+     * If the tree is empty or k exceeds the number of available nodes, the method returns null.
+     *
+     * Complexity:
+     * Time: O(h + k): where h is the height of the tree and k is the input
+     * Space: O(h): where h is the height of the tree.
+     *
+     * @param k The rank of the largest node to find, where k = 1 corresponds to the largest node.
+     * @return The kth largest node as a TreeNode<T>, or null if the rank is invalid or the tree is empty.
+     */
+    override fun findKthLargest(k: Int): TreeNode<T>? {
+        if (root == null) {
+            return null
+        }
+        // This is a helper class that helps to track the algorithm's progress of traversing the tree
+        class TreeInfo(var numberOfNodesVisited: Int = 0, var latestVisitedNode: BinaryTreeNode<T>? = null)
+
+        /**
+         * Helper function to traverse the tree in reverse in order
+         * @param node [BinaryTreeNode] The node to traverse
+         * @param treeInformation [TreeInfo] The tree information
+         */
+        fun reverseInOrderTraverse(node: BinaryTreeNode<T>?, treeInformation: TreeInfo) {
+            // base case: if the node is null, or we've already found the kth largest
+            if (node == null || treeInformation.numberOfNodesVisited >= k ) {
+                return
+            }
+
+            // traverse right subtree first for larger values
+            reverseInOrderTraverse(node.right, treeInformation)
+
+            // Visit the current node if we haven't found k nodes yet
+            if (treeInformation.numberOfNodesVisited < k) {
+                treeInformation.numberOfNodesVisited + 1
+                treeInformation.latestVisitedNode = node
+            }
+
+            // traverse the left subtree for smaller values if needed
+            reverseInOrderTraverse(node.left, treeInformation)
+        }
+
+        val treeInfo = TreeInfo(0)
+        reverseInOrderTraverse(root, treeInfo)
+        return treeInfo.latestVisitedNode
+    }
 }

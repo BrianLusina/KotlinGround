@@ -475,5 +475,9 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         return dfs(nodeData.iterator())
     }
+
+    override fun findKthLargest(k: Int): TreeNode<T>? {
+        TODO("Not yet implemented")
+    }
 }
 

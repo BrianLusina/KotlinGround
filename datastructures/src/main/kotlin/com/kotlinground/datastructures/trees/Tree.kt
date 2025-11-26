@@ -86,4 +86,12 @@ abstract class Tree<T> {
      * Deserializes a string to a  tree
      */
     abstract fun deserialize(tree: String): TreeNode<T>?
+
+    /**
+     * Finds the k-th largest element in the tree.
+     *
+     * @param k The position of the largest element to find, where 1 corresponds to the largest element.
+     * @return The k-th largest node in the tree as a [TreeNode], or null if the tree does not contain enough nodes.
+     */
+    abstract fun findKthLargest(k: Int): TreeNode<T>?
 }
