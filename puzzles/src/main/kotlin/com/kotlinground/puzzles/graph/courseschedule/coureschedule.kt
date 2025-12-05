@@ -1,4 +1,4 @@
-package com.kotlinground.algorithms.graph.courseschedule
+package com.kotlinground.puzzles.graph.courseschedule
 
 const val WHITE = 1
 const val GRAY = 2
@@ -11,7 +11,11 @@ fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
     for (prerequisite in prerequisites) {
         val destination = prerequisite[0]
         val source = prerequisite[1]
-        adjacencyList[source]?.add(destination)
+        if (adjacencyList.containsKey(source)) {
+            adjacencyList[source]?.add(destination)
+        } else {
+            adjacencyList[source] = arrayListOf(destination)
+        }
     }
 
     var isPossible = true
