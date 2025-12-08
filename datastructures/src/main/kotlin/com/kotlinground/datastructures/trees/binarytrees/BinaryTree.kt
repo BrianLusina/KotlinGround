@@ -476,8 +476,61 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         return dfs(nodeData.iterator())
     }
 
-    override fun findKthLargest(k: Int): TreeNode<T>? {
+    override fun findKthLargest(k: Int): BinaryTreeNode<T>? {
         TODO("Not yet implemented")
+    }
+
+    /**
+     * Perform zigzag level order traversal of a binary tree.
+     *
+     * Time Complexity: O(n) where n is the number of nodes
+     * Space Complexity: O(w) where w is the maximum width of the tree
+     */
+    fun zigZagLevelOrderTraversal(): List<List<BinaryTreeNode<T>>> {
+        if (root == null) {
+            return emptyList()
+        }
+
+        val result = mutableListOf<List<BinaryTreeNode<T>>>()
+
+        // traverse the tree from the root moving down level by level and adding the nodes in zig zag manner. the first
+        // level will start with the left and then go right, the iteration will change direction on each level
+        // we use a queue to traverse the tree level by level
+        val fifoQueue = FifoQueue<BinaryTreeNode<T>>()
+        fifoQueue.enqueue(root!!)
+
+        var levelNumber = 0
+
+        while (!fifoQueue.isEmpty) {
+            val levelSize = fifoQueue.size
+            val currentLevel = arrayListOf<BinaryTreeNode<T>>()
+
+            for (i in 0 until levelSize) {
+                val node = fifoQueue.dequeue()
+                currentLevel.add(node)
+
+                if (node.left != null) {
+                    fifoQueue.enqueue(node.left!!)
+                }
+
+                if (node.right != null) {
+                    fifoQueue.enqueue(node.right!!)
+                }
+            }
+            // if level number is odd reverse the list, every odd level is reversed
+            if (levelNumber % 2 == 1) {
+                currentLevel.reverse()
+                result.add(currentLevel)
+            } else {
+                // otherwise add the current level
+                result.add(currentLevel)
+            }
+
+            // add a level and proceed
+            levelNumber += 1
+        }
+
+        return result
     }
 }
 
