@@ -374,7 +374,7 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
      * @param k The rank of the largest node to find, where k = 1 corresponds to the largest node.
      * @return The kth largest node as a TreeNode<T>, or null if the rank is invalid or the tree is empty.
      */
-    override fun findKthLargest(k: Int): TreeNode<T>? {
+    override fun findKthLargest(k: Int): BinaryTreeNode<T>? {
         if (root == null) {
             return null
         }
