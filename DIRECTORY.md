@@ -69,14 +69,14 @@
                 * [Floodfill](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/floodfill/floodfill.kt)
               * Frogriver
                 * [Frogriverone](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/frogriver/frogRiverOne.kt)
-              * Graph
-                * Courseschedule
-                  * [Coureschedule](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/graph/courseschedule/coureschedule.kt)
               * Greedy
                 * Minarrows
                   * [Findminarrowshots](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/minarrows/findMinArrowShots.kt)
               * Hamming
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
+              * Intervals
+                * Taskscheduler
+                  * [Taskscheduler](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/taskScheduler.kt)
               * Josephuscircle
                 * [Josephuscircle](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/josephuscircle/josephusCircle.kt)
               * Luhn
@@ -174,6 +174,9 @@
                 * Minarrows
                   * [Findminarrowshotstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/minarrows/FindMinArrowShotsTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
+              * Intervals
+                * Taskscheduler
+                  * [Taskschedulertest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/TaskSchedulerTest.kt)
               * Josephuscircle
                 * [Josephuscircletest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/josephuscircle/JosephusCircleTest.kt)
               * Luhn
@@ -420,6 +423,9 @@
                 * [Queue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/Queue.kt)
               * Randomizedset
                 * [Randomizedset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/randomizedset/RandomizedSet.kt)
+              * Sets
+                * [Disjointsetunion](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sets/DisjointSetUnion.kt)
+                * [Unionfind](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sets/UnionFind.kt)
               * Smallestinfiniteset
                 * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSet.kt)
               * Snapshotarray
@@ -892,6 +898,8 @@
               * Graph
                 * Canvisitallrooms
                   * [Canvisitallrooms](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/canvisitallrooms/canVisitAllRooms.kt)
+                * Courseschedule
+                  * [Coureschedule](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/courseschedule/coureschedule.kt)
                 * Numberofprovinces
                   * [Numberofprovinces](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/numberofprovinces/numberOfProvinces.kt)
                 * Reorderroutes
@@ -1002,6 +1010,8 @@
               * Graph
                 * Canvisitallrooms
                   * [Canvisitallroomstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/canvisitallrooms/CanVisitAllRoomsTest.kt)
+                * Courseschedule
+                  * [Coursescheduletest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/courseschedule/CourseScheduleTest.kt)
                 * Numberofprovinces
                   * [Numberofprovincestest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/numberofprovinces/NumberOfProvincesTest.kt)
                 * Reorderroutes
