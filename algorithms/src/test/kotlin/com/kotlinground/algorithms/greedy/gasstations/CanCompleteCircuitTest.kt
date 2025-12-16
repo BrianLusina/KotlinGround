@@ -1,4 +1,4 @@
-package com.kotlinground.puzzles.arrays.gasstations
+package com.kotlinground.algorithms.greedy.gasstations
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

@@ -1,4 +1,4 @@
-package com.kotlinground.puzzles.arrays.gasstations
+package com.kotlinground.algorithms.greedy.gasstations
 
 /**
  * If sum of gas is less than sum of cost, then there is no way to get through all stations. So while we loop through
