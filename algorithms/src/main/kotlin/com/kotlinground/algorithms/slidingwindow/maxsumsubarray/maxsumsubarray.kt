@@ -6,7 +6,7 @@ fun maxSumSubArray(nums: IntArray, k: Int): Int {
 
     var start = 0
     var state = 0
-    var maxSum = 0
+    var maxSum = Int.MIN_VALUE
 
     for (end in 0 until size) {
         state += nums[end]
