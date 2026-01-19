@@ -69,14 +69,16 @@
                 * [Floodfill](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/floodfill/floodfill.kt)
               * Frogriver
                 * [Frogriverone](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/frogriver/frogRiverOne.kt)
-              * Graph
-                * Courseschedule
-                  * [Coureschedule](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/graph/courseschedule/coureschedule.kt)
               * Greedy
+                * Gasstations
+                  * [Cancompletecircuit](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/gasstations/canCompleteCircuit.kt)
                 * Minarrows
                   * [Findminarrowshots](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/minarrows/findMinArrowShots.kt)
               * Hamming
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
+              * Intervals
+                * Taskscheduler
+                  * [Taskscheduler](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/taskScheduler.kt)
               * Josephuscircle
                 * [Josephuscircle](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/josephuscircle/josephusCircle.kt)
               * Luhn
@@ -96,6 +98,8 @@
                   * Searchsuggestions
                     * [Suggestedproducts](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/suggestedProducts.kt)
               * Slidingwindow
+                * Maxsumsubarray
+                  * [Maxsumsubarray](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/maxsumsubarray/maxsumsubarray.kt)
                 * Repeateddnasequences
                   * [Findrepeateddnasequences](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/repeateddnasequences/findRepeatedDnaSequences.kt)
               * Sorting
@@ -171,9 +175,14 @@
               * Floodfill
                 * [Floodfilltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/floodfill/FloodFillTest.kt)
               * Greedy
+                * Gasstations
+                  * [Cancompletecircuittest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/gasstations/CanCompleteCircuitTest.kt)
                 * Minarrows
                   * [Findminarrowshotstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/minarrows/FindMinArrowShotsTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
+              * Intervals
+                * Taskscheduler
+                  * [Taskschedulertest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/TaskSchedulerTest.kt)
               * Josephuscircle
                 * [Josephuscircletest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/josephuscircle/JosephusCircleTest.kt)
               * Luhn
@@ -187,6 +196,8 @@
                   * Searchsuggestions
                     * [Suggestedproductstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/SuggestedProductsTest.kt)
               * Slidingwindow
+                * Maxsumsubarray
+                  * [Maxsumsubarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/maxsumsubarray/MaxSumSubArrayTest.kt)
                 * Repeateddnasequences
                   * [Findrepeateddnasequencestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/repeateddnasequences/FindRepeatedDnaSequencesTest.kt)
               * Sorting
@@ -420,6 +431,9 @@
                 * [Queue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/Queue.kt)
               * Randomizedset
                 * [Randomizedset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/randomizedset/RandomizedSet.kt)
+              * Sets
+                * [Disjointsetunion](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sets/DisjointSetUnion.kt)
+                * [Unionfind](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sets/UnionFind.kt)
               * Smallestinfiniteset
                 * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSet.kt)
               * Snapshotarray
@@ -790,6 +804,8 @@
                 * [Generatepermutations](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/permutations/generatePermutations.kt)
               * Rnatranscription
                 * [Rnatranscription](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/rnatranscription/RnaTranscription.kt)
+              * Similarstringgroups
+                * [Similarstringgroups](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/similarstringgroups/similarStringGroups.kt)
               * Spreadsheetencode
                 * [Spreadsheetencode](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/spreadsheetencode/spreadsheetEncode.kt)
               * Wordcount
@@ -829,6 +845,8 @@
                 * [Generatepermutationstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/permutations/GeneratePermutationsTest.kt)
               * Rnatranscription
                 * [Rnatranscriptionkttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/rnatranscription/RnaTranscriptionKtTest.kt)
+              * Similarstringgroups
+                * [Similarstringgroupstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/similarstringgroups/SimilarStringGroupsTest.kt)
               * Spreadsheetencode
                 * [Spreadsheetencodetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/spreadsheetencode/SpreadsheetEncodeTest.kt)
               * Wordcount
@@ -856,8 +874,6 @@
                   * [Containerwithmostwater](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/containerwithmostwater/containerWithMostWater.kt)
                 * Finddiffoftwoarrays
                   * [Finddifference](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/finddiffoftwoarrays/findDifference.kt)
-                * Gasstations
-                  * [Cancompletecircuit](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/gasstations/canCompleteCircuit.kt)
                 * Hindex
                   * [Hindex](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/hindex/hIndex.kt)
                 * Jumpgame
@@ -892,6 +908,8 @@
               * Graph
                 * Canvisitallrooms
                   * [Canvisitallrooms](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/canvisitallrooms/canVisitAllRooms.kt)
+                * Courseschedule
+                  * [Coureschedule](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/courseschedule/coureschedule.kt)
                 * Numberofprovinces
                   * [Numberofprovinces](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/numberofprovinces/numberOfProvinces.kt)
                 * Reorderroutes
@@ -964,8 +982,6 @@
                   * [Finddifferencetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/finddiffoftwoarrays/FindDifferenceTest.kt)
                 * Findpivotindex
                   * [Findpivotindextest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/findpivotindex/FindPivotIndexTest.kt)
-                * Gasstations
-                  * [Cancompletecircuittest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/gasstations/CanCompleteCircuitTest.kt)
                 * Highestaltitude
                   * [Largestaltitudetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/highestaltitude/LargestAltitudeTest.kt)
                 * Hindex
@@ -1002,6 +1018,8 @@
               * Graph
                 * Canvisitallrooms
                   * [Canvisitallroomstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/canvisitallrooms/CanVisitAllRoomsTest.kt)
+                * Courseschedule
+                  * [Coursescheduletest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/courseschedule/CourseScheduleTest.kt)
                 * Numberofprovinces
                   * [Numberofprovincestest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/numberofprovinces/NumberOfProvincesTest.kt)
                 * Reorderroutes
