@@ -98,6 +98,8 @@
                   * Searchsuggestions
                     * [Suggestedproducts](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/suggestedProducts.kt)
               * Slidingwindow
+                * Maxpointsfromcards
+                  * [Maxpointsfromcards](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/maxpointsfromcards/maxPointsFromCards.kt)
                 * Maxsumsubarray
                   * [Maxsumsubarray](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/maxsumsubarray/maxsumsubarray.kt)
                 * Repeateddnasequences
@@ -196,6 +198,8 @@
                   * Searchsuggestions
                     * [Suggestedproductstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/SuggestedProductsTest.kt)
               * Slidingwindow
+                * Maxpointsfromcards
+                  * [Maxpointsfromcards](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/maxpointsfromcards/MaxPointsFromCards.kt)
                 * Maxsumsubarray
                   * [Maxsumsubarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/maxsumsubarray/MaxSumSubArrayTest.kt)
                 * Repeateddnasequences
