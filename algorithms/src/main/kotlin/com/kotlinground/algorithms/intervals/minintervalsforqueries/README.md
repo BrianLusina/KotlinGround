@@ -101,7 +101,7 @@ The steps of the algorithm are as follows:
 ![Solution 6](./images/solutions/min_intervals_to_include_query_solution_6.png)
 ![Solution 7](./images/solutions/min_intervals_to_include_query_solution_7.png)
 ![Solution 8](./images/solutions/min_intervals_to_include_query_solution_8.png)
-![Solution 19](./images/solutions/min_intervals_to_include_query_solution_9.png)
+![Solution 9](./images/solutions/min_intervals_to_include_query_solution_9.png)
 ![Solution 10](./images/solutions/min_intervals_to_include_query_solution_10.png)
 ![Solution 11](./images/solutions/min_intervals_to_include_query_solution_11.png)
 ![Solution 12](./images/solutions/min_intervals_to_include_query_solution_12.png)
