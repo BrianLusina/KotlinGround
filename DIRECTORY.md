@@ -77,6 +77,8 @@
               * Hamming
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
               * Intervals
+                * Minintervalsforqueries
+                  * [Minintervalforqueries](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/intervals/minintervalsforqueries/minIntervalForQueries.kt)
                 * Taskscheduler
                   * [Taskscheduler](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/taskScheduler.kt)
               * Josephuscircle
@@ -183,6 +185,8 @@
                   * [Findminarrowshotstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/minarrows/FindMinArrowShotsTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
               * Intervals
+                * Minintervalsforqueries
+                  * [Minintervalsforqueriestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/intervals/minintervalsforqueries/MinIntervalsForQueriesTest.kt)
                 * Taskscheduler
                   * [Taskschedulertest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/TaskSchedulerTest.kt)
               * Josephuscircle
