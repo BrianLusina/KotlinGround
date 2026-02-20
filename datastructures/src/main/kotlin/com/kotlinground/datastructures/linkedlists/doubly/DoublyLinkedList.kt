@@ -190,6 +190,10 @@ class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
         head = previous
     }
 
+    override fun reverseGroups(k: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
     override fun insert(node: DoublyLinkedListNode<T>, position: Int): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }

@@ -145,6 +145,83 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
         head = previous
     }
 
+    override fun reverseGroups(k: Int): SinglyLinkedListNode<T>? {
+        if (head == null || head?.next == null || k <= 1) {
+            return head
+        }
+
+        // Sentinel node to handle edge cases such as when the head of the linked list is part of the group to reverse.
+        // This will be used to keep track of the previous node of the group to reverse
+        // Also, it will simplify the return
+        val sentinelHead = SinglyLinkedListNode(null as T)
+        sentinelHead.next = head
+        // Tail will be used to keep track of the last node of the previous group that was reversed. This will be used
+        // to connect the last node of the previous group to the head of the current group that is being reversed
+        var tail: SinglyLinkedListNode<T>? = sentinelHead
+
+        var trackingNode = head
+        var current = head
+
+        fun reverseListHelper(node: SinglyLinkedListNode<T>?): SinglyLinkedListNode<T>? {
+            var previous: SinglyLinkedListNode<T>? = null
+            var currentNode = node
+
+            while (currentNode != null) {
+                val next = currentNode.next
+                currentNode.next = previous
+                previous = currentNode
+                currentNode = next
+            }
+            return node
+        }
+
+        // While the tracking node has not reached the end
+        while (trackingNode != null) {
+            // Set the count of the current group, we start with 1
+            var count = 1
+            while (count < k) {
+                if(trackingNode != null) {
+                    // While we can still move the tracking node and we have not reached the end of the group, we move
+                    // the tracking node and increment the count
+                    trackingNode = trackingNode.next
+                    count += 1
+                } else {
+                    // We have reached the end of the linked list before reaching the end of the group, so we return as
+                    // there is no need to reverse a group that is not complete
+                    return sentinelHead.next
+                }
+            }
+
+            // only perform below if we have enough nodes inside k-group and haven't reached end. node is currently at
+            // the tail of the k-group after reversal it will be the head of the k-group
+            if (trackingNode != null) {
+                // track the head of the next k group
+                val next = trackingNode.next
+
+                // Sever the list, so we can reverse it
+                trackingNode.next = null
+
+                // Reverse list which will return new tail
+                val newTail = reverseListHelper(current)
+
+                // re-attach our new tail back to the remaining linked list
+                newTail?.next = next
+
+                // setup prev linked list to node, which was once the k-group's tail, but after reversal became the
+                // k-group's head
+                tail?.next = trackingNode
+                // update tail to be the new tail of the reversed group
+                tail = newTail
+
+                // update current to be the head of the next k group
+                current = next
+                trackingNode = next
+            }
+        }
+
+        return sentinelHead.next
+    }
+
     override fun insert(node: SinglyLinkedListNode<T>, position: Int): SinglyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
@@ -493,7 +570,7 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
             if (seen.containsKey(current.data)) {
                 previous?.next = current
             } else {
-                seen[current.data] = true
+                seen[current.data!!] = true
                 previous = current
             }
             current = previous?.next

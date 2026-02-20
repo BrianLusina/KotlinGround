@@ -139,6 +139,15 @@ abstract class LinkedList<Node, T> : Iterable<Node> {
     abstract fun reverse()
 
     /**
+     * Reverses nodes in groups of size `k` within the linked list.
+     * If the number of nodes is not a multiple of `k`, the remaining nodes will stay in their original order.
+     *
+     * @param k [Int] the size of each group to reverse.
+     * @return [Node?] the head node of the modified linked list.
+     */
+    abstract fun reverseGroups(k: Int): Node?
+
+    /**
      * Inserts a node at the specified position of the linked list
      * @param node
      * @param position [Int]
