@@ -217,6 +217,10 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         TODO("Not yet implemented")
     }
 
+    override fun reverseGroups(k: Int): CircularLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
     override fun alternateSplit(): Pair<CircularLinkedListNode<T>, CircularLinkedListNode<T>> {
         TODO("Not yet implemented")
     }

@@ -2,13 +2,16 @@ package com.kotlinground.datastructures.linkedlists.singly
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.MethodSource
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
-class SinglyLinkedListTest {
+class SinglyLinkedListReverseTest {
 
     @Test
     fun `should reverse the list making the head the tail and vice versa`() {
@@ -46,6 +49,44 @@ class SinglyLinkedListTest {
         assertNull(actualHead)
     }
 }
+
+class SinglyLinkedListReverseGroupsTest {
+    companion object {
+        @JvmStatic
+        fun testCases() = listOf(
+            Arguments.of(listOf(1, 2, 3, 4, 5, 6), 4, listOf(4, 3, 2, 1, 5, 6)),
+            Arguments.of(listOf(9, 8, 7, 6, 5, 4, 3, 2, 1), 3, listOf(7, 8, 9, 4, 5, 6, 1, 2, 3)),
+            Arguments.of(listOf(9, 8, 7, 6, 5, 4, 3, 2, 1), 0, listOf(9, 8, 7, 6, 5, 4, 3, 2, 1)),
+            Arguments.of(listOf(1, 2, 3, 4, 5), 2, listOf(2, 1, 4, 3, 5)),
+            Arguments.of(listOf(1, 2, 3, 4, 5), 2, listOf(2, 1, 4, 3, 5)),
+            Arguments.of(listOf(1, 2, 3, 4, 5), 3, listOf(3, 2, 1, 4, 5)),
+            Arguments.of(listOf(1, 2, 3, 4, 5, 6), 2, listOf(2, 1, 4, 3, 6, 5)),
+            Arguments.of(listOf(1, 2, 3, 4, 5, 6, 7), 3, listOf(3, 2, 1, 6, 5, 4, 7)),
+            Arguments.of(listOf(8, 11, 4, 12, 0), 1, listOf(8, 11, 4, 12, 0)),
+            Arguments.of(listOf(3, 4, 5, 6, 2, 8, 7, 7), 3, listOf(5, 4, 3, 8, 2, 6, 7, 7)),
+            Arguments.of(listOf(1, 2, 3, 4, 5, 6, 7), 7, listOf(7, 6, 5, 4, 3, 2, 1)),
+        )
+    }
+
+    @ParameterizedTest
+    @MethodSource("testCases")
+    fun `reverse linked list in groups`(input: List<Int>, k: Int, expected: List<Int>) {
+        val singlyLinkedList = SinglyLinkedList<Int>(null)
+        for (value in input) {
+            singlyLinkedList.append(value)
+        }
+        val actual = singlyLinkedList.reverseGroups(k)
+        val actualData = arrayListOf<Int>()
+        var current = actual
+        while (current != null) {
+            actualData.add(current.data)
+            current = current.next
+        }
+
+        assertEquals(expected, actualData)
+    }
+}
+
 
 class SingleLinkedListDeleteMiddleNodeTest {
     @Test
