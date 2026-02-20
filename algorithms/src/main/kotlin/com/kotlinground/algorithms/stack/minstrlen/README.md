@@ -215,5 +215,5 @@ time complexity is linear, `O(n)`.
 In Java and Python3, strings are immutable. So, the input string needs to be converted to an array or list to perform in
 place modifications. Thus, the space complexity remains O(n).
 
-String are mutable in C++. So, all modifications can be done on the input string itself. No additional data structures
+Strings are mutable in C++. So, all modifications can be done on the input string itself. No additional data structures
 are used, so the space complexity is O(1).
