@@ -116,6 +116,8 @@
               * Stack
                 * Dailytemperatures
                   * [Dailytemperatures](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/dailyTemperatures.kt)
+                * Longestvalidparentheses
+                  * [Longestvalidparentheses](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/longestvalidparentheses/longestValidParentheses.kt)
               * Tapeequilibrium
                 * [Tapequilibrium](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/tapeequilibrium/tapequilibrium.kt)
               * Twopointers
@@ -216,6 +218,8 @@
               * Stack
                 * Dailytemperatures
                   * [Dailytemperaturestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/DailyTemperaturesTest.kt)
+                * Longestvalidparentheses
+                  * [Longestvalidparenthesestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/longestvalidparentheses/LongestValidParenthesesTest.kt)
               * Twopointers
                 * Findsumofthree
                   * [Findsumofthreetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/twopointers/findsumofthree/FindSumOfThreeTest.kt)
@@ -718,6 +722,8 @@
                 * [Pascalstriangle](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/pascalstriangle/pascalsTriangle.kt)
               * Perfectnumbers
                 * [Naturalnumber](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/perfectNumbers/NaturalNumber.kt)
+              * Poweroftwo
+                * [Ispoweroftwo](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/poweroftwo/isPowerOfTwo.kt)
               * Powersofi
                 * [Powersofi](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/powersofi/powersofi.kt)
               * Primes
@@ -752,6 +758,8 @@
                 * [Pascalstriangletest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/pascalstriangle/PascalsTriangleTest.kt)
               * Perfectnumbers
                 * [Naturalnumbertest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/perfectNumbers/NaturalNumberTest.kt)
+              * Poweroftwo
+                * [Ispoweroftwotests](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/poweroftwo/IsPowerOfTwoTests.kt)
               * Primes
                 * Backwardsreadprimes
                   * [Backwardsreadprimestest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/primes/backwardsreadprimes/BackwardsReadPrimesTest.kt)
