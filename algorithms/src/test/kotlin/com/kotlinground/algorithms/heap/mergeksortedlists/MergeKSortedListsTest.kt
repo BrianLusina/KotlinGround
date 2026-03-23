@@ -33,7 +33,7 @@ class MergeKSortedListsTest {
                 listOf(1, 1, 2, 3, 4, 4, 5, 6)
             ),
             Arguments.of(
-                listOf<Int>(),
+                emptyList<List<Int>>(),
                 listOf<Int>()
             ),
             Arguments.of(
