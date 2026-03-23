@@ -6,12 +6,6 @@ fun mergeKLists(lists: List<List<Int>>): List<Int> {
     // Validate that the input provided is not empty. If it is empty, return an empty list. Nothing more to do here
     if (lists.isEmpty()) return emptyList()
 
-    // Check if any of the lists provided is empty. If we have an empty lis, we return, as there is nothing more to do
-    // here
-    lists.forEach {
-        if (it.isEmpty()) return emptyList()
-    }
-
     // Initialize our minimum heap. This will be usd to keep the lowest value from each list at the root of the heap.
     // Whenever a value is popped from the root, the next value is added to the heap and if it is the lowest value it
     // will be at the root of the heap
@@ -42,7 +36,7 @@ fun mergeKLists(lists: List<List<Int>>): List<Int> {
         result.add(value)
 
         // Check if the element index is less than the current list it an be found in. This means there are still other
-        // elements withint this list
+        // elements within this list
         if(elementIndex + 1 < lists[listIndex].size) {
             val nextValue = lists[listIndex][elementIndex + 1]
             minHeap.add(Triple(nextValue, listIndex, elementIndex + 1))
