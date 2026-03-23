@@ -70,7 +70,7 @@ The following steps can be performed to implement the algorithm above:
        is the difference between the currentIndex and the index at the new top of the stack (which is the index right
        before the start of this valid pair). Compare this length with the maximum length, currentLength, found so far,
        and update it if necessary.
-3. After the iteration ends, the maximum length, as recorded using max(maxLength, currentLength), is the answer.
+3. After the iteration ends, the maximum length is the answer.
 
 ### Time Complexity
 
