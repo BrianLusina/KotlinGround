@@ -76,6 +76,9 @@
                   * [Findminarrowshots](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/minarrows/findMinArrowShots.kt)
               * Hamming
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
+              * Heap
+                * Mergeksortedlists
+                  * [Mergeksortedlists](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/heap/mergeksortedlists/mergeKSortedLists.kt)
               * Intervals
                 * Minintervalsforqueries
                   * [Minintervalforqueries](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/intervals/minintervalsforqueries/minIntervalForQueries.kt)
@@ -186,6 +189,9 @@
                 * Minarrows
                   * [Findminarrowshotstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/minarrows/FindMinArrowShotsTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
+              * Heap
+                * Mergeksortedlists
+                  * [Mergeksortedliststest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/heap/mergeksortedlists/MergeKSortedListsTest.kt)
               * Intervals
                 * Minintervalsforqueries
                   * [Minintervalsforqueriestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/intervals/minintervalsforqueries/MinIntervalsForQueriesTest.kt)
