@@ -1,7 +1,7 @@
 # Merge K Sorted Lists
 
-Given k linked lists, each sorted in ascending order, in a list lists, write a function to merge the input lists into
-one sorted linked list.
+Given k lists, each sorted in ascending order, in a list of lists, write a function to merge the input lists into
+one sorted list.
 
 ## Examples
 
