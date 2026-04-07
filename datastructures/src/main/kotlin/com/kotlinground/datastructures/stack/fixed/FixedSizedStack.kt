@@ -32,7 +32,8 @@ class FixedSizedStack<T>(maxSize: Int) : Stack<T>() {
         val idx = --currentSize
         @Suppress("UNCHECKED_CAST")
         val value = items[idx] as T
-        items[idx] = null // help GC
+        // help GC by preventing loitering of unused items by setting them to null
+        items[idx] = null
         return value
     }
 
@@ -49,4 +50,13 @@ class FixedSizedStack<T>(maxSize: Int) : Stack<T>() {
 
     override val isEmpty: Boolean
         get() = currentSize == 0
+
+    override fun next(): T {
+        @Suppress("UNCHECKED_CAST")
+        return items[--currentSize] as T
+    }
+
+    override fun hasNext(): Boolean {
+        return currentSize > 0
+    }
 }

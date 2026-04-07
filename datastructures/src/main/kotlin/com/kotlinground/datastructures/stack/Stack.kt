@@ -5,7 +5,7 @@ package com.kotlinground.datastructures.stack
  *
  * @param T the type of elements held in this stack.
  */
-abstract class Stack<T> {
+abstract class Stack<T>: Iterator<T> {
     abstract fun push(item: T)
     abstract fun pop(): T
     abstract fun peek(): T

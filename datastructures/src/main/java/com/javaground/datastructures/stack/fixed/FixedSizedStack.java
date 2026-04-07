@@ -1,6 +1,9 @@
 package com.javaground.datastructures.stack.fixed;
 
 import com.javaground.datastructures.stack.Stack;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Iterator;
 
 /**
  * A fixed-size stack implementation that extends the abstract Stack class.
@@ -43,7 +46,8 @@ public class FixedSizedStack<T> extends Stack<T> {
             throw new IllegalStateException("Stack underflow: empty stack");
         }
         T value = items[--currentSize];
-        items[currentSize] = null; // help GC
+        // help GC by preventing loitering of unused items by setting them to null
+        items[currentSize] = null;
         return value;
     }
 
@@ -63,5 +67,22 @@ public class FixedSizedStack<T> extends Stack<T> {
     @Override
     public Boolean isEmpty() {
         return currentSize == 0;
+    }
+
+    @Override
+    public @NotNull Iterator<T> iterator() {
+        return new FixedSizedStackIterator();
+    }
+
+    public class FixedSizedStackIterator implements Iterator<T> {
+        @Override
+        public boolean hasNext() {
+            return currentSize > 0;
+        }
+
+        @Override
+        public T next() {
+            return items[--currentSize];
+        }
     }
 }
