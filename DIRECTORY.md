@@ -117,6 +117,8 @@
                 * Quicksort
                   * [Quicksort](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/quicksort/quicksort.kt)
               * Stack
+                * Arithmetic
+                  * [Arithmeticexpression](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/arithmetic/arithmeticExpression.kt)
                 * Dailytemperatures
                   * [Dailytemperatures](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/dailyTemperatures.kt)
                 * Longestvalidparentheses
@@ -222,6 +224,8 @@
                 * Quicksort
                   * [Quicksorttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/quicksort/QuicksortTest.kt)
               * Stack
+                * Arithmetic
+                  * [Arithmeticexpressiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/arithmetic/ArithmeticExpressionTest.kt)
                 * Dailytemperatures
                   * [Dailytemperaturestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/DailyTemperaturesTest.kt)
                 * Longestvalidparentheses
@@ -456,6 +460,16 @@
                 * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSet.kt)
               * Snapshotarray
                 * [Snapshotarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArray.kt)
+              * Stack
+                * Dynamic
+                  * [Dynamicsizedstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStack.kt)
+                * Fixed
+                  * [Fixedsizedstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/fixed/FixedSizedStack.kt)
+                * Max
+                  * [Maxstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/max/MaxStack.kt)
+                * Min
+                  * [Minstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/min/MinStack.kt)
+                * [Stack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/Stack.kt)
               * Timemap
                 * [Timemap](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/timemap/TimeMap.kt)
               * Trees
@@ -479,6 +493,7 @@
                 * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/utils.kt)
               * Utils
                 * [Extensions](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/extensions.kt)
+                * [Nullablewrapper](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/NullableWrapper.kt)
     * Test
               * Arrays
                 * Arbitraryprecisionincrement
@@ -529,6 +544,11 @@
                 * [Smallestinfinitesettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSetTest.kt)
               * Snapshotarray
                 * [Snapshotarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArrayTest.kt)
+              * Stack
+                * Dynamic
+                  * [Dynamicsizedstacktest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStackTest.kt)
+                * Fixed
+                  * [Fixedsizedstacktest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/stack/fixed/FixedSizedStackTest.kt)
               * Timemap
                 * [Timemaptest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/timemap/TimeMapTest.kt)
               * Trees
@@ -652,6 +672,12 @@
                       * [Winbutton](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinButton.kt)
                       * [Wincheckbox](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinCheckBox.kt)
                       * [Winfactory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinFactory.kt)
+                  * Notification
+                    * [Emailnotification](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/EmailNotification.kt)
+                    * [Main](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/main.kt)
+                    * [Notification](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/Notification.kt)
+                    * [Notificationfactory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/NotificationFactory.kt)
+                    * [Smsnotification](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/SmsNotification.kt)
                   * Parser
                     * [Factory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/factory.kt)
                     * [Intproperty](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/IntProperty.kt)
