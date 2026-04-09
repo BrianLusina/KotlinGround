@@ -507,6 +507,7 @@
                 * [Unionfind](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/unionfind/UnionFind.kt)
               * Utils
                 * [Extensions](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/extensions.kt)
+                * [Nullablewrapper](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/NullableWrapper.kt)
     * Test
               * Arrays
                 * Arbitraryprecisionincrement
