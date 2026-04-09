@@ -1,6 +1,8 @@
 package com.kotlinground.datastructures.stack.fixed
 
 import com.kotlinground.datastructures.stack.Stack
+import com.kotlinground.datastructures.stack.dynamic.DynamicSizedStack
+import com.kotlinground.datastructures.utils.NullableWrapper
 
 /**
  * A stack implementation with a fixed maximum size. This stack prevents dynamically resizing the storage
@@ -16,6 +18,16 @@ class FixedSizedStack<T : Comparable<T>>(maxSize: Int) : Stack<T>() {
     init {
         require(maxSize > 0) { "maxSize must be > 0, was $maxSize" }
         items = arrayOfNulls(maxSize)
+    }
+
+    companion object{
+        /**
+         * Extension function to create a stack for nullable values.
+         * Usage: val stack = FixedSizedStack.forNullable<Int>()
+         */
+        fun <T : Comparable<T>> forNullable(maxSize: Int): FixedSizedStack<NullableWrapper<T>> {
+            return FixedSizedStack(maxSize)
+        }
     }
 
     override fun push(item: T) {

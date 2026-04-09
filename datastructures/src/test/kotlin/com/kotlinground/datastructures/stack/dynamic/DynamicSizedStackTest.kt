@@ -1,5 +1,6 @@
 package com.kotlinground.datastructures.stack.dynamic
 
+import com.kotlinground.datastructures.utils.NullableWrapper
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -66,8 +67,8 @@ class DynamicSizedStackTest {
 
     @Test
     fun `Null elements are allowed and behave correctly`() {
-        val s = DynamicSizedStack<Int?>()
-        s.push(null)
+        val s = DynamicSizedStack.forNullable<Int>()
+        s.push(NullableWrapper(null))
         assertEquals(1, s.size)
         assertNull(s.peek())
         assertEquals(1, s.size)
