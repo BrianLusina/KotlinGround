@@ -9,7 +9,7 @@ import com.kotlinground.datastructures.stack.Stack
  * @param T the type of elements held in this stack.
  * @param maxSize the maximum number of elements the stack can hold (must be > 0).
  */
-class FixedSizedStack<T>(maxSize: Int) : Stack<T>() {
+class FixedSizedStack<T : Comparable<T>>(maxSize: Int) : Stack<T>() {
     private val items: Array<Any?>
     private var currentSize = 0
 

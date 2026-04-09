@@ -2,9 +2,9 @@ package com.kotlinground.datastructures.stack.dynamic
 
 import com.kotlinground.datastructures.stack.Stack
 
-class DynamicSizedStack<T>: Stack<T>() {
-    private val items = mutableListOf<T>()
-    private var currentSize = 0
+open class DynamicSizedStack<T : Comparable<T>>: Stack<T>() {
+    protected val items = mutableListOf<T>()
+    protected var currentSize = 0
 
     override fun push(item: T) {
         currentSize++
