@@ -10,6 +10,8 @@ import com.javaground.datastructures.linkedlists.LinkedListNode;
  *            implement the Comparable interface.
  */
 public class SinglyLinkedListNode<T extends Comparable<T>> extends LinkedListNode<T> {
+    public SinglyLinkedListNode<T> next = null;
+
     public SinglyLinkedListNode(T data) {
         super(data);
     }

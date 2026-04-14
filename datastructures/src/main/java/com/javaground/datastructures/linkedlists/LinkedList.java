@@ -13,6 +13,15 @@ package com.javaground.datastructures.linkedlists;
 public abstract class LinkedList<T extends Comparable<T>, Node extends LinkedListNode<T>> implements Iterable<Node> {
 
     /**
+     * Retrieves the head node of the linked list. The head node represents
+     * the first element in the list and provides access to the rest of the
+     * nodes via its next reference.
+     *
+     * @return the head node of the linked list, or null if the list is empty
+     */
+    abstract public Node headNode();
+
+    /**
      * Appends the specified data to the end of the linked list. This method
      * creates a new node containing the given data and links it at the
      * end of the current list.
