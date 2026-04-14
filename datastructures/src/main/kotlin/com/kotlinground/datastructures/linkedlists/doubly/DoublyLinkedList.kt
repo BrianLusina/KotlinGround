@@ -30,7 +30,7 @@ class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
         }
     }
 
-    override fun pop(): T? {
+    override fun pop(): DoublyLinkedListNode<T>? {
         if (head == null) {
             return null
         }
@@ -40,14 +40,14 @@ class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
             val node = head
             head = null
             tail = null
-            return node?.data
+            return node
         }
 
         val lastNode = tail
         val lastNodePrev = tail?.previous
         lastNodePrev?.next = null
         tail = lastNodePrev
-        return lastNode?.data
+        return lastNode
 
 //        Below is a viable option if we are not keeping track of the tail node in the linked list. This involves
 //        needing to traverse the whole linked list to reach the last node. Note that this ends up being an O(n) operation
@@ -69,7 +69,7 @@ class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
 //            tail = lastNodePrev
 //        }
 //
-//        return current?.data
+//        return current
     }
 
     override fun prepend(data: T) {
