@@ -61,7 +61,26 @@ public class SinglyLinkedList<T extends Comparable<T>> extends LinkedList<T, Sin
 
     @Override
     public SinglyLinkedListNode<T> pop() {
-        return null;
+        if (head == null) {
+            return null;
+        }
+
+        if (head.next == null) {
+            SinglyLinkedListNode<T> node = head;
+            head = null;
+            return node;
+        }
+
+        SinglyLinkedListNode<T> prev = head;
+        SinglyLinkedListNode<T> current = head;
+
+        while (current.next != null) {
+            prev = current;
+            current = current.next;
+        }
+
+        prev.next = null;
+        return current;
     }
 
     @Override

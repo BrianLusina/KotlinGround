@@ -16,4 +16,18 @@ class SinglyLinkedListTest {
         assertNotNull(list.headNode());
         assertEquals(1, list.headNode().data);
     }
+
+    @Test
+    @DisplayName("Can pop the last item from a linked list")
+    void testCanPopTheLastItem() {
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.append(1);
+        list.append(2);
+        list.append(3);
+
+        assertEquals(3, list.pop().data);
+        assertEquals(2, list.pop().data);
+        assertEquals(1, list.pop().data);
+        assertNull(list.pop());
+    }
 }

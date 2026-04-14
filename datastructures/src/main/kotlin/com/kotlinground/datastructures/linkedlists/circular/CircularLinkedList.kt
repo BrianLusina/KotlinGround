@@ -56,7 +56,7 @@ class CircularLinkedList<T>(private var head: CircularLinkedListNode<T>? = null)
         head = newNode
     }
 
-    override fun pop(): T? {
+    override fun pop(): CircularLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
