@@ -30,4 +30,17 @@ class SinglyLinkedListTest {
         assertEquals(1, list.pop().data);
         assertNull(list.pop());
     }
+
+    @Test
+    @DisplayName("Can prepend data to the head of the linked list")
+    void testCanPrependData() {
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.prepend(1);
+        list.prepend(2);
+        list.prepend(3);
+
+        assertEquals(3, list.headNode().data);
+        assertEquals(2, list.headNode().next.data);
+        assertEquals(1, list.headNode().next.next.data);
+    }
 }

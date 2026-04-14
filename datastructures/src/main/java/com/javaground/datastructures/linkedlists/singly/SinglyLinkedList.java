@@ -10,7 +10,6 @@ import java.util.Iterator;
  * of the abstract {@code LinkedList} class. A singly linked list is a sequence
  * of nodes where each node points to the next node in the list, and the last node
  * points to null.
- *
  * This implementation supports generic types that must implement the {@code Comparable}
  * interface to enable comparison operations.
  *
@@ -81,6 +80,13 @@ public class SinglyLinkedList<T extends Comparable<T>> extends LinkedList<T, Sin
 
         prev.next = null;
         return current;
+    }
+
+    @Override
+    public void prepend(T data) {
+        SinglyLinkedListNode<T> node = new SinglyLinkedListNode<>(data, head);
+        node.next = head;
+        head = node;
     }
 
     @Override

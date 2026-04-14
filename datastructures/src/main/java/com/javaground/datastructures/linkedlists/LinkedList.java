@@ -38,4 +38,13 @@ public abstract class LinkedList<T extends Comparable<T>, Node extends LinkedLis
      * @return the last node in the linked list, or null if the list is empty
      */
     abstract public Node pop();
+
+    /**
+     * Prepends the specified data to the beginning of the linked list. This method
+     * creates a new node containing the given data and sets it as the new head
+     * of the linked list. The existing list nodes will follow the newly prepended node.
+     *
+     * @param data the data to be prepended to the linked list
+     */
+    abstract public void prepend(T data);
 }
