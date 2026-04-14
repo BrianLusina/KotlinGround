@@ -528,9 +528,35 @@ class SinglyLinkedList<T>(private var head: SinglyLinkedListNode<T>? = null) :
         currentTwo.data = tempTwo
     }
 
+    override fun pop(): SinglyLinkedListNode<T>? {
+        // if there is no head node, return null
+        if (head == null) {
+            return null;
+        }
 
-    override fun pop(): T? {
-        TODO("Not yet implemented")
+        // If the head node has no next pointer, then the linked list has a size of 1, assign the head
+        // node to null after setting the value in a variable that will be returned
+        if (head?.next == null) {
+            val node = head
+            head = null
+            return node
+        }
+
+        // The linked list has a size of at least 2, so, we set 2 pointers. the current is the pointer to the current node
+        // the previous is a pointer reference to the node before the current pointer.
+        var current = head
+        var previous: SinglyLinkedListNode<T>? = head
+
+        // We iterate through the linked list. As we move the next pointer down the linked list we also need to ensure
+        // that we are moving the previous pointer down the linked list
+        while (current?.next != null) {
+            previous = current
+            current = current.next
+        }
+
+        // Assign the previous pointer's next to null and return current
+        previous?.next = null
+        return current
     }
 
     override fun shift(): T? {
