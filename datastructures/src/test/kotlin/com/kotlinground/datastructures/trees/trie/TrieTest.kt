@@ -1,6 +1,5 @@
 package com.kotlinground.datastructures.trees.trie
 
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 
@@ -9,7 +8,7 @@ class TrieTest {
     @Test
     fun `insert a word into the trie`() {
         val word = "can"
-        val trie = Trie(TrieNode('*'))
+        val trie = Trie()
         trie.insert(word)
 
         val actual = trie.search("can")
@@ -19,7 +18,7 @@ class TrieTest {
 
     @Test
     fun `collect all words should return all words in the Trie`() {
-        val trie = Trie(TrieNode('*'))
+        val trie = Trie()
 
         val wordList = listOf("can", "cat")
         wordList.forEach { trie.insert(it) }
