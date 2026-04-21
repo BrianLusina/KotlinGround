@@ -76,6 +76,9 @@
                   * [Findminarrowshots](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/minarrows/findMinArrowShots.kt)
               * Hamming
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
+              * Hashmaps
+                * Powerfulintegers
+                  * [Powerfulintegers](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hashmaps/powerfulintegers/powerfulIntegers.kt)
               * Heap
                 * Mergeksortedlists
                   * [Mergeksortedlists](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/heap/mergeksortedlists/mergeKSortedLists.kt)
@@ -194,6 +197,9 @@
                 * Minarrows
                   * [Findminarrowshotstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/minarrows/FindMinArrowShotsTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
+              * Hashmaps
+                * Powerfulintegers
+                  * [Powerfulintegerstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/hashmaps/powerfulintegers/PowerfulIntegersTest.kt)
               * Heap
                 * Mergeksortedlists
                   * [Mergeksortedliststest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/heap/mergeksortedlists/MergeKSortedListsTest.kt)
