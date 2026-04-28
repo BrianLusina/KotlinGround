@@ -503,6 +503,8 @@
                   * [Trie](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/Trie.kt)
                   * [Trienode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/TrieNode.kt)
                 * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/utils.kt)
+              * Unionfind
+                * [Unionfind](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/unionfind/UnionFind.kt)
               * Utils
                 * [Extensions](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/extensions.kt)
     * Test
@@ -828,6 +830,8 @@
               * Acronym
                 * [Acronym](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/acronym/Acronym.kt)
               * Anagram
+                * Countanagrams
+                  * [Countanagrams](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/anagram/countanagrams/countAnagrams.kt)
                 * [Isanagram](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/anagram/isAnagram.kt)
               * Findcapitals
                 * [Findcapitals](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/findcapitals/findCapitals.kt)
@@ -873,6 +877,8 @@
               * Acronym
                 * [Acronymtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/acronym/AcronymTest.kt)
               * Anagram
+                * Countanagrams
+                  * [Countanagramstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/anagram/countanagrams/CountAnagramsTest.kt)
                 * [Isanagramtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/anagram/IsAnagramTest.kt)
               * Findcapitals
                 * [Findcapitalstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/findcapitals/FindCapitalsTest.kt)
