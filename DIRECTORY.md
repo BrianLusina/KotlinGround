@@ -472,6 +472,8 @@
                 * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSet.kt)
               * Snapshotarray
                 * [Snapshotarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArray.kt)
+              * Sparsevector
+                * [Sparsevector](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sparsevector/SparseVector.kt)
               * Stack
                 * Dynamic
                   * [Dynamicsizedstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStack.kt)
@@ -558,6 +560,8 @@
                 * [Smallestinfinitesettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSetTest.kt)
               * Snapshotarray
                 * [Snapshotarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArrayTest.kt)
+              * Sparsevector
+                * [Sparsevectortest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/sparsevector/SparseVectorTest.kt)
               * Stack
                 * Dynamic
                   * [Dynamicsizedstacktest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStackTest.kt)
