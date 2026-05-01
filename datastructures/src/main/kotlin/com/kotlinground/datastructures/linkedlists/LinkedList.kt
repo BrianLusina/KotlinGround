@@ -17,7 +17,7 @@ abstract class LinkedList<Node, T> : Iterable<Node> {
      * number of nodes in the list as the algorithm has to traverse the entire list before removing the last node in the
      * list
      */
-    abstract fun pop(): T?
+    abstract fun pop(): Node?
 
     /**
      * Remove value at front

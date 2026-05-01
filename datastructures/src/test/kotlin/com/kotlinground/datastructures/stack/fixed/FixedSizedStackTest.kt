@@ -1,5 +1,6 @@
 package com.kotlinground.datastructures.stack.fixed
 
+import com.kotlinground.datastructures.utils.NullableWrapper
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -94,8 +95,8 @@ class FixedSizedStackTest {
 
     @Test
     fun `Null elements are allowed and behave correctly`() {
-        val s = FixedSizedStack<Int?>(2)
-        s.push(null)
+        val s = FixedSizedStack.forNullable<Int>(2)
+        s.push(NullableWrapper(null))
         assertEquals(1, s.size)
         assertNull(s.peek())
         assertEquals(1, s.size)
