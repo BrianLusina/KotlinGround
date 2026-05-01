@@ -21,7 +21,7 @@ class UnionFind(private val size: Int) {
      * Component identifier for p
      */
     fun find(p: Int): Int {
-
+        return 0
     }
 
     /**
