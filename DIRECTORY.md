@@ -503,6 +503,8 @@
                   * [Trie](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/Trie.kt)
                   * [Trienode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/TrieNode.kt)
                 * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/utils.kt)
+              * Unionfind
+                * [Unionfind](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/unionfind/UnionFind.kt)
               * Utils
                 * [Extensions](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/extensions.kt)
                 * [Nullablewrapper](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/NullableWrapper.kt)
