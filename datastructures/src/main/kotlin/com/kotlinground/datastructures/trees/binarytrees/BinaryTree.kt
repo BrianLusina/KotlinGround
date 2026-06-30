@@ -222,7 +222,7 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         stackOne.add(root!!)
 
-        while (stackOne.size != 0) {
+        while (stackOne.isNotEmpty()) {
             val node = stackOne.removeAt(stackOne.size - 1)
             stackTwo.add(node)
 
@@ -235,7 +235,7 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
             }
         }
 
-        while (stackTwo.size != 0) {
+        while (stackTwo.isNotEmpty()) {
             val node = stackTwo.removeAt(stackTwo.size - 1)
             values.add(node.data)
         }
