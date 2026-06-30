@@ -124,6 +124,25 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         return mergeTreeHelper(this.root, otherTree as BinaryTreeNode<T>)
     }
 
+    override fun inorderTraversal(): Collection<T> {
+        val data = arrayListOf<T>()
+        if (root == null) {
+            return data
+        }
+
+        fun inorderHelper(node: BinaryTreeNode<T>?) {
+            if (node == null) {
+                return
+            }
+            inorderHelper(node.left)
+            data.add(node.data)
+            inorderHelper(node.right)
+        }
+
+        inorderHelper(root)
+        return data
+    }
+
     override fun inorderTraversalIteratively(): Collection<T> {
         val stack = arrayListOf<BinaryTreeNode<T>>()
         val result = arrayListOf<T>()
