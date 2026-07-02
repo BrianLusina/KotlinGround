@@ -20,6 +20,8 @@ import com.kotlinground.datastructures.trees.TreeNode
  * evaluates the presence of child nodes and returns them in an `ArrayList`. If both child nodes are
  * present, it returns both. If only one exists, it returns the existing child. If no children exist,
  * an empty list is returned.
+ * @property leftThread Indicates whether the left link of the node is a thread. Default is `null`.
+ * @property rightThread Indicates whether the right link of the node is a thread. Default is `null`.
  */
 data class BinaryTreeNode<T>(
     override var data: T,
@@ -28,6 +30,8 @@ data class BinaryTreeNode<T>(
     override var depth: Int? = null,
     override var height: Int? = null,
     override var degree: Int? = null,
+    override var leftThread: Boolean = false,
+    override var rightThread: Boolean = false,
 ) : TreeNode<T> {
     val children: ArrayList<BinaryTreeNode<T>?>
         get() {

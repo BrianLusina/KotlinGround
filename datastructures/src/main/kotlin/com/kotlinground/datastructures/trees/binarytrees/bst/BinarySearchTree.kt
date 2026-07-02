@@ -5,7 +5,7 @@ import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.binarytrees.BinaryTree
 import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
 
-class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : BinaryTree<T>() {
+open class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : BinaryTree<T>() {
 
     private operator fun Any.plusAssign(i: Int) {
         this += i

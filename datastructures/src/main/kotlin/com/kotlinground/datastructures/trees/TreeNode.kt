@@ -52,4 +52,28 @@ interface TreeNode<T> {
     val degree: Int?
         get() = null
 
+    /**
+     * Indicates whether the left link of a node is a thread in a threaded binary tree implementation.
+     *
+     * In a threaded binary tree, null pointers in leaf nodes or empty subtrees are replaced with
+     * "threads" that point to the in-order predecessor or successor. This allows for more efficient
+     * tree traversal without the need for a stack or recursion.
+     *
+     * @return `true` if the left link is a thread, `false` if it points to a child node, or `null`
+     * if the state is undefined.
+     */
+    val leftThread: Boolean
+        get() = false
+
+    /**
+     * Indicates whether the right child of the current node is threaded.
+     *
+     * In a threaded tree, threads are used to make in-order traversal more efficient by turning the
+     * null pointers (usually indicating no left or right child) into pointers to the in-order predecessor
+     * or successor. This variable signifies whether the right pointer of the node is a thread (true) or a
+     * regular pointer to a right child (false). If null, the threading state is not specified or undefined.
+     */
+    val rightThread: Boolean
+        get() = false
+
 }
