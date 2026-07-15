@@ -1,5 +1,5 @@
 package com.kotlinground.datastructures.graphs
 
-class DirectedGraph : Graph<GraphNode>() {
+class DirectedGraph<T> : Graph<Vertex<T>>() {
 
 }

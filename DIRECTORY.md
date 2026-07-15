@@ -428,7 +428,7 @@
                 * [Directedgraph](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/DirectedGraph.kt)
                 * [Edge](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Edge.kt)
                 * [Graph](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Graph.kt)
-                * [Graphnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/GraphNode.kt)
+                * [Vertex](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Vertex.kt)
               * Hashmap
                 * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashmap/HashTable.kt)
                 * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashmap/Item.kt)
@@ -472,6 +472,8 @@
                 * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSet.kt)
               * Snapshotarray
                 * [Snapshotarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArray.kt)
+              * Sparsevector
+                * [Sparsevector](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sparsevector/SparseVector.kt)
               * Stack
                 * Dynamic
                   * [Dynamicsizedstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStack.kt)
@@ -493,6 +495,8 @@
                   * [Binarytreenode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeNode.kt)
                   * Bst
                     * [Binarysearchtree](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTree.kt)
+                  * Threaded
+                    * [Threadedbinarysearchtree](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/threaded/ThreadedBinarySearchTree.kt)
                   * Utils
                     * Generatetrees
                       * [Generateuniquebinarytrees](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/binarytrees/utils/generatetrees/generateUniqueBinaryTrees.kt)
@@ -532,6 +536,8 @@
                   * [Mergeablestateflowimpltest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableStateFlowImplTest.kt)
                   * [Mergeablevaluetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableValueTest.kt)
                   * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/UtilsTest.kt)
+              * Graphs
+                * [Vertextest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/graphs/VertexTest.kt)
               * Hashmap
                 * [Hashtabletest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/hashmap/HashTableTest.kt)
               * Hashset
@@ -558,6 +564,8 @@
                 * [Smallestinfinitesettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSetTest.kt)
               * Snapshotarray
                 * [Snapshotarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArrayTest.kt)
+              * Sparsevector
+                * [Sparsevectortest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/sparsevector/SparseVectorTest.kt)
               * Stack
                 * Dynamic
                   * [Dynamicsizedstacktest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStackTest.kt)
@@ -577,6 +585,8 @@
                     * [Binarysearchtreeheighttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTreeHeightTest.kt)
                     * [Binarysearchtreeinserttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTreeInsertTest.kt)
                     * [Binarysearchtreeleafsimilartest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTreeLeafSimilarTest.kt)
+                  * Threaded
+                    * [Threadedbinarysearchtreetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/threaded/ThreadedBinarySearchTreeTest.kt)
                   * Utils
                     * Generatetrees
                       * [Generateuniquebinarytreetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/utils/generatetrees/GenerateUniqueBinaryTreeTest.kt)
