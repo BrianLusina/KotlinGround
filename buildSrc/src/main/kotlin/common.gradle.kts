@@ -86,7 +86,7 @@ subprojects {
                 showStackTraces = true
             }
 
-            finalizedBy(tasks.findByName("jacocoTestReport"))
+//            finalizedBy(tasks.findByName("jacocoTestReport"))
         }
     }
 

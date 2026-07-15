@@ -29,6 +29,15 @@ abstract class Tree<T> {
      */
     abstract fun size(): Int
 
+    /**
+     * Performs an in-order traversal of the tree.
+     * In an in-order traversal, the nodes are recursively visited in the order:
+     * left subtree, root node, and then right subtree.
+     *
+     * @return A collection containing the elements of the tree in in-order sequence.
+     */
+    abstract fun inorderTraversal(): Collection<T>
+
     abstract fun inorderTraversalIteratively(): Collection<T>
 
     abstract fun inorderMorrisTraversal(): Collection<T>

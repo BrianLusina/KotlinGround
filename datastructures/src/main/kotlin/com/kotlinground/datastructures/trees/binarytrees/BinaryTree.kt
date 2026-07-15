@@ -124,6 +124,25 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         return mergeTreeHelper(this.root, otherTree as BinaryTreeNode<T>)
     }
 
+    override fun inorderTraversal(): Collection<T> {
+        val data = arrayListOf<T>()
+        if (root == null) {
+            return data
+        }
+
+        fun inorderHelper(node: BinaryTreeNode<T>?) {
+            if (node == null) {
+                return
+            }
+            inorderHelper(node.left)
+            data.add(node.data)
+            inorderHelper(node.right)
+        }
+
+        inorderHelper(root)
+        return data
+    }
+
     override fun inorderTraversalIteratively(): Collection<T> {
         val stack = arrayListOf<BinaryTreeNode<T>>()
         val result = arrayListOf<T>()
@@ -203,7 +222,7 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         stackOne.add(root!!)
 
-        while (stackOne.size != 0) {
+        while (stackOne.isNotEmpty()) {
             val node = stackOne.removeAt(stackOne.size - 1)
             stackTwo.add(node)
 
@@ -216,7 +235,7 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
             }
         }
 
-        while (stackTwo.size != 0) {
+        while (stackTwo.isNotEmpty()) {
             val node = stackTwo.removeAt(stackTwo.size - 1)
             values.add(node.data)
         }

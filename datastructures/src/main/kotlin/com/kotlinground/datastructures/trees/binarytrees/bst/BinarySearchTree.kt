@@ -5,7 +5,7 @@ import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.binarytrees.BinaryTree
 import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
 
-class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : BinaryTree<T>() {
+open class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : BinaryTree<T>() {
 
     private operator fun Any.plusAssign(i: Int) {
         this += i
@@ -208,62 +208,6 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
             temp?.left = null
         }
         return result
-    }
-
-    override fun preorderTraversal(): Collection<T> {
-        val result = arrayListOf<T>()
-        val stack = arrayListOf<BinaryTreeNode<T>>()
-
-        if (root == null) {
-            return result
-        }
-
-        var current = root
-
-        while (current != null || stack.isNotEmpty()) {
-            while (current != null) {
-                result.add(current.data)
-                stack.add(current)
-                current = current.left
-            }
-
-            current = stack.removeAt(stack.size - 1)
-            current = current.right
-        }
-
-        return result
-    }
-
-    override fun postorderTraversal(): Collection<T> {
-        val values = arrayListOf<T>()
-        val stackOne = arrayListOf<BinaryTreeNode<T>>()
-        val stackTwo = arrayListOf<BinaryTreeNode<T>>()
-
-        if (root == null) {
-            return values
-        }
-
-        stackOne.add(root!!)
-
-        while (stackOne.size != 0) {
-            val node = stackOne.removeAt(stackOne.size - 1)
-            stackTwo.add(node)
-
-            if (node.left != null) {
-                stackOne.add(node.left!!)
-            }
-
-            if (node.right != null) {
-                stackOne.add(node.right!!)
-            }
-        }
-
-        while (stackTwo.size != 0) {
-            val node = stackTwo.removeAt(stackTwo.size - 1)
-            values.add(node.data)
-        }
-
-        return values
     }
 
     /**
