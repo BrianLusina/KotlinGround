@@ -8,9 +8,10 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":utils"))
     implementation(Dependencies.Jetbrains.kotlinXDatetime)
     implementation(Dependencies.Jetbrains.kotlinXCollectionsImmutable)
     implementation(Dependencies.Jetbrains.kotlinXSerializationJson)
-    implementation(Dependencies.Jetbrains.kotlinXCoroutinesCore)
-    implementation(Dependencies.Jetbrains.kotlinXCoroutinesTest)
+    implementation(Dependencies.Jetbrains.Coroutines.core)
+    testImplementation(Dependencies.Jetbrains.Coroutines.test)
 }

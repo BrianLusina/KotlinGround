@@ -1,9 +1,10 @@
 package com.kotlinground.datastructures.linkedlists.doubly
 
 import com.kotlinground.datastructures.linkedlists.LinkedList
+import com.kotlinground.datastructures.utils.plus
 
-class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
-    private var head: DoublyLinkedListNode<T>? = null
+class DoublyLinkedList<T>(private var head: DoublyLinkedListNode<T>? = null) :
+    LinkedList<DoublyLinkedListNode<T>, T>() {
     private var tail: DoublyLinkedListNode<T>? = null
     public var size: Int = 0
 
@@ -11,47 +12,42 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         return head
     }
 
+    override fun iterator(): Iterator<DoublyLinkedListNode<T>> {
+        return DoublyLinkedListIterator(head)
+    }
+
     override fun append(data: T) {
-        size++
         val newNode = DoublyLinkedListNode(data)
         if (head == null) {
             head = newNode
-            tail = newNode
         } else {
-            newNode.previous = tail
-            tail?.next = newNode
-            tail = newNode
-
-            // This is also viable if the doubly linked list does not have a tail node reference. This will traverse
-            // the entire list until it reaches the end and add this node to the end, this results in an O(n) operation
-//            var current = head
-//            while (current?.next != null) {
-//                current = current.next
-//            }
-//            current?.next = newNode
-//            newNode.prev = current
+            var current = head
+            while (current?.next != null) {
+                current = current.next
+            }
+            current?.next = newNode
+            newNode.previous = current
         }
     }
 
-    override fun pop(): T? {
+    override fun pop(): DoublyLinkedListNode<T>? {
         if (head == null) {
             return null
         }
 
-        size--
         // instances where the list is of size 1, that is has only 1 node
         if (head?.next == null) {
             val node = head
             head = null
             tail = null
-            return node?.data
+            return node
         }
 
         val lastNode = tail
         val lastNodePrev = tail?.previous
         lastNodePrev?.next = null
         tail = lastNodePrev
-        return lastNode?.data
+        return lastNode
 
 //        Below is a viable option if we are not keeping track of the tail node in the linked list. This involves
 //        needing to traverse the whole linked list to reach the last node. Note that this ends up being an O(n) operation
@@ -73,15 +69,13 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
 //            tail = lastNodePrev
 //        }
 //
-//        return current?.data
+//        return current
     }
 
     override fun prepend(data: T) {
-        size++
         val node = DoublyLinkedListNode(data)
         if (head == null) {
             head = node
-            tail = node
         } else {
             head?.previous = node
             node.next = head
@@ -105,8 +99,19 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         return null
     }
 
-    override fun count(data: T): Int {
-        TODO("Not yet implemented")
+    override fun countOccurrences(data: T): Int {
+        if (head == null) {
+            return 0
+        }
+        var occurrences = 0
+        var current = head
+        while (current != null) {
+            if (current.data == data) {
+                occurrences++
+            }
+            current = current.next
+        }
+        return occurrences
     }
 
     override fun getLast(): DoublyLinkedListNode<T> {
@@ -117,9 +122,6 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         TODO("Not yet implemented")
     }
 
-    override fun deleteFirst(): DoublyLinkedListNode<T> {
-        TODO("Not yet implemented")
-    }
 
     override fun removeLast(): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
@@ -165,17 +167,16 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     }
 
     override fun reverse() {
-        if (head?.next == null) {
+        if (head == null || head?.next == null) {
             return
         }
 
         var current = head
         var previous: DoublyLinkedListNode<T>? = null
-        var next: DoublyLinkedListNode<T>?
 
         while (current != null) {
             // copy a pointer to the next element, before we overwrite the current
-            next = current.next
+            val next = current.next
 
             // reverse the next pointer & previous pointer
             current.next = previous
@@ -189,15 +190,30 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         head = previous
     }
 
+    override fun reverseGroups(k: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
     override fun insert(node: DoublyLinkedListNode<T>, position: Int): DoublyLinkedListNode<T> {
         TODO("Not yet implemented")
     }
 
-    override fun insertAfter(
-        nodeToInsert: DoublyLinkedListNode<T>,
-        currentNode: DoublyLinkedListNode<T>
-    ): DoublyLinkedListNode<T> {
-        TODO("Not yet implemented")
+    override fun insertAfter(data: T, key: Any) {
+        var current = head
+        while (current != null) {
+            if (current.next == null && current.key == key) {
+                append(data)
+                return
+            } else if (current.key == key) {
+                val nodeToInsert = DoublyLinkedListNode(data)
+                val nxt = current.next
+                current.next = nodeToInsert
+                nodeToInsert.next = nxt
+                nodeToInsert.previous = current
+                return
+            }
+            current = current.next
+        }
     }
 
     override fun removeCycle(): DoublyLinkedListNode<T> {
@@ -216,20 +232,86 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
         TODO("Not yet implemented")
     }
 
+    override fun deleteFirst(): DoublyLinkedListNode<T>? {
+        val current = head
+        if (current != null) {
+            if (current.next != null) {
+                current.next?.previous = null
+                head = current.next
+                return current
+            }
+            // head not is the only node, so, we set it to null and return the deleted node
+            head = null
+            return current
+        }
+        return null
+    }
+
     override fun deleteNode(node: DoublyLinkedListNode<T>) {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeAtPosition(position: Int) {
+    override fun deleteNodeAtPosition(position: Int): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
 
-    override fun deleteNodeByData(data: T) {
-        TODO("Not yet implemented")
+    override fun deleteNodeByKey(key: String) {
+        // no head node, means nothing further to do
+        if (head == null) {
+            return
+        }
+
+        // no next node, means we check if the head node is the node we seek. If this condition evaluates to true, we
+        // set the head node to null and return
+        if (head?.next == null && head?.key == key) {
+            head = null
+            return
+        }
+
+        // otherwise, the node we seek is somewhere down the list, so, we set a pointer called current at the head node
+        // and use it to track which position we are in, in the doubly linked list as we traverse seeking a node with
+        // the same key
+
+        var current = head
+
+        // we move the pointer down the Doubly Linked List until we find the Node whose key matches
+        while (current != null && current.key != key) {
+            current = current.next
+        }
+
+        //if there is no node that matches the condition above, we exit
+        if (current == null) {
+            return
+        }
+
+        // re-assign the pointers of the nodes around the node to delete. That is, moving the previous node's next
+        // pointer to the current node's next pointer. This essentially 'deletes' the node by the data attribute
+        val previous = current.previous
+        previous?.next = current.next
+        if (current.next != null) {
+            current.next?.previous = previous
+        }
+        current = null
+        return
     }
 
-    override fun deleteNodesByData(data: T): DoublyLinkedListNode<T>? {
-        TODO("Not yet implemented")
+    override fun deleteNodesByKey(key: String): Collection<DoublyLinkedListNode<T>> {
+        val deletedNodes = arrayListOf<DoublyLinkedListNode<T>>()
+
+        if (head == null) {
+            return emptyList()
+        }
+
+        var current = head
+        while (current != null) {
+            if (current.key == key) {
+                deleteNodeByKey(key)
+                deletedNodes.add(current)
+            }
+            current = current.next
+        }
+
+        return deletedNodes
     }
 
     override fun deleteMiddle(): DoublyLinkedListNode<T>? {
@@ -290,4 +372,91 @@ class DoublyLinkedList<T> : LinkedList<DoublyLinkedListNode<T>, T> {
     override fun oddEvenList(): DoublyLinkedListNode<T>? {
         TODO("Not yet implemented")
     }
+
+    override fun removeDuplicates(): DoublyLinkedListNode<T>? {
+        if (head == null || head?.next == null) {
+            return head
+        }
+
+        val seen = hashMapOf<String, Boolean>()
+        var current = head
+
+        while (current != null) {
+            if (!seen.containsKey(current.key)) {
+                seen[current.key] = true
+                current = current.next
+            } else {
+                val next = current.next
+                val previous = current.previous
+                previous?.next = next
+                if (next != null) {
+                    next.previous = previous
+                }
+                current = next
+            }
+        }
+
+        return head
+    }
+
+    override fun nthToLastNode(n: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    override fun rotate(k: Int): DoublyLinkedListNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    override fun isPalindrome(): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun moveTailToHead() {
+        if (head != null && head?.next != null) {
+            var last = head
+
+            while (last?.next != null) {
+                last = last.next
+            }
+
+            // we can obtain the second_to_last node from the last node
+            val secondToLast = last?.previous
+
+            // set the current head node's second_to_last pointer to the last node
+            head?.previous = last
+
+            // set the next pointer of the last node to the head node
+            last?.next = head
+
+            // remove the secondToLast pointer of the last node
+            last?.previous = null
+
+            // remove the next pointer of the secondToLast node
+            secondToLast?.next = null
+
+            // set the head node as the last node
+            head = last
+        }
+    }
+
+    override fun pairsWithSum(target: T): Collection<Pair<DoublyLinkedListNode<T>, DoublyLinkedListNode<T>>> {
+        val pairs = arrayListOf<Pair<DoublyLinkedListNode<T>, DoublyLinkedListNode<T>>>()
+        var current = head
+
+        while (current != null) {
+            var next = current.next
+
+            while (next != null) {
+                if (current.data + next.data == target) {
+                    pairs.add(Pair(current, next))
+                }
+                next = next.next
+            }
+
+            current = current.next
+        }
+
+        return pairs
+    }
 }
+

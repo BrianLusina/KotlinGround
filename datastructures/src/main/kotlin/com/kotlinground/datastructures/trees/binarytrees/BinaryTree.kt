@@ -1,5 +1,6 @@
 package com.kotlinground.datastructures.trees.binarytrees
 
+import com.kotlinground.datastructures.queues.fifo.FifoQueue
 import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.compareTo
@@ -14,14 +15,42 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         fun heightHelper(node: BinaryTreeNode<T>?): Int {
             if (node == null) {
-                return 0
+                return -1
             }
-            return maxOf(heightHelper(node.left), heightHelper(node.right)) + 1
+
+            val leftHeight = heightHelper(node.left)
+            val rightHeight = heightHelper(node.right)
+            return maxOf(leftHeight, rightHeight) + 1
         }
 
         return heightHelper(root)
     }
 
+    override fun size(): Int {
+        if (root == null) {
+            return 0
+        }
+
+        var counter = 1
+        val stack = Stack<BinaryTreeNode<T>>()
+        stack.push(root)
+
+        while (stack.isNotEmpty()) {
+            val node = stack.pop()
+
+            if (node.left != null) {
+                counter += 1
+                stack.push(node.left)
+            }
+
+            if (node.right != null) {
+                counter += 1
+                stack.push(node.right)
+            }
+        }
+
+        return counter
+    }
 
     /**
      * Inserts a Tree node into this Binary Search Tree
@@ -93,6 +122,25 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         }
 
         return mergeTreeHelper(this.root, otherTree as BinaryTreeNode<T>)
+    }
+
+    override fun inorderTraversal(): Collection<T> {
+        val data = arrayListOf<T>()
+        if (root == null) {
+            return data
+        }
+
+        fun inorderHelper(node: BinaryTreeNode<T>?) {
+            if (node == null) {
+                return
+            }
+            inorderHelper(node.left)
+            data.add(node.data)
+            inorderHelper(node.right)
+        }
+
+        inorderHelper(root)
+        return data
     }
 
     override fun inorderTraversalIteratively(): Collection<T> {
@@ -174,7 +222,7 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
 
         stackOne.add(root!!)
 
-        while (stackOne.size != 0) {
+        while (stackOne.isNotEmpty()) {
             val node = stackOne.removeAt(stackOne.size - 1)
             stackTwo.add(node)
 
@@ -187,12 +235,71 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
             }
         }
 
-        while (stackTwo.size != 0) {
+        while (stackTwo.isNotEmpty()) {
             val node = stackTwo.removeAt(stackTwo.size - 1)
             values.add(node.data)
         }
 
         return values
+    }
+
+    override fun levelOrderTraversal(): Collection<T> {
+        if (root == null) {
+            return emptyList()
+        }
+
+        val queue = FifoQueue<BinaryTreeNode<T>>()
+        queue.enqueue(root!!)
+
+        val result = arrayListOf<T>()
+
+        while (!queue.isEmpty) {
+            val peekedNode = queue.peek()
+            result.add(peekedNode.data)
+
+            val node = queue.dequeue()
+
+            if (node.left != null) {
+                queue.enqueue(node.left!!)
+            }
+            if (node.right != null) {
+                queue.enqueue(node.right!!)
+            }
+        }
+
+        return result
+    }
+
+    override fun reverseLevelOrderTraversal(): Collection<T> {
+        if (root == null) {
+            return emptyList()
+        }
+
+        val fifoQueue = FifoQueue<BinaryTreeNode<T>>()
+        val stack = Stack<BinaryTreeNode<T>>()
+
+        fifoQueue.enqueue(root!!)
+
+        val traversed = arrayListOf<T>()
+        while (!fifoQueue.isEmpty) {
+            val node = fifoQueue.dequeue()
+            stack.push(node)
+
+            node.right?.let {
+                fifoQueue.enqueue(it)
+            }
+
+            node.left?.let {
+                fifoQueue.enqueue(it)
+            }
+        }
+
+        while (stack.isNotEmpty()) {
+            val node = stack.pop()
+            traversed.add(node.data)
+        }
+
+        return traversed
     }
 
     /**
@@ -386,6 +493,63 @@ open class BinaryTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = 
         val nodeData = tree.split(" ")
 
         return dfs(nodeData.iterator())
+    }
+
+    override fun findKthLargest(k: Int): BinaryTreeNode<T>? {
+        TODO("Not yet implemented")
+    }
+
+    /**
+     * Perform zigzag level order traversal of a binary tree.
+     *
+     * Time Complexity: O(n) where n is the number of nodes
+     * Space Complexity: O(w) where w is the maximum width of the tree
+     */
+    fun zigZagLevelOrderTraversal(): List<List<BinaryTreeNode<T>>> {
+        if (root == null) {
+            return emptyList()
+        }
+
+        val result = mutableListOf<List<BinaryTreeNode<T>>>()
+
+        // traverse the tree from the root moving down level by level and adding the nodes in zig zag manner. the first
+        // level will start with the left and then go right, the iteration will change direction on each level
+        // we use a queue to traverse the tree level by level
+        val fifoQueue = FifoQueue<BinaryTreeNode<T>>()
+        fifoQueue.enqueue(root!!)
+
+        var levelNumber = 0
+
+        while (!fifoQueue.isEmpty) {
+            val levelSize = fifoQueue.size
+            val currentLevel = arrayListOf<BinaryTreeNode<T>>()
+
+            for (i in 0 until levelSize) {
+                val node = fifoQueue.dequeue()
+                currentLevel.add(node)
+
+                if (node.left != null) {
+                    fifoQueue.enqueue(node.left!!)
+                }
+
+                if (node.right != null) {
+                    fifoQueue.enqueue(node.right!!)
+                }
+            }
+            // if level number is odd reverse the list, every odd level is reversed
+            if (levelNumber % 2 == 1) {
+                currentLevel.reverse()
+                result.add(currentLevel)
+            } else {
+                // otherwise add the current level
+                result.add(currentLevel)
+            }
+
+            // add a level and proceed
+            levelNumber += 1
+        }
+
+        return result
     }
 }
 

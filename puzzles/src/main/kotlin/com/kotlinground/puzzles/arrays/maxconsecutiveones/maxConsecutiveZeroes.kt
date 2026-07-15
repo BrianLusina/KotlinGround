@@ -29,3 +29,20 @@ fun longestOnes(nums: IntArray, k: Int): Int {
 
     return right - left
 }
+
+fun findMaxConsecutiveOnes(nums: IntArray): Int {
+    if (nums.isEmpty()) return 0
+
+    var maxConsecutiveOnes = 0
+    var currentConsecutiveOnes = 0
+
+    for (num in nums) {
+        if (num == 1) {
+            currentConsecutiveOnes++
+            maxConsecutiveOnes = maxOf(maxConsecutiveOnes, currentConsecutiveOnes)
+        } else {
+            currentConsecutiveOnes = 0
+        }
+    }
+    return maxConsecutiveOnes
+}

@@ -4,4 +4,5 @@ repositories {
 
 dependencies {
     implementation(project(":ktmath"))
+    implementation(project(":datastructures"))
 }

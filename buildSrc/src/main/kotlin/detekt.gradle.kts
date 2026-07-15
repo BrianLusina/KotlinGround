@@ -38,13 +38,13 @@ subprojects {
     }
 
     tasks.withType<Detekt> {
-        jvmTarget = Versions.JAVA
+        jvmTarget = "16.0.0"
     }
 }
 
 allprojects {
     repositories {
-        jcenter {
+        mavenCentral {
             content {
                 // just allow to include kotlinx projects
                 // detekt needs 'kotlinx-html' for the html report

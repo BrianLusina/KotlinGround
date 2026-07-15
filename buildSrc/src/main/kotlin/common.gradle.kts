@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.net.URI
 
@@ -21,12 +22,12 @@ allprojects {
     }
 
     configure<JavaPluginExtension> {
-        sourceCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_16
     }
 
     configure<JacocoPluginExtension> {
         toolVersion = Versions.JACOCO
-        reportsDirectory.set(file("${buildDir}/reports/jacoco"))
+        reportsDirectory.set(file("${layout.buildDirectory}/reports/jacoco"))
     }
 }
 
@@ -43,6 +44,7 @@ subprojects {
     apply {
         plugin("org.jetbrains.kotlin.jvm")
         plugin("jacoco")
+//        plugin(Plugins.KOTLINX_BENCHMARK)
     }
 
     repositories {
@@ -51,7 +53,6 @@ subprojects {
             dirs("libs")
         }
         maven { url = URI.create("https://jitpack.io") }
-//        maven { url = URI.create("http://dl.bintray.com/jetbrains/spek") }
         maven { url = URI.create("https://plugins.gradle.org/m2/") }
     }
 
@@ -62,13 +63,14 @@ subprojects {
         }
 
         withType<KotlinCompile> {
-            kotlinOptions {
-                freeCompilerArgs = listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn")
-                jvmTarget = "${JavaVersion.VERSION_11}"
+            compilerOptions {
+                freeCompilerArgs.set(listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn"))
+                jvmTarget.set(JvmTarget.JVM_11)
             }
         }
+
         compileTestKotlin {
-            kotlinOptions.jvmTarget = "${JavaVersion.VERSION_11}"
+            compilerOptions.jvmTarget.set(JvmTarget.JVM_11)
         }
 
         withType<Test> {
@@ -84,21 +86,27 @@ subprojects {
                 showStackTraces = true
             }
 
-            finalizedBy(tasks.findByName("jacocoTestReport"))
+//            finalizedBy(tasks.findByName("jacocoTestReport"))
         }
     }
 
     dependencies {
         implementation(kotlin("stdlib-jdk8", Versions.KOTLIN))
 
+        testRuntimeOnly(Dependencies.Test.kotlinReflect)
+
         testImplementation(Dependencies.Test.kotlinTestJunit)
         testImplementation(Dependencies.Test.jUnitJupiterApi)
+        testImplementation(Dependencies.Test.jUnitJupiter)
         testImplementation(Dependencies.Test.mockK)
         testImplementation(Dependencies.Test.spekDslJvm)
-        testImplementation(Dependencies.Test.kotlinReflect)
-        testImplementation(Dependencies.Test.spekRunnerJunit5)
         testImplementation(Dependencies.Test.jUnitJupiterEngine)
         testImplementation(Dependencies.Test.jUnitJupiterVintageEngine)
+        testImplementation(Dependencies.Test.koTest)
+        testImplementation(Dependencies.Test.koTestProperty)
+        testImplementation(Dependencies.Test.koTestAssertions)
+        testImplementation(Dependencies.Test.koTestFrameworkDataTest)
+//        testRuntimeOnly(Dependencies.Test.spekRunnerJunit5)
     }
 }
 

@@ -13,8 +13,7 @@ object ETL {
     fun transform(oldMap: Map<Int, List<Char>>): Map<Char, Int> {
         return oldMap.flatMap {
             it.value.map {
-                word ->
-                Pair(word.toLowerCase(), it.key)
+                word -> Pair(word.lowercaseChar(), it.key)
             }
         }.toMap()
     }

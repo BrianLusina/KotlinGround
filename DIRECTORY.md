@@ -8,8 +8,24 @@
           * Kotlinground
             * Algorithms
               * Arrays
+                * Intersection
+                  * [Intersection](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/intersection/intersection.kt)
+                * Majorityelement
+                  * [Majorityelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/majorityelement/majorityElement.kt)
+                * Nonconstructiblechange
+                  * [Nonconstructiblechange](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/nonconstructiblechange/nonConstructibleChange.kt)
+                * Optimaltasks
+                  * [Optimaltaskassignment](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/optimaltasks/optimalTaskAssignment.kt)
                 * Removeelement
                   * [Removeelement](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/removeelement/removeelement.kt)
+                * Sortedsquaredarray
+                  * [Sortedsquaredarray](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/sortedsquaredarray/sortedSquaredArray.kt)
+                * Tournamentwinner
+                  * [Tournamentwinner](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/tournamentwinner/tournamentWinner.kt)
+                * Twosum
+                  * [Twosum](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/twosum/twoSum.kt)
+                * Validsubsequence
+                  * [Isvalidsubsequence](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/arrays/validsubsequence/isValidSubsequence.kt)
               * Backtracking
                 * Decodemessage
                   * [Numberofwaystodecodemessage](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/decodemessage/numberOfWaysToDecodeMessage.kt)
@@ -19,8 +35,6 @@
                   * [Lettercombination](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/letterCombination.kt)
                 * Partitionstring
                   * [Partition](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/partition.kt)
-                * Permutations
-                  * [Generatepermutations](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/permutations/generatePermutations.kt)
                 * Restoreipaddresses
                   * [Restoreipaddresses](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/backtracking/restoreipaddresses/restoreIpAddresses.kt)
               * Climbstairs
@@ -46,18 +60,35 @@
                   * [Uniquepaths](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/uniquePaths.kt)
               * Etl
                 * [Etl](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/etl/ETL.kt)
+              * Fastandslow
+                * Circulararrayloop
+                  * [Circulararrayloop](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/fastandslow/circulararrayloop/circularArrayLoop.kt)
+                * Happynumber
+                  * [Happynumber](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/fastandslow/happynumber/happynumber.kt)
               * Floodfill
                 * [Floodfill](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/floodfill/floodfill.kt)
               * Frogriver
                 * [Frogriverone](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/frogriver/frogRiverOne.kt)
-              * Graph
-                * Courseschedule
-                  * [Coureschedule](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/graph/courseschedule/coureschedule.kt)
               * Greedy
+                * Gasstations
+                  * [Cancompletecircuit](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/gasstations/canCompleteCircuit.kt)
                 * Minarrows
                   * [Findminarrowshots](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/greedy/minarrows/findMinArrowShots.kt)
               * Hamming
                 * [Hamming](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hamming/Hamming.kt)
+              * Hashmaps
+                * Powerfulintegers
+                  * [Powerfulintegers](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/hashmaps/powerfulintegers/powerfulIntegers.kt)
+              * Heap
+                * Mergeksortedlists
+                  * [Mergeksortedlists](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/heap/mergeksortedlists/mergeKSortedLists.kt)
+              * Intervals
+                * Minintervalsforqueries
+                  * [Minintervalforqueries](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/intervals/minintervalsforqueries/minIntervalForQueries.kt)
+                * Taskscheduler
+                  * [Taskscheduler](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/taskScheduler.kt)
+              * Josephuscircle
+                * [Josephuscircle](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/josephuscircle/josephusCircle.kt)
               * Luhn
                 * [Luhn](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/luhn/Luhn.kt)
               * Maxareaofisland
@@ -74,6 +105,13 @@
                 * Trie
                   * Searchsuggestions
                     * [Suggestedproducts](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/suggestedProducts.kt)
+              * Slidingwindow
+                * Maxpointsfromcards
+                  * [Maxpointsfromcards](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/maxpointsfromcards/maxPointsFromCards.kt)
+                * Maxsumsubarray
+                  * [Maxsumsubarray](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/maxsumsubarray/maxsumsubarray.kt)
+                * Repeateddnasequences
+                  * [Findrepeateddnasequences](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/slidingwindow/repeateddnasequences/findRepeatedDnaSequences.kt)
               * Sorting
                 * Mergeintervals
                   * [Mergeintervals](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/mergeintervals.kt)
@@ -81,12 +119,44 @@
                   * [Mergesort](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/mergesort/mergesort.kt)
                 * Quicksort
                   * [Quicksort](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/sorting/quicksort/quicksort.kt)
+              * Stack
+                * Arithmetic
+                  * [Arithmeticexpression](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/arithmetic/arithmeticExpression.kt)
+                * Dailytemperatures
+                  * [Dailytemperatures](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/dailyTemperatures.kt)
+                * Longestvalidparentheses
+                  * [Longestvalidparentheses](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/stack/longestvalidparentheses/longestValidParentheses.kt)
               * Tapeequilibrium
                 * [Tapequilibrium](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/tapeequilibrium/tapequilibrium.kt)
+              * Trie
+                * Indexpairs
+                  * [Indexpairs](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/trie/indexpairs/indexPairs.kt)
+              * Twopointers
+                * Findsumofthree
+                  * [Findsumofthree](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/twopointers/findsumofthree/findSumOfThree.kt)
+                * Mergesortedarray
+                  * [Merge](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/twopointers/mergesortedarray/merge.kt)
+                * Sortcolors
+                  * [Sortcolors](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/main/kotlin/com/kotlinground/algorithms/twopointers/sortcolors/sortColors.kt)
     * Test
               * Arrays
+                * Intersection
+                  * [Intersectionofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/intersection/IntersectionOfArraysTest.kt)
+                  * [Intersectiontwoofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/intersection/IntersectionTwoOfArraysTest.kt)
+                * Majorityelement
+                  * [Majorityelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/majorityelement/MajorityElementTest.kt)
+                * Nonconstructiblechange
+                  * [Nonconstructiblechangetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/nonconstructiblechange/NonConstructibleChangeTest.kt)
+                * Optimaltasks
+                  * [Optimaltaskassignmenttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/optimaltasks/OptimalTaskAssignmentTest.kt)
                 * Removeelement
-                  * [Removeelementkttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveelementKtTest.kt)
+                  * [Removeelementtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/removeelement/RemoveElementTest.kt)
+                * Sortedsquaredarray
+                  * [Sortedsquaredarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/sortedsquaredarray/SortedSquaredArrayTest.kt)
+                * Tournamentwinner
+                  * [Tournamentwinnertest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/tournamentwinner/TournamentWinnerTest.kt)
+                * Twosum
+                  * [Twosumtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/arrays/twosum/TwoSumTest.kt)
               * Backtracking
                 * Decodemessage
                   * [Numberofwaystodecodemessagetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/decodemessage/NumberOfWaysToDecodeMessageTest.kt)
@@ -96,8 +166,6 @@
                   * [Lettercombinationtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/lettercombination/LetterCombinationTest.kt)
                 * Partitionstring
                   * [Partitiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/partitionstring/PartitionTest.kt)
-                * Permutations
-                  * [Generatepermutationstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/permutations/GeneratePermutationsTest.kt)
                 * Restoreipaddresses
                   * [Restoreipaddressestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/backtracking/restoreipaddresses/RestoreIpAddressesTest.kt)
               * Dynamicprogramming
@@ -116,12 +184,32 @@
                 * Uniquepaths
                   * [Uniquepathstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/dynamicprogramming/uniquepaths/UniquePathsTest.kt)
               * [Etltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/ETLTest.kt)
+              * Fastandslow
+                * Circulararrayloop
+                  * [Circulararraylooptest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/fastandslow/circulararrayloop/CircularArrayLoopTest.kt)
+                * Happynumber
+                  * [Ishappynumbertest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/fastandslow/happynumber/IsHappyNumberTest.kt)
               * Floodfill
                 * [Floodfilltest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/floodfill/FloodFillTest.kt)
               * Greedy
+                * Gasstations
+                  * [Cancompletecircuittest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/gasstations/CanCompleteCircuitTest.kt)
                 * Minarrows
                   * [Findminarrowshotstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/greedy/minarrows/FindMinArrowShotsTest.kt)
               * [Hammingtest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/HammingTest.kt)
+              * Hashmaps
+                * Powerfulintegers
+                  * [Powerfulintegerstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/hashmaps/powerfulintegers/PowerfulIntegersTest.kt)
+              * Heap
+                * Mergeksortedlists
+                  * [Mergeksortedliststest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/heap/mergeksortedlists/MergeKSortedListsTest.kt)
+              * Intervals
+                * Minintervalsforqueries
+                  * [Minintervalsforqueriestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/intervals/minintervalsforqueries/MinIntervalsForQueriesTest.kt)
+                * Taskscheduler
+                  * [Taskschedulertest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/intervals/taskscheduler/TaskSchedulerTest.kt)
+              * Josephuscircle
+                * [Josephuscircletest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/josephuscircle/JosephusCircleTest.kt)
               * Luhn
                 * [Luhntest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/luhn/LuhnTest.kt)
               * Maxareaofisland
@@ -132,11 +220,35 @@
                 * Trie
                   * Searchsuggestions
                     * [Suggestedproductstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/searching/trie/searchsuggestions/SuggestedProductsTest.kt)
+              * Slidingwindow
+                * Maxpointsfromcards
+                  * [Maxpointsfromcards](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/maxpointsfromcards/MaxPointsFromCards.kt)
+                * Maxsumsubarray
+                  * [Maxsumsubarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/maxsumsubarray/MaxSumSubArrayTest.kt)
+                * Repeateddnasequences
+                  * [Findrepeateddnasequencestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/slidingwindow/repeateddnasequences/FindRepeatedDnaSequencesTest.kt)
               * Sorting
                 * Mergeintervals
                   * [Mergeintervalskttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/mergeintervals/MergeintervalsKtTest.kt)
                 * Quicksort
                   * [Quicksorttest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/sorting/quicksort/QuicksortTest.kt)
+              * Stack
+                * Arithmetic
+                  * [Arithmeticexpressiontest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/arithmetic/ArithmeticExpressionTest.kt)
+                * Dailytemperatures
+                  * [Dailytemperaturestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/dailytemperatures/DailyTemperaturesTest.kt)
+                * Longestvalidparentheses
+                  * [Longestvalidparenthesestest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/stack/longestvalidparentheses/LongestValidParenthesesTest.kt)
+              * Trie
+                * Indexpairs
+                  * [Indexpairstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/trie/indexpairs/IndexPairsTest.kt)
+              * Twopointers
+                * Findsumofthree
+                  * [Findsumofthreetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/twopointers/findsumofthree/FindSumOfThreeTest.kt)
+                * Mergesortedarray
+                  * [Mergetest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/twopointers/mergesortedarray/MergeTest.kt)
+                * Sortcolors
+                  * [Sortcolorstest](https://github.com/BrianLusina/KotlinGround/blob/master/algorithms/src/test/kotlin/com/kotlinground/algorithms/twopointers/sortcolors/SortColorsTest.kt)
 
 ## Bitmanipulation
     * Main
@@ -167,21 +279,133 @@
             * Concurrency
               * Bankaccount
                 * [Bankaccount](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/bankaccount/BankAccount.kt)
+              * Coroutines
+                * Builders
+                  * [Asyncbuilder](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/builders/asyncBuilder.kt)
+                  * [Daemonthreads](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/builders/daemonThreads.kt)
+                  * [Launcherbuilder](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/builders/launcherBuilder.kt)
+                  * [Runblockingbuilder](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/builders/runblockingBuilder.kt)
+                  * [Threadbuilder](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/builders/threadBuilder.kt)
+                * Cancellation
+                  * [Cancellation](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/cancellation.kt)
+                  * [Cancellationwithexception](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/cancellationWithException.kt)
+                  * [Cancellationwiththreads](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/cancellationWithThreads.kt)
+                  * [Cancellationwiththreads2](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/cancellationWithThreads2.kt)
+                  * [Exceptionhandling](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/exceptionHandling.kt)
+                  * [Exceptionhandlingawait](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/exceptionHandlingAwait.kt)
+                  * [Exceptionhandlingcancellationexception](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/exceptionHandlingCancellationException.kt)
+                  * [Exceptionhandlinghandler](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/exceptionHandlingHandler.kt)
+                  * [Exceptionhandlingwithsupervisorjob](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/exceptionHandlingWithSupervisorJob.kt)
+                  * [Exceptionhandlingwithsupervisorscope](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/exceptionHandlingWithSupervisorScope.kt)
+                  * [Invokeoncompletion](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/cancellation/invokeOnCompletion.kt)
+                * Channelflowactors
+                  * [Callbackflow](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/callbackFlow.kt)
+                  * [Channel](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channel.kt)
+                  * [Channelbufferoverflow](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelBufferOverflow.kt)
+                  * [Channelconflated](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelConflated.kt)
+                  * [Channelconsume](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelConsume.kt)
+                  * [Channelfanin](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelFanIn.kt)
+                  * [Channelfanout](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelFanOut.kt)
+                  * [Channelfixed](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelFixed.kt)
+                  * [Channelflow](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelFlow.kt)
+                  * [Channelpipelines](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelPipelines.kt)
+                  * [Channelproduce](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelProduce.kt)
+                  * [Channelrendezvous](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelRendezvous.kt)
+                  * [Channelundeliveredelementhandler](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelUndeliveredElementHandler.kt)
+                  * [Channelunlimited](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/channelUnlimited.kt)
+                  * [Flow](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flow.kt)
+                  * [Flow2](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flow2.kt)
+                  * [Flow3](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flow3.kt)
+                  * [Flow4](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flow4.kt)
+                  * [Flowconversion](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flowConversion.kt)
+                  * [Flowlifecycle](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flowLifecycle.kt)
+                  * [Flowprocessing](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flowProcessing.kt)
+                  * [Flowprocessing2](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flowProcessing2.kt)
+                  * [Flowprocessing3](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flowProcessing3.kt)
+                  * [Flowprocessingdistinct](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flowProcessingDistinct.kt)
+                  * [Flowprocessingretry](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/flowProcessingRetry.kt)
+                  * [Select](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/select.kt)
+                  * [Selectonreceivechannels](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/selectOnReceiveChannels.kt)
+                  * [Selectonsendchannels](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/selectOnSendChannels.kt)
+                  * [Selectrace](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/channelflowactors/selectRace.kt)
+                * Context
+                  * [Context](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/context/context.kt)
+                  * [Contextandbuilders](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/context/contextAndBuilders.kt)
+                  * [Countercontext](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/context/CounterContext.kt)
+                  * [Customcontext](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/context/CustomContext.kt)
+                  * [Diusecase](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/context/diUsecase.kt)
+                * Coroutinescope
+                  * [Runblockingwithscope](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/runBlockingWithScope.kt)
+                  * [Twitterexample](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/twitterExample.kt)
+                  * [Usingscope](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/usingScope.kt)
+                  * [Usingsupervisorscopr](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/usingSupervisorScopr.kt)
+                  * [Usingwithcontext](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/usingWithContext.kt)
+                  * [Usingwithtimeout](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/usingWithTimeout.kt)
+                * Dispatchers
+                  * [Defaultdispatcher](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/defaultDispatcher.kt)
+                  * [Dispatcherswitching](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/dispatcherSwitching.kt)
+                  * [Iodispatcher](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/ioDispatcher.kt)
+                  * [Iodispatchercustomtheadpool](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/ioDispatcherCustomTheadPool.kt)
+                  * [Loomdispatcher](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/loomDispatcher.kt)
+                  * [Sharedstateproblem](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/sharedStateProblem.kt)
+                  * [Sharedstateproblemsinglethread](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/sharedStateProblemSingleThread.kt)
+                  * [Sharedstateproblemsinglethreadsequential](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/dispatchers/sharedStateProblemSingleThreadSequential.kt)
+                * Jobs
+                  * [Buildersjob](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/buildersJob.kt)
+                  * [Completablejobfactory](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/completableJobFactory.kt)
+                  * [Completablejobfactory2](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/completableJobFactory2.kt)
+                  * [Completablejobfactory3](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/completableJobFactory3.kt)
+                  * [Completablejobfactory4](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/completableJobFactory4.kt)
+                  * [Factory](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/factory.kt)
+                  * [Factorytwo](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/factoryTwo.kt)
+                  * [Job](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/job.kt)
+                  * [Waitingchildren](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/waitingChildren.kt)
+                  * [Waitingchildren2](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/jobs/waitingChildren2.kt)
+                * Sample
+                  * [Main](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sample/main.kt)
+                * Sequences
+                  * [Fibonacci](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/fibonacci.kt)
+                  * [Randomnumbers](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/randomNumbers.kt)
+                  * [Randomstring](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/randomString.kt)
+                  * [Sequences](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sequences/sequences.kt)
+                * Sharedstate
+                  * [Blockingsync](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/blockingSync.kt)
+                  * [Counter](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/counter.kt)
+                  * [Counteratomic](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/counterAtomic.kt)
+                  * [Massiverun](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/massiveRun.kt)
+                  * [Mutex](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/mutex.kt)
+                  * [Mutexwithlock](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/mutexWithLock.kt)
+                  * [Mutexwithlock2](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/mutexWithLock2.kt)
+                  * [Mutexwithlock3](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/mutexWithLock3.kt)
+                  * [Mutexwithlock4](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/mutexWithLock4.kt)
+                  * [Semaphore](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/sharedstate/semaphore.kt)
+                * Suspension
+                  * [Resumevalue](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/suspension/resumeValue.kt)
+                  * [Resumevaluesuspension](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/suspension/resumeValueSuspension.kt)
+                  * [Sample](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/main/kotlin/com/kotlinground/concurrency/coroutines/suspension/sample.kt)
     * Test
+              * Bankaccount
                 * [Bankaccounttest](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/test/kotlin/com/kotlinground/concurrency/bankaccount/BankAccountTest.kt)
+              * Coroutines
+                * Coroutinescope
+                  * [Cancellationandcontextpassing](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/test/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/CancellationAndContextPassing.kt)
+                  * [Coroutineschedulertest](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/test/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/CoroutineSchedulerTest.kt)
+                  * [Usingwithtimeouttest](https://github.com/BrianLusina/KotlinGround/blob/master/concurrency/src/test/kotlin/com/kotlinground/concurrency/coroutines/coroutinescope/UsingWithTimeoutTest.kt)
 
 ## Datastructures
     * Main
             * Datastructures
               * Arrays
+                * Arbitraryprecisionincrement
+                  * [Arbitraryprecisionincrement](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/arbitraryprecisionincrement/arbitraryPrecisionIncrement.kt)
+                * Arrayadvancegame
+                  * [Arrayadvancegame](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/arrayadvancegame/arrayAdvanceGame.kt)
                 * Buildarrfromperm
                   * [Buildarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/buildarray.kt)
                 * Containsduplicates
                   * [Containsduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsDuplicate.kt)
                   * [Containsnearbyalmostduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsNearbyAlmostDuplicate.kt)
                   * [Containsnearbyduplicate](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/containsNearbyDuplicate.kt)
-                * Intersectionofarrays
-                  * [Intersectionofarrays](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/intersectionOfArrays.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlen](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/findmaxlen.kt)
                 * Maxsumsubarray
@@ -205,16 +429,31 @@
                 * [Edge](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Edge.kt)
                 * [Graph](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Graph.kt)
                 * [Vertex](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/Vertex.kt)
+                * [Graphnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/graphs/GraphNode.kt)
+              * Hashmap
+                * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashmap/HashTable.kt)
+                * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashmap/Item.kt)
+              * Hashset
+                * [Myhashset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/hashset/MyHashSet.kt)
               * Linkedlists
+                * Circular
+                  * [Circularlinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/circular/CircularLinkedList.kt)
+                  * [Circularlinkedlistiterator](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/circular/CircularLinkedListIterator.kt)
+                  * [Circularlinkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/circular/CircularLinkedListNode.kt)
                 * Doubly
                   * [Doublylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedList.kt)
+                  * [Doublylinkedlistiterator](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListIterator.kt)
                   * [Doublylinkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListNode.kt)
                 * [Linkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/LinkedList.kt)
                 * [Linkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/LinkedListNode.kt)
                 * Singly
                   * [Singlylinkedlist](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedList.kt)
+                  * [Singlylinkedlistiterator](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListIterator.kt)
                   * [Singlylinkedlistnode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListNode.kt)
                   * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/singly/utils.kt)
+                * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/linkedlists/utils.kt)
+              * Orderedstream
+                * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/orderedstream/OrderedStream.kt)
               * Queues
                 * Exceptions
                   * [Queueemptyexception](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/exceptions/QueueEmptyException.kt)
@@ -225,6 +464,29 @@
                   * [Fifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/FifoQueue.kt)
                   * [Linkedlistfifoqueue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/fifo/LinkedListFifoQueue.kt)
                 * [Queue](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/queues/Queue.kt)
+              * Randomizedset
+                * [Randomizedset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/randomizedset/RandomizedSet.kt)
+              * Sets
+                * [Disjointsetunion](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sets/DisjointSetUnion.kt)
+                * [Unionfind](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sets/UnionFind.kt)
+              * Smallestinfiniteset
+                * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSet.kt)
+              * Snapshotarray
+                * [Snapshotarray](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArray.kt)
+              * Sparsevector
+                * [Sparsevector](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/sparsevector/SparseVector.kt)
+              * Stack
+                * Dynamic
+                  * [Dynamicsizedstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStack.kt)
+                * Fixed
+                  * [Fixedsizedstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/fixed/FixedSizedStack.kt)
+                * Max
+                  * [Maxstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/max/MaxStack.kt)
+                * Min
+                  * [Minstack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/min/MinStack.kt)
+                * [Stack](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/stack/Stack.kt)
+              * Timemap
+                * [Timemap](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/timemap/TimeMap.kt)
               * Trees
                 * Binarytrees
                   * Avl
@@ -244,17 +506,23 @@
                   * [Trie](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/Trie.kt)
                   * [Trienode](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/trie/TrieNode.kt)
                 * [Utils](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/trees/utils.kt)
+              * Unionfind
+                * [Unionfind](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/unionfind/UnionFind.kt)
+              * Utils
+                * [Extensions](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/extensions.kt)
+                * [Nullablewrapper](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/main/kotlin/com/kotlinground/datastructures/utils/NullableWrapper.kt)
     * Test
               * Arrays
+                * Arbitraryprecisionincrement
+                  * [Arbitraryprecisionincrementtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/arbitraryprecisionincrement/ArbitraryPrecisionIncrementTest.kt)
+                * Arrayadvancegame
+                  * [Arrayadvancegametest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/arrayadvancegame/ArrayAdvanceGameTest.kt)
                 * Buildarrfromperm
                   * [Buildarraykttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/buildarrfromperm/BuildarrayKtTest.kt)
                 * Containsduplicates
                   * [Containsduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsDuplicateTest.kt)
                   * [Containsnearbyalmostduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsNearbyAlmostDuplicateTest.kt)
                   * [Containsnearbyduplicatetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/containsduplicates/ContainsNearbyDuplicateTest.kt)
-                * Intersectionofarrays
-                  * [Intersectionofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/IntersectionOfArraysTest.kt)
-                  * [Intersectiontwoofarraystest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/intersectionofarrays/IntersectionTwoOfArraysTest.kt)
                 * Maxlencontiguoussubarray
                   * [Findmaxlentest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/arrays/maxlencontiguoussubarray/FindMaxLenTest.kt)
                 * Maxsumsubarray
@@ -267,27 +535,55 @@
                   * [Mergeablestateflowimpltest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableStateFlowImplTest.kt)
                   * [Mergeablevaluetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/MergeableValueTest.kt)
                   * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/crdt/cvrdt/UtilsTest.kt)
+              * Hashmap
+                * [Hashtabletest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/hashmap/HashTableTest.kt)
+              * Hashset
+                * [Myhashsettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/hashset/MyHashSetTest.kt)
               * Graphs
                 * [Vertextest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/graphs/VertexTest.kt)
               * Linkedlists
+                * Circular
+                  * [Circularlinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/circular/CircularLinkedListTest.kt)
                 * Doubly
                   * [Doublylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/doubly/DoublyLinkedListTest.kt)
                 * Singly
+                  * [Singlylinkedlistpalindrometest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListPalindromeTest.kt)
                   * [Singlylinkedlisttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/SinglyLinkedListTest.kt)
+                  * [Utilstest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/linkedlists/singly/UtilsTest.kt)
+              * Orderedstream
+                * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/orderedstream/OrderedStreamTest.kt)
               * Queues
                 * Fifo
                   * [Arraylistfifoqueuespec](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueueSpec.kt)
                   * [Arraylistfifoqueuetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/ArrayListFifoQueueTest.kt)
                   * [Fifoqueuetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/queues/fifo/FifoQueueTest.kt)
+              * Randomizedset
+                * [Randomizedsettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/randomizedset/RandomizedSetTest.kt)
+              * Smallestinfiniteset
+                * [Smallestinfinitesettest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/smallestinfiniteset/SmallestInfiniteSetTest.kt)
+              * Snapshotarray
+                * [Snapshotarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/snapshotarray/SnapshotArrayTest.kt)
+              * Sparsevector
+                * [Sparsevectortest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/sparsevector/SparseVectorTest.kt)
+              * Stack
+                * Dynamic
+                  * [Dynamicsizedstacktest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/stack/dynamic/DynamicSizedStackTest.kt)
+                * Fixed
+                  * [Fixedsizedstacktest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/stack/fixed/FixedSizedStackTest.kt)
+              * Timemap
+                * [Timemaptest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/timemap/TimeMapTest.kt)
               * Trees
                 * Binarytrees
                   * [Binarytreecountgoodnodestest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeCountGoodNodesTest.kt)
                   * [Binarytreedeserializetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeDeserializeTest.kt)
                   * [Binarytreemaxlevelsumtest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeMaxLevelSumTest.kt)
                   * [Binarytreeserializetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeSerializeTest.kt)
+                  * [Binarytreesizetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeSizeTest.kt)
+                  * [Binarytreetraversaltest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/BinaryTreeTraversalTest.kt)
                   * Bst
+                    * [Binarysearchtreeheighttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTreeHeightTest.kt)
+                    * [Binarysearchtreeinserttest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTreeInsertTest.kt)
                     * [Binarysearchtreeleafsimilartest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTreeLeafSimilarTest.kt)
-                    * [Binarysearchtreetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/bst/BinarySearchTreeTest.kt)
                   * Utils
                     * Generatetrees
                       * [Generateuniquebinarytreetest](https://github.com/BrianLusina/KotlinGround/blob/master/datastructures/src/test/kotlin/com/kotlinground/datastructures/trees/binarytrees/utils/generatetrees/GenerateUniqueBinaryTreeTest.kt)
@@ -375,7 +671,15 @@
                 * Builder
                   * [Mailbuilder](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/builder/MailBuilder.kt)
                 * Factory
-                  * [Chess](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Chess.kt)
+                  * Chess
+                    * [Bishop](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/Bishop.kt)
+                    * [Chess](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/Chess.kt)
+                    * [Chesspiece](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/ChessPiece.kt)
+                    * [King](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/King.kt)
+                    * [Knight](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/Knight.kt)
+                    * [Pawn](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/Pawn.kt)
+                    * [Queen](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/Queen.kt)
+                    * [Rook](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/chess/Rook.kt)
                   * Gui
                     * [App](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/App.kt)
                     * [Button](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/Button.kt)
@@ -389,27 +693,33 @@
                       * [Winbutton](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinButton.kt)
                       * [Wincheckbox](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinCheckBox.kt)
                       * [Winfactory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/gui/win/WinFactory.kt)
-                  * [Parser](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Parser.kt)
-                  * [Server](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/Server.kt)
+                  * Notification
+                    * [Emailnotification](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/EmailNotification.kt)
+                    * [Main](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/main.kt)
+                    * [Notification](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/Notification.kt)
+                    * [Notificationfactory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/NotificationFactory.kt)
+                    * [Smsnotification](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/notification/SmsNotification.kt)
+                  * Parser
+                    * [Factory](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/factory.kt)
+                    * [Intproperty](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/IntProperty.kt)
+                    * [Jsonparser](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/JsonParser.kt)
+                    * [Main](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/main.kt)
+                    * [Parser](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/Parser.kt)
+                    * [Property](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/Property.kt)
+                    * [Serverconfig](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/ServerConfig.kt)
+                    * [Serverconfigimpl](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/ServerConfigImpl.kt)
+                    * [Stringproperty](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/StringProperty.kt)
+                    * [Yamlparser](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/parser/YamlParser.kt)
+                  * Server
+                    * [Server](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/factory/server/Server.kt)
                 * Singleton
                   * [Logger](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/creationalpatterns/singleton/Logger.kt)
-              * Hashmap
-                * [Hashtable](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/HashTable.kt)
-                * [Item](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashmap/Item.kt)
-              * Hashset
-                * [Myhashset](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/hashset/MyHashSet.kt)
               * Oop
                 * Interfaces
                   * [Lgremote](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/LGRemote.kt)
                   * [Remote](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/Remote.kt)
                   * [Samsungremote](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/SamsungRemote.kt)
                   * [Tv](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/oop/interfaces/TV.kt)
-              * Orderedstream
-                * [Orderedstream](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/orderedstream/OrderedStream.kt)
-              * Smallestinfiniteset
-                * [Smallestinfiniteset](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/smallestinfiniteset/SmallestInfiniteSet.kt)
-              * Snapshotarray
-                * [Snapshotarray](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/snapshotarray/SnapshotArray.kt)
               * Structuralpatterns
                 * Adapter
                   * [Pegs](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/adapter/pegs.kt)
@@ -432,23 +742,9 @@
                 * Proxy
                   * [Catimage](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/proxy/catimage.kt)
                   * [Youtubemanager](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/structuralpatterns/proxy/youtubemanager.kt)
-              * Timemap
-                * [Timemap](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/main/kotlin/com/kotlinground/design/timemap/TimeMap.kt)
     * Test
               * Browserhistory
                 * [Browserhistorytest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/browserhistory/BrowserHistoryTest.kt)
-              * Hashmap
-                * [Hashtabletest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashmap/HashTableTest.kt)
-              * Hashset
-                * [Myhashsettest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/hashset/MyHashSetTest.kt)
-              * Orderedstream
-                * [Orderedstreamtest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/orderedstream/OrderedStreamTest.kt)
-              * Smallestinfiniteset
-                * [Smallestinfinitesettest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/smallestinfiniteset/SmallestInfiniteSetTest.kt)
-              * Snapshotarray
-                * [Snapshotarraytest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/snapshotarray/SnapshotArrayTest.kt)
-              * Timemap
-                * [Timemaptest](https://github.com/BrianLusina/KotlinGround/blob/master/design/src/test/kotlin/com/kotlinground/design/timemap/TimeMapTest.kt)
 
 ## Ktmath
     * Main
@@ -475,8 +771,12 @@
                 * [Series](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/largestSeriesProduct/Series.kt)
               * Ntheven
                 * [Ntheven](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/ntheven/ntheven.kt)
+              * Pascalstriangle
+                * [Pascalstriangle](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/pascalstriangle/pascalsTriangle.kt)
               * Perfectnumbers
                 * [Naturalnumber](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/perfectNumbers/NaturalNumber.kt)
+              * Poweroftwo
+                * [Ispoweroftwo](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/poweroftwo/isPowerOfTwo.kt)
               * Powersofi
                 * [Powersofi](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/main/kotlin/com/kotlinground/ktmath/powersofi/powersofi.kt)
               * Primes
@@ -507,8 +807,12 @@
                 * [Squarestest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/diffOfSquares/SquaresTest.kt)
               * Largestseriesproduct
                 * [Seriestest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/largestSeriesProduct/SeriesTest.kt)
+              * Pascalstriangle
+                * [Pascalstriangletest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/pascalstriangle/PascalsTriangleTest.kt)
               * Perfectnumbers
                 * [Naturalnumbertest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/perfectNumbers/NaturalNumberTest.kt)
+              * Poweroftwo
+                * [Ispoweroftwotests](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/poweroftwo/IsPowerOfTwoTests.kt)
               * Primes
                 * Backwardsreadprimes
                   * [Backwardsreadprimestest](https://github.com/BrianLusina/KotlinGround/blob/master/ktmath/src/test/kotlin/com/kotlinground/ktmath/primes/backwardsreadprimes/BackwardsReadPrimesTest.kt)
@@ -534,11 +838,15 @@
               * Acronym
                 * [Acronym](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/acronym/Acronym.kt)
               * Anagram
-                * [Validanagram](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/anagram/ValidAnagram.kt)
+                * Countanagrams
+                  * [Countanagrams](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/anagram/countanagrams/countAnagrams.kt)
+                * [Isanagram](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/anagram/isAnagram.kt)
               * Findcapitals
                 * [Findcapitals](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/findcapitals/findCapitals.kt)
               * Firstandlast
                 * [Removechars](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/firstandlast/removeChars.kt)
+              * Firstoccurrence
+                * [Strstr](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/firstoccurrence/strStr.kt)
               * Gcdofstrings
                 * [Gcdofstrings](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/gcdofstrings/gcdOfStrings.kt)
               * Highlows
@@ -547,6 +855,8 @@
                 * [Isomorphic](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/isomorphic/isomorphic.kt)
               * Issubsequence
                 * [Issubsequence](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/issubsequence/IsSubsequence.kt)
+              * Isunique
+                * [Isunique](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/isunique/isUnique.kt)
               * Longestsubstring
                 * [Longestsubstring](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/longestsubstring/longestsubstring.kt)
               * Maximumtime
@@ -557,37 +867,61 @@
                 * [Mergestrings](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/mergstrings/mergestrings.kt)
               * Palindromes
                 * [Ispalindrome](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/palindromes/isPalindrome.kt)
+                * [Ispalindromepermutation](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/palindromes/isPalindromePermutation.kt)
               * Pangram
                 * [Pangrams](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/pangram/Pangrams.kt)
+              * Permutations
+                * [Checkpermutations](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/permutations/checkPermutations.kt)
+                * [Generatepermutations](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/permutations/generatePermutations.kt)
               * Rnatranscription
                 * [Rnatranscription](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/rnatranscription/RnaTranscription.kt)
+              * Similarstringgroups
+                * [Similarstringgroups](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/similarstringgroups/similarStringGroups.kt)
+              * Spreadsheetencode
+                * [Spreadsheetencode](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/spreadsheetencode/spreadsheetEncode.kt)
               * Wordcount
                 * [Wordcount](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/main/kotlin/com/kotlinground/strings/wordcount/WordCount.kt)
     * Test
               * Acronym
                 * [Acronymtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/acronym/AcronymTest.kt)
               * Anagram
-                * [Validanagramtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/anagram/ValidAnagramTest.kt)
+                * Countanagrams
+                  * [Countanagramstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/anagram/countanagrams/CountAnagramsTest.kt)
+                * [Isanagramtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/anagram/IsAnagramTest.kt)
               * Findcapitals
                 * [Findcapitalstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/findcapitals/FindCapitalsTest.kt)
               * Firstandlast
                 * [Removecharskttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/firstandlast/RemoveCharsKtTest.kt)
+              * Firstoccurrence
+                * [Strstrtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/firstoccurrence/StrStrTest.kt)
               * Gcdofstrings
                 * [Gcdofstringstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/gcdofstrings/GcdOfStringsTest.kt)
               * Isomorphic
                 * [Isomorphictest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/isomorphic/IsomorphicTest.kt)
               * Issubsequence
                 * [Issubsequencetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/issubsequence/IsSubsequenceTest.kt)
+              * Isunique
+                * [Isuniquetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/isunique/IsUniqueTest.kt)
               * Maximumtime
                 * [Maximumtimetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/maximumtime/MaximumTimeTest.kt)
               * Maxvowelsinsubstr
                 * [Maxvowelstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/maxvowelsinsubstr/MaxVowelsTest.kt)
               * Mergstrings
                 * [Mergestringstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/mergstrings/MergeStringsTest.kt)
+              * Palindromes
+                * [Ispalindromepermutationtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/palindromes/IsPalindromePermutationTest.kt)
+                * [Ispalindrometest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/palindromes/IsPalindromeTest.kt)
               * Pangram
                 * [Pangramtest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/pangram/PangramTest.kt)
+              * Permutations
+                * [Checkpermutationstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/permutations/CheckPermutationsTest.kt)
+                * [Generatepermutationstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/permutations/GeneratePermutationsTest.kt)
               * Rnatranscription
                 * [Rnatranscriptionkttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/rnatranscription/RnaTranscriptionKtTest.kt)
+              * Similarstringgroups
+                * [Similarstringgroupstest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/similarstringgroups/SimilarStringGroupsTest.kt)
+              * Spreadsheetencode
+                * [Spreadsheetencodetest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/spreadsheetencode/SpreadsheetEncodeTest.kt)
               * Wordcount
                 * [Wordcounttest](https://github.com/BrianLusina/KotlinGround/blob/master/ktstrings/src/test/kotlin/com/kotlinground/strings/wordcount/WordCountTest.kt)
 
@@ -605,12 +939,19 @@
               * Arrays
                 * Array Three Pointers
                   * [Minimize](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/array_three_pointers/minimize.kt)
+                * Candy
+                  * [Candy](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/candy/candy.kt)
                 * Canplaceflowers
                   * [Canplaceflowers](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/canplaceflowers/canplaceflowers.kt)
                 * Containerwithmostwater
                   * [Containerwithmostwater](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/containerwithmostwater/containerWithMostWater.kt)
                 * Finddiffoftwoarrays
                   * [Finddifference](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/finddiffoftwoarrays/findDifference.kt)
+                * Hindex
+                  * [Hindex](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/hindex/hIndex.kt)
+                * Jumpgame
+                  * [Canjump](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/jumpgame/canJump.kt)
+                  * [Jump](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/jumpgame/jump.kt)
                 * Longestincreasingsubsequence
                   * [Longestincreasingsubsequence](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/arrays/longestincreasingsubsequence/longestIncreasingSubsequence.kt)
                 * Longestsubarrayofones
@@ -640,6 +981,8 @@
               * Graph
                 * Canvisitallrooms
                   * [Canvisitallrooms](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/canvisitallrooms/canVisitAllRooms.kt)
+                * Courseschedule
+                  * [Coureschedule](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/courseschedule/coureschedule.kt)
                 * Numberofprovinces
                   * [Numberofprovinces](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/graph/numberofprovinces/numberOfProvinces.kt)
                 * Reorderroutes
@@ -668,6 +1011,8 @@
                 * [Scrabblescore](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/scrabblescore/ScrabbleScore.kt)
               * Search
                 * Binarysearch
+                  * Findclosestvalue
+                    * [Findclosestvalueinbst](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/findclosestvalue/findClosestValueInBst.kt)
                   * Findpeakelement
                     * [Findpeakelement](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/main/kotlin/com/kotlinground/puzzles/search/binarysearch/findpeakelement/findPeakElement.kt)
                   * Kokoeatingbananas
@@ -700,6 +1045,8 @@
               * Arrays
                 * Array Three Pointers
                   * [Minimizetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/array_three_pointers/MinimizeTest.kt)
+                * Candy
+                  * [Candytest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/candy/CandyTest.kt)
                 * Canplaceflowers
                   * [Canplaceflowerstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/canplaceflowers/CanplaceflowersTest.kt)
                 * Containerwithmostwater
@@ -710,6 +1057,11 @@
                   * [Findpivotindextest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/findpivotindex/FindPivotIndexTest.kt)
                 * Highestaltitude
                   * [Largestaltitudetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/highestaltitude/LargestAltitudeTest.kt)
+                * Hindex
+                  * [Hindextest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/hindex/HIndexTest.kt)
+                * Jumpgame
+                  * [Canjumptest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/jumpgame/CanJumpTest.kt)
+                  * [Jumptest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/jumpgame/JumpTest.kt)
                 * Longestincreasingsubsequence
                   * [Longestincreasingsubsequencetest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/arrays/longestincreasingsubsequence/LongestIncreasingSubsequenceTest.kt)
                 * Longestsubarrayofones
@@ -739,6 +1091,8 @@
               * Graph
                 * Canvisitallrooms
                   * [Canvisitallroomstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/canvisitallrooms/CanVisitAllRoomsTest.kt)
+                * Courseschedule
+                  * [Coursescheduletest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/courseschedule/CourseScheduleTest.kt)
                 * Numberofprovinces
                   * [Numberofprovincestest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/graph/numberofprovinces/NumberOfProvincesTest.kt)
                 * Reorderroutes
@@ -790,3 +1144,9 @@
                   * [Nextgreatertest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/stack/nextgreater/NextGreaterTest.kt)
                 * Removestars
                   * [Removestarstest](https://github.com/BrianLusina/KotlinGround/blob/master/puzzles/src/test/kotlin/com/kotlinground/puzzles/stack/removestars/RemoveStarsTest.kt)
+
+## Utils
+    * Main
+            * Utils
+              * Range
+                * [Rangeextensions](https://github.com/BrianLusina/KotlinGround/blob/master/utils/src/main/kotlin/com/kotlinground/utils/range/rangeExtensions.kt)

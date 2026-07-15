@@ -4,12 +4,43 @@ import com.kotlinground.datastructures.trees.TreeNode
 import com.kotlinground.datastructures.trees.Tree
 import com.kotlinground.datastructures.trees.binarytrees.BinaryTree
 import com.kotlinground.datastructures.trees.binarytrees.BinaryTreeNode
-import com.kotlinground.datastructures.trees.compareTo
 
-class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : BinaryTree<T>() {
+open class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? = null) : BinaryTree<T>() {
 
     private operator fun Any.plusAssign(i: Int) {
         this += i
+    }
+
+    fun root(): BinaryTreeNode<T>? {
+        return root
+    }
+
+    companion object {
+        /**
+         * Constructs a balanced binary search tree from a sorted list of comparable elements.
+         *
+         * @param values A sorted list of comparable elements used to construct the binary search tree.
+         * @return A `BinarySearchTree` constructed from the given sorted list of values, or `null` if the list is empty.
+         */
+        fun <T: Comparable<T>> constructTree(values: List<T>): BinarySearchTree<T>? {
+            if (values.isEmpty()) {
+                return null
+            }
+
+            fun constructTreeHelper(left: Int, right: Int): BinaryTreeNode<T>? {
+                if (left > right) {
+                    return null
+                }
+
+                val mid = left + (right - left) / 2
+                val node = BinaryTreeNode(values[mid])
+                node.left = constructTreeHelper(left, mid - 1)
+                node.right = constructTreeHelper(mid + 1, right)
+                return node
+            }
+            val root = constructTreeHelper(0, values.size - 1)
+            return BinarySearchTree(root)
+        }
     }
 
     override fun height(): Int {
@@ -27,44 +58,30 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
         return heightHelper(root)
     }
 
-
     /**
      * Inserts a Tree node into this Binary Search Tree
      */
     override fun insertTreeNode(data: T): BinaryTreeNode<T>? {
         if (this.root == null) {
-            return BinaryTreeNode(data)
+            this.root = BinaryTreeNode(data)
+            return this.root
         }
 
-        var parent = this.root
-        val dummy = this.root
-
-        while (this.root != null) {
-            parent = this.root
-
-            if (data != null) {
-                if (data < this.root!!.data) {
-                    this.root = this.root!!.left
-                } else {
-                    this.root = this.root!!.right
-                }
+        fun insertHelper(value: T, node: BinaryTreeNode<T>?): BinaryTreeNode<T> {
+            if (node == null) {
+                return BinaryTreeNode(value)
             }
+
+            if (value < node.data) {
+                node.left = insertHelper(value, node.left)
+            } else {
+                node.right = insertHelper(value, node.right)
+            }
+            return node
         }
 
-        when {
-            parent != null -> {
-                parent = BinaryTreeNode(data)
-            }
-
-            data < parent?.data -> {
-                parent?.left = BinaryTreeNode(data)
-            }
-
-            else -> {
-                parent?.right = BinaryTreeNode(data)
-            }
-        }
-        return dummy
+        insertHelper(data, this.root)
+        return this.root
     }
 
     override fun delete(data: T): BinaryTreeNode<T>? {
@@ -193,60 +210,37 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
         return result
     }
 
-    override fun preorderTraversal(): Collection<T> {
-        val result = arrayListOf<T>()
-        val stack = arrayListOf<BinaryTreeNode<T>>()
-
+    /**
+     * Checks if the binary search tree is valid.
+     *
+     * @return true if the binary search tree is valid or empty; false otherwise.
+     */
+    fun isValid(): Boolean {
         if (root == null) {
-            return result
+            return true
         }
 
-        var current = root
-
-        while (current != null || stack.isNotEmpty()) {
-            while (current != null) {
-                result.add(current.data)
-                stack.add(current)
-                current = current.left
+        val stack = arrayListOf(Triple(root?.left, root, root?.right))
+        while (stack.isNotEmpty()) {
+            val (lowerBound, node, upperBound) = stack.removeFirst()
+            if (node == null) {
+                continue
             }
 
-            current = stack.removeAt(stack.size - 1)
-            current = current.right
-        }
-
-        return result
-    }
-
-    override fun postorderTraversal(): Collection<T> {
-        val values = arrayListOf<T>()
-        val stackOne = arrayListOf<BinaryTreeNode<T>>()
-        val stackTwo = arrayListOf<BinaryTreeNode<T>>()
-
-        if (root == null) {
-            return values
-        }
-
-        stackOne.add(root!!)
-
-        while (stackOne.size != 0) {
-            val node = stackOne.removeAt(stackOne.size - 1)
-            stackTwo.add(node)
-
-            if (node.left != null) {
-                stackOne.add(node.left!!)
+            if (node.data <= lowerBound!!.data || node.data >= upperBound!!.data) {
+                return false
             }
 
-            if (node.right != null) {
-                stackOne.add(node.right!!)
+            if (lowerBound != null) {
+                stack.add(Triple(lowerBound, node.left, node))
+            }
+
+            if (upperBound != null) {
+                stack.add(Triple(node, node.right, upperBound))
             }
         }
 
-        while (stackTwo.size != 0) {
-            val node = stackTwo.removeAt(stackTwo.size - 1)
-            values.add(node.data)
-        }
-
-        return values
+        return true
     }
 
     /**
@@ -309,5 +303,54 @@ class BinarySearchTree<T : Comparable<T>>(private var root: BinaryTreeNode<T>? =
         dfs(other.root, leaves2)
 
         return leaves1.equals(leaves2)
+    }
+
+    /**
+     * Finds the kth largest node in the binary search tree.
+     *
+     * The method uses a reverse in-order traversal to find the kth largest node efficiently.
+     * If the tree is empty or k exceeds the number of available nodes, the method returns null.
+     *
+     * Complexity:
+     * Time: O(h + k): where h is the height of the tree and k is the input
+     * Space: O(h): where h is the height of the tree.
+     *
+     * @param k The rank of the largest node to find, where k = 1 corresponds to the largest node.
+     * @return The kth largest node as a TreeNode<T>, or null if the rank is invalid or the tree is empty.
+     */
+    override fun findKthLargest(k: Int): BinaryTreeNode<T>? {
+        if (root == null) {
+            return null
+        }
+        // This is a helper class that helps to track the algorithm's progress of traversing the tree
+        class TreeInfo(var numberOfNodesVisited: Int = 0, var latestVisitedNode: BinaryTreeNode<T>? = null)
+
+        /**
+         * Helper function to traverse the tree in reverse in order
+         * @param node [BinaryTreeNode] The node to traverse
+         * @param treeInformation [TreeInfo] The tree information
+         */
+        fun reverseInOrderTraverse(node: BinaryTreeNode<T>?, treeInformation: TreeInfo) {
+            // base case: if the node is null, or we've already found the kth largest
+            if (node == null || treeInformation.numberOfNodesVisited >= k ) {
+                return
+            }
+
+            // traverse right subtree first for larger values
+            reverseInOrderTraverse(node.right, treeInformation)
+
+            // Visit the current node if we haven't found k nodes yet
+            if (treeInformation.numberOfNodesVisited < k) {
+                treeInformation.numberOfNodesVisited + 1
+                treeInformation.latestVisitedNode = node
+            }
+
+            // traverse the left subtree for smaller values if needed
+            reverseInOrderTraverse(node.left, treeInformation)
+        }
+
+        val treeInfo = TreeInfo(0)
+        reverseInOrderTraverse(root, treeInfo)
+        return treeInfo.latestVisitedNode
     }
 }

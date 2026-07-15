@@ -17,4 +17,5 @@ object Plugins {
     const val KOTLIN_GRADLE_ALL_OPEN = "org.jetbrains.kotlin:kotlin-allopen:${Versions.KOTLIN}"
     const val KOTLIN_GRADLE_NO_ARGS= "org.jetbrains.kotlin:kotlin-noarg:${Versions.KOTLIN}"
     const val KOTLINX = "org.jetbrains.kotlinx"
+    const val KOTLINX_BENCHMARK = "org.jetbrains.kotlinx.benchmark"
 }

@@ -23,6 +23,21 @@ abstract class Tree<T> {
      */
     abstract fun height(): Int
 
+    /**
+     * Returns the number of nodes of the tree
+     * @return [Int]
+     */
+    abstract fun size(): Int
+
+    /**
+     * Performs an in-order traversal of the tree.
+     * In an in-order traversal, the nodes are recursively visited in the order:
+     * left subtree, root node, and then right subtree.
+     *
+     * @return A collection containing the elements of the tree in in-order sequence.
+     */
+    abstract fun inorderTraversal(): Collection<T>
+
     abstract fun inorderTraversalIteratively(): Collection<T>
 
     abstract fun inorderMorrisTraversal(): Collection<T>
@@ -30,6 +45,13 @@ abstract class Tree<T> {
     abstract fun preorderTraversal(): Collection<T>
 
     abstract fun postorderTraversal(): Collection<T>
+
+    /**
+     * Performs a level order traversal of a tree returning a collection of data items on every node in the tree
+     */
+    abstract fun levelOrderTraversal(): Collection<T>
+
+    abstract fun reverseLevelOrderTraversal(): Collection<T>
 
     /**
      * Finds the lowest common ancestor of 2 nodes in a Tree
@@ -73,4 +95,12 @@ abstract class Tree<T> {
      * Deserializes a string to a  tree
      */
     abstract fun deserialize(tree: String): TreeNode<T>?
+
+    /**
+     * Finds the k-th largest element in the tree.
+     *
+     * @param k The position of the largest element to find, where 1 corresponds to the largest element.
+     * @return The k-th largest node in the tree as a [TreeNode], or null if the tree does not contain enough nodes.
+     */
+    abstract fun findKthLargest(k: Int): TreeNode<T>?
 }

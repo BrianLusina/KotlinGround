@@ -60,6 +60,14 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
         TODO("Not yet implemented")
     }
 
+    override fun size(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun inorderTraversal(): Collection<T> {
+        TODO("Not yet implemented")
+    }
+
     override fun inorderTraversalIteratively(): Collection<T> {
         TODO("Not yet implemented")
     }
@@ -73,6 +81,14 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
     }
 
     override fun postorderTraversal(): Collection<T> {
+        TODO("Not yet implemented")
+    }
+
+    override fun levelOrderTraversal(): Collection<T> {
+        TODO("Not yet implemented")
+    }
+
+    override fun reverseLevelOrderTraversal(): Collection<T> {
         TODO("Not yet implemented")
     }
 
@@ -135,6 +151,10 @@ class AVLTree<T : Comparator<T>>(private var root: AVLTreeNode<T>? = null) : Tre
     }
 
     override fun serialize(): String {
+        TODO("Not yet implemented")
+    }
+
+    override fun findKthLargest(k: Int): TreeNode<T>? {
         TODO("Not yet implemented")
     }
 }

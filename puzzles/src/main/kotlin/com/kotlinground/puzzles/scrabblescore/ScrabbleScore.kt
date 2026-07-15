@@ -28,7 +28,7 @@ object ScrabbleScore {
 
     fun scoreWord(word: String): Int {
         var total = 0
-        val letters = word.toUpperCase().split("")
+        val letters = word.uppercase().split("")
 
         scoreMap.forEach { arrList, score ->
             letters.filter { arrList.contains(it) }
@@ -38,5 +38,5 @@ object ScrabbleScore {
         return total
     }
 
-    val scoreWord = { word: String -> word.toUpperCase().map { scoreMap(it) }.sum() }
+    val scoreWord = { word: String -> word.uppercase().map { scoreMap(it) }.sum() }
 }
