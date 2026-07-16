@@ -9,7 +9,7 @@ import com.kotlinground.datastructures.graphs.Vertex
  * @constructor Creates a self-edge for the specified vertex.
  * @param node The vertex to which this edge connects itself.
  */
-data class SelfEdge(val node: Vertex<Any>): Edge() {
+data class SelfEdge<T>(val node: Vertex<T>): Edge() {
     override fun toString(): String {
         return "${super.toString()}, type=${EdgeType.SELF} node=$node"
     }

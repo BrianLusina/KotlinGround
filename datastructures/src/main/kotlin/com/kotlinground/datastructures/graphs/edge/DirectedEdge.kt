@@ -11,7 +11,7 @@ import com.kotlinground.datastructures.graphs.Vertex
  * @property source The source vertex where the directed edge originates.
  * @property destination The destination vertex where the directed edge points to.
  */
-data class DirectedEdge(val source: Vertex<Any>, val destination: Vertex<Any>): Edge() {
+data class DirectedEdge<T>(val source: Vertex<T>, val destination: Vertex<T>): Edge() {
     override fun toString(): String {
         return "${super.toString()}, type=${EdgeType.DIRECTED}, source=$source, destination=$destination"
     }

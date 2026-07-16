@@ -10,7 +10,7 @@ import com.kotlinground.datastructures.graphs.Vertex
  *
  * @property vertices A list of [Vertex] objects that the hyperedge connects.
  */
-data class HyperEdge(private val vertices: List<Vertex<Any>>): Edge() {
+data class HyperEdge<T>(val vertices: List<Vertex<T>>): Edge() {
     override fun toString(): String {
         return "${super.toString()}, type=${EdgeType.HYPER_DIRECTED}, nodes=${vertices.joinToString(", ") { it.toString() }}"
     }

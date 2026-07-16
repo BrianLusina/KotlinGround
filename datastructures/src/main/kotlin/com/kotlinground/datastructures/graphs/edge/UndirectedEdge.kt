@@ -13,7 +13,7 @@ import com.kotlinground.datastructures.graphs.Vertex
  * @property nodeOne The first vertex connected by this edge.
  * @property nodeTwo The second vertex connected by this edge.
  */
-data class UndirectedEdge(private val nodeOne: Vertex<Any>, private val nodeTwo: Vertex<Any>): Edge() {
+data class UndirectedEdge<T>(val nodeOne: Vertex<T>, val nodeTwo: Vertex<T>): Edge() {
     override fun toString(): String {
         return "${super.toString()}, type=${EdgeType.UNDIRECTED}, nodeOne=$nodeOne, nodeTwo=$nodeTwo"
     }
