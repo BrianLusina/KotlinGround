@@ -1,4 +1,4 @@
-package com.kotlinground.algorithms.searching.binary.search2dmatrix
+package com.kotlinground.algorithms.search.binary.search2dmatrix
 
 fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
     val nColumns = matrix[0].size

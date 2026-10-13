@@ -1,4 +1,4 @@
-package com.kotlinground.algorithms.searching.trie.searchsuggestions
+package com.kotlinground.algorithms.search.trie.searchsuggestions
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals

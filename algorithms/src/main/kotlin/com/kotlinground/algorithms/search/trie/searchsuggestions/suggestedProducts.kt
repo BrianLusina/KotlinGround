@@ -1,4 +1,4 @@
-package com.kotlinground.algorithms.searching.trie.searchsuggestions
+package com.kotlinground.algorithms.search.trie.searchsuggestions
 
 import java.util.*
 import kotlin.collections.ArrayList

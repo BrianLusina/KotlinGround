@@ -1,4 +1,4 @@
-package com.kotlinground.algorithms.searching.binary.search2dmatrix
+package com.kotlinground.algorithms.search.binary.search2dmatrix
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
